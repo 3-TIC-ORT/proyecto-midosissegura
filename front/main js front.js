@@ -1,10 +1,14 @@
 function cambiardatosdelusuario() {
-    const inputElement = document.getElementById("contraseña");
-    const valorDelInput = inputElement.value;
-    let contrseña = valorDelInput;
+    const inputcontraseña = document.getElementById("contraseña");
+    const valorinputcontraseña = inputcontraseña.value;
+    let contrseña = valorinputcontraseña;
     console.log(contrseña);
-    const inputElement2 = document.getElementById("sesion");
-    const secion = inputElement2.value;
-    let sesion = secion;
-    console.log(sesion);
+    const inputgmail = document.getElementById("gmail");
+    const valorinputgmail = inputgmail.value;
+    let gmail = valorinputgmail;
+    console.log(gmail);
+    const inputratioinsulina= document.getElementById("ratioinsulina");
+    const  valorinputratioinsulina= inputratioinsulina.value;
+    let ratioinsulina = valorinputratioinsulina;
+    console.log(ratioinsulina);
   }
