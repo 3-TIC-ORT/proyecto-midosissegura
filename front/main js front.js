@@ -1,3 +1,4 @@
+let mostrarElementos = true;
 function cambiardatosdelusuario() {
     const inputcontraseña = document.getElementById("contraseña");
     const valorinputcontraseña = inputcontraseña.value;
@@ -10,5 +11,12 @@ function cambiardatosdelusuario() {
     const inputratioinsulina= document.getElementById("ratioinsulina");
     const  valorinputratioinsulina= inputratioinsulina.value;
     let ratioinsulina = valorinputratioinsulina;
-    console.log("ratio de insulina:" + ratioinsulina);
-}
+    console.log("ratio de insulina:" + ratioinsulina);}
+    function actualizarVisibilidad() {
+        const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina, button");
+        elementos.forEach(el => {
+            el.style.display = mostrarElementos ? "block" : "none";
+        });
+    }
+
+window.onload = actualizarVisibilidad;
