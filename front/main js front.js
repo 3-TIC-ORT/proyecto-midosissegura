@@ -13,44 +13,22 @@ function cambiardatosdelusuario() {
     let ratioinsulina = valorinputratioinsulina;
     console.log("ratio de insulina:" + ratioinsulina);}
     function actualizarVisibilidad() {
-        const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina, #btndecambiodelusuario");
+        const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina");
         elementos.forEach(el => {
             el.style.display = mostrarcambiardatos ? "block" : "none";
         });
     }
-
+    function a(){
+        mostrarcambiardatos= true;  
+        actualizarVisibilidad()
+       }
+ 
+  
 window.onload = actualizarVisibilidad;
-let diagnosticos = [];
-
-document.getElementById("btnAgregar").addEventListener("click", agregarDiagnostico);
-document.getElementById("btnMostrar").addEventListener("click", mostrarDiagnosticos);
-
-function agregarDiagnostico() {
-    const input = document.getElementById("inputDiagnostico");
-    const texto = input.value.trim();
-
-    if (texto !== "") {
-        diagnosticos.push(texto);
-        input.value = "";
-        alert("Diagnóstico agregado correctamente.");
-    } else {
-        alert("Por favor, escribe un diagnóstico.");
-    }
+document.getElementById("btndecambiodelusuario").addEventListener("click", a);
+if ( ratioinsulina !== "" ||  gmail !== "" || contrseña !== "" ){
+    function b (){
+    mostrarcambiardatos= false;  
+    actualizarVisibilidad()}
+    document.getElementById("btndecambiodelusuario").addEventListener("click", b);
 }
-
-function mostrarDiagnosticos() {
-    const contenedor = document.getElementById("listaDiagnosticos");
-    contenedor.innerHTML = "";
-
-    if (diagnosticos.length === 0) {
-        contenedor.innerHTML = "<p>No hay diagnósticos cargados.</p>";
-        return;
-    }
-
-    diagnosticos.forEach(d => {
-        const p = document.createElement("p");
-        p.textContent = d;
-        contenedor.appendChild(p);
-    });
-}
-
