@@ -1,3 +1,12 @@
+const botonnene = document.getElementById ("botonniño");
+const botonadulto = document.getElementById ("botonadulto");
+function click(event) {
+    const boton = event.target.id;
+    alert ("El boton presionado es " + boton);
+}
+botonnene.addEventListener ("click", click);
+botonadulto.addEventListener ("click", click);
+
 let mostrarElementos = true;
 function cambiardatosdelusuario() {
     const inputcontraseña = document.getElementById("contraseña");
