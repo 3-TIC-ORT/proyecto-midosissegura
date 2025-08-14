@@ -7,6 +7,14 @@ function click(event) {
 botonnene.addEventListener ("click", click);
 botonadulto.addEventListener ("click", click);
 
+if (nombre && apellido && correo && contraseña != 0) {
+let nombre = document.getElementById ("NOMBRE").value.trim();
+let apellido = document.getElementById ("APELLIDO").value.trim();
+let correo = document.getElementById ("CORREO").value.trim();
+let contraseña = document.getElementById ("CONTRASEÑA").value.trim();
+}
+
+
 let mostrarElementos = true;
 function cambiardatosdelusuario() {
     const inputcontraseña = document.getElementById("contraseña");
