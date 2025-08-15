@@ -7,11 +7,11 @@ function click(event) {
 botonnene.addEventListener ("click", click);
 botonadulto.addEventListener ("click", click);
 
-if (nombre && apellido && correo && contraseña != 0) {
-let nombre = document.getElementById ("NOMBRE").value.trim();
-let apellido = document.getElementById ("APELLIDO").value.trim();
-let correo = document.getElementById ("CORREO").value.trim();
-let contraseña = document.getElementById ("CONTRASEÑA").value.trim();
+if (nombre && apellido && gmail && contraseña != 0) {
+let nombre = document.getElementById ("nombre").value.trim();
+let apellido = document.getElementById ("apellido").value.trim();
+let correo = document.getElementById ("gmail").value.trim();
+let contraseña = document.getElementById ("contraseña").value.trim();
 }
 
 
