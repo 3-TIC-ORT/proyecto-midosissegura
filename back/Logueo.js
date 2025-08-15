@@ -1,31 +1,36 @@
 var Usuario = 
 [
 {
-    sesion: "GerardoTabakman",
+    nombre: "Gerardo",
+    apellido:"Tabakman",
     contraseña: "Maxi2223",
+    gmail:"gerardo@gmail.com",
+
 },
 {
-    sesion: "HernanRossi",
+    nombre: "Hernan",
+    apellido:"Rossi",
     contraseña: "Male123",
+    gmail:"Hernan@gmail.com"
 }
 ]
 
 function Loguear()
 {
-    var sesion= document.getElementById('sesion').value
+    var nombre= document.getElementById('nombre').value
     var contraseña = document.getElementById ('contraseña').value
+    var apellido = document.getElementById('apellido').value
+    var gmail = document.getElementById('gmail').value
 
     for (var i = 0; i< Usuario.length;i++)
     {
-        if (sesion == Usuario[i].sesion && contraseña == Usuario[i].contraseña)
+        if (nombre == Usuario[i].nombre && contraseña == Usuario[i].contraseña && apellido == Usuario[i].apellido && gmail == Usuario[i].gmail)
     {
-            console.log (sesion + "se registró. ")
-            window.location.href = 'https://google.com/';
-            return
+            console.log (nombre + " " + apellido + " se registró. ")
     }
-    }
-    console.log("El nombre de usuario y la contraseña no coinciden.")
-}   
+  
+}
+}
 
 
 
