@@ -1,12 +1,17 @@
 var Usuario = 
 [
 {
-    sesion: "GerardoTabakman",
+    nombre: "Gerardo",
+    apellido:"Tabakman",
     contraseña: "Maxi2223",
+    gmail:"gerardo@gmail.com",
+
 },
 {
-    sesion: "HernanRossi",
+    nombre: "Hernan",
+    apellido:"Rossi",
     contraseña: "Male123",
+    gmail:"Hernan@gmail.com"
 }
 ]
 
