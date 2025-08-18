@@ -1,16 +1,15 @@
-let mostrarcambiardatos = false;
+let mostrarcambiardatos = true;
+let contrseña = "";
+let gmail = "";
+let ratioinsulina = "";
 function cambiardatosdelusuario() {
-    const inputcontraseña = document.getElementById("contraseña");
-    const valorinputcontraseña = inputcontraseña.value;
-    let contrseña = valorinputcontraseña;
+   
+    contrseña = document.getElementById("contraseña").value;
     console.log("contraseña:" + contrseña);
-    const inputgmail = document.getElementById("gmail");
-    const valorinputgmail = inputgmail.value;
-    let gmail = valorinputgmail;
+
+    gmail = document.getElementById("gmail").value;
     console.log( "correo electronico:" +gmail);
-    const inputratioinsulina= document.getElementById("ratioinsulina");
-    const  valorinputratioinsulina= inputratioinsulina.value;
-    let ratioinsulina = valorinputratioinsulina;
+    ratioinsulina = document.getElementById("ratioinsulina").value;
     console.log("ratio de insulina:" + ratioinsulina);}
     function actualizarVisibilidad() {
         const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina");
@@ -18,17 +17,18 @@ function cambiardatosdelusuario() {
             el.style.display = mostrarcambiardatos ? "block" : "none";
         });
     }
-    function a(){
-        mostrarcambiardatos= true;  
-        actualizarVisibilidad()
-       }
+
  
   
-window.onload = actualizarVisibilidad;
+
 document.getElementById("btndecambiodelusuario").addEventListener("click", a);
+function a (){
 if ( ratioinsulina !== "" ||  gmail !== "" || contrseña !== "" ){
-    function b (){
+    
     mostrarcambiardatos= false;  
-    actualizarVisibilidad()}
-    document.getElementById("btndecambiodelusuario").addEventListener("click", b);
 }
+else {
+        mostrarcambiardatos= true;  
+}
+actualizarVisibilidad()}
+window.onload = actualizarVisibilidad;
