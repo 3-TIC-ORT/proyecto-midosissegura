@@ -7,11 +7,18 @@ function click(event) {
 botonnene.addEventListener ("click", click);
 botonadulto.addEventListener ("click", click);
 
-if (nombre && apellido && gmail && contraseña != 0) {
-let nombre = document.getElementById ("nombre").value.trim();
-let apellido = document.getElementById ("apellido").value.trim();
-let correo = document.getElementById ("gmail").value.trim();
-let contraseña = document.getElementById ("contraseña").value.trim();
+
+const botonenviar = document.getElementById ("enviar")
+function formularioinicio (event) {
+    let nombre = document.getElementById ("nombre").value.trim();
+    let apellido = document.getElementById ("apellido").value.trim();
+    let gmail = document.getElementById ("gmail").value.trim();
+    let contraseña = document.getElementById ("contraseña").value.trim();
+if (nombre !== "" && apellido !== "" && gmail !== "" && contraseña !== "") {
+    alert ("La informacion dada es " + nombre + apellido + gmail + contraseña);
+} else {
+    alert ("Porfavor, completar todos los campos.")
+}
 }
 
 
