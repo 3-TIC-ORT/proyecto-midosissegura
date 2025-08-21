@@ -23,7 +23,6 @@ if (nombre !== "" && apellido !== "" && gmail !== "" && contraseña !== "") {
         gmail,
         contraseña,
     };
-    alert ("Los datos del usuario son: " + datos);
 } else {
     alert ("Por favor, completar todos los campos.")
 }
