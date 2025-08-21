@@ -6,7 +6,6 @@ function cambiardatosdelusuario() {
    
     contrseña = document.getElementById("contraseña").value;
     console.log("contraseña:" + contrseña);
-
     gmail = document.getElementById("gmail").value;
     console.log( "correo electronico:" +gmail);
     ratioinsulina = document.getElementById("ratioinsulina").value;

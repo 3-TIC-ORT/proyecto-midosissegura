@@ -1,12 +1,24 @@
-let mostrarcambiardatos = true;
-let comentarios = []
-gmail = document.getElementById("gmail").value;
-console.log( "correo electronico:" +gmail);
-ratioinsulina = document.getElementById("ratioinsulina").value;
-console.log("ratio de insulina:" + ratioinsulina);
+let mostrarcambiardatos =true;
+let comentarios = [];
+
 function actualizarVisibilidad() {
-    const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina");
+    const elementos = document.querySelectorAll("#agregarcomentario");
     elementos.forEach(el => {
         el.style.display = mostrarcambiardatos ? "block" : "none";
     });
 }
+
+document.getElementById("agregarcomentario").addEventListener("click", c);
+
+function c() {
+    mostrarcambiardatos = true;
+
+    let comentariov = document.getElementById("comentario").value;
+    comentarios.push(comentariov); 
+    console.log(comentarios);      
+}
+
+window.onload = actualizarVisibilidad;
+;
+
+
