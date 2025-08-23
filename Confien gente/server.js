@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var bcrypt = require('bcrypt');
 
+var cors = require('cors');
+app.use(cors());
+
 app.use(express.json());
 
 var Usuarios = []

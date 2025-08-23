@@ -1,11 +1,11 @@
 const serverURL = "http://localhost:4000"; // donde corre tu backend
 
 // Registro
-document.getElementById("formRegistro").addEventListener("submit", async (e) => {
+document.getElementById("formR").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const nombre = document.getElementById("nombreRegistro").value;
-  const contraseña = document.getElementById("passRegistro").value;
+  const nombre = document.getElementById("nombreR").value;
+  const contraseña = document.getElementById("contraseñaR").value;
 
   const res = await fetch(`${serverURL}/Usuarios`, {
     method: "POST",
@@ -18,11 +18,11 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
 });
 
 // Login
-document.getElementById("formLogin").addEventListener("submit", async (e) => {
+document.getElementById("formL").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const nombre = document.getElementById("nombreLogin").value;
-  const contraseña = document.getElementById("passLogin").value;
+  const nombre = document.getElementById("nombreL").value;
+  const contraseña = document.getElementById("contraseñaL").value;
 
   const res = await fetch(`${serverURL}/Usuarios/login`, {
     method: "POST",
