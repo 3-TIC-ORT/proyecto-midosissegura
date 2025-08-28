@@ -5,7 +5,6 @@ const paso4 = document.getElementById ("PASO 4");
 const paso5 = document.getElementById ("PASO 5");
 const paso6 = document.getElementById ("PASO 6");
 const paso7 = document.getElementById ("PASO 7");
-const paso8 = document.getElementById ("PASO 8");
 
 function click(event) {
     const paso1 = event.target.id;
