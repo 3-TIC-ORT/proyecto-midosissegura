@@ -19,9 +19,13 @@ const InstruccionesPopUp = {
 function Instrucciones (event) {
     const paso = event.target.id;
     const popup = InstruccionesPopUp [paso];
-    alert (popup)
 
-    document.getElementById (popup).addEventListener ("click", cerrarPopup)
+    document.getElementById ("popup-texto").textContent = popup;
+    document.getElementById ("popup").style.display = "block";
+}
+
+function cerrar (event) {
+    document.getElementById ("popup").style.display = "none"
 }
 paso1.addEventListener("click", Instrucciones);
 paso2.addEventListener("click", Instrucciones);
