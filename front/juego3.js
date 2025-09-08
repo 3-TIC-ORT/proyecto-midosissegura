@@ -1,7 +1,8 @@
-document.getElementById("boton").addEventListener("click",a)
-function orden(){
+const botonorden = document.getElementById("boton");
+const img1 = document.getElementById("imagen1");
 
-}
-function a (){
-    document.getElementById("imagen1").addEventListener("click",)
-}
+botonorden.addEventListener("click", () => {
+  img1.addEventListener("click", () => {
+    img1.classList.add("orden-1");
+  });
+});

@@ -1,12 +1,18 @@
+.containerdeimg {
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  .orden-1 {
+    order: 5;
+  }
 #imagen1{
     width: 50px;   
-        height: auto;   
+        height: auto; 
+       
   }
     #imagen2{
-        width: 500px;   
-        height: auto;   
-    }
-    #imagen3{
-        width: 500px;   
-        height: auto;   
+        width: 50px;   
+        height: auto; 
+        order: 1;  
     }
