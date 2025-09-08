@@ -1,4 +1,4 @@
-let mostrarcambiardatos = false;
+let mostrarcambiardatos = true
 function cambiardatosdelusuario() {
     const inputcontraseña = document.getElementById("contraseña");
     const valorinputcontraseña = inputcontraseña.value;
