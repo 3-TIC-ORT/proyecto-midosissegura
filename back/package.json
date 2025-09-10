@@ -1,0 +1,41 @@
+{
+  "name": "proyecto-midosissegura",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3-TIC-ORT/proyecto-midosissegura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3-TIC-ORT/proyecto-midosissegura/issues"
+  },
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-midosissegura#readme",
+  "description": "",
+
+
+
+  "Usuarios": 
+[
+  {
+      "nombre": "Gerardo",
+      "apellido":"Tabakman",
+      "contrasena":"Maxi2223",
+      "gmail":"gerardo@gmail.com"
+  
+  },
+  {
+      "nombre": "Hernan",
+      "apellido":"Rossi",
+      "contrasena":"Male123",
+      "gmail":"Hernan@gmail.com"
+  }
+]
+}

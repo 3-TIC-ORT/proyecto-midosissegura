@@ -1,19 +1,8 @@
-var Usuario = 
-[
-{
-    nombre: "Gerardo",
-    apellido:"Tabakman",
-    contraseña: "Maxi2223",
-    gmail:"gerardo@gmail.com",
+import fs from "fs";
 
-},
-{
-    nombre: "Hernan",
-    apellido:"Rossi",
-    contraseña: "Male123",
-    gmail:"Hernan@gmail.com"
-}
-]
+var packagejson = JSON.parse(fs.readFileSync('back/package.json', 'UTF-8'));
+var Usuario = packagejson.Usuarios
+console.log(Usuario)
 
 function Loguear()
 {
@@ -26,11 +15,13 @@ function Loguear()
     {
         if (nombre == Usuario[i].nombre && contraseña == Usuario[i].contraseña && apellido == Usuario[i].apellido && gmail == Usuario[i].gmail)
     {
-            console.log (nombre + " " + apellido + " se registró. ")
+            console.log (sesion + "se registró. ")
+            window.location.href = 'https://google.com/';
+            return
     }
-  
-}
-}
+    }
+    console.log("El nombre de usuario y la contraseña no coinciden.")
+}   
 
 
 
