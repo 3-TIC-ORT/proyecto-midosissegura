@@ -92,3 +92,63 @@ botonresultado.addEventListener("click", () => {
     alert("sigue intentando");
   }
 });
+const confettiContainer = document.getElementById("confetti-container");
+const colors = ['#f94144', '#f3722c', '#f9844a', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
+
+function createConfettiPiece() {
+  const confetti = document.createElement('div');
+  confetti.classList.add('confetti');
+
+  // Tamaño random
+  const size = Math.floor(Math.random() * 10) + 5; // 5px a 15px
+  confetti.style.width = `${size}px`;
+  confetti.style.height = `${size}px`;
+
+  // Color random
+  confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+  // Posición horizontal random
+  confetti.style.left = Math.random() * window.innerWidth + 'px';
+
+  // Posición inicial arriba, pero con un offset random (para dispersar)
+  confetti.style.top = -size + 'px';
+
+  // Velocidad y movimiento
+  confetti.speed = Math.random() * 3 + 2; // velocidad vertical
+  confetti.xSpeed = (Math.random() - 0.5) * 2; // leve movimiento horizontal
+  confetti.yPos = -size;
+  confetti.xPos = parseFloat(confetti.style.left);
+
+  confettiContainer.appendChild(confetti);
+  return confetti;
+}
+
+const confettiPieces = [];
+const maxConfetti = 100;
+
+for (let i = 0; i < maxConfetti; i++) {
+  confettiPieces.push(createConfettiPiece());
+}
+
+function updateConfetti() {
+  for (let i = 0; i < confettiPieces.length; i++) {
+    const c = confettiPieces[i];
+    c.yPos += c.speed;
+    c.xPos += c.xSpeed;
+
+    // Aplicar transform para mejor rendimiento
+    c.style.transform = `translate(${c.xPos}px, ${c.yPos}px) rotate(${c.yPos * 5}deg)`;
+
+    // Resetear cuando sale de la pantalla abajo
+    if (c.yPos > window.innerHeight) {
+      c.yPos = -10;
+      c.xPos = Math.random() * window.innerWidth;
+      c.speed = Math.random() * 3 + 2;
+      c.xSpeed = (Math.random() - 0.5) * 2;
+    }
+  }
+
+  requestAnimationFrame(updateConfetti);
+}
+
+updateConfetti();
