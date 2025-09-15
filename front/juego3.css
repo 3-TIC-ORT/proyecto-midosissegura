@@ -36,32 +36,3 @@
         margin: 0;
         font-family: Arial, sans-serif;
       }
-      body, html {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        height: 100vh;
-        background-color: #222;
-      }
-      
-      #confetti-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none; /* para no interferir con clicks */
-        overflow: hidden;
-      }
-      
-      .confetti {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-color: red;
-        opacity: 0.8;
-        will-change: transform;
-        /* Forma básica cuadrada, podemos hacer diferentes formas */
-      }
-
-      

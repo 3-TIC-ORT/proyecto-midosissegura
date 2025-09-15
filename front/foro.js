@@ -1,24 +1,15 @@
-let mostrarcambiardatos =true;
-let comentarios = [];
-
-function actualizarVisibilidad() {
-    const elementos = document.querySelectorAll("#agregarcomentario");
-    elementos.forEach(el => {
-        el.style.display = mostrarcambiardatos ? "block" : "none";
-    });
-}
-
-document.getElementById("agregarcomentario").addEventListener("click", c);
-
-function c() {
-    mostrarcambiardatos = true;
-
-    let comentariov = document.getElementById("comentario").value;
-    comentarios.push(comentariov); 
-    console.log(comentarios);      
-}
-
-window.onload = actualizarVisibilidad;
-;
+let listacomentarios =[]
+const inputcomentario=document.getElementById("comentarioinput")
+const agregarcomentario =document.getElementById("agregarcomentario")
+const ulcomentarios=document.getElementById("comentarios")
+agregarcomentario.addEventListener("click", function() {
+    const comentario = inputcomentario.value;
+    listacomentarios.push(comentario);
+    const li = document.createElement("li");
+    inputcomentario.value=""
+    li.textContent = listacomentarios[i];
+    ulcomentarios.appendChild(li);
+ listacomentarios.innerHTML=""
+})
 
 
