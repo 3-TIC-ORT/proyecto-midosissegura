@@ -12,6 +12,7 @@ agregarcomentario.addEventListener("click", function() {
     li.className="tipocomentario"
     ulcomentarios.appendChild(li);
  listacomentarios.innerHTML=""
+ listacomentarios=[]
 }})
 
 
