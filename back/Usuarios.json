@@ -1,6 +1,6 @@
 {
-    "Usuarios": 
-{
-    
-}
+    "NOMBRE":"nombre",
+    "APELLIDO":"apellido",
+    "GMAIL":"gmail",
+    "CONTRASEÑA":"contraseña"
 }
