@@ -24,7 +24,7 @@ function Instrucciones (event) {
     document.getElementById ("popup").style.display = "block";
 }
 
-function cerrar (event) {
+function cerrarPopup (event) {
     document.getElementById ("popup").style.display = "none"
 }
 paso1.addEventListener("click", Instrucciones);
