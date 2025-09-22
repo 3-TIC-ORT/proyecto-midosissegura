@@ -13,25 +13,28 @@ ctrofeos.addEventListener("input", () => {
   actualizarTexto();        // actualiza el párrafo
 });
 actualizarTexto();
-document.addEventListener("DOMContentLoaded", () => {
-    // Elementos
+while (ctrofeos!==""){
+document.addEventListener("keydown", () => {
+  if (event.key === 'Enter'){
     let pclave = document.getElementById("pclave");
     let cclave = document.getElementById("cclave");
-
-    // Variable inicial
     let clave = "";
-
-    // Función para actualizar el <p>
     function actualizarTextoClave() {
       pclave.textContent = "Tu nueva contraseña es: " + clave;
     }
-
-    // Cuando escribís en el input
     cclave.addEventListener("input", () => {
-      clave = cclave.value;  // guardamos lo que escribe el usuario
-      actualizarTextoClave(); // mostramos en el párrafo
+      clave = cclave.value;  
+      actualizarTextoClave(); 
     });
-
-    // Mostrar estado inicial
     actualizarTextoClave();
-  }); 
+  }}); 
+}
+
+  function actualizarVisibilidad() {
+    const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina, #btndecambiodelusuario");
+    elementos.forEach(el => {
+        el.style.display = mostrarcambiardatos ? "block" : "none";
+    });
+}
+
+window.onload = actualizarVisibilidad;
