@@ -16,11 +16,4 @@ function cambiardatosdelusuario() {
     const  valorinputnomredeusuario= inputnombredeusuario.value;
     let nombreusuario = valorinputnomredeusuario;
     console.log("ratio de insulina:" + nombreusuario);}
-    function actualizarVisibilidad() {
-        const elementos = document.querySelectorAll("#contraseña, #gmail, #ratioinsulina, #btndecambiodelusuario");
-        elementos.forEach(el => {
-            el.style.display = mostrarcambiardatos ? "block" : "none";
-        });
-    }
 
-window.onload = actualizarVisibilidad;
