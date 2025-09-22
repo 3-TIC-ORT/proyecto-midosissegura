@@ -1,30 +1,44 @@
 import fs from "fs";
 
-var packagejson = JSON.parse(fs.readFileSync('back/package.json', 'utf-8'));
+var packagejson = JSON.parse(fs.readFileSync('Usuarios.json', 'utf-8'));
 var Usuario = packagejson.Usuarios
 console.log(Usuario)
 
-function Loguear()
-{
-    var nombre= document.getElementById('nombre').value
-    var contraseña = document.getElementById ('contraseña').value
-
-    for (var i = 0; i< Usuario.length;i++)
+var registro=[
     {
-        if (nombre == Usuario[i].nombre && contraseña == Usuario[i].contraseña)
-    {
-            console.log (sesion + "se registró. ")
+        NOMBRE:"",
+        CONTRASEÑA:"",
+        GMAIL:"",
+        APELLIDO:""
     }
-    else 
-    {
-        console.log("El nombre de usuario y la contraseña no coinciden.")
-    }
+]
 
-}    
-}
+
 function Iniciar()
 {
+    var nombre = document.getElementById('nombre').value
+    var contraseña = document.getElementById('contraseña').value
+    var gmail = document.getElementById('gmail').value
+    var apellido = document.getElementById('apellido').value
 
+    for (var i =0; i<Usuario.length;i++)
+    {
+        if (gmail == Usuario[i].gmail)
+        {
+            alert ("Este correo ya está siendo utilizado por otra cuenta")
+        }
+
+        else {
+            registro.push ({
+                NOMBRE:nombre,
+                CONTRASEÑA:contraseña,
+                GMAIL:gmail,
+                APELLIDO:apellido
+            })
+            fs.writeFileSync('Usuarios.json', JSON.stringify(registro))
+            console.log("Usuario registrado con éxito")
+        }
+    }
 }
 
 
