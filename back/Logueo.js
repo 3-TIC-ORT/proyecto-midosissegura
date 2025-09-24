@@ -82,4 +82,4 @@ function Logueo()
         console.log ("No se ha encontrado una cuenta con ese correo")
     }
 }
-Logueo();
+export {Logueo};
