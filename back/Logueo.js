@@ -1,27 +1,85 @@
 import fs from "fs";
 
-var packagejson = JSON.parse(fs.readFileSync('back/package.json', 'UTF-8'));
-var Usuario = packagejson.Usuarios
-console.log(Usuario)
 
-function Loguear()
+var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
+
+
+var lista = registro
+
+
+function Iniciar()
 {
-    var nombre= document.getElementById('nombre').value
-    var contraseña = document.getElementById ('contraseña').value
-    var apellido = document.getElementById('apellido').value
-    var gmail = document.getElementById('gmail').value
+  //  var nombre = document.getElementById('nombre').value
+  // var contraseña = document.getElementById('contraseña').value
+  //  var gmail = document.getElementById('gmail').value
+  //  var apellido = document.getElementById('apellido').value
 
-    for (var i = 0; i< Usuario.length;i++)
+
+    for (var i =0; i<registro.length;i++)
     {
-        if (nombre == Usuario[i].nombre && contraseña == Usuario[i].contraseña && apellido == Usuario[i].apellido && gmail == Usuario[i].gmail)
+        if (gmail === registro[i].GMAIL)
+        {
+            console.log ("Este correo ya está siendo utilizado por otra cuenta")
+            var serepite = true
+        }
+    }
+        if (serepite != true)
+            {
+            lista.push ({
+                "NOMBRE": nombre ,
+                "APELLIDO":apellido ,
+                "GMAIL": gmail ,
+                "CONTRASENA": contraseña
+            })
+            fs.writeFileSync('Usuarios.json', JSON.stringify(lista))
+            console.log("Usuario registrado con éxito")
+        }
+       
+}
+export {Iniciar};
+
+function Logueo()
+{
+      //  var nombre = document.getElementById('nombre').value
+  // var contraseña = document.getElementById('contraseña').value
+  //  var gmail = document.getElementById('gmail').value
+  //  var apellido = document.getElementById('apellido').value
+  var nombre    = "nombre"
+    var apellido  = "apellido"
+    var gmail     = "gmail"
+    var contraseña = "contraseña"
+
+  for (var i =0; i<registro.length;i++)
     {
-            console.log (sesion + "se registró. ")
-            window.location.href = 'https://google.com/';
-            return
+        if (gmail === registro[i].GMAIL && contraseña === registro[i].CONTRASENA && nombre === registro[i].NOMBRE && apellido === registro[i].APELLIDO)
+        {
+            console.log ("Has iniciado sesión con éxito")
+            var encontrado = true
+            var logueado = true
+            break
+        }
+        else if (contraseña != registro[i].CONTRASENA && gmail === registro[i].GMAIL)
+        {
+            console.log ("La contraseña es incorrecta")
+            var logueado = false
+            var encontrado = true
+            break
+        }
+        else if ((nombre != registro[i].NOMBRE || apellido != registro[i].APELLIDO) && (gmail === registro[i].GMAIL))
+        {
+            console.log ("Has ingresado mal tu nombre o apellido")
+            var logueado = false
+            var encontrado = true
+            break
+        }
+        else if (gmail != registro[i].GMAIL)
+        {
+            encontrado = false
+        }
     }
+    if (encontrado != true)
+    {
+        console.log ("No se ha encontrado una cuenta con ese correo")
     }
-    console.log("El nombre de usuario y la contraseña no coinciden.")
-}   
-
-
-
+}
+export {Logueo};
