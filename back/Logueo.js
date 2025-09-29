@@ -1,4 +1,5 @@
 import fs from "fs";
+import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
@@ -44,7 +45,7 @@ function Logueo()
   // var contraseña = document.getElementById('contraseña').value
   //  var gmail = document.getElementById('gmail').value
   //  var apellido = document.getElementById('apellido').value
-  var nombre    = "nombre"
+    var nombre    = "nombre"
     var apellido  = "apellido"
     var gmail     = "gmail"
     var contraseña = "contraseña"
@@ -81,5 +82,10 @@ function Logueo()
     {
         console.log ("No se ha encontrado una cuenta con ese correo")
     }
+
+    return logueado
+    return encontrado
 }
 export {Logueo};
+
+startServer
