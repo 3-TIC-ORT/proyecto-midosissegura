@@ -1,5 +1,6 @@
 let nivelglucemia= 70;
 const plato= document.getElementById ("plato");
+const platopantalla = null;
 const platofideos = document.getElementById ("Fideos");
 const platopapasfritas = document.getElementById ("PapasFritas");
 const platocarne = document.getElementById ("Carne");
@@ -12,15 +13,22 @@ function cambiosglucemia (cambio) {
 }
 
 const platos= [
-    "fideos.jpg",
-    "carneeeee.jfif",
-    "helado.jpg",
-    "papas.jfif"
+    platofideos,
+    platopapasfritas,
+    platocarne,
+    platohelado
 ];
 
 function platoaleatorio () {
     const platorandom= Math.floor(Math.random() * platos.length);
-    plato.src =  platos [platorandom];
+    
+    platos.forEach (function(plato, i) {
+    if (i===platorandom) {
+        plato.style.display = "inline";
+    } else {
+        plato.style.display = "none";
+    }
+})
 }
 
 window.onload = function () {
