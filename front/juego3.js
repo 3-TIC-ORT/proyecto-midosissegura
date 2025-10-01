@@ -5,6 +5,7 @@ const botonorden4 = document.getElementById("boton4");
 const botonorden5 = document.getElementById("boton5");
 const botonorden6 = document.getElementById("boton6");
 const botonorden7 = document.getElementById("boton7");
+let resultadoDiv = document.getElementById("resultadodiv");
 let correcttos = 0
 const botonreiniciar = document.getElementById("botonreiniciar");
 const img1 = document.getElementById("imagen1");
@@ -16,12 +17,6 @@ const img3 = document.getElementById("imagen3");
   const img7 = document.getElementById("imagen7");
  const contenedor = document.querySelector(".containerdeimg");
 botonreiniciar.addEventListener("click", () => {
-  function actualizarVisibilidad() {
-    const elementos = document.querySelectorAll("#resultadodiv");
-    elementos.forEach(el => {
-      el.style.display = mostrarInputs ? "block" : "none";
-    });
-  }actualizarVisibilidad=false
   function mezclarElementos(container) {
     let imagenes = Array.from(container.children);
     for (let i = imagenes.length - 1; i > 0; i--) {
@@ -83,37 +78,38 @@ botonresultado.addEventListener("click", () => {
   let fondo6 = window.getComputedStyle(botonorden6).backgroundImage;
   let fondo7 = window.getComputedStyle(botonorden7).backgroundImage;
 
-  correcttos = 0; // Reinicia el contador de correctos
+  correcttos = 0;
 
-  if (fondo1.includes("paso%201.png")) {
-    correcttos++;
-  }
-  if (fondo2.includes("Paso-2.jpg")) {
-    correcttos++;
-  }
-  if (fondo3.includes("Paso-3.jpg")) {
-    correcttos++;
-  }
-  if (fondo4.includes("Paso-4.jpg")) {
-    correcttos++;
-  }
-  if (fondo5.includes("Paso-5.jpg")) {
-    correcttos++;
-  }
-  if (fondo6.includes("Paso-6.jpg")) {
-    correcttos++;
-  }
-  if (fondo7.includes("Paso-7.jpg")) {
-    correcttos++;
-  }
+  if (fondo1.includes("paso%201.png")) correcttos++;
+  if (fondo2.includes("Paso-2.jpg")) correcttos++;
+  if (fondo3.includes("paso-3.png")) correcttos++;
+  if (fondo4.includes("paso-4.png")) correcttos++;
+  if (fondo5.includes("paso-5.png")) correcttos++;
+  if (fondo6.includes("paso-6.png")) correcttos++;
+  if (fondo7.includes("paso-7.png")) correcttos++;
 
-  // Llama a la función actualizarVisibilidad si la imagen 7 está en el botón 7
-  actualizarVisibilidad(correcttos === 7);
+
+if (correcttos==7) {
+     resultadoDiv.classList.add("verde");
+resultadoDiv.textContent="tenes "+correcttos+" correctos";
+  }
+else if (correcttos<7 && correcttos>3) {
+   resultadoDiv.classList.add("amarillo");
+   resultadoDiv.textContent="tenes "+correcttos+" correctos";
+}
+else {
+   resultadoDiv.classList.add("rojo");
+   resultadoDiv.textContent="tenes "+correcttos+" correctos";
+}
+actualizarVisibilidad(true);
 });
-
-
 function actualizarVisibilidad(mostrar) {
-  console.log("Mostrar resultado:", mostrar); // Depuración
   const resultadoDiv = document.getElementById("resultadodiv");
-  resultadoDiv.style.display = mostrar ? "block" : "none";
+  if (mostrar) {
+    resultadoDiv.style.display = "flex";  // se muestra como flex
+    resultadoDiv.style.alignItems = "center";
+    resultadoDiv.style.justifyContent = "center";
+  } else {
+    resultadoDiv.style.display = "none";  // se oculta
+  }
 }
