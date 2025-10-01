@@ -1,7 +1,7 @@
+import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
 import fs from "fs";
-import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
-
+startServer({ port: 3000 });
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 
 
@@ -10,10 +10,10 @@ var lista = registro
 
 function Iniciar()
 {
-  //  var nombre = document.getElementById('nombre').value
-  // var contraseña = document.getElementById('contraseña').value
-  //  var gmail = document.getElementById('gmail').value
-  //  var apellido = document.getElementById('apellido').value
+   var nombre = document.getElementById('nombre').value
+  var contraseña = document.getElementById('contraseña').value
+   var gmail = document.getElementById('gmail').value
+   var apellido = document.getElementById('apellido').value
 
 
     for (var i =0; i<registro.length;i++)
@@ -42,7 +42,7 @@ export {Iniciar};
 function Logueo()
 {
       //  var nombre = document.getElementById('nombre').value
-  // var contraseña = document.getElementById('contraseña').value
+    // var contraseña = document.getElementById('contraseña').value
   //  var gmail = document.getElementById('gmail').value
   //  var apellido = document.getElementById('apellido').value
     var nombre    = "nombre"
@@ -88,4 +88,3 @@ function Logueo()
 }
 export {Logueo};
 
-startServer
