@@ -33,6 +33,7 @@ function platoaleatorio () {
 
 window.onload = function () {
     platoaleatorio ();
+    nivelglucemia=70;
 }
 
 platofideos.addEventListener ("click", function() {
