@@ -1,8 +1,0 @@
-.niveltermometro {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    height: 70px;
-    transition: height 0.3s;
-}
