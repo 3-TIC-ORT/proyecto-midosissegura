@@ -47,6 +47,10 @@
     font-weight: bold;
     z-index: 1000;
     display: none; 
+    width: 701px;
+height: 682px;
+margin-top: 76.06px;
+margin-left: 258.4px;
 }
 .amarillo {
     background-color: #F3F36E;
@@ -61,9 +65,12 @@
     border: 15px solid #FF0000;
 }
 .cruz {
-    background-image: url("imagenes/cruz.png");
-    background-size: cover;
-    background-position: center;
-    height:  15px;
-    width: 15px;
+    position: absolute;  /* en lugar de fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;  /* dale tamaño para asegurarte */
+    height: 80px;
+    margin-top: 31px;
+    margin-left: 584px;
 }

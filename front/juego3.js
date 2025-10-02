@@ -91,15 +91,18 @@ botonresultado.addEventListener("click", () => {
 
 if (correcttos==7) {
      resultadoDiv.classList.add("verde");
-resultadoDiv.textContent="tenes "+correcttos+" correctos";
+ resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
   }
 else if (correcttos<7 && correcttos>3) {
    resultadoDiv.classList.add("amarillo");
-   resultadoDiv.textContent="tenes "+correcttos+" correctos";
+ resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
 }
 else {
    resultadoDiv.classList.add("rojo");
-   resultadoDiv.textContent="tenes "+correcttos+" correctos";
+ resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
 }
 actualizarVisibilidad(true);
 });
