@@ -1,21 +1,15 @@
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
 import fs from "fs";
 
-startServer({ port: 3000 });
+
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 
 
 var lista = registro
 
 
-function Iniciar()
+function Iniciar(gmail, contraseña, nombre, apellido)
 {
-   var nombre = document.getElementById('nombre').value
-  var contraseña = document.getElementById('contraseña').value
-   var gmail = document.getElementById('gmail').value
-   var apellido = document.getElementById('apellido').value
-
-
     for (var i =0; i<registro.length;i++)
     {
         if (gmail === registro[i].GMAIL)
@@ -39,16 +33,8 @@ function Iniciar()
 }
 export {Iniciar};
 
-function Logueo()
+function Logueo(gmail, contraseña, nombre, apellido)
 {
-      //  var nombre = document.getElementById('nombre').value
-    // var contraseña = document.getElementById('contraseña').value
-  //  var gmail = document.getElementById('gmail').value
-  //  var apellido = document.getElementById('apellido').value
-    var nombre    = "nombre"
-    var apellido  = "apellido"
-    var gmail     = "gmail"
-    var contraseña = "contraseña"
 
   for (var i =0; i<registro.length;i++)
     {
@@ -83,8 +69,7 @@ function Logueo()
         console.log ("No se ha encontrado una cuenta con ese correo")
     }
 
-    return logueado
-    return encontrado
+    return [logueado,encontrado]
 }
 export {Logueo};
 
