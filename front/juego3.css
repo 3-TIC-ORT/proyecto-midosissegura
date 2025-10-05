@@ -1,3 +1,11 @@
+/* apply background color to the actual body element (not .body) */
+body {
+  background-color: #A3DFF2;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+
 .containerdeimg {
     display: flex;
     flex-direction: column;  
@@ -33,24 +41,26 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
+        /* margin and font-family already set above */
       }
 .resultadodiv {
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 1000;
-    display: none; 
-    width: 701px;
-height: 682px;
-margin-top: 76.06px;
-margin-left: 258.4px;
+  position: fixed;
+  /* match Figma: specific position and size */
+  top: 76.06px;
+  left: 258.4px;
+  transform: none;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
+  display: none;
+  width: 701px;
+  height: 682px;
+  padding: 24px;
+  box-sizing: border-box;
+  opacity: 1;
 }
 .amarillo {
     background-color: #F3F36E;
@@ -65,12 +75,25 @@ margin-left: 258.4px;
     border: 15px solid #FF0000;
 }
 .cruz {
-    position: absolute;  /* en lugar de fixed */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;  /* dale tamaño para asegurarte */
-    height: 80px;
-    margin-top: 31px;
-    margin-left: 584px;
+  position: absolute; /* positioned relative to the result container */
+  /* place the cross inside the top-right corner of the result box */
+  top: 12px;
+  right: 12px;
+  width: 48px; /* smaller so it fits inside without overlaying too much */
+  height: 48px;
+  transform: none; /* no centrar con translate, ya está en la esquina */
+}
+.frame{
+  position: fixed;
+  width: 1267.6707763671875px;
+  height: 823.3153076171875px;
+ 
+  left: 87.6px;
+  opacity: 1;
+  box-sizing: border-box;
+  border: 6.71px solid black;
+  background: transparent;
+  pointer-events: none; /* doesn't block clicks */
+  z-index: 900; /* behind the result popup which is 1000 */
+  background-color: #10CE2C; /* green background */
 }
