@@ -62,6 +62,7 @@ function aplicarFondo(boton) {
     boton.style.backgroundSize = "cover";
     boton.style.backgroundPosition = "center";
   }
+  boton.textContent = "";
 }
 botonorden1.addEventListener("click", () => aplicarFondo(botonorden1));
 botonorden2.addEventListener("click", () => aplicarFondo(botonorden2));

@@ -20,23 +20,24 @@ body {
     margin: 10px;
 }
 .boton{
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
+    width: 165.16612243652344px;
+height: 160.13568115234375px;
     gap: 10px;
     color: black;
     font-size: 50px;
-    
+    border-radius: 100%;
+    font-family: Fredoka One;
+font-weight: 400;
+font-style: Regular;
+font-size: 107.32px;
+line-height: 100%;
+letter-spacing: 0%;
+background-color: #FFFFFFB2;;
+border: 2.52px solid #FFFFFF;
 }
 .boton:hover{
-    background-color:aqua;
-    cursor: pointer;
-    color: white;
-    font-size: 50px;
-    border-radius: 20px;
-    gap: 10px;
-    width: 110px;
-    height: 110px;
+padding: 5%;
+ transition: all 0.3s ease;
 }
 .resultadodiv {
   position: fixed;
@@ -76,4 +77,72 @@ body {
   height: 48px;
   transform: none;
   cursor: pointer;
+}
+.frame{
+    width: 1267.6707763671875px;
+height: 823.3153076171875px;
+opacity: 1;
+margin-top: 136.94px;
+margin-left: 87.6px;
+border: black,solid,6.71px;
+background-color: #10CE2C;
+}
+.dinoazul{
+    position: fixed;
+    width: 224.69297790527344;
+height: 192.83352661132812;
+opacity: 1;
+margin-top: 300.15px;
+margin-left: 104.8px;
+}
+.dinoamarillo{
+    position: fixed;
+ width: 207.92483520507812px;
+height: 185.28787231445312;
+opacity: 1;
+margin-top:12.58px ;
+margin-left: 430.94px;
+}
+.dinovioleta{
+    width: 285.0582580566406;
+height: 219.6625213623047;
+opacity: 1;
+margin-top: 643.06px;
+margin-left: 568.44px;
+}
+.boton1{
+    position: fixed;
+opacity: 1;
+margin-top: 103.12px;
+margin-left: 91.38px;
+}
+.boton2{
+    position: fixed;
+    width: 165.16612243652344;
+height: 160.13568115234375;
+opacity: 1;
+margin-top: 162.65px;
+margin-left: 336.2px;
+border-width: 2.52px;
+border-radius: 83.84px;
+}
+.boton3{
+    position: fixed;
+    width: 165.16612243652344;
+    height: 160.13568115234375;
+    opacity: 1;
+   margin-top:  148.4px;
+   margin-left:  581.01px;
+    border-width: 2.52px;
+    border-radius: 83.84px;
+}
+.boton4{
+    position: fixed;
+    width: 165.16612243652344;
+height: 160.13568115234375;
+opacity: 1;
+margin-top: 354.65px;
+margin-left: 562.57px;
+border-width: 2.52px;
+border-radius: 83.84px;
 }
