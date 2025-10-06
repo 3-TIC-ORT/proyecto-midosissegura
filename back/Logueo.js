@@ -8,11 +8,11 @@ var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 var lista = registro
 
 
-function Iniciar(gmail, contraseña, nombre, apellido)
+function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
     {
-        if (gmail === registro[i].GMAIL)
+        if (data.GMAIL === registro[i].GMAIL)
         {
             console.log ("Este correo ya está siendo utilizado por otra cuenta")
             var serepite = true
@@ -33,33 +33,33 @@ function Iniciar(gmail, contraseña, nombre, apellido)
 }
 export {Iniciar};
 
-function Logueo(gmail, contraseña, nombre, apellido)
+function Logueo(data)
 {
 
   for (var i =0; i<registro.length;i++)
     {
-        if (gmail === registro[i].GMAIL && contraseña === registro[i].CONTRASENA && nombre === registro[i].NOMBRE && apellido === registro[i].APELLIDO)
+        if (data.GMAIL === registro[i].GMAIL && data.CONTRASENA === registro[i].CONTRASENA && data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
         {
             console.log ("Has iniciado sesión con éxito")
             var encontrado = true
             var logueado = true
             break
         }
-        else if (contraseña != registro[i].CONTRASENA && gmail === registro[i].GMAIL)
+        else if (data.CONTRASENA != registro[i].CONTRASENA && data.GMAIL === registro[i].GMAIL)
         {
             console.log ("La contraseña es incorrecta")
             var logueado = false
             var encontrado = true
             break
         }
-        else if ((nombre != registro[i].NOMBRE || apellido != registro[i].APELLIDO) && (gmail === registro[i].GMAIL))
+        else if ((data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO) && (data.GMAIL === registro[i].GMAIL))
         {
             console.log ("Has ingresado mal tu nombre o apellido")
             var logueado = false
             var encontrado = true
             break
         }
-        else if (gmail != registro[i].GMAIL)
+        else if (data.GMAIL != registro[i].GMAIL)
         {
             encontrado = false
         }
@@ -73,3 +73,83 @@ function Logueo(gmail, contraseña, nombre, apellido)
 }
 export {Logueo};
 
+function AñadirTrofeo(data)
+{
+    if (data.T1 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T1 = true
+            }
+        }
+    }
+
+    if (data.T2 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T2 = true
+            }
+        }
+    }
+    if (data.T3 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T3 = true
+            }
+        }
+    }
+    if (data.T4 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T4 = true
+            }
+        }
+    }
+    if (data.T5 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T5 = true
+            }
+        }
+    }
+    if (data.T6 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T6 = true
+            }
+        }
+    }
+    if (data.T7 === true)
+    {
+        for (var i = 0; i < lista.length; i++)
+        {
+            if (data.GMAIL === lista[i].GMAIL)
+            {
+                lista[i].T7 = true
+            }
+        }
+    }
+
+
+    fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
+    
+}
+
+export {AñadirTrofeo};
