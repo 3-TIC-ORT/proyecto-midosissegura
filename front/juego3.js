@@ -6,16 +6,18 @@ const botonorden5 = document.getElementById("boton5");
 const botonorden6 = document.getElementById("boton6");
 const botonorden7 = document.getElementById("boton7");
 let resultadoDiv = document.getElementById("resultadodiv");
-let correcttos = 0
+let correcttos = 0;
 const botonreiniciar = document.getElementById("botonreiniciar");
+const botonresultado = document.getElementById("botonresultado");
 const img1 = document.getElementById("imagen1");
 const img2 = document.getElementById("imagen2");
 const img3 = document.getElementById("imagen3");
-  const img4 = document.getElementById("imagen4");
-  const img5 = document.getElementById("imagen5");
-  const img6 = document.getElementById("imagen6");
-  const img7 = document.getElementById("imagen7");
- const contenedor = document.querySelector(".containerdeimg");
+const img4 = document.getElementById("imagen4");
+const img5 = document.getElementById("imagen5");
+const img6 = document.getElementById("imagen6");
+const img7 = document.getElementById("imagen7");
+const contenedor = document.querySelector(".containerdeimg");
+
 botonreiniciar.addEventListener("click", () => {
   function mezclarElementos(container) {
     let imagenes = Array.from(container.children);
@@ -29,7 +31,7 @@ botonreiniciar.addEventListener("click", () => {
   }
   mezclarElementos(contenedor);
 });
-let imagenSeleccionada =null;
+let imagenSeleccionada = null;
 
 img1.addEventListener("click", () => {
   imagenSeleccionada = img1.getAttribute("src");
@@ -57,7 +59,7 @@ img7.addEventListener("click", () => {
 function aplicarFondo(boton) {
   if (imagenSeleccionada) {
     boton.style.backgroundImage = `url("${imagenSeleccionada}")`;
-    boton.style.backgroundSize = "cover";  
+    boton.style.backgroundSize = "cover";
     boton.style.backgroundPosition = "center";
   }
 }
@@ -89,30 +91,38 @@ botonresultado.addEventListener("click", () => {
   if (fondo7.includes("paso-7.png")) correcttos++;
 
 
-if (correcttos==7) {
-     resultadoDiv.classList.add("verde");
- resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
-     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
+  if (correcttos == 7) {
+    resultadoDiv.classList.add("verde");
+    resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+      '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
+  } else if (correcttos < 7 && correcttos > 3) {
+    resultadoDiv.classList.add("amarillo");
+    resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+      '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
+  } else {
+    resultadoDiv.classList.add("rojo");
+    resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
+      ('<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">');
   }
-else if (correcttos<7 && correcttos>3) {
-   resultadoDiv.classList.add("amarillo");
- resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
-     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
-}
-else {
-   resultadoDiv.classList.add("rojo");
- resultadoDiv.innerHTML = "tenes " + correcttos + " correctos" +
-     '<img src="/front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
-}
-actualizarVisibilidad(true);
+  actualizarVisibilidad(true);
 });
+
 function actualizarVisibilidad(mostrar) {
   const resultadoDiv = document.getElementById("resultadodiv");
   if (mostrar) {
-    resultadoDiv.style.display = "flex";  // se muestra como flex
+    resultadoDiv.style.display = "flex";
     resultadoDiv.style.alignItems = "center";
     resultadoDiv.style.justifyContent = "center";
   } else {
-    resultadoDiv.style.display = "none";  // se oculta
+    resultadoDiv.style.display = "none";
   }
 }
+cruz.addEventListener("click", function() {
+
+  resultadoDiv.innerHTML = "";
+  correcttos = 0;
+  resultadoDiv.class.remove("verde");
+  resultadoDiv.class.remove("amarillo");
+  resultadoDiv.class.remove("rojo");
+
+});
