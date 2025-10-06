@@ -146,3 +146,37 @@ margin-left: 562.57px;
 border-width: 2.52px;
 border-radius: 83.84px;
 }
+.boton5{
+    position: fixed;
+    width: 165.16612243652344;
+height: 160.13568115234375;
+opacity: 1;
+border-width: 2.52px;
+border-radius: 83.84px;
+margin-top:435.13px; 
+margin-left:347.94px;
+}
+.boton6{
+    position: fixed;
+    width: 165.16612243652344;
+height: 160.13568115234375;
+opacity: 1;
+margin-top: 456.93px;
+margin-left: 93.07px;
+border-width: 2.52px;
+border-radius: 83.84px;
+
+}
+.boton7{
+    position: fixed;
+    width: 165.16612243652344;
+height: 160.13568115234375;
+opacity: 1;
+margin-top: 634.67px;
+margin-left: 193.67px;
+border-width: 2.52px;
+border-radius: 83.84px;
+}
+.camino{
+    
+}
