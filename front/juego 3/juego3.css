@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Fredoka One', Arial, sans-serif;
-  background-image: url('juego\ pantalla\ general\ vista.png');
+  background-color: #39ABD9;
 }
 *{
     font-family: 'Fredoka One';
@@ -20,10 +20,7 @@ opacity: 1;
 border: black,solid,6.71px;
 border-radius: 50%;
 cursor: pointer;
-
-
 position: relative;
-
 }
 .boton{
     width: 165.16612243652344px;
@@ -42,6 +39,12 @@ letter-spacing: 0%;
 background-color: #FFFFFFB2;;
 border: 2.52px solid #FFFFFF;
 cursor: pointer;
+  font-weight: 800;
+font-weight: 400;
+font-style: normal;
+font-size: 107.32px;
+line-height: 100%;
+letter-spacing: 0%;
 }
 .boton:hover{
 padding: 5%;
@@ -67,6 +70,10 @@ padding: 5%;
   gap: 18px;
   color: #000;
   z-index: -3;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .amarillo {
     background-color: #F3F36E;
@@ -234,6 +241,7 @@ width: 36.889888763427734px;
 height: 827.50732421875px;
 opacity: 1;
 margin-left: 853.5px;
+z-index: 2;
 }
 .piedras4{
   width: 426.33099365234375;
@@ -329,6 +337,7 @@ left: 89.71px;
 border-width: 6.71px;
 }
 .txtresultado{
+
   margin: 0;
   padding: 0;
   font-family: 'Fredoka One', Arial, sans-serif;
@@ -341,6 +350,9 @@ border-width: 6.71px;
   color: #000;
   text-transform: uppercase;
     transform: none;
+    width: 555;
+height: 179;
+opacity: 1;
 }
 
 .txtresultado .numero {
@@ -357,4 +369,62 @@ border-width: 6.71px;
 }
 .zindex{
   z-index: 10;
+}
+.felicidades{
+position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 555;
+height: 77;
+opacity: 1;
+font-family: "Fredoka One";
+font-weight: 400;
+font-style: normal;
+font-size: 64px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+margin-top: 250px;
+margin-left: 75px;
+}
+.textosresultado{
+  
+    display: flex;
+  flex-direction: column;
+
+
+  position: absolute;
+width: 555px;
+height: 338px;
+top: 149px;
+left: 69px;
+opacity: 1;
+gap: 82px;
+
+}
+*{
+  font-family: 'Fredoka One', sans-serif;
+font-style: normal;
+}
+.botonresultado{
+  position: absolute;
+  width: 425px;
+height: 68.7621841430664px;
+margin-top: 500px;
+opacity: 1;
+border-width: 6.63px;
+gap: 8.28px;
+border-radius: 49.71px;
+padding: 8.28px;
+background-color: #39ABD9;
+border: #000000,solid,6.63px;
+cursor: pointer;
+font-family: "Fredoka One";
+font-weight: 400;
+font-style: normal;
+font-size: 39.77px;
+line-height: 100%;
+letter-spacing: 0%;
 }
