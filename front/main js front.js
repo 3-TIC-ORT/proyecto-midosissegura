@@ -1,5 +1,6 @@
 
 let btniniciosesion= document.getElementById("btniniciosesion")
+connect2Server(3000)
 function cambiardatosdelusuario() {
    
     contrseña = document.getElementById("contraseña").value;
@@ -38,14 +39,5 @@ btniniciosesion.addEventListener("click", () => {
  
   
 
-document.getElementById("btndecambiodelusuario").addEventListener("click", a);
-function a (){
-if ( ratioinsulina !== "" ||  gmail !== "" || contrseña !== "" ){
-    
-    mostrarcambiardatos= false;  
-}
-else {
-        mostrarcambiardatos= true;  
-}
-actualizarVisibilidad()}
-window.onload = actualizarVisibilidad;
+
+

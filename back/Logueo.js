@@ -1,10 +1,10 @@
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
 import fs from "fs";
-
+startServer(3000);
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
-
-
+subscribePOSTEvent("iniciarsesion", Logueo);
+subscribePOSTEvent("iniciarsecion", Logueo());
 var lista = registro
 
 

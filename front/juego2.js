@@ -69,7 +69,7 @@ botonresultado.addEventListener("click", () => {
   let fondo4 = window.getComputedStyle(botonorden4).backgroundImage;
   let fondo5 = window.getComputedStyle(botonorden5).backgroundImage;
   if (
-    fondo1.includes("paso%201.png") &&  fondo2.includes("Paso-2.jpg") && fondo3.includes("paso-3.png") &&fondo4.includes("paso-4.png") &&fondo5.includes("paso-5.png") )
+    fondo1.includes("paso-1.png") &&  fondo2.includes("Paso-2.jpg") && fondo3.includes("paso-3.png") &&fondo4.includes("paso-4.png") &&fondo5.includes("paso-5.png") )
    
    
    {
