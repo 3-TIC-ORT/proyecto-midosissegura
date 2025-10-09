@@ -1,13 +1,10 @@
 
 let btniniciosesion= document.getElementById("btniniciosesion")
 function cambiardatosdelusuario() {
-    const inputcontraseña = document.getElementById("contraseña");
-    const valorinputcontraseña = inputcontraseña.value;
-    let contrseña = valorinputcontraseña;
+   
+    contrseña = document.getElementById("contraseña").value;
     console.log("contraseña:" + contrseña);
-    const inputgmail = document.getElementById("gmail");
-    const valorinputgmail = inputgmail.value;
-    let gmail = valorinputgmail;
+    gmail = document.getElementById("gmail").value;
     console.log( "correo electronico:" +gmail);
     const inputratioinsulina= document.getElementById("ratioinsulina");
     const  valorinputratioinsulina= inputratioinsulina.value;
@@ -38,3 +35,17 @@ btniniciosesion.addEventListener("click", () => {
 });
 
 
+ 
+  
+
+document.getElementById("btndecambiodelusuario").addEventListener("click", a);
+function a (){
+if ( ratioinsulina !== "" ||  gmail !== "" || contrseña !== "" ){
+    
+    mostrarcambiardatos= false;  
+}
+else {
+        mostrarcambiardatos= true;  
+}
+actualizarVisibilidad()}
+window.onload = actualizarVisibilidad;

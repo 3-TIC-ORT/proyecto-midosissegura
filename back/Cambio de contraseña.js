@@ -17,7 +17,8 @@ var Usuario =
 
 function Cambio()
 {
-var sesion = document.getElementById('sesion').value
+var nombre= document.getElementById('nombre').value
+var apellido = document.getElementById('apellido').value
 var contraseña = document.getElementById('contraseña').value
 var gmail = document.getElementById("gmail").value
 var nuevacontraseña = document.getElementById ("nueva contraseña").value
@@ -28,7 +29,7 @@ for (var i = 0; i< Usuario.length;i++)
     {
             console.log("Contraseña cambiada")
     }
-    else if (gmail == Usuario[i].gmail && (nuevocorreo != Usuario[i].gmail))
+    else if (gmail == Usuario[i].gmail && (nuevocorreo != Usuario[i].gmail) && (contraseña == Usuario[i].contraseña))
     {
         console.log("Mail cambiado")
     }
