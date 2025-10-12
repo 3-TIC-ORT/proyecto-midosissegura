@@ -31,7 +31,6 @@ function Iniciar(data)
        
 }
 export {Iniciar};
-
 function Logueo(data)
 {
 
@@ -42,6 +41,7 @@ function Logueo(data)
             console.log ("Has iniciado sesión con éxito")
             var encontrado = true
             var logueado = true
+            var contra=true
             break
         }
         else if (data.CONTRASENA != registro[i].CONTRASENA && data.GMAIL === registro[i].GMAIL)
@@ -49,6 +49,7 @@ function Logueo(data)
             console.log ("La contraseña es incorrecta")
             var logueado = false
             var encontrado = true
+            var contra=false
             break
         }
         else if ((data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO) && (data.GMAIL === registro[i].GMAIL))
@@ -56,6 +57,7 @@ function Logueo(data)
             console.log ("Has ingresado mal tu nombre o apellido")
             var logueado = false
             var encontrado = true
+            var contra=true
             break
         }
         else if (data.GMAIL != registro[i].GMAIL)
@@ -66,9 +68,11 @@ function Logueo(data)
     if (encontrado != true)
     {
         console.log ("No se ha encontrado una cuenta con ese correo")
+        var logueado = false
+        var contra=false
     }
 
-  return { logueado };
+  return [logueado,encontrado,contra];
 }
 export {Logueo};
 

@@ -1,0 +1,71 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  background-color: #A3DFF2;
+
+}
+.logo{
+    position: absolute;
+    width: 420px;
+height: 237px;
+top: 26px;
+left: 58px;
+opacity: 1;
+}
+.frameazul{
+ position: absolute;
+
+width: 795px;
+height: 721px;
+top: 181px;
+left: 358px;
+opacity: 1;
+border-width: 8px;
+gap: 128px;
+border-radius: 30px;
+
+background-color: #39ABD9;
+border: 8px solid #000000;
+}
+.putamadre{
+width: 806px;
+height: 384px;
+opacity: 1;
+}
+.padreoniño{
+    position: relative;
+    width: 616px;
+height: 279px;
+top: 79px;
+left: 95px;
+opacity: 1;
+border-radius: 1000px;
+}
+.emaa{
+    position: absolute;
+    width: 806px;
+height: 64px;
+left: 77px;
+opacity: 1;
+}
+.emaforra{
+    position: absolute;
+    width: 261px;
+height: 62px;
+left: 211px;
+opacity: 1;
+gap: 10px;
+padding: 10px;
+}
+.quieneres{
+    font-family: 'Fredoka', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #000000;
+}

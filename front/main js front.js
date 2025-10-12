@@ -35,13 +35,23 @@ postEvent("iniciarsesion", {
 
 });
 function comprobaciondedatos(data) {
-    if (data.logueado) {
+    let logueado = data[0];
+    let encontrado = data[1];
+    let contra = data[2];
+    if (logueado === true && encontrado === true && contra === true) {
         alert("Has iniciado sesión con éxito");
-
     }
-else {
-    alert("Error al iniciar sesión. Por favor, verifica tus datos e inténtalo de nuevo.");
-}}
+    else if (encontrado === true && contra === false && logueado === false) {
+    alert("La contraseña es incorrecta");
+}
+else if (encontrado === true && contra === true && logueado === false) {
+    alert("Has ingresado mal tu nombre o apellido");
+}
+else if (encontrado === false) {
+    alert("No se ha encontrado una cuenta con ese correo");
+}
+
+}
 
  
   
