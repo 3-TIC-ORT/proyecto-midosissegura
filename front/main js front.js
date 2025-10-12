@@ -26,15 +26,20 @@ function obtenerDatosUsuario() {
 }
 btniniciosesion.addEventListener("click", () => {
     const datos = obtenerDatosUsuario();
-    postEvent("iniciarsesion", datos, (data) => {
-        if (data === true) {
-            alert("Inicio de sesión exitoso ✅");
-        } else {
-            alert("Error en inicio de sesión ❌");
-        }
-    });
+    postEvent("iniciarsesion", {nombre: document.getElementById("nombre").value,
+        apellido: document.getElementById("apellido").value,
+        gmail: document.getElementById("gmail").value,
+        contraseña: document.getElementById("contraseña").value}, comprobaciondedatos
+    );
 });
+function comprobaciondedatos(data) {
+    if (data.logueado) {
+        alert("Has iniciado sesión con éxito");
 
+    }
+else {
+    alert("Error al iniciar sesión. Por favor, verifica tus datos e inténtalo de nuevo.");
+}}
 
  
   

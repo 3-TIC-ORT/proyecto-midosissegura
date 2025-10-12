@@ -3,12 +3,11 @@ let pclave = document.getElementById("pclave");
 let iclave = document.getElementById("cclave");
 let btnCambiar = document.getElementById("btndecambiodelusuario");
 let ptrofeos = document.getElementById("ptrofeos");
-
 let usuario = "Invitado";
 let clave = "1234";
 let mostrarInputs = false; 
 let trofeos = 1;
-
+let claveant=""
 // Función de usuario
 function actualizarTextoUsuario() {
   pusuario.textContent = "Usuario: " + usuario;
@@ -41,12 +40,22 @@ btnCambiar.addEventListener("click", () => {
 // Cambiar clave al presionar Enter
 iclave.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
+    claveant=clave
     clave = iclave.value;
-    actualizarTextoClave();
+   if(confirm("estas seguro que "+clave +" sea tu nueva contraseña?")){
+   actualizarTextoClave();
+    mostrarInputs = false;
+    actualizarVisibilidad(false)
+    iclave.value = "";
   }
-});
-
-// Inicializar
+  else{
+    clave=claveant
+       actualizarTextoClave();
+    mostrarInputs = false;
+    actualizarVisibilidad(false)
+    iclave.value = "";
+  }
+}});
 actualizarTextoUsuario();
 actualizarTextoClave();
 actualizarVisibilidad();

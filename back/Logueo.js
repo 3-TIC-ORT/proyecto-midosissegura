@@ -4,7 +4,6 @@ startServer(3000);
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 subscribePOSTEvent("iniciarsesion", Logueo);
-subscribePOSTEvent("iniciarsecion", Logueo());
 var lista = registro
 
 
@@ -69,7 +68,7 @@ function Logueo(data)
         console.log ("No se ha encontrado una cuenta con ese correo")
     }
 
-    return [logueado,encontrado]
+    return [logueado]
 }
 export {Logueo};
 
