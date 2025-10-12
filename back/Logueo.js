@@ -68,7 +68,7 @@ function Logueo(data)
         console.log ("No se ha encontrado una cuenta con ese correo")
     }
 
-    return [logueado]
+  return { logueado };
 }
 export {Logueo};
 

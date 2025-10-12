@@ -26,11 +26,13 @@ function obtenerDatosUsuario() {
 }
 btniniciosesion.addEventListener("click", () => {
     const datos = obtenerDatosUsuario();
-    postEvent("iniciarsesion", {nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
-        gmail: document.getElementById("gmail").value,
-        contraseña: document.getElementById("contraseña").value}, comprobaciondedatos
-    );
+postEvent("iniciarsesion", {
+  NOMBRE: document.getElementById("nombre").value,
+  APELLIDO: document.getElementById("apellido").value,
+  GMAIL: document.getElementById("gmail").value,
+  CONTRASENA: document.getElementById("contraseña").value
+}, comprobaciondedatos);
+
 });
 function comprobaciondedatos(data) {
     if (data.logueado) {
