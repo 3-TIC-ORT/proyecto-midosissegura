@@ -71,8 +71,12 @@ function Logueo(data)
         var logueado = false
         var contra=false
     }
+    if (logueado= true)
+    {
+        var Usuario = i
+    }
 
-  return [logueado,encontrado,contra];
+  return [logueado,encontrado,contra, data[Usuario]];
 }
 export {Logueo};
 
