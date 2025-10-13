@@ -1,147 +1,149 @@
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Fredoka One', Arial, sans-serif;
-  background-color: #A3DFF2;
-
-}
-.logo{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', Arial, sans-serif;
+    background-color: #A3DFF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .logo {
     position: absolute;
+    top: 26px;
+    left: 58px;
     width: 420px;
-height: 237px;
-top: 26px;
-left: 58px;
-opacity: 1;
-}
-.frameazul{
- position: absolute;
-
-width: 795px;
-height: 721px;
-top: 181px;
-left: 358px;
-opacity: 1;
-border-width: 8px;
-gap: 128px;
-border-radius: 30px;
-background-color: #39ABD9;
-border: 8px solid #000000;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.putamadre{
-width: 806px;
-height: 384px;
-opacity: 1;
-}
-.padreoniño{
-    position: relative;
-    width: 616px;
-height: 279px;
-top: 79px;
-left: 95px;
-opacity: 1;
-border-radius: 1000px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.emaa{
-    position: relative;
-    width: 806px;
-height: 64px;
-left: 77px;
-opacity: 1;
-}
-.emaforra{
-    position: absolute;
-    width: 261px;
-height: 62px;
-left: 211px;
-opacity: 1;
-gap: 10px;
-padding: 10px;
-}
-.quieneres{
+    height: 237px;
+  }
+  
+  .frameazul {
+    width: 795px;
+    height: 721px;
+    border: 8px solid #000;
+    border-radius: 30px;
+    background-color: #39ABD9;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 60px;
+    padding-top: 60px;
+margin-left: 50px;
+  }
+  
+  .iniciosesion {
+    width: 401px;
+    height: 77px;
+  }
+  
+  .quieneres {
     font-family: 'Fredoka', Arial, sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: 36px;
     line-height: 36px;
-    letter-spacing: 0px;
+    color: #000;
     text-align: center;
-    color: #000000;
-}
-.niño{
+    margin: 0;
+    white-space: nowrap; /* 🔹 Evita que el texto se divida en dos líneas */
+    display: inline-block; 
+  }
+  
+  .padreoniño {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 616px;
+    height: 279px;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+  
+  .padre, .niño {
     width: 308px;
-height: 279px;
-opacity: 1;
-border-width: 8px;
-gap: 15px;
-padding-top: 50px;
-padding-bottom: 10px;
-border-top-right-radius: 30px;
-border-bottom-right-radius: 30px;
-border: 8px solid #000000;
-background-color:#3CB371;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}
-.icononiño{
-    width: 84.20194244384766;
-height: 137.9999542236328;
-opacity: 1;
-}
-.niñop{
-    font-family: "Fredoka One";
-font-weight: 400;
-font-style: normal;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-width: 316;
-height: 58;
-opacity: 1;
-color: #000000;
-}
-.padre{
-    position: relative;
-    width: 308px;
-height: 279px;
-opacity: 1;
-border-width: 8px;
-gap: 12px;
-padding-top: 30px;
-padding-bottom: 30px;
-border-top-left-radius: 30px;
-border-bottom-left-radius: 30px;
-border: 8px solid #000000;
-background-color:#FFE100;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}
-.iconopadre{
-width: 120.99624633789062;
-height: 151.39285278320312;
-opacity: 1;
-}
-.padrep{
-    font-family: "Fredoka One";
-font-weight: 400;
-font-style: normal;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-width: 310px;
-height: 58px;
-opacity: 1;
+    height: 279px;
+    border: 8px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-}
+  }
+  
+  .padre {
+    background-color: #FFE100;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 8px solid #000000
+  }
+  
+  .niño {
+    background-color: #3CB371;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 8px solid #000000
+  }
+  
+  .iconopadre, .icononiño {
+    height: 130px;
+    object-fit: contain;
+  }
+  
+  .padrep, .niñop {
+    font-family: "Fredoka One";
+    font-size: 48px;
+    color: black;
+    margin-top:15px;
+  }
+  .emaa {
+    position: relative; /* Podés quitarlo si no lo necesitás */
+    width: 806px;
+    height: 64px;
+    opacity: 1;
+  top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .emaforra {
+    width: 261px;
+    height: 62px;
+    opacity: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .emaa {
+    width: 100%;            /* ocupa el ancho del frame azul */
+    height: 64px;           /* deja la altura original */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+  }
+  
+  .emaforra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 261px;  /* 🔹 mantengo tus medidas exactas */
+    height: 62px;  /* 🔹 igual */
+  }
+  
+  .quieneres {
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap; /* evita el salto “quién / eres” */
+
+  }
+  
