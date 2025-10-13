@@ -25,9 +25,11 @@ opacity: 1;
 border-width: 8px;
 gap: 128px;
 border-radius: 30px;
-
 background-color: #39ABD9;
 border: 8px solid #000000;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .putamadre{
 width: 806px;
@@ -42,9 +44,12 @@ top: 79px;
 left: 95px;
 opacity: 1;
 border-radius: 1000px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .emaa{
-    position: absolute;
+    position: relative;
     width: 806px;
 height: 64px;
 left: 77px;
@@ -68,4 +73,75 @@ padding: 10px;
     letter-spacing: 0px;
     text-align: center;
     color: #000000;
+}
+.niño{
+    width: 308px;
+height: 279px;
+opacity: 1;
+border-width: 8px;
+gap: 15px;
+padding-top: 50px;
+padding-bottom: 10px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+border: 8px solid #000000;
+background-color:#3CB371;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.icononiño{
+    width: 84.20194244384766;
+height: 137.9999542236328;
+opacity: 1;
+}
+.niñop{
+    font-family: "Fredoka One";
+font-weight: 400;
+font-style: normal;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+width: 316;
+height: 58;
+opacity: 1;
+color: #000000;
+}
+.padre{
+    position: relative;
+    width: 308px;
+height: 279px;
+opacity: 1;
+border-width: 8px;
+gap: 12px;
+padding-top: 30px;
+padding-bottom: 30px;
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border: 8px solid #000000;
+background-color:#FFE100;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.iconopadre{
+width: 120.99624633789062;
+height: 151.39285278320312;
+opacity: 1;
+}
+.padrep{
+    font-family: "Fredoka One";
+font-weight: 400;
+font-style: normal;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+width: 310px;
+height: 58px;
+opacity: 1;
+
 }
