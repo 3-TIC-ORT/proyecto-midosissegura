@@ -45,8 +45,8 @@ function aplicarFondo(boton) {
   if (imagenSeleccionada) {
     boton.style.backgroundImage = `url("${imagenSeleccionada}")`;
     boton.style.backgroundSize = "cover";
-    boton.style.backgroundPosition = "center"; 
-    verificarFondos()
+    boton.style.backgroundPosition = "center";
+    verificarFondos();
   }
 }
 botonorden1.addEventListener("click", () => aplicarFondo(botonorden1));
@@ -65,7 +65,15 @@ function verificarFondos() {
   let fondo6 = window.getComputedStyle(botonorden6).backgroundImage;
   let fondo7 = window.getComputedStyle(botonorden7).backgroundImage;
 
-  if (fondo1 !== "none" && fondo2 !== "none" && fondo3 !== "none" && fondo4 !== "none" && fondo5 !== "none" && fondo6 !== "none" && fondo7 !== "none") {
+  if (
+    fondo1 !== "none" &&
+    fondo2 !== "none" &&
+    fondo3 !== "none" &&
+    fondo4 !== "none" &&
+    fondo5 !== "none" &&
+    fondo6 !== "none" &&
+    fondo7 !== "none"
+  ) {
     resultadoDiv.classList.add("zindex");
     correcttos = 0;
 
@@ -90,37 +98,37 @@ function verificarFondos() {
 
     if (correcttos == 7) {
       resultadoDiv.classList.add("verde");
-    resultadoDiv.innerHTML = `
+      resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
         <p class="felicidades">¡FELICIDADES!</p>
       </div>
 <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
-    `;}
-    else if (correcttos >= 4 && correcttos < 7){
-      resultadoDiv.classList.add("verde")
-    resultadoDiv.innerHTML = `
+    `;
+    } else if (correcttos >= 4 && correcttos < 7) {
+      resultadoDiv.classList.add("verde");
+      resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
         <p class="felicidades">¡SIGUE ASÍ!</p>
       </div>
    <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
-    `}
-    else if (correcttos >= 2 && correcttos < 4){
-       resultadoDiv.classList.add("amarillo")
-    resultadoDiv.innerHTML = `
+    `;
+    } else if (correcttos >= 2 && correcttos < 4) {
+      resultadoDiv.classList.add("amarillo");
+      resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
         <p class="felicidades">¡SIGUE ASI!</p>
       </div>
 <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
-    `}
-    else
-    { resultadoDiv.classList.add("rojo")
-resultadoDiv.innerHTML = `
+    `;
+    } else {
+      resultadoDiv.classList.add("rojo");
+      resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
         <p class="felicidades">¡TU PUEDES!</p>
@@ -144,7 +152,7 @@ function actualizarVisibilidad(mostrar) {
 }
 
 function reiniciarJuego() {
- botonorden1.style.backgroundImage = "none";
+  botonorden1.style.backgroundImage = "none";
   botonorden2.style.backgroundImage = "none";
   botonorden3.style.backgroundImage = "none";
   botonorden4.style.backgroundImage = "none";
@@ -167,7 +175,8 @@ resultadoDiv.addEventListener("click", function (event) {
     actualizarVisibilidad(false);
     resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
     correcttos = 0;
-    resultadoDiv.innerHTML = '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
+    resultadoDiv.innerHTML =
+      '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
   } else if (
     event.target &&
     event.target.classList &&
@@ -175,4 +184,8 @@ resultadoDiv.addEventListener("click", function (event) {
   ) {
     reiniciarJuego();
   }
+});
+let btnatras = document.getElementById("btnatras");
+btnatras.addEventListener("click", function () {
+  window.location.href = "../paginageneraln.html";
 });

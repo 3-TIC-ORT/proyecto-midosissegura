@@ -45,7 +45,7 @@ margin-left: 50px;
     color: #000;
     text-align: center;
     margin: 0;
-    white-space: nowrap; /* 🔹 Evita que el texto se divida en dos líneas */
+    white-space: nowrap; 
     display: inline-block; 
   }
   
@@ -96,7 +96,7 @@ margin-left: 50px;
     margin-top:15px;
   }
   .emaa {
-    position: relative; /* Podés quitarlo si no lo necesitás */
+    position: relative; 
     width: 806px;
     height: 64px;
     opacity: 1;
@@ -119,19 +119,19 @@ margin-left: 50px;
   }
   
   .emaa {
-    width: 100%;            /* ocupa el ancho del frame azul */
-    height: 64px;           /* deja la altura original */
+    width: 100%;          
+    height: 64px;          
     display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
+    justify-content: center; 
+    align-items: center;     
   }
   
   .emaforra {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 261px;  /* 🔹 mantengo tus medidas exactas */
-    height: 62px;  /* 🔹 igual */
+    width: 261px;  
+    height: 62px;  
   }
   
   .quieneres {
@@ -143,7 +143,6 @@ margin-left: 50px;
     color: #000;
     text-align: center;
     margin: 0;
-    white-space: nowrap; /* evita el salto “quién / eres” */
-
+    white-space: nowrap; 
   }
   
