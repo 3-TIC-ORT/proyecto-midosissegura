@@ -20,10 +20,18 @@ function Iniciar(data)
         if (serepite != true)
             {
             lista.push ({
-                "NOMBRE": nombre ,
-                "APELLIDO":apellido ,
-                "GMAIL": gmail ,
-                "CONTRASENA": contraseña
+                "NOMBRE": data.NOMBRE ,
+                "APELLIDO": data.APELLIDO ,
+                "GMAIL": data.GMAIL ,
+                "CONTRASENA": data.CONTRASENA ,
+                "T1": false,
+                "T2": false,
+                "T3": false,
+                "T4": false,
+                "T5": false,
+                "T6": false,
+                "T7": false,
+                "Bolo" : data.BOLO
             })
             fs.writeFileSync('Usuarios.json', JSON.stringify(lista))
             console.log("Usuario registrado con éxito")
@@ -73,10 +81,11 @@ function Logueo(data)
     }
     if (logueado= true)
     {
-        var Usuario = i
+        var UsuarioR = registro[i]
+
     }
 
-  return [logueado,encontrado,contra, data[Usuario]];
+  return [logueado,encontrado,contra, UsuarioR];
 }
 export {Logueo};
 
