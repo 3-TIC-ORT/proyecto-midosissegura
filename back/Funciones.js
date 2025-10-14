@@ -31,9 +31,11 @@ function Iniciar(data)
                 "T5": false,
                 "T6": false,
                 "T7": false,
-                "Bolo" : data.BOLO
+                "Bolo" : data.BOLO,
+                "NOMBREniño": data.NOMBREniño,
+                "CONTRASENAniño": data.CONTRASENAniño
             })
-            fs.writeFileSync('Usuarios.json', JSON.stringify(lista))
+            fs.writeFileSync('Usuarios.json', JSON.stringify(lista, null, 2))
             console.log("Usuario registrado con éxito")
         }
        
@@ -50,6 +52,7 @@ function Logueo(data)
             var encontrado = true
             var logueado = true
             var contra=true
+            var UsuarioR = registro[i]
             break
         }
         else if (data.CONTRASENA != registro[i].CONTRASENA && data.GMAIL === registro[i].GMAIL)
@@ -79,11 +82,7 @@ function Logueo(data)
         var logueado = false
         var contra=false
     }
-    if (logueado= true)
-    {
-        var UsuarioR = registro[i]
 
-    }
 
   return [logueado,encontrado,contra, UsuarioR];
 }
