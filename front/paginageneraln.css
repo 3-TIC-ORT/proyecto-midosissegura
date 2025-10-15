@@ -72,7 +72,7 @@ cursor: pointer;
     position: absolute;
     width: 413px;
 height: 106px;
-left: 160.22px;
+left: 106.22px;
 border-width: 7.28px;
 opacity: 1;
 font-family: "Fredoka One";
@@ -88,10 +88,9 @@ color: #16AC2D;
 position: absolute;
 width: 297px;
 height: 106px;
-
-left: 900.64px;
-
-
+left: 843.64px;
+border-width: 7.28px;
+opacity: 1;
 opacity: 1;
 font-family: "Fredoka One";
 font-weight: 400;
@@ -107,15 +106,25 @@ color: #F7B81D;
     width: 655.0242309570312px;
 height: 547.6729736328125px;
 top: 367.73px;
-left: 698.98px;
-
+left: 720.98px;
 opacity: 1;
 display: grid;
-
 row-gap: 22.21px;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
   grid-template-rows: repeat(2, auto); 
 }
-
+.juego4{
+    position: absolute;
+    left: 327.51px;
+    top: 284.94px;
+}
+.juego2{
+position: absolute;
+  left: 327.51px;
+}
+.juego3{
+    position: absolute;
+    top: 284.94px;
+}
 
 
