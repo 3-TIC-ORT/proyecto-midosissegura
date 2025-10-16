@@ -5,8 +5,8 @@ startServer(3000);
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 subscribePOSTEvent("iniciarsesion", Logueo);
 var lista = registro
-
-
+var UsuarioR = null
+var NiñoR= null
 function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
@@ -15,7 +15,24 @@ function Iniciar(data)
         {
             console.log ("Este usuario ya existe")
             var cuentacreada = false
-        } else if (data.BOLO /*contiene números*/)
+        } else if (isNaN(data.BOLO) /*Contiene letras*/)
+        {
+            console.log ("El bolo debe ser un número")
+            var cuentacreada = false
+        } else if (/\d/.test(data.NOMBREniño) /*Contiene números*/)
+        {
+            console.log ("El nombre del niño no puede contener números")
+            var cuentacreada = false
+        } else if (/\d/.test(data.NOMBRE) /*Contiene números*/)
+        {
+            console.log ("El nombre no puede contener números")
+            var cuentacreada = false
+        }
+        else if (/\d/.test(data.APELLIDO) /*Contiene números*/)
+        {
+                console.log ("El apellido no puede contener números")
+                var cuentacreada = false
+        }
     }
         if (cuentacreada === true)
             {
@@ -36,55 +53,41 @@ function Iniciar(data)
             fs.writeFileSync('Usuarios.json', JSON.stringify(lista, null, 2))
             console.log("Usuario registrado con éxito")
         }
+        return cuentacreada
        
 }
 export {Iniciar};
-function Logueo(data)
+function LogueoAdultos(data)
 {
 
   for (var i =0; i<registro.length;i++)
     {
-        if (data.GMAIL === registro[i].GMAIL && data.CONTRASENA === registro[i].CONTRASENA && data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
+        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
         {
-            console.log ("Has iniciado sesión con éxito")
+            console.log ("Has iniciado sesión correctamente")
             var encontrado = true
             var logueado = true
-            var contra=true
-            var UsuarioR = registro[i]
-            break
-        }
-        else if (data.CONTRASENA != registro[i].CONTRASENA && data.GMAIL === registro[i].GMAIL)
+            var contra=true 
+            UsuarioR = registro[i] 
+        } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
             console.log ("La contraseña es incorrecta")
-            var logueado = false
             var encontrado = true
+            var logueado = false
             var contra=false
-            break
-        }
-        else if ((data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO) && (data.GMAIL === registro[i].GMAIL))
+        } else if (data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO)
         {
-            console.log ("Has ingresado mal tu nombre o apellido")
+            var encontrado = false
             var logueado = false
-            var encontrado = true
-            var contra=true
-            break
+            console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
+            var contra=false
         }
-        else if (data.GMAIL != registro[i].GMAIL)
-        {
-            encontrado = false
-        }
+  
     }
-    if (encontrado != true)
-    {
-        console.log ("No se ha encontrado una cuenta con ese correo")
-        var logueado = false
-        var contra=false
-    }
-
 
   return [logueado,encontrado,contra, UsuarioR];
 }
-export {Logueo};
+export {LogueoAdultos};
 
 function AñadirTrofeo(data)
 {
@@ -164,7 +167,54 @@ function AñadirTrofeo(data)
     fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
     
 }
-function Usuarior (){
-    
-}
+
 export {AñadirTrofeo};
+
+function Comidas()
+{
+    var comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
+    return comidas
+}
+export {Comidas}
+
+function UsuarioRegistrado(){
+    return UsuarioR
+}
+export {UsuarioRegistrado}
+function Calculadora(data){
+    var Elección = data.comidaelegida
+    var carbohidratos = comidas.Elección
+    var resultado = UsuarioR.BOLO * data.gramos / carbohidratos
+    return resultado
+}
+export {Calculadora}
+
+function LogueoNiños(data) {
+  for (var i = 0; i < registro.length; i++) {
+  
+    if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño === registro[i].CONTRASENAniño) {
+        console.log("Has iniciado sesión correctamente")
+        var logueado = true
+        var encontrado = true
+        var contra = true
+        NiñoR = registro[i]
+    }
+    else if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño !== registro[i].CONTRASENAniño) {
+        console.log("La contraseña es incorrecta")
+        var logueado = false
+        var encontrado = true
+        var contra = false
+    } else if (data.NOMBREniño !== registro[i].NOMBREniño) {
+        console.log("No se ha encontrado una cuenta con ese nombre")
+        var logueado = false
+        var encontrado = false
+        var contra = false
+    }
+}
+return [logueado, encontrado, contra, NiñoR];
+}
+export{LogueoNiños};
+
+function NiñoRegistrado(){
+return NiñoR
+}
