@@ -11,18 +11,17 @@ function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
     {
-        if (data.GMAIL === registro[i].GMAIL)
+        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
         {
-            console.log ("Este correo ya está siendo utilizado por otra cuenta")
-            var serepite = true
-        }
+            console.log ("Este usuario ya existe")
+            var cuentacreada = false
+        } else if (data.BOLO /*contiene números*/)
     }
-        if (serepite != true)
+        if (cuentacreada === true)
             {
             lista.push ({
                 "NOMBRE": data.NOMBRE ,
                 "APELLIDO": data.APELLIDO ,
-                "GMAIL": data.GMAIL ,
                 "CONTRASENA": data.CONTRASENA ,
                 "T1": false,
                 "T2": false,
@@ -30,7 +29,6 @@ function Iniciar(data)
                 "T4": false,
                 "T5": false,
                 "T6": false,
-                "T7": false,
                 "Bolo" : data.BOLO,
                 "NOMBREniño": data.NOMBREniño,
                 "CONTRASENAniño": data.CONTRASENAniño
@@ -166,5 +164,7 @@ function AñadirTrofeo(data)
     fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
     
 }
-
+function Usuarior (){
+    
+}
 export {AñadirTrofeo};
