@@ -5,3 +5,19 @@
 .pelo.visible {
     display: block;
 }
+
+.lentes {
+    display: none;
+}
+
+.lentes.visible {
+    display: block;
+}
+
+.piel {
+    display: none;
+}
+
+.piel.visible {
+    display: block;
+}
