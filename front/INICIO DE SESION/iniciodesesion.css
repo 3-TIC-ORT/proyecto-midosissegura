@@ -21,3 +21,11 @@
 .piel.visible {
     display: block;
 }
+
+.ojos {
+    display: none;
+}
+
+.ojos.visible {
+    display: block;
+}
