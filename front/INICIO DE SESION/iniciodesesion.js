@@ -34,9 +34,9 @@ document.getElementById ('colorcitos').addEventListener ("click", () => {
 })
 
 let ojo = 0;
-const ojos = document.querySelectorAll ('#colorcitos .piel')
+const ojos = document.querySelectorAll ('#ojoss .ojos')
 
-document.getElementById ('ojos').addEventListener ("click", () => {
+document.getElementById ('ojoss').addEventListener ("click", () => {
         ojos[ojo].classList.remove ('visible');
         ojo = (ojo + 1) % ojos.length;
         ojos[ojo].classList.add ('visible');
