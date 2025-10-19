@@ -11,9 +11,9 @@ const img3 = document.getElementById("imagen3");
 const img4 = document.getElementById("imagen4");
 const img5 = document.getElementById("imagen5");
 const contenedor = document.querySelector(".containerdeimg");
-
+let confeti =document.getElementById("confeti")
 let imagenSeleccionada = null;
-
+ 
 img1.addEventListener("click", () => {
   imagenSeleccionada = img1.getAttribute("src");
 });
@@ -68,7 +68,7 @@ function verificarFondos() {
     const f5 = fondo5.toLowerCase();
 
     if (f1.includes("paso-1j2.png")) correcttos++;
-    if (f2.includes("paso-2j2.jpg")) correcttos++;
+    if (f2.includes("paso-2j2.png")) correcttos++;
     if (f3.includes("paso-3j2.png")) correcttos++;
     if (f4.includes("paso-4j2.png")) correcttos++;
     if (f5.includes("paso-5js.png")) correcttos++;
@@ -78,7 +78,10 @@ function verificarFondos() {
     const num7 = `<span class="numero">5</span>`;
 
     if (correcttos == 5) {
+       confeti.play();
+        confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
+      confeti.classList.add("zindex")
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
@@ -97,7 +100,7 @@ function verificarFondos() {
    <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
     `;
-    } else if ( correcttos = 1) {
+    } else if ( correcttos == 1) {
       resultadoDiv.classList.add("amarillo");
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
@@ -143,6 +146,9 @@ function reiniciarJuego() {
   resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
   actualizarVisibilidad(false);
   resultadoDiv.innerHTML = "";
+  confeti.classList.remove("zindex")
+   confeti.pause();
+    confeti.classList.remove("display")
 }
 
 resultadoDiv.addEventListener("click", function (event) {
@@ -153,6 +159,9 @@ resultadoDiv.addEventListener("click", function (event) {
   ) {
     actualizarVisibilidad(false);
     resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
+    confeti.classList.remove("zindex")
+ confeti.pause();
+ confeti.classList.remove("display")
     correcttos = 0;
     resultadoDiv.innerHTML =
       '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
