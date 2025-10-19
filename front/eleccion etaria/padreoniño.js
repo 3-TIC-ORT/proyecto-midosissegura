@@ -5,5 +5,5 @@ padre.addEventListener("click", function() {
     window.location.href = "../main_html_front.html";
 });
 niño.addEventListener("click", function() {
-    window.location.href = "../iniciodesesion.html";
+    window.location.href = "../../iniciodesesion.html";
 });
