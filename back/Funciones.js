@@ -178,7 +178,7 @@ function Comidas()
 export {Comidas}
 
 function UsuarioRegistrado(){
-    return {UsuarioR}
+    return [UsuarioR.NOMBRE, UsuarioR.APELLIDO, UsuarioR.CONTRASENA, UsuarioR.T1,UsuarioR.T2,UsuarioR.T3,UsuarioR.T4,UsuarioR.T5,UsuarioR.T6, UsuarioR.BOLO, UsuarioR.NOMBREniño, UsuarioR.CONTRASENAniño]
 }
 export {UsuarioRegistrado}
 function Calculadora(data){
@@ -216,5 +216,5 @@ return [logueado, encontrado, contra, NiñoR];
 export{LogueoNiños};
 
 function NiñoRegistrado(){
-return NiñoR
+return [NiñoR.CONTRASENAniño, NiñoR.NOMBREniño]
 }

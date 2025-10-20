@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <input list="listacomida" type="text" placeholder="comida" id="inputcomida">
+    <datalist id="listacomida">
+        <option value="x">x</option>
+        <option value="a">a</option>
+    </datalist>
+    <input list="listacantidad" type="text" placeholder="cantidad" id="inputcantidad">
+    <datalist id="listacantidad">
+        <option value="h">h</option>
+        <option value="o">o</option>
+        <option value="l">l</option>
+        <option value="a">a</option>
+    </datalist>
+    <select  name="grupocomidas" id="grupocomidas">
+        <option value="seleccionar" selected hidden>grupo de comidas</option>
+        <option value="carne">Carne</option>
+        <option value="pollo">Pollo</option>
+    </select>
+    <select name="unidades" id="unidades">
+        <option value="unidades" selected hidden>unidades</option>
+        <option value="cucharada">cucharada</option>
+        <option value="taza">taza</option>
+        <option value="gramos">gramos</option>
+    </select>
+    <input type="button" value="calcular" id="calcular">
+    <script src="calculadora.js"></script>
+</body>
+</html>
