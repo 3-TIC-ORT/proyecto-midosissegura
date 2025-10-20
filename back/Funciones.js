@@ -1,9 +1,8 @@
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
 import fs from "fs";
-startServer(3000);
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
-subscribePOSTEvent("iniciarsesion", Logueo);
+
 var lista = registro
 var UsuarioR = null
 var NiñoR= null
@@ -218,3 +217,4 @@ export{LogueoNiños};
 function NiñoRegistrado(){
 return [NiñoR.CONTRASENAniño, NiñoR.NOMBREniño]
 }
+export {NiñoRegistrado}

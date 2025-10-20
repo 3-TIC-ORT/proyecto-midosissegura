@@ -1,6 +1,6 @@
 
 let btniniciosesion= document.getElementById("btniniciosesion")
-connect2Server(3000)
+connect2Server()
 function cambiardatosdelusuario() {
    
     contrseña = document.getElementById("contraseña").value;
@@ -15,7 +15,7 @@ function cambiardatosdelusuario() {
     const  valorinputnomredeusuario= inputnombredeusuario.value;
     let nombre = valorinputnomredeusuario;
     console.log("ratio de insulina:" + nombre);}
-    connect2Server("http://127.0.0.1:3000");
+    connect2Server("http://127.0.0.1:5501");
 function obtenerDatosUsuario() {
     return {
         nombre: document.getElementById("nombre").value,
@@ -29,7 +29,6 @@ btniniciosesion.addEventListener("click", () => {
 postEvent("iniciarsesion", {
   NOMBRE: document.getElementById("nombre").value,
   APELLIDO: document.getElementById("apellido").value,
-  GMAIL: document.getElementById("gmail").value,
   CONTRASENA: document.getElementById("contraseña").value
 }, comprobaciondedatos);
 
