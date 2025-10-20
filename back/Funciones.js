@@ -4,7 +4,11 @@ import fs from "fs";
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 
 var lista = registro
+var logueado = null
+var contra = null
+var encontrado = null
 var UsuarioR = null
+
 var NiñoR= null
 function Iniciar(data)
 {
@@ -64,22 +68,22 @@ function LogueoAdultos(data)
         if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
         {
             console.log ("Has iniciado sesión correctamente")
-            var encontrado = true
-            var logueado = true
-            var contra=true 
+            encontrado = true
+            logueado = true
+            contra=true 
             UsuarioR = registro[i] 
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
             console.log ("La contraseña es incorrecta")
-            var encontrado = true
-            var logueado = false
-            var contra=false
+            encontrado = true
+            logueado = false
+            contra=false
         } else if (data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO)
         {
-            var encontrado = false
-            var logueado = false
+            encontrado = false
+            logueado = false
             console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
-            var contra=false
+            contra=false
         }
   
     }

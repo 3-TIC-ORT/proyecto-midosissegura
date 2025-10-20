@@ -17,5 +17,9 @@
     "url": "https://github.com/3-TIC-ORT/proyecto-midosissegura/issues"
   },
   "homepage": "https://github.com/3-TIC-ORT/proyecto-midosissegura#readme",
+  "dependencies": {
+    "soquetic": "^1.4.2"
+  },
+  "devDependencies": {},
   "description": ""
 }
