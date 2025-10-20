@@ -3,12 +3,16 @@ let pclave = document.getElementById("pclave");
 let iclave = document.getElementById("cclave");
 let btnCambiar = document.getElementById("btndecambiodelusuario");
 let ptrofeos = document.getElementById("ptrofeos");
-let usuario = "Invitado";
+connect2Server("http://127.0.0.1:3001");
+postEvent("usuarior",{},definicion)
+function definicion(data){
+let nombre = data[0] ;
+let usuario=""
 let clave = "1234";
 let mostrarInputs = false; 
 let trofeos = 1;
 let claveant=""
-// Función de usuario
+
 function actualizarTextoUsuario() {
   pusuario.textContent = "Usuario: " + usuario;
 }
@@ -59,4 +63,4 @@ iclave.addEventListener("keydown", (event) => {
 actualizarTextoUsuario();
 actualizarTextoClave();
 actualizarVisibilidad();
-actualizartrofeos();
+actualizartrofeos();}

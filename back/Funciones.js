@@ -178,7 +178,7 @@ function Comidas()
 export {Comidas}
 
 function UsuarioRegistrado(){
-    return UsuarioR
+    return {UsuarioR}
 }
 export {UsuarioRegistrado}
 function Calculadora(data){
