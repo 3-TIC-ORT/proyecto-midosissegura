@@ -1,0 +1,5 @@
+let nombrep =document.getElementById("nombrep")
+let apellido =document.getElementById("apellido")
+let niño =document.getElementById("nombreh")
+let bolo =document.getElementById("bolo")
+let contraseña =document.getElementById("contraseña")
