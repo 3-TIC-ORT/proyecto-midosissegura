@@ -18,9 +18,9 @@ function Iniciar(data)
         {
             console.log ("Este usuario ya existe")
             var cuentacreada = false
-        } else if (isNaN(data.BOLO) /*Contiene letras*/)
+        } else if (isNaN(data.RATIO) /*Contiene letras*/)
         {
-            console.log ("El bolo debe ser un número")
+            console.log ("El radio debe ser un número")
             var cuentacreada = false
         } else if (/\d/.test(data.NOMBREniño) /*Contiene números*/)
         {
@@ -35,6 +35,10 @@ function Iniciar(data)
         {
                 console.log ("El apellido no puede contener números")
                 var cuentacreada = false
+        }else if (isNaN(data.DOSIS))
+        {
+            var cuentacreada = false
+            console.log ("La dosis debe ser un número")
         }
     }
         if (cuentacreada === true)
@@ -49,7 +53,8 @@ function Iniciar(data)
                 "T4": false,
                 "T5": false,
                 "T6": false,
-                "Bolo" : data.BOLO,
+                "DOSIS": data.DOSIS,
+                "RATIO": data.RATIO,
                 "NOMBREniño": data.NOMBREniño,
                 "CONTRASENAniño": data.CONTRASENAniño
             })
