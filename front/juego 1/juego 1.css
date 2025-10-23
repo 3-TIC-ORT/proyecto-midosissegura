@@ -37,15 +37,58 @@ body {
 }
 
 .botonesrojos {
-    color: red;
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 49px;
-    height: 49px;
     top: 163px;
     left: 748px;
-    gap: 220px;
+    gap: 190px;
+}
+
+.botonesrojos input{
+    background-color: red;
+    border-radius: 100%;
+    border-color: red;
+    width: 49px;
+    height: 49px;
+}
+
+.botonesazules {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 163px;
+    left: 475px;
+    gap: 190px;
+}
+
+.botonesazules input{
+    background-color: blue;
+    border-radius: 100%;
+    border-color: blue;
+    width: 49px;
+    height: 49px;
+}
+
+.botonatras {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 38px;
+    left: 110px;
+    padding: 10px;
+}
+
+.botonatras img {
+    width: 252px;
+    height: 59px;
+}
+
+.imagenlogo {
+    width: 287px;
+    height: 161.95px;
+    top: 11px;
+    left: 1141px;
 }
 
 
