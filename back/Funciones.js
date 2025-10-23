@@ -8,7 +8,7 @@ var logueado = null
 var contra = null
 var encontrado = null
 var UsuarioR = null
-
+let cuentacreada = null
 var NiñoR= null
 function Iniciar(data)
 {
@@ -17,29 +17,30 @@ function Iniciar(data)
         if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
         {
             console.log ("Este usuario ya existe")
-            var cuentacreada = false
+            cuentacreada = false
         } else if (isNaN(data.RATIO) /*Contiene letras*/)
         {
             console.log ("El radio debe ser un número")
-            var cuentacreada = false
+            cuentacreada = false
         } else if (/\d/.test(data.NOMBREniño) /*Contiene números*/)
         {
             console.log ("El nombre del niño no puede contener números")
-            var cuentacreada = false
+            cuentacreada = false
         } else if (/\d/.test(data.NOMBRE) /*Contiene números*/)
         {
             console.log ("El nombre no puede contener números")
-            var cuentacreada = false
+            cuentacreada = false
         }
         else if (/\d/.test(data.APELLIDO) /*Contiene números*/)
         {
                 console.log ("El apellido no puede contener números")
-                var cuentacreada = false
+                cuentacreada = false
         }else if (isNaN(data.DOSIS))
         {
             var cuentacreada = false
             console.log ("La dosis debe ser un número")
         }
+        //poner que el nombre, el apellido y la contraseña tengan que tener minimo un caracter
     }
         if (cuentacreada === true)
             {
