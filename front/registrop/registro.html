@@ -5,17 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="registrop.css">
 </head>
 <body>
-    <button id="registroBTN">registrarte</button>
-    <input type="text" id="RATIO" required placeholder="ratio de insulina">
-        <input type="text" id="dosis" required placeholder="dosis">
-    <input type="text" id="nombrep" required placeholder="nombre del padre"> 
-    <input type="text" id="apellido" required placeholder="apellido">
-    <input type="text" id="nombreh" required placeholder="nombre del hijo">
-    <input type="text" id="contraseña" required placeholder="contraseña">
-    
+<div class="frame">
+    <div class="titulos">
+        <h1 class="datosp">tus datos</h1>
+        <h1 class="datosh"> datos de tu hijo</h1>
+    </div>
+    <div class="ratio container">
+        <h1 class="h1">Ratio de insulina</h1>
+        <input type="text" id="RATIO" required placeholder="ratio de insulina">
+    </div>
+    <div class="dosis container">
+        <h1 class="h1">Dosis de insulina</h1>
+        <input type="text" id="DOSIS" required placeholder="dosis de insulina">
+    </div>
+    <div class="nombrep container">
+        <h1 class="h1">Nombre del padre</h1>
+        <input type="text" id="NOMBREP" required placeholder="nombre del padre">
+    </div>
+    <div class="apellido container">
+        <h1 class="h1">Apellido</h1>
+        <input type="text" id="APELLIDO" required placeholder="apellido">
+    </div>
+<div class="nombreh">
+    <h1 class="h1">Nombre del hijo</h1>
+    <input type="text" id="NOMBREH" required placeholder="nombre del hijo">
+</div>
+<div class="contraseña container">
+    <h1 class="h1">Contraseña</h1>
+    <input type="text" id="CONTRASEÑA" required placeholder="contraseña">
+</div>
+<button id="registroBTN">registrarte</button>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    
 <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
 <script src="registro.js"></script>
 </body>
