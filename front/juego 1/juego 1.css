@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(163, 223, 242);
+    width: 1440px;
+    height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.azuloscuro {
+    position:relative;
+    background-color: rgb(130, 219, 247);
+    width: 1283.14px;
+    height: 833.36px;
+    display: flex;
+}
+
+.comida {
+    position: absolute;
+    width: 229.1322479248047px;
+    height: 229.1322479248047px;
+    top: 78.92px;
+    left: 260.53px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carbos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 79.77px;
+    left: 780.75px;
+    width: 229.1322479248047px;
+    height: 229.1322479248047px;
+}
+
+.botonesrojos {
+    color: red;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 49px;
+    height: 49px;
+    top: 163px;
+    left: 748px;
+    gap: 220px;
+}
+
+
+
