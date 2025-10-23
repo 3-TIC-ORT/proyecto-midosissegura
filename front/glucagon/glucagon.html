@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="glucagon.css">
 </head>
 <body>
-    <div class="comida" id="comidas">
-        <img src="imagenes/banana.png" alt="banana"  width="150">
-        <img src="imagenes/carne.png" alt="carne"  width="150">
-        <img src="imagenes/tostada.png" alt="tostada"  width="150">
-    </div>
-    <div class="carbos" id="carbohidratos">
-        <img src="imagenes/0.png" alt="nada"  width="150">
-        <img src="imagenes/15.png" alt="medio" width="150">
-        <img src="imagenes/20.png" alt="entero"  width="150">
-    </div>
-    <div class="botonesrojos" id="rojos">
-        <input type="button" id="rojo15">
-        <input type="button" id="rojo30">
-        <input type="button" id="rojo0">
+    <div class="azuloscuro">
+        <canvas id="lineas" width="500" height="500"></canvas>
+        <div class="comida" id="comidas">
+            <img src="imagenes/banana.png" alt="banana"  width="150">
+            <img src="imagenes/carne.png" alt="carne"  width="150">
+            <img src="imagenes/tostada.png" alt="tostada"  width="150">
+        </div>
+        <div class="carbos" id="carbohidratos">
+            <img src="imagenes/0.png" alt="nada"  width="150">
+            <img src="imagenes/15.png" alt="medio" width="150">
+            <img src="imagenes/20.png" alt="entero"  width="150">
+        </div>
+        <div class="botonesrojos" id="rojos">
+            <input type="button" id="rojo15" data-id="1">
+            <input type="button" id="rojo30" data-id="2">
+            <input type="button" id="rojo0" data-id="3">
+        </div>
+        <div class="botonesazules" id="azules">
+            <input type="button" id="tostada" data-id="1">
+            <input type="button" id="banana" data-id="2">
+            <input type="button" id="carne" data-id="3">
+        </div>
     </div>
     <script src="glucagon.js"></script>
 </body>
