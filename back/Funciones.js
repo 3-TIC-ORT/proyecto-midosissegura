@@ -57,6 +57,7 @@ function Iniciar(data)
                 "DOSIS": data.DOSIS,
                 "RATIO": data.RATIO,
                 "NOMBREniño": data.NOMBREniño,
+                "APELLIDOniño": data.APELLIDOniño ,
                 "CONTRASENAniño": data.CONTRASENAniño
             })
             fs.writeFileSync('Usuarios.json', JSON.stringify(lista, null, 2))

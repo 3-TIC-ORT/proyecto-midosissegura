@@ -9,6 +9,7 @@ connect2Server()
 registroBTN.addEventListener("click", () => {
 postEvent("registro", {
     NOMBRE: document.getElementById("nombrep").value,
+    APELLIDOniño: document.getElementById("apellidoh").value,
     APELLIDO: document.getElementById("apellido").value,
     CONTRASENA: document.getElementById("contraseña").value,
     RATIO:document.getElementById("RATIO").value,
