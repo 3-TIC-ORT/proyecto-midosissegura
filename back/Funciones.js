@@ -2,6 +2,7 @@ import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } fro
 import fs from "fs";
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
+let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
 
 var lista = registro
 var logueado = null
@@ -37,8 +38,14 @@ function Iniciar(data)
                 cuentacreada = false
         }else if (isNaN(data.DOSIS))
         {
-            var cuentacreada = false
+            cuentacreada = false
             console.log ("La dosis debe ser un número")
+        } else if (data.APELLIDO === null || data.NOMBRE === null || data.CONTRASENA === null || data.NOMBREniño === null || data.APELLIDOniño === null)
+        {
+            cuentacreada = false
+        }
+        else {
+            cuentacreada = true
         }
         //poner que el nombre, el apellido y la contraseña tengan que tener minimo un caracter
     }
@@ -173,7 +180,7 @@ function AñadirTrofeo(data)
         }
     }
 
-
+return "Trofeo actualizado"
     fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
     
 }
@@ -229,3 +236,15 @@ function NiñoRegistrado(){
 return [NiñoR.CONTRASENAniño, NiñoR.NOMBREniño]
 }
 export {NiñoRegistrado}
+
+function Guardarmensajesdelforo (data){
+    mensajes.push(
+        {
+            "Mensaje": data.Mensajenuevo,
+            "Autor": UsuarioR.NOMBRE + UsuarioR.APELLIDO
+        }
+    )
+    fs.writeFileSync ("Mensajes.json", JSON.stringify(mensajes, null, 2))
+ return "Mensaje guardado"
+}
+export {Guardarmensajesdelforo}
