@@ -8,6 +8,7 @@ import {UsuarioRegistrado} from "./Funciones.js";
 import {Calculadora} from "./Funciones.js";
 import {LogueoNiños} from "./Funciones.js"
 import {NiñoRegistrado} from "./Funciones.js"
+import { Guardarmensajesdelforo } from "./Funciones.js";
 subscribePOSTEvent ("iniciarsesion", LogueoAdultos);
 subscribePOSTEvent ("registro", Iniciar);
 subscribePOSTEvent ("trofeos", AñadirTrofeo);
@@ -16,4 +17,5 @@ subscribePOSTEvent ("UsuarioRegistrado", UsuarioRegistrado)
 subscribePOSTEvent ("Calculadora", Calculadora)
 subscribePOSTEvent ("LogueoNiños", LogueoNiños)
 subscribePOSTEvent ("NiñoRegistrado", NiñoRegistrado)
+subscribePOSTEvent ("GuardarMensaje", Guardarmensajesdelforo)
 startServer()
