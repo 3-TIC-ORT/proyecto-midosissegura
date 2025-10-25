@@ -121,6 +121,8 @@ align-items: center;
 gap: 15px;
 }
 .input{
+    word-wrap: break-word;
+overflow-wrap: break-word;
     width: 315px;
 height: 64px;
 border-radius: 20px;

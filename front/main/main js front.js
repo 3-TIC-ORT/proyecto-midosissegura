@@ -1,11 +1,10 @@
 
-let btniniciosesion= document.getElementById("btniniciosesion")
+let btniniciosesion= document.getElementById("registroBTN")
 connect2Server()
 function cambiardatosdelusuario() {
    
     contrseña = document.getElementById("contraseña").value;
     console.log("contraseña:" + contrseña);
-    gmail = document.getElementById("gmail").value;
     console.log( "correo electronico:" +gmail);
     const inputratioinsulina= document.getElementById("ratioinsulina");
     const  valorinputratioinsulina= inputratioinsulina.value;
@@ -16,18 +15,10 @@ function cambiardatosdelusuario() {
     let nombre = valorinputnomredeusuario;
     console.log("ratio de insulina:" + nombre);}
     connect2Server("http://127.0.0.1:5501");
-function obtenerDatosUsuario() {
-    return {
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
-        gmail: document.getElementById("gmail").value,
-        contraseña: document.getElementById("contraseña").value
-    };
-}
+
 btniniciosesion.addEventListener("click", () => {
-    const datos = obtenerDatosUsuario();
 postEvent("iniciarsesion", {
-  NOMBRE: document.getElementById("nombre").value,
+  NOMBRE: document.getElementById("NOMBREP").value,
   APELLIDO: document.getElementById("apellido").value,
   CONTRASENA: document.getElementById("contraseña").value
 }, comprobaciondedatos);
