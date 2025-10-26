@@ -7,22 +7,26 @@ let img3 = document.getElementById ("img3");
 const botonesazules = document.querySelectorAll ("botonesazules");
 const botonesrojos = document.querySelectorAll ("botonesrojos");
 let numero = 0;
-function cambiarnm (){
+let imgactiva = null;
+const uno = "posicion1";
+function cambiarnm (posicion){
+
 numero= Math.random ();
 if (numero <=0.33){
-img1.classList.remove ("display");
-img2.classList.add ("display");
-img3.classList.add ("display");
+img1.classList.add ("display");
+img1.classList.add (posicion);
+imgactiva = "img1";
 }
 else if (numero >0.33 && numero <=0.66){
-img2.classList.remove ("display");
-img1.classList.add ("display");
-img3.classList.add ("display");
+img2.classList.add ("display");
+img2.classList.add (posicion);
+imgactiva = "img2"
+;
 }
 else {
-img3.classList.remove ("display");
-img1.classList.add ("display");
-img2.classList.add ("display");}
+img3.classList.add ("display");
+img3.classList.add (posicion);
+imgactiva = "img3"
 }
-
-cambiarnm ();
+}
+cambiarnm (uno);

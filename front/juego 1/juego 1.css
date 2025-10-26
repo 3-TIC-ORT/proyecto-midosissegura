@@ -93,5 +93,17 @@ body {
 .display{
     display: none;
 }
-
-
+.posicion1{
+    
+    top: 350px;
+    left: 550px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.posicion2{
+ 
+    top: 400px;
+    left: 500px;
+    font-size: 24px;
+    font-weight: bold;
+}
