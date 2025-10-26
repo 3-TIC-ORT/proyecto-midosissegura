@@ -14,5 +14,10 @@ agregarcomentario.addEventListener("click", function() {
  listacomentarios.innerHTML=""
  listacomentarios=[]
 }})
+let btnatras = document.getElementById("btnatras");
+btnatras.addEventListener("click", function () {
+  window.location.href = "";
+});
+
 
 
