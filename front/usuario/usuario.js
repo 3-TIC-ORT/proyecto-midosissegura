@@ -14,9 +14,8 @@ APELLIDO: localStorage.getItem("apellidousuario")
 },definicion)
 function definicion(data){
     console.log("Datos recibidos:", data);
-  pusuario.textContent = data[0] + " " + data.APELLIDO;
+  pusuario.textContent = data.NOMBRE + " " + data.APELLIDO;
   pdosis.textContent =+ data.DOSIS ;
   pclave.textContent =data.CONTRASENA;
-  ptrofeos.textContent = data.NOMBREniño + " " + data.APELLIDOniño ;
-// Ver inputs
+  ptrofeos.textContent = data.NOMBREniño + " " + data.APELLIDOniño;
 }
