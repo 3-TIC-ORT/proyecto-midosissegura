@@ -111,3 +111,8 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+.flechas {
+    position: absolute;
+    pointer-events: none;
+}

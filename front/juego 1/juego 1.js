@@ -1,10 +1,9 @@
 
-const lineas = document.getElementById ("lineas");
-const ctx = lineas.getContext ("2d");
+const svg = document.getElementById ("flechas");
 const botonesazules = document.querySelectorAll (".botonesazules");
 const botonesrojos = document.querySelectorAll (".botonesrojos");
-let azul = null;
-let rojo = null;
+let comidaseleccionada = null;
+let cantidadcarbohidratosseleccionaado = null;
 let bien = 0;
 
 
