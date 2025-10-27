@@ -14,5 +14,4 @@ agregarcomentario.addEventListener("click", function() {
  listacomentarios.innerHTML=""
  listacomentarios=[]
 }})
-
-
+ulcomentarios.textContent=localStorage.getItem("nombreusuario") + " ha entrado al foro."
