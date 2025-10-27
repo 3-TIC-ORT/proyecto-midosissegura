@@ -5,7 +5,13 @@
     margin-bottom: 10px;
     border-radius: 5px;
 }
-
+.tipocomentariootro{
+    background-color: #058eff;
+    border: 1px solid #007bff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 body{
     background-color: #A3DFF2;
     font-family: "Fredoka One", Arial, sans-serif;

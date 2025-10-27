@@ -11,6 +11,7 @@ var encontrado = null
 var UsuarioR = null
 let cuentacreada = null
 var NiñoR= null
+let Mensajenuevo= null
 function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
@@ -238,13 +239,21 @@ return [NiñoR.CONTRASENAniño, NiñoR.NOMBREniño]
 export {NiñoRegistrado}
 
 function Guardarmensajesdelforo (data){
+        Mensajenuevo: data.Mensajenuevo,
     mensajes.push(
         {
+        
             "Mensaje": data.Mensajenuevo,
-            "Autor": UsuarioR.NOMBRE + UsuarioR.APELLIDO
+            "Autor": data.NOMBRE + data.APELLIDO
         }
     )
     fs.writeFileSync ("Mensajes.json", JSON.stringify(mensajes, null, 2))
  return "Mensaje guardado"
 }
 export {Guardarmensajesdelforo}
+function darmensajesalforo() {
+    return mensajes;
+}
+export { darmensajesalforo };
+
+
