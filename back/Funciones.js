@@ -194,10 +194,45 @@ function Comidas()
     return comidas
 }
 export {Comidas}
+    let usuarion = ""
+    let usuarioa = ""
+     let   nombre=""
+   let usuarioapellido= ""
+   let contraseña=""
+   let t1= ""
+   let t2= ""
+   let t3= ""
+  let  t4= ""
+   let t5= ""
+   let t6= ""
+   let dosis= ""
+   let ratio= ""
+    let nombreniño= ""
+   let apellidoniño= ""
+function UsuarioRegistrado(data){
+    let usuarion = data.NOMBRE;
+    let usuarioa = data.APELLIDO;
 
-function UsuarioRegistrado(){
-    return [UsuarioR.NOMBRE, UsuarioR.APELLIDO, UsuarioR.CONTRASENA, UsuarioR.T1,UsuarioR.T2,UsuarioR.T3,UsuarioR.T4,UsuarioR.T5,UsuarioR.T6, UsuarioR.BOLO, UsuarioR.NOMBREniño, UsuarioR.CONTRASENAniño]
+    let resultado = null;
+
+    for (let i = 0; i < registro.length; i++) {
+        if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
+            resultado = {
+                NOMBRE: registro[i].NOMBRE,
+                APELLIDO: registro[i].APELLIDO,
+                CONTRASENA: registro[i].CONTRASENA,
+                DOSIS: registro[i].DOSIS,
+                RATIO: registro[i].RATIO,
+                NOMBREniño: registro[i].NOMBREniño,
+                APELLIDOniño: registro[i].APELLIDOniño
+            };
+            break;
+        }
+    }
+
+    return resultado;
 }
+
 export {UsuarioRegistrado}
 function Calculadora(data){
     var Elección = data.comidaelegida

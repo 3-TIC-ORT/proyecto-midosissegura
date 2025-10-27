@@ -2,5 +2,14 @@
 "NOMBRE": "Bryan",
 "APELLIDO": "Mbeumo",
 "CONTRASENA": "Caput",
-"BOLO": "1.0"
+"BOLO": "1.0",
+"T1": false,
+"T2": false,
+"T3": false,
+"T4": false,
+"T5": false,
+"T6": false,
+"DOSIS":"20",
+"NOMBREniño": "Mateo",
+"APELLIDOniño": "Mbeumo"
 }]
