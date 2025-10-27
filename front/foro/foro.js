@@ -6,13 +6,14 @@ let nombre=""
      localStorage.setItem("apellidousuario", "a");
 const inputcomentario=document.getElementById("comentarioinput")
 const agregarcomentario =document.getElementById("agregarcomentario")
-const ulcomentarios=document.getElementById("comentarios")
+const ulcomentarios=document.getElementById("comentariosresto")
+const ulcomentariosusuario=document.getElementById("comentariostuyos")
 agregarcomentario.addEventListener("click", function() {
     const comentario = inputcomentario.value;
     listacomentarios.push(comentario);
         inputcomentario.value=""
     for (let i = 0; i < listacomentarios.length; i++) {
-    const li = document.createElement("li");
+    const li = document.createElement("div");
     li.textContent = listacomentarios[i];
     li.className="tipocomentario"
     ulcomentarios.appendChild(li);
@@ -27,16 +28,24 @@ postEvent("GuardarMensaje", {
    mensajes = data.Mensaje;
    nombre = data.Autor;
    if(nombre==localStorage.getItem("nombreusuario") + localStorage.getItem("apellidousuario")){
-    const li = document.createElement("li");
+    const li = document.createElement("p");
     li.textContent = mensajes;
     li.className="tipocomentario"
-    ulcomentarios.appendChild(li);
+    ulcomentariosusuario.appendChild(li);
+    const li2 = document.createElement("p");
+    li2.textContent = mensajes;
+    li2.className="tipocomentarioblanco"
+    ulcomentarios.appendChild(li2);
    }
    else{
-    const li = document.createElement("li");
+    const li = document.createElement("p");
     li.textContent = mensajes;
     li.className="tipocomentariootro"
     ulcomentarios.appendChild(li);
+    const li2 = document.createElement("p");
+    li2.textContent = mensajes;
+    li2.className="tipocomentarioblanco"
+    ulcomentariosusuario.appendChild(li2);
    }
 });
 }})
@@ -45,16 +54,24 @@ getEvent("darmensajesalforo", function(data) {
    mensajes = data[i].Mensaje;
    nombre = data[i].Autor;
    if(nombre==localStorage.getItem("nombreusuario") + localStorage.getItem("apellidousuario")){
-    const li = document.createElement("li");
+    const li = document.createElement("p");
     li.textContent = mensajes;
     li.className="tipocomentario"
-    ulcomentarios.appendChild(li);
+    ulcomentariosusuario.appendChild(li);
+    const li2 = document.createElement("p");
+    li2.textContent = mensajes;
+    li2.className="tipocomentarioblanco"
+    ulcomentarios.appendChild(li2);
    }
    else{
-    const li = document.createElement("li");
+    const li = document.createElement("p");
     li.textContent = mensajes;
     li.className="tipocomentariootro"
     ulcomentarios.appendChild(li);
+    const li2 = document.createElement("p");
+    li2.textContent = mensajes;
+    li2.className="tipocomentarioblanco"
+    ulcomentariosusuario.appendChild(li2);
    }}
 });
 let btnatras = document.getElementById("btnatras");
