@@ -1,10 +1,5 @@
-
-const svg = document.getElementById ("flechas");
 const botonesazules = document.querySelectorAll (".botonesazules");
 const botonesrojos = document.querySelectorAll (".botonesrojos");
-let comidaseleccionada = null;
-let cantidadcarbohidratosseleccionaado = null;
-let bien = 0;
 
 
 let img1 = document.getElementById ("img1");
@@ -128,3 +123,82 @@ return seleccion;
 imgactiva1 = cambiarnm (uno, null, null);
 imgactiva2 = cambiarnm (dos, imgactiva1, null);
 imgactiva3 = cambiarnm (tres, imgactiva1, imgactiva2);
+
+
+const correctas = {
+    img1 = "carbos1",
+    img2 = "carbos2",
+    img3 = "carbos3",
+    img4 = "carbos4",
+    img5 = "carbos5",
+    img6 = "carbos6",
+    img7 = "carbos7",
+    img8 = "carbos8",
+}
+
+let comidaseleccionada = null;
+let conexiones = [];
+const svg = document.getElementById ("flechas");
+
+function obtenerCentro(centro) {
+    const tamaño = centro.getBoundingClientRect();
+    return {
+      x: tamaño.left + tamaño.width / 2 + window.scrollX,
+      y: tamaño.top + tamaño.height / 2 + window.scrollY
+    };
+}
+
+function clickimagenes () {
+    [imgactiva1, imgactiva2, imgactiva3].forEach(escuchar => {
+        const img = document.getElementById (escuchar);
+        img.addEventListener("click", () => {
+            comidaseleccionada = img;
+        })
+    })
+}
+
+const carboseleccionado = [
+    "carbos" + imgactiva1.slice(-1),
+    "carbos" + imgactiva2.slice(-1),
+    "carbos" + imgactiva3.slice(-1),
+]
+
+//Explicacion de chat porque seriamente no entendi nada de svg
+carbosActivos.forEach(id => {
+    const carb = document.getElementById(id);
+    carb.addEventListener("click", () => {
+      if (!seleccionComida) return;
+
+      // Dibujar línea
+      const p1 = centro(seleccionComida);
+      const p2 = centro(carb);
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", p1.x);
+      line.setAttribute("y1", p1.y);
+      line.setAttribute("x2", p2.x);
+      line.setAttribute("y2", p2.y);
+      line.setAttribute("stroke", "yellow");
+      line.setAttribute("stroke-width", "4");
+      svg.appendChild(line);
+
+      // Guardar conexión
+      conexiones.push({ comida: seleccionComida.id, carbos: carb.id });
+      seleccionComida = null;
+
+      // Si ya hay 3 conexiones → verificar
+      if (conexiones.length === 3) verificar();
+    });
+  });
+}
+
+// 🔹 Verificar aciertos
+function verificar() {
+  let bien = 0;
+  conexiones.forEach(c => {
+    if (correctas[c.comida] === c.carbos) bien++;
+  });
+  alert(`¡Acertaste ${bien}/3!`);
+}
+
+// Activar el sistema una vez cargadas las imágenes
+activarConexiones();
