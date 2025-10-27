@@ -15,3 +15,10 @@ agregarcomentario.addEventListener("click", function() {
  listacomentarios=[]
 }})
 ulcomentarios.textContent=localStorage.getItem("nombreusuario") + " ha entrado al foro."
+let btnatras = document.getElementById("btnatras");
+btnatras.addEventListener("click", function () {
+  window.location.href = "";
+});
+
+
+
