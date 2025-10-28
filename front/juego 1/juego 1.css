@@ -14,7 +14,13 @@ body {
     background-color: rgb(130, 219, 247);
     width: 1283.14px;
     height: 833.36px;
+    top: 138px;
+    left: 78px;
+    border-width: 8px;
+    border-color: black;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -138,4 +144,34 @@ body {
     position: absolute;
     z-index: 2000;
     pointer-events: none;
+}
+
+.pop1 {
+    background-color: #F37777;
+    border-color: #FF0000;
+    width: 701px;
+    height: 682px;
+    opacity: 1;
+    border-radius: 20px;
+    border-width: 15px;
+}
+
+.pop2 {
+    background-color: #F3F36E;
+    border-color: #F7B81D;
+    width: 701px;
+    height: 682px;
+    opacity: 1;
+    border-radius: 20px;
+    border-width: 15px;
+}
+
+.pop3 {
+    background-color: #A4DFAD;
+    border-color: #16AC2D;
+    width: 701px;
+    height: 682px;
+    opacity: 1;
+    border-radius: 20px;
+    border-width: 15px;
 }

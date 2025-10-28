@@ -1,3 +1,9 @@
+let pop1 = document.getElementById ("pop1");
+pop1.classList.add ("display");
+let pop2 = document.getElementById ("pop2");
+pop2.classList.add ("display");
+let pop3 = document.getElementById ("pop3");
+pop3.classList.add ("display");
 let img1 = document.getElementById ("img1");
 let img2 = document.getElementById ("img2");
 let img3 = document.getElementById ("img3");
@@ -228,25 +234,31 @@ carboseleccionado.forEach(escuchar => {
 
 function verificar () {
     let bien = 0;
+    let cerrarPOPUP1 = document.getElementById ("cerrarPOPUP1");
+    let cerrarPOPUP2 = document.getElementById ("cerrarPOPUP2");
+    let cerrarPOPUP3 = document.getElementById ("cerrarPOPUP3");
     conexiones.forEach(c => {
         if (correctas[c.comida] === c.carbos) bien++;
     });
     alert ("Acertaste" + bien +"/3");
 
+    if (bien === 1) {
+        pop1.classList.remove ("display");
+    }
 
-
+    if (bien === 2) {
+        pop2.classList.remove ("display");
+    }
 
     if (bien === 3) {
-    video.classList.remove ("display");
-    video.play();
+        pop3.classList.remove ("display");
+        video.classList.remove ("display");
+        video.play();
 }
 
 
-let cerrarPOPUP = document.getElementById ("cerrarPOPUP");
-
-
-if (cerrarPOPUP) {
-    cerrarPOPUP.addEventListener ("click", () => {
+if (cerrarPOPUP1) {
+    cerrarPOPUP1.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
     })
