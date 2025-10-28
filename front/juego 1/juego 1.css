@@ -8,6 +8,7 @@ body {
     margin-top: 180px;
 }
 
+
 .azuloscuro {
     position:relative;
     background-color: rgb(130, 219, 247);
@@ -15,6 +16,7 @@ body {
     height: 833.36px;
     display: flex;
 }
+
 
 .comida {
     position: absolute;
@@ -26,6 +28,7 @@ body {
     flex-direction: column;
 }
 
+
 .carbos {
     position: absolute;
     display: flex;
@@ -36,6 +39,7 @@ body {
     height: 229.1322479248047px;
 }
 
+
 .botonesrojos {
     position: absolute;
     display: flex;
@@ -45,6 +49,7 @@ body {
     gap: 190px;
 }
 
+
 .botonesrojos input{
     background-color: red;
     border-radius: 100%;
@@ -52,6 +57,7 @@ body {
     width: 49px;
     height: 49px;
 }
+
 
 .botonesazules {
     position: absolute;
@@ -62,6 +68,7 @@ body {
     gap: 190px;
 }
 
+
 .botonesazules input{
     background-color: blue;
     border-radius: 100%;
@@ -69,6 +76,7 @@ body {
     width: 49px;
     height: 49px;
 }
+
 
 .botonatras {
     position: absolute;
@@ -79,10 +87,12 @@ body {
     padding: 10px;
 }
 
+
 .botonatras img {
     width: 252px;
     height: 59px;
 }
+
 
 .imagenlogo {
     width: 287px;
@@ -112,6 +122,7 @@ body {
     font-weight: bold;
 }
 
+
 .flechas {
     position: absolute;
     top: 0;
@@ -120,4 +131,11 @@ body {
     height: 100vw;
     pointer-events: none;
     z-index: 1000;
+}
+
+
+.video {
+    position: absolute;
+    z-index: 2000;
+    pointer-events: none;
 }

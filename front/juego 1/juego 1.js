@@ -32,6 +32,7 @@ function ocultarimagenes () {
     img7.classList.add ("display", uno, dos, tres);
     img8.classList.add ("display", uno, dos, tres);
 
+
     carbos1.classList.add ("display");
     carbos2.classList.add ("display");
     carbos3.classList.add ("display");
@@ -41,10 +42,14 @@ function ocultarimagenes () {
     carbos7.classList.add ("display");
     carbos8.classList.add ("display");
 
+
     video.classList.add ("display");
 }
 
+
 ocultarimagenes ();
+
+
 
 
 function cambiarnm (posicion, usada1, usada2){
@@ -60,16 +65,6 @@ if (numero <=0.125) seleccion = "img1";
     else seleccion = "img8";
 
 
-if (seleccion === usada1 || seleccion === usada2) {
-    if (seleccion === "img1") seleccion = "img2";
-    else if (seleccion === "img2") seleccion = "img3";
-    else if (seleccion === "img3") seleccion = "img4";
-    else if (seleccion === "img4") seleccion = "img5";
-    else if (seleccion === "img5") seleccion = "img6";
-    else if (seleccion === "img6") seleccion = "img7";
-    else if (seleccion === "img7") seleccion = "img8";
-    else if (seleccion === "img8") seleccion = "img1";
-}
 
 
 if (seleccion === usada1 || seleccion === usada2) {
@@ -84,6 +79,8 @@ if (seleccion === usada1 || seleccion === usada2) {
 }
 
 
+
+
 if (seleccion === usada1 || seleccion === usada2) {
     if (seleccion === "img1") seleccion = "img2";
     else if (seleccion === "img2") seleccion = "img3";
@@ -94,11 +91,31 @@ if (seleccion === usada1 || seleccion === usada2) {
     else if (seleccion === "img7") seleccion = "img8";
     else if (seleccion === "img8") seleccion = "img1";
 }
+
+
+
+
+if (seleccion === usada1 || seleccion === usada2) {
+    if (seleccion === "img1") seleccion = "img2";
+    else if (seleccion === "img2") seleccion = "img3";
+    else if (seleccion === "img3") seleccion = "img4";
+    else if (seleccion === "img4") seleccion = "img5";
+    else if (seleccion === "img5") seleccion = "img6";
+    else if (seleccion === "img6") seleccion = "img7";
+    else if (seleccion === "img7") seleccion = "img8";
+    else if (seleccion === "img8") seleccion = "img1";
+}
+
+
 
 
 const img = document.getElementById (seleccion);
 img.classList.remove ("display");
 img.classList.add (posicion);
+
+
+
+
 
 
 
@@ -114,8 +131,12 @@ if (seleccion === "img7") comidaCarbohidratos = carbos7;
 if (seleccion === "img8") comidaCarbohidratos = carbos8;
 
 
+
+
 comidaCarbohidratos.classList.remove ("display");
 comidaCarbohidratos.classList.add (posicion);
+
+
 
 
 return seleccion;
@@ -123,6 +144,8 @@ return seleccion;
 imgactiva1 = cambiarnm (uno, null, null);
 imgactiva2 = cambiarnm (dos, imgactiva1, null);
 imgactiva3 = cambiarnm (tres, imgactiva1, imgactiva2);
+
+
 
 
 const correctas = {
@@ -136,9 +159,11 @@ const correctas = {
     img8 : "carbos8",
 }
 
+
 let comidaseleccionada = null;
 let conexiones = [];
 const svg = document.getElementById ("flechas");
+
 
 function obtenerCentro(centro) {
     const tamaño = centro.getBoundingClientRect();
@@ -147,6 +172,7 @@ function obtenerCentro(centro) {
       y: tamaño.top + tamaño.height / 2 + window.scrollY
     };
 }
+
 
 function clickimagenes () {
     [imgactiva1, imgactiva2, imgactiva3].forEach(escuchar => {
@@ -158,19 +184,23 @@ function clickimagenes () {
 }
 clickimagenes ();
 
+
 const carboseleccionado = [
     "carbos" + imgactiva1.slice(-1),
     "carbos" + imgactiva2.slice(-1),
     "carbos" + imgactiva3.slice(-1),
 ]
 
+
 carboseleccionado.forEach(escuchar => {
     const carbohidratos = document.getElementById (escuchar)
     carbohidratos.addEventListener ("click", () => {
         if (!comidaseleccionada) return;
 
+
         const principio = obtenerCentro(comidaseleccionada);
         const final = obtenerCentro(carbohidratos);
+
 
         const linea = document.createElementNS("http://www.w3.org/2000/svg", "line");
         linea.setAttribute("x1", principio.x);
@@ -181,15 +211,20 @@ carboseleccionado.forEach(escuchar => {
         linea.setAttribute("stroke-width", "8");
         svg.appendChild(linea);
 
-        conexiones.push ({ 
-            comida: comidaseleccionada.id, 
+
+        conexiones.push ({
+            comida: comidaseleccionada.id,
             carbos: carbohidratos.id
         });
         comidaseleccionada = null;
 
-        if (conexiones.length === 3) verificar ();
+
+        if (conexiones.length === 3) {
+            setTimeout (verificar, 50);
+        }
     });
 });
+
 
 function verificar () {
     let bien = 0;
@@ -199,11 +234,25 @@ function verificar () {
     alert ("Acertaste" + bien +"/3");
 
 
+
+
     if (bien === 3) {
     video.classList.remove ("display");
     video.play();
 }
+
+
+let cerrarPOPUP = document.getElementById ("cerrarPOPUP");
+
+
+if (cerrarPOPUP) {
+    cerrarPOPUP.addEventListener ("click", () => {
+        video.pause();
+        video.classList.add ("display");
+    })
 }
+}
+
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
   window.location.href = "/front/pagina gral/paginageneraln.html";
