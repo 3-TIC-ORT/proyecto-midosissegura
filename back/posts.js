@@ -10,7 +10,8 @@ import {LogueoNiños} from "./Funciones.js"
 import {NiñoRegistrado} from "./Funciones.js"
 import { Guardarmensajesdelforo } from "./Funciones.js";
 import { darmensajesalforo } from "./Funciones.js";
-import{} from "./Funciones.js";
+import {recargarratio} from "./Funciones.js";
+import {recargardosis} from "./Funciones.js";
 subscribePOSTEvent ("iniciarsesion", LogueoAdultos);
 subscribePOSTEvent ("registro", Iniciar);
 subscribePOSTEvent ("trofeos", AñadirTrofeo);
@@ -21,5 +22,6 @@ subscribePOSTEvent ("LogueoNiños", LogueoNiños)
 subscribePOSTEvent ("NiñoRegistrado", NiñoRegistrado)
 subscribePOSTEvent ("GuardarMensaje", Guardarmensajesdelforo)
 subscribeGETEvent ("darmensajesalforo", darmensajesalforo);
-
+subscribePOSTEvent ("ActualizarDosis", recargardosis);
+subscribePOSTEvent ("ActualizarRatio", recargarratio);
 startServer(3000)

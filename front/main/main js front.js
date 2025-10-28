@@ -30,7 +30,9 @@ function comprobaciondedatos(data) {
     let contra = data[2];
     if (logueado === true && encontrado === true && contra === true) {
         alert("Has iniciado sesión con éxito");
-        localStorage.setItem("nombreusuario", document.getElementById("NOMBREP").value);
+        localStorage.setItem("nombreusuario", document.getElementById("NOMBREP").value)
+        localStorage.setItem("apellidousuario", document.getElementById("apellido").value);
+         window.location.href='/front/paginageneralp/paginageneralp.html'
     }
     else if (encontrado === true && contra === false && logueado === false) {
     alert("La contraseña es incorrecta");

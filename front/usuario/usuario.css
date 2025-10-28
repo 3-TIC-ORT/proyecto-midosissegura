@@ -8,6 +8,11 @@ angle: 0 deg;
 opacity: 1;
 border-width: 8px;
 }
+body{
+    background: #A3DFF2;
+padding: 0;
+margin: 0;
+}
 .frame{
     position: absolute;
     width: 1223px;
@@ -67,15 +72,51 @@ border-width: 8px;
 height: 624px;
 top: 155px;
 left: 82px;
-
 opacity: 1;
+}
+.divdemierdados{
+    position: absolute;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+   width: 604px;
+height: 594px;
+left: 686px;
+angle: 0 deg;
+opacity: 1;
+}
+.input{
+    position: absolute;
+    width: 75px;
+height: 73.29545593261719px;
+gap: 8.52px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 8.52px;
+border-width: 6.82px;
+padding-top: 8.52px;
+padding-right: 8.52px;
+padding-bottom: 8.52px;
+padding-left: 17.9px;
+top: 553px;
+left: 1100px;
+angle: 0 deg;
+opacity: 1;
+border: 6.82px solid #000000;
+font-family: "Fredoka One";
+font-weight: 400;
+font-style: Regular;
+font-size: 40.91px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
 
 }
 .usuario{
-    position: absolute;
     width: 422;
 height: 75;
-top: 202px;
+ margin-top: 102px;
 left: 131px;
 angle: 0 deg;
 opacity: 1;
@@ -91,5 +132,101 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 vertical-align: bottom;
+}
+.hijo{
+     margin-top: 312px;
+    width: 422;
+height: 75;
 
+left: 182px;
+angle: 0 deg;
+opacity: 1;
+border-width: 6px;
+}
+.nose{
+    position: absolute;
+    width: 75px;
+height: 73.29545593261719px;
+gap: 8.52px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 8.52px;
+border-width: 6.82px;
+padding-top: 8.52px;
+padding-right: 8.52px;
+padding-bottom: 8.52px;
+padding-left: 17.9px;
+top: 762px;
+left: 1201px;
+angle: 0 deg;
+opacity: 1;
+border: 6.82px solid #000000;
+font-family: "Fredoka One";
+font-weight: 400;
+font-style: Regular;
+font-size: 40.91px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.nenito{
+    position: relative;
+    width: 72.737060546875;
+height: 97.941162109375;
+top: 864px;
+left: 788px;
+angle: 0 deg;
+opacity: 1;
+}
+.pss{
+    position: absolute;
+    font-family: "Fredoka One";
+font-weight: 400;
+font-style: Regular;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+    width: 255px;
+height: 96px;
+top: 835px;
+left: 885px;
+angle: 0 deg;
+opacity: 1;
+}
+.ceropixeles{
+    position: absolute;
+    background-color: #000000;
+   width: 1px;
+height: 486.5px;
+top: 194px;
+left: -50px;
+angle: 0 deg;
+opacity: 1;
+border-width: 1px;
+}
+.flechita{
+background-color: transparent;
+}
+.botonatras{
+    position: absolute;
+   width: 107px;
+height: 69.20108795166016px;
+top: 14px;
+left: 82px;
+gap: 5.82px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 30px;
+border-width: 8px;
+padding-top: 14.54px;
+padding-right: 29.08px;
+padding-bottom: 14.54px;
+padding-left: 29.08px;
+background:transparent;
+border: 8px solid #A18F8F;
+display: flex;
+justify-content: center;
+align-items: center;
 }

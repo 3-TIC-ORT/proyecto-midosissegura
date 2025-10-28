@@ -232,8 +232,44 @@ function UsuarioRegistrado(data){
 
     return resultado;
 }
-
 export {UsuarioRegistrado}
+function recargardosis(data) {
+    let usuarion = data.NOMBRE;
+    let usuarioa = data.APELLIDO;
+    let dosisnew = data.DOSIS;
+    let resultado = null;
+    for (let i = 0; i < registro.length; i++) {
+        if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
+            registro[i].DOSIS = dosisnew;
+            resultado = {
+                DOSIS: dosisnew,
+            };
+            break;
+        }
+    }
+            fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2));
+    return resultado;
+}
+export {recargardosis}
+function recargarratio(data) {
+    let usuarion = data.NOMBRE;
+    let usuarioa = data.APELLIDO;
+    let ratinew = data.RATIO;
+    let resultado = null;
+    for (let i = 0; i < registro.length; i++) {
+        if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
+            registro[i].RATIO = ratinew;
+        
+            resultado = {
+                RATIO: ratinew,
+            };
+            break;
+           }   }
+            fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2));
+    
+    return resultado;
+}
+export {recargarratio}
 function Calculadora(data){
     var Elección = data.comidaelegida
     var carbohidratos = comidas.Elección
