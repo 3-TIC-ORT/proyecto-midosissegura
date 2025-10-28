@@ -30,13 +30,13 @@ body {
     white-space: nowrap;
   }
   .advertenciaamarilla{
-    width: 843px;
-    height: 49px;
-    padding: 30px;
-    margin: 20px;
+    width: 1109px;
+    height: 152px;
+    padding: 15px;
+    margin: 10px;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     font-family: "Fredoka One", Arial, sans-serif;
     background-color: #F7B81D;
     border-radius: 30px;
@@ -46,9 +46,10 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     gap: 10px;
-    position: relative;,
+    position: relative;
     z-index: 10;
-    
+    opacity: 0.7;
+    justify-content: center;
 }
 .main img:first-of-type {
   position: absolute;
@@ -58,10 +59,13 @@ body {
   height: auto;
   z-index: 0;
 }
-#signowarning{
+.signowarning{
   width: 75px;
   height: 75px;
   padding: 10px;
+  display: flexbox;
+ margin: 10px;
+ justify-content: center;
  
 }
 .main {
@@ -81,13 +85,15 @@ body {
     height: auto;
   }
   
-  #restaurante1 {  position:absolute; top: 200px; left: 300px;width: 101.33px; height: 126.67px; }
-#restaurante2 { position:absolute; top:  350px; left: 600px; width: 101.33px; height: 126.67px;}
-#restaurante3 { position:absolute; top: 500px; left: 400px;width: 101.33px; height: 126.67px; }
-#restaurante4 { position:absolute; top: 600px; left: 800px;width: 101.33px; height: 126.67px; }
-#restaurante5 { position:absolute; top: 650px; left: 200px; width: 101.33px; height: 126.67px;}
+.restaurante1 {  position:absolute; top: 200px; left: 300px;width: 101.33px; height: 126.67px; }
+.restaurante2 { position:absolute; top:  350px; left: 600px; width: 101.33px; height: 126.67px;}
+.restaurante3 { position:absolute; top: 500px; left: 400px;width: 101.33px; height: 126.67px; }
+.restaurante4 { position:absolute; top: 600px; left: 800px;width: 101.33px; height: 126.67px; }
+.restaurante5 { position:absolute; top: 650px; left: 200px; width: 101.33px; height: 126.67px;}
 .LOGO{
     position: absolute;
     left: 1133px;
     top: 14px;
+    width: 260px;
+    height: 136.81px;
 }
