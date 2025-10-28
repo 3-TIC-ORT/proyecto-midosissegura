@@ -175,5 +175,5 @@ resultadoDiv.addEventListener("click", function (event) {
 });
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
-  window.location.href = "../paginageneraln.html";
+  window.location.href = "/front/pagina gral/paginageneraln.html";
 });

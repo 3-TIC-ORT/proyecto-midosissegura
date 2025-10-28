@@ -7,6 +7,7 @@ const botonorden6 = document.getElementById("boton6");
 const botonorden7 = document.getElementById("boton7");
 let resultadoDiv = document.getElementById("resultadodiv");
 let correcttos = 0;
+let confeti =document.getElementById("confeti")
 const img1 = document.getElementById("imagen1");
 const img2 = document.getElementById("imagen2");
 const img3 = document.getElementById("imagen3");
@@ -97,6 +98,9 @@ function verificarFondos() {
     const num7 = `<span class="numero">7</span>`;
 
     if (correcttos == 7) {
+      confeti.classList.add("zindex")
+      confeti.play();
+      confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
@@ -164,6 +168,9 @@ function reiniciarJuego() {
   resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
   actualizarVisibilidad(false);
   resultadoDiv.innerHTML = "";
+  confeti.classList.remove("zindex")
+  confeti.pause();
+   confeti.classList.remove("display")
 }
 
 resultadoDiv.addEventListener("click", function (event) {
@@ -177,6 +184,9 @@ resultadoDiv.addEventListener("click", function (event) {
     correcttos = 0;
     resultadoDiv.innerHTML =
       '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
+      confeti.classList.remove("zindex")
+      confeti.pause();
+      confeti.classList.remove("display")
   } else if (
     event.target &&
     event.target.classList &&
@@ -187,5 +197,5 @@ resultadoDiv.addEventListener("click", function (event) {
 });
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
-  window.location.href = "../paginageneraln.html";
+  window.location.href = "/front/pagina gral/paginageneraln.html";
 });

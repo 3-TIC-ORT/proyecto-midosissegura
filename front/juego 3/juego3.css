@@ -445,3 +445,19 @@ body {
   color: #777777;
   white-space: nowrap;
 }
+.confeti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none; /* para que no bloquee clicks */
+  display: none;
+}
+.display{
+  display: block;
+}
+.zindex {
+  z-index: 10;
+}

@@ -65,3 +65,7 @@ lapicera.addEventListener ("click", function() {
     cambiosglucemia (-30);
     alert ("La glucemia esta a " + nivelglucemia);
 })
+let btnatras = document.getElementById("btnatras");
+btnatras.addEventListener("click", function () {
+  window.location.href = "/front/pagina gral/paginageneraln.html";
+});

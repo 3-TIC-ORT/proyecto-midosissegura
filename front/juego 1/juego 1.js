@@ -204,3 +204,7 @@ function verificar () {
     video.play();
 }
 }
+let btnatras = document.getElementById("btnatras");
+btnatras.addEventListener("click", function () {
+  window.location.href = "/front/pagina gral/paginageneraln.html";
+});
