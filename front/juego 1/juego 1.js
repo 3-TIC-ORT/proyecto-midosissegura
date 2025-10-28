@@ -14,6 +14,7 @@ let carbos5 = document.getElementById ("carbos5");
 let carbos6 = document.getElementById ("carbos6");
 let carbos7 = document.getElementById ("carbos7");
 let carbos8 = document.getElementById ("carbos8");
+let video = document.getElementById ("video");
 let numero = 0;
 let imgactiva1 = null;
 let imgactiva2 = null;
@@ -39,7 +40,10 @@ function ocultarimagenes () {
     carbos6.classList.add ("display");
     carbos7.classList.add ("display");
     carbos8.classList.add ("display");
+
+    video.classList.add ("display");
 }
+
 ocultarimagenes ();
 
 
@@ -193,4 +197,10 @@ function verificar () {
         if (correctas[c.comida] === c.carbos) bien++;
     });
     alert ("Acertaste" + bien +"/3");
+
+
+    if (bien === 3) {
+    video.classList.remove ("display");
+    video.play();
+}
 }
