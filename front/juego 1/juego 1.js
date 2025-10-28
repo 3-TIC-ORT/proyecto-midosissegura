@@ -1,7 +1,3 @@
-const botonesazules = document.querySelectorAll (".botonesazules");
-const botonesrojos = document.querySelectorAll (".botonesrojos");
-
-
 let img1 = document.getElementById ("img1");
 let img2 = document.getElementById ("img2");
 let img3 = document.getElementById ("img3");
@@ -18,6 +14,7 @@ let carbos5 = document.getElementById ("carbos5");
 let carbos6 = document.getElementById ("carbos6");
 let carbos7 = document.getElementById ("carbos7");
 let carbos8 = document.getElementById ("carbos8");
+let video = document.getElementById ("video");
 let numero = 0;
 let imgactiva1 = null;
 let imgactiva2 = null;
@@ -43,7 +40,10 @@ function ocultarimagenes () {
     carbos6.classList.add ("display");
     carbos7.classList.add ("display");
     carbos8.classList.add ("display");
+
+    video.classList.add ("display");
 }
+
 ocultarimagenes ();
 
 
@@ -126,14 +126,14 @@ imgactiva3 = cambiarnm (tres, imgactiva1, imgactiva2);
 
 
 const correctas = {
-    img1 = "carbos1",
-    img2 = "carbos2",
-    img3 = "carbos3",
-    img4 = "carbos4",
-    img5 = "carbos5",
-    img6 = "carbos6",
-    img7 = "carbos7",
-    img8 = "carbos8",
+    img1 : "carbos1",
+    img2 : "carbos2",
+    img3 : "carbos3",
+    img4 : "carbos4",
+    img5 : "carbos5",
+    img6 : "carbos6",
+    img7 : "carbos7",
+    img8 : "carbos8",
 }
 
 let comidaseleccionada = null;
@@ -156,6 +156,7 @@ function clickimagenes () {
         })
     })
 }
+clickimagenes ();
 
 const carboseleccionado = [
     "carbos" + imgactiva1.slice(-1),
@@ -163,42 +164,43 @@ const carboseleccionado = [
     "carbos" + imgactiva3.slice(-1),
 ]
 
-//Explicacion de chat porque seriamente no entendi nada de svg
-carbosActivos.forEach(id => {
-    const carb = document.getElementById(id);
-    carb.addEventListener("click", () => {
-      if (!seleccionComida) return;
+carboseleccionado.forEach(escuchar => {
+    const carbohidratos = document.getElementById (escuchar)
+    carbohidratos.addEventListener ("click", () => {
+        if (!comidaseleccionada) return;
 
-      // Dibujar línea
-      const p1 = centro(seleccionComida);
-      const p2 = centro(carb);
-      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute("x1", p1.x);
-      line.setAttribute("y1", p1.y);
-      line.setAttribute("x2", p2.x);
-      line.setAttribute("y2", p2.y);
-      line.setAttribute("stroke", "yellow");
-      line.setAttribute("stroke-width", "4");
-      svg.appendChild(line);
+        const principio = obtenerCentro(comidaseleccionada);
+        const final = obtenerCentro(carbohidratos);
 
-      // Guardar conexión
-      conexiones.push({ comida: seleccionComida.id, carbos: carb.id });
-      seleccionComida = null;
+        const linea = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        linea.setAttribute("x1", principio.x);
+        linea.setAttribute("y1", principio.y);
+        linea.setAttribute("x2", final.x);
+        linea.setAttribute("y2", final.y);
+        linea.setAttribute("stroke", "black");
+        linea.setAttribute("stroke-width", "8");
+        svg.appendChild(linea);
 
-      // Si ya hay 3 conexiones → verificar
-      if (conexiones.length === 3) verificar();
+        conexiones.push ({ 
+            comida: comidaseleccionada.id, 
+            carbos: carbohidratos.id
+        });
+        comidaseleccionada = null;
+
+        if (conexiones.length === 3) verificar ();
     });
-  });
-}
+});
 
-// 🔹 Verificar aciertos
-function verificar() {
-  let bien = 0;
-  conexiones.forEach(c => {
-    if (correctas[c.comida] === c.carbos) bien++;
-  });
-  alert(`¡Acertaste ${bien}/3!`);
-}
+function verificar () {
+    let bien = 0;
+    conexiones.forEach(c => {
+        if (correctas[c.comida] === c.carbos) bien++;
+    });
+    alert ("Acertaste" + bien +"/3");
 
-// Activar el sistema una vez cargadas las imágenes
-activarConexiones();
+
+    if (bien === 3) {
+    video.classList.remove ("display");
+    video.play();
+}
+}
