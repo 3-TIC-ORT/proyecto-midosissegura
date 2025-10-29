@@ -24,3 +24,7 @@ else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
 }
   }
+  let cuenta = document.getElementById("cuenta")
+  cuenta.addEventListener("click", function(){
+    window.location.href='/front/main/main_html_front.html'
+  })

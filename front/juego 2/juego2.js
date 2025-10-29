@@ -82,6 +82,11 @@ function verificarFondos() {
         confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
       confeti.classList.add("zindex")
+      connect2Server()
+      postEvent("trofeos",{t5: true  },function(data){
+        console.log(data)
+      }
+      )
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
