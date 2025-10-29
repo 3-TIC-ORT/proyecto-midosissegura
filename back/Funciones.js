@@ -3,7 +3,7 @@ import fs from "fs";
 
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
-
+let comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
 var lista = registro
 var logueado = null
 var contra = null
@@ -271,9 +271,17 @@ function recargarratio(data) {
 }
 export {recargarratio}
 function Calculadora(data){
-    var Elección = data.comidaelegida
-    var carbohidratos = comidas.Elección
-    var resultado = UsuarioR.BOLO * data.gramos / carbohidratos
+    let eleccion = data.comidaelegida
+    let unidades = data.cantidad
+    let resultado = null
+for (var i = 0; i<comidas.length; i++)
+{
+    if (eleccion === comidas[i].Alimento)
+    {
+        resultado = (comidas[i].CpU * unidades / UsuarioR.RATIO)
+    }
+}
+     
     return resultado
 }
 export {Calculadora}
