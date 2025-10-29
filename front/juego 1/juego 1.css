@@ -3,24 +3,20 @@ body {
     width: 1440px;
     height: 1024px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 180px;
 }
 
 
 .azuloscuro {
-    position:relative;
+    position: absolute;
     background-color: rgb(130, 219, 247);
     width: 1283.14px;
     height: 833.36px;
     top: 138px;
     left: 78px;
+    border-style: solid;
     border-width: 8px;
     border-color: black;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -101,6 +97,7 @@ body {
 
 
 .imagenlogo {
+    position: absolute;
     width: 287px;
     height: 161.95px;
     top: 11px;
@@ -147,31 +144,47 @@ body {
 }
 
 .pop1 {
+    position: absolute;
     background-color: #F37777;
     border-color: #FF0000;
     width: 701px;
     height: 682px;
+    top: 97px;
+    left: 281px;
     opacity: 1;
+    border-style: solid;
     border-radius: 20px;
     border-width: 15px;
+    z-index: 1500;
 }
 
 .pop2 {
+    position: absolute;
     background-color: #F3F36E;
     border-color: #F7B81D;
     width: 701px;
     height: 682px;
+    top: 97px;
+    left: 281px;
     opacity: 1;
+    border-style: solid;
     border-radius: 20px;
     border-width: 15px;
+    z-index: 1500;
+    
 }
 
 .pop3 {
+    position: absolute;
     background-color: #A4DFAD;
     border-color: #16AC2D;
     width: 701px;
     height: 682px;
+    top: 97px;
+    left: 281px;
     opacity: 1;
+    border-style: solid;
     border-radius: 20px;
     border-width: 15px;
+    z-index: 1500;
 }

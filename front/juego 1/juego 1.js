@@ -56,8 +56,6 @@ function ocultarimagenes () {
 ocultarimagenes ();
 
 
-
-
 function cambiarnm (posicion, usada1, usada2){
 numero= Math.random ();
 let seleccion;
@@ -71,6 +69,16 @@ if (numero <=0.125) seleccion = "img1";
     else seleccion = "img8";
 
 
+if (seleccion === usada1 || seleccion === usada2) {
+    if (seleccion === "img1") seleccion = "img2";
+    else if (seleccion === "img2") seleccion = "img3";
+    else if (seleccion === "img3") seleccion = "img4";
+    else if (seleccion === "img4") seleccion = "img5";
+    else if (seleccion === "img5") seleccion = "img6";
+    else if (seleccion === "img6") seleccion = "img7";
+    else if (seleccion === "img7") seleccion = "img8";
+    else if (seleccion === "img8") seleccion = "img1";
+}
 
 
 if (seleccion === usada1 || seleccion === usada2) {
@@ -85,8 +93,6 @@ if (seleccion === usada1 || seleccion === usada2) {
 }
 
 
-
-
 if (seleccion === usada1 || seleccion === usada2) {
     if (seleccion === "img1") seleccion = "img2";
     else if (seleccion === "img2") seleccion = "img3";
@@ -97,33 +103,11 @@ if (seleccion === usada1 || seleccion === usada2) {
     else if (seleccion === "img7") seleccion = "img8";
     else if (seleccion === "img8") seleccion = "img1";
 }
-
-
-
-
-if (seleccion === usada1 || seleccion === usada2) {
-    if (seleccion === "img1") seleccion = "img2";
-    else if (seleccion === "img2") seleccion = "img3";
-    else if (seleccion === "img3") seleccion = "img4";
-    else if (seleccion === "img4") seleccion = "img5";
-    else if (seleccion === "img5") seleccion = "img6";
-    else if (seleccion === "img6") seleccion = "img7";
-    else if (seleccion === "img7") seleccion = "img8";
-    else if (seleccion === "img8") seleccion = "img1";
-}
-
-
 
 
 const img = document.getElementById (seleccion);
 img.classList.remove ("display");
 img.classList.add (posicion);
-
-
-
-
-
-
 
 
 let comidaCarbohidratos;
@@ -137,12 +121,8 @@ if (seleccion === "img7") comidaCarbohidratos = carbos7;
 if (seleccion === "img8") comidaCarbohidratos = carbos8;
 
 
-
-
 comidaCarbohidratos.classList.remove ("display");
 comidaCarbohidratos.classList.add (posicion);
-
-
 
 
 return seleccion;
@@ -150,8 +130,6 @@ return seleccion;
 imgactiva1 = cambiarnm (uno, null, null);
 imgactiva2 = cambiarnm (dos, imgactiva1, null);
 imgactiva3 = cambiarnm (tres, imgactiva1, imgactiva2);
-
-
 
 
 const correctas = {
