@@ -244,26 +244,44 @@ function verificar () {
 
     if (bien === 1) {
         pop1.classList.remove ("display");
+        cerrarPOPUP1.addEventListener ("click", () => {
+        pop1.classList.add ("display");
+    })
     }
 
     if (bien === 2) {
         pop2.classList.remove ("display");
+        cerrarPOPUP2.addEventListener ("click", () => {
+        pop2.classList.add ("display");
+    })
     }
 
     if (bien === 3) {
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
-}
-
-
-if (cerrarPOPUP1) {
-    cerrarPOPUP1.addEventListener ("click", () => {
+        cerrarPOPUP3.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
+        pop3.classList.add ("display");
     })
 }
 }
+
+let volverajugar1 = document.getElementById ("volverajugar1")
+volverajugar1.addEventListener ("click", function() {
+    window.location.reload ();
+})
+
+let volverajugar2 = document.getElementById ("volverajugar2")
+volverajugar2.addEventListener ("click", function() {
+    window.location.reload ();
+})
+
+let volverajugar3 = document.getElementById ("volverajugar3")
+volverajugar3.addEventListener ("click", function() {
+    window.location.reload ();
+})
 
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
