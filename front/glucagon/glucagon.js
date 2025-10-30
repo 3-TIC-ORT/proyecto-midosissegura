@@ -25,6 +25,20 @@ function paginasmostrar () {
     paginas.forEach((pagina, i) => {
         pagina.style.display = (i === indice) ? `block` : `none`;
     });
+
+    if (indice === 0) {
+        atras.style.display= "none"
+    }
+    else {
+        atras.style.display= "block"
+    }
+
+    if (indice === paginas.length - 1){
+        seguir.style.display = "none"
+    }
+    else {
+        seguir.style.display = "block"
+    }
 }
 
 paginasmostrar ();
@@ -40,3 +54,4 @@ seguir.addEventListener ("click", () => {
     if (indice > paginas.length) indice = 0;
     paginasmostrar ();
 })
+
