@@ -29,4 +29,27 @@ catorce.classList.add ("display");
 let atras = document.getElementById ("atras");
 let seguir = document.getElementById ("seguir");
 
-atras.addEventListener ("click")
+const total = 14;
+const indice = 1;
+
+const paginas = document.querySelector (`[class^="pagina"]`);
+
+function paginasmostrar () {
+    paginas.forEach((pagina, i) => {
+        pagina.style.display = (i === indice) ? `block` : `none`;
+    });
+}
+
+paginasmostrar ();
+
+atras.addEventListener ("click", () => {
+    indice--;
+    if (indice<0) indice = paginas.length - 1;
+    paginasmostrar
+})
+
+seguir.addEventListener ("click", () => {
+    indice ++;
+    if (indice > paginas.length) indice = 0;
+    paginasmostrar ();
+})
