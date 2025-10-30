@@ -87,6 +87,7 @@ function LogueoAdultos(data)
             logueado = true
             contra=true 
             UsuarioR = registro[i] 
+            break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
             console.log ("La contraseña es incorrecta")
@@ -113,7 +114,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T1 = true
             }
@@ -180,9 +181,9 @@ function AñadirTrofeo(data)
             }
         }
     }
+    fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
 
 return "Trofeo actualizado"
-    fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
     
 }
 
