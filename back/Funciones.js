@@ -87,6 +87,7 @@ function LogueoAdultos(data)
             logueado = true
             contra=true 
             UsuarioR = registro[i] 
+            break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
             console.log ("La contraseña es incorrecta")
