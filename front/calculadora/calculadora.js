@@ -1,192 +1,29 @@
 connect2Server();
 const calcular = document.getElementById ("calcular");
 
-const comida = document.getElementById ("inputcomida");
-const cantidad = document.getElementById ("inputcantidad");
-const grupocomida = document.getElementById ("grupocomidas");
-const unidades = document.getElementById ("unidades");
+const comida = document.querySelectorAll (".inputcomida");
+const cantidad = document.querySelectorAll (".inputcantidad");
+const grupocomida = document.querySelectorAll (".grupocomidas");
+const unidades = document.querySelectorAll (".unidades");
 
-const unidad = document.getElementById ("unidad");
-const cucharada = document.getElementById ("cucharada");
-const pocillo = document.getElementById ("pocillo");
-const taza = document.getElementById ("taza");
-const vaso = document.getElementById ("vaso");
-const rodaja = document.getElementById ("rodaja");
-const lamina = document.getElementById ("lamina");
-const paquete = document.getElementById ("paquete");
-const plato = document.getElementById ("plato");
-const gramos = document.getElementById ("gramos");
-const compotera = document.getElementById ("compotera");
-
-
-const unidadesparacomidas = {
-    "papa": unidad,
-    "choclo-en-grano": taza,
-    "choclo-entero": unidad,
-    "mandioca": unidad,
-    "batata": unidad,
-    "pure-de-batata": "carbos6",
-    "pure-de-papa": "carbos7",
-    "pure-instantaneo": "carbos8",
-    "calabaza": "carbos9",
-    "zapallo": "carbos10",
-    "palta": unidad,
-    "remolacha": "carbos12",
-    "zanahoria": unidad,
-    "anana": unidad,
-    "banana": "carbos15",
-    "cerezas": "carbos16",
-    "ciruelas": "carbos17",
-    "damascos": "carbos18",
-    "duraznos": "carbos19",
-    "frutillas": "carbos20",
-    "granada": "carbos21",
-    "melon": "carbos22",
-    "mandarina": unidad,
-    "mango": unidad,
-    "manzana": unidad,
-    "moras": "carbos26",
-    "naranja": unidad,
-    "peras": unidad,
-    "pomelo": unidad,
-    "sandia": "carbos30",
-    "uvas": unidad,
-    "kiwi": unidad,
-    "higos": unidad,
-    "kinotos": unidad,
-    "frambuesas": "carbos35",
-    "manzanas": unidad,
-    "pasas-de-uva": "carbos37",
-    "frutas-secas": "carbos38",
-    "pure-de-manzana": "carbos39",
-    "anana-en-lata-dietetico": "carbos40",
-    "coctel-de-frutas-dietetico": "carbos41",
-    "duraznos-en-lata-dieteticos": unidad,
-    "avena-cocida": "carbos43",
-    "almidon-de-maiz": "carbos44",
-    "harina-de-mandioca": "carbos45",
-    "arroz-blanco": "carbos46",
-    "arroz-integral": "carbos47",
-    "canellones": unidad,
-    "panqueque": unidad,
-    "noquis": "carbos50",
-    "noquis-de-semola": unidad,
-    "pastas-cocidas": "carbos52",
-    "ravioles": "carbos53",
-    "capellettini": "carbos54",
-    "lamina-de-lasagna": "carbos55",
-    "lentejas": "carbos56",
-    "porotos": "carbos57",
-    "garbanzos": "carbos58",
-    "milanesa-de-soja": unidad,
-    "habas-cocidas": "carbos60",
-    "pan-blanco": "carbos61",
-    "pan-integral": unidad,
-    "pan-de-hamburguesa": unidad,
-    "pan-arabe": unidad,
-    "sandwich-de-miga": unidad,
-    "tortilla-de-maiz": unidad,
-    "pan-de-salvado": unidad,
-    "pan-de-pancho": unidad,
-    "pan-de-fajitas": unidad,
-    "pan-frances-en-rodajas": "carbos70",
-    "pan-pebete": unidad,
-    "barra-de-cereal": unidad,
-    "copitos-azucarados": "carbos73",
-    "copos-de-maiz": "carbos74",
-    "granola": "carbos75",
-    "pochoclo-dulce": "carbos76",
-    "pochoclo-salado": "carbos77",
-    "cuadraditos-de-avena": "carbos78",
-    "galleta-de-agua": unidad,
-    "bizcochitos-de-grasa": unidad,
-    "galleta-de-arroz": unidad,
-    "grisines": unidad,
-    "mini-tostadas": "unidad",
-    "galleta-tipo-bizcochitos": "unidad",
-    "empanaditas-de-coopetin": "unidad",
-    "snacks": "unidad",
-    "papas-fritas": "unidad",
-    "mani": "unidad",
-    "papas-fritas-chicas": "unidad",
-    "papas-fritas-grandes": "unidad",
-    "pizza-a-la-piedra": "unidad",
-    "masa-de-tarta": "unidad",
-"tapa-de-empanada": "unidad",
-"galleta-cuadrada-dulce": "unidad",
-"magdalena": "unidad",
-"budin-de-chocolate": "unidad",
-"budin-de-vainilla": "unidad",
-"medialuna": "unidad",
-"pan-dulce": "unidad",
-"scones-grandes": "unidad",
-"palmerita": "unidad",
-"bizcohuero": "unidad",
-"galleta-de-arroz-dulces": "unidad",
-"churros": "unidad",
-"leche-descremada": "unidad",
-"leche-en-polvo": "unidad",
-"yogurt-bebible-dietetico": "unidad",
-"yogurt-bebible-entero": "unidad",
-"flan": "unidad",
-"postre-simple": "unidad",
-"yogurt-dietetico-con-granola": "unidad",
-"yogurt-dietetico-con-cereales": "unidad",
-"yogurt-entero-con-cereales-azucarados": "unidad",
-"flan-de-vainilla": "unidad",
-"flan-de-dulce-de-leche": "unidad",
-"flan-con-caramelo": "unidad",
-"postre-dietetico-de-chocolate": "unidad",
-"chocolatada-envasada": "unidad",
-"chocolatada-preparada": "unidad",
-"yogur-dietetico-con-frutas": "unidad",
-"yogur-griego": "unidad",
-"yogur-con-frutas-y-cereales": "unidad",
-"azucar": "unidad",
-"dulce-compacto-comun": "unidad",
-"dulce-de-leche-comun-y-dietetico": "unidad",
-"gelatina-comun": "unidad",
-"miel": "unidad",
-"mermelada-de-fruta": "unidad",
-"alfajor-de-chocolate-con-dulce-de-leche": "unidad",
-"bananita-cubierta-de-chocolate": "unidad",
-"caramelos": "unidad",
-"barrita-de-chocolate-y-cereal-dietetica": "unidad",
-"chocolate-de-taza": "unidad",
-"chocolate-en-polvo": "unidad",
-"merengue": "unidad",
-"turron-de-mani": "unidad",
-"turron-de-mani-dulce": "unidad",
-"huevo-de-pascua": "unidad",
-"alfajor-de-galleta-de-arroz": "unidad",
-"cucurucho-tipo-barquillo": "unidad",
-"casata-de-tres-gustos": "unidad",
-"helado-bombon": "unidad",
-"helado": "unidad",
-"cono-de-vainilla": "unidad",
-"helado-de-agua-en-palito": "unidad",
-"helado-de-crema-en-palito": "unidad",
-"helado-dietetico": "unidad",
-"chipa": "unidad",
-"empanada-de-humita": "unidad",
-"empanadas": "unidad",
-"humita-en-chala": "unidad",
-"locro": "unidad",
-"tamares": "unidad",
-"tortas-fritas": "unidad",
-"criollo-o-tortilla": "unidad",
-"tortitas": "unidad",
-"sushi-tipo-roll": "unidad",
-"sushi-tipo-nighiri": "unidad",
-"ensalada-rusa": "unidad",
-"milanesas": "unidad",
-"gaseosa-comun": "unidad",
-"jugo-de-naranja-o-pomelo": "unidad",
-"jugo-comercial": "unidad",
-"jugo-comercial-dietetico": "unidad"
-
-}
-
+fetch("back/Comidas.json")
+  .then(res => res.json())
+  .then(comidasjson => {
+      function seleccionUnidad (comidainput) {
+          const convertir = comidainput.trim().toLowerCase();
+          const match = comidasjson.find (item =>
+            item.Alimento.trim().toLowerCase() === convertir
+            );
+            return match ? match.Unidad: "";
+      };
+    comida.forEach ((input, index) => {
+        input.addEventListener ("input", () => {
+            const comidita = input.value;
+            const correspondienteU = seleccionUnidad (comidita);
+            unidades [index].value = correspondienteU;
+        });
+  });
+  })
 
 const datos = [comida, cantidad, grupocomida, unidades];
 postEvent ("calculadora", datos, (respuesta) => {
@@ -195,5 +32,7 @@ postEvent ("calculadora", datos, (respuesta) => {
     }
     else {
         alert (respuesta);
-    }
+    };
 })
+
+.catch(err => console.error("Error al cargar Comidas.json:", err));
