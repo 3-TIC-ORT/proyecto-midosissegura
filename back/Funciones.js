@@ -86,7 +86,21 @@ function LogueoAdultos(data)
             encontrado = true
             logueado = true
             contra=true 
-            UsuarioR = registro[i] 
+            UsuarioR.push({
+                "NOMBRE": registro[i].NOMBRE,
+                "APELLIDO": registro[i].APELLIDO,
+                "CONTRASENA": registro[i].CONTRASENA,
+                "DOSIS": registro[i].DOSIS,
+                "RATIO": registro[i].RATIO,
+                "NOMBREniño": registro[i].NOMBREniño,
+                "APELLIDOniño": registro[i].APELLIDOniño,
+                "T1": registro[i].T1,
+                "T2": registro[i].T2,
+                "T3": registro[i].T3,
+                "T4": registro[i].T4,
+                "T5": registro[i].T5,
+                "T6": registro[i].T6
+            }) 
             break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
@@ -275,11 +289,18 @@ function Calculadora(data){
     let eleccion = data.comidaelegida
     let unidades = data.cantidad
     let resultado = null
+
+    
+
 for (var i = 0; i<comidas.length; i++)
 {
     if (eleccion === comidas[i].Alimento)
     {
         resultado = (comidas[i].CpU * unidades / UsuarioR.RATIO)
+    } else {
+        if (resultado === null) {
+         console.log ("Alimento no encontrado")
+        }
     }
 }
      
@@ -295,8 +316,10 @@ function LogueoNiños(data) {
         var logueado = true
         var encontrado = true
         var contra = true
-        NiñoR = registro[i]
-    }
+        NiñoR.push({
+            "NOMBREniño": registro[i].NOMBREniño,
+            "APELLIDOniño": registro[i].APELLIDOniño,
+    })}
     else if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño !== registro[i].CONTRASENAniño) {
         console.log("La contraseña es incorrecta")
         var logueado = false
