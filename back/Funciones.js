@@ -108,14 +108,15 @@ function LogueoAdultos(data)
             encontrado = true
             logueado = false
             contra=false
-        } else if (data.NOMBRE != registro[i].NOMBRE || data.APELLIDO != registro[i].APELLIDO)
-        {
-            encontrado = false
-            logueado = false
-            console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
-            contra=false
-        }
+            break
+        } 
   
+    }
+    if (encontrado == false)
+    {
+        console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
+        logueado = false
+        contra = false
     }
 
   return [logueado,encontrado,contra, UsuarioR];
@@ -288,23 +289,32 @@ export {recargarratio}
 function Calculadora(data){
     let eleccion = data.comidaelegida
     let unidades = data.cantidad
-    let resultado = null
-
+    let resultado = 0
     
-
+    
+if (unidades === 0 || isNaN(unidades))
+{
+    resultado = 0
+    console.log ("Cantidad no válida")
+    return resultado
+}
 for (var i = 0; i<comidas.length; i++)
 {
     if (eleccion === comidas[i].Alimento)
     {
         resultado = (comidas[i].CpU * unidades / UsuarioR.RATIO)
-    } else {
-        if (resultado === null) {
-         console.log ("Alimento no encontrado")
-        }
+             console.log ("El resultado es: " + resultado)
+             let hecho = true
+        break
     }
 }
-     
-    return resultado
+if (resultado === 0)
+{
+    console.log ("Comida no encontrada")
+    let hecho = false
+}
+
+    return [resultado, hecho];
 }
 export {Calculadora}
 
@@ -358,5 +368,3 @@ function darmensajesalforo() {
     return mensajes;
 }
 export { darmensajesalforo };
-
-
