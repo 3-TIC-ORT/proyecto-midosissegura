@@ -28,7 +28,7 @@ fetch("../../back/Comidas.json")
 
 const datos = [comidaelegida, cantidades, grupocomidaelegida, cantidad];
 postEvent ("Calculadora", datos, (respuesta) => {
-    if (respuesta.error) {
+    if (respuesta === error) {
         alert ("Error");
     }
     else {
