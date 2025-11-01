@@ -7,185 +7,187 @@
     <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
-    <div class="cajaazul"></div>
-    <div class="comidas">
-        <div class="botoncomidas">
-            <input type="button" class="botongrupocomidas">
-                <img src="imagenes/opcionescomidas.png" alt="veropcionescomidas" class="veropcionescomidas">
-            </input>
-            <img src="imagenes/grupo de comidas select.png" alt="grupo de comidas" class="grupodecomidas">
+    <div class="cajaazul">
+        <div class="comidas">
+            <div class="botoncomidas">
+                <button type="button" class="botongrupocomidas">
+                    <img src="imagenes/opcionescomidas.png" alt="veropcionescomidas" class="veropcionescomidas">
+                </button>
+                <img src="imagenes/grupo de comidas select.png" alt="grupo de comidas" class="grupodecomidas">
+            </div>
+            <button class="botoncalcular">
+                <img src="imagenes/boton calcular.png" class="imagencalcular">
+            </button>
         </div>
-        <button class="botoncalcular">
-            <img src="imagenes/boton calcular.png" class="imagencalcular">
-        </button>
+        <div class="listacomidas">
         <input list="listacomida" type="text" placeholder="comida" id="inputcomida">
-    <datalist id="listacomida">
-        <option id="papa" value="PAPA">PAPA</option>
-        <option id="choclo-en-grano" value="CHOCLO EN GRANO">CHOCLO EN GRANO</option>
-        <option id="choclo-entero" value="CHOCLO ENTERO">CHOCLO ENTERO</option>
-        <option id="mandioca" value="MANDIOCA">MANDIOCA</option>
-        <option id="batata" value="BATATA">BATATA</option>
-        <option id="pure-de-batata" value="PURE DE BATATA">PURE DE BATATA</option>
-        <option id="pure-de-papa" value="PURE DE PAPA">PURE DE PAPA</option>
-        <option id="pure-instantaneo" value="PURE INSTANTÁNEO">PURE INSTANTÁNEO</option>
-        <option id="calabaza" value="CALABAZA">CALABAZA</option>
-        <option id="zapallo" value="ZAPALLO">ZAPALLO</option>
-        <option id="palta" value="PALTA">PALTA</option>
-        <option id="remolacha" value="REMOLACHA">REMOLACHA</option>
-        <option id="zanahoria" value="ZANAHORIA">ZANAHORIA</option>
-        <option id="anana" value="ANANÁ">ANANÁ</option>
-        <option id="banana" value="BANANA">BANANA</option>
-        <option id="cerezas" value="CEREZAS">CEREZAS</option>
-        <option id="ciruelas" value="CIRUELAS">CIRUELAS</option>
-        <option id="damascos" value="DAMASCOS">DAMASCOS</option>
-        <option id="duraznos" value="DURAZNOS">DURAZNOS</option>
-        <option id="frutillas" value="FRUTILLAS">FRUTILLAS</option>
-        <option id="granada" value="GRANADA">GRANADA</option>
-        <option id="melon" value="MELÓN">MELÓN</option>
-        <option id="mandarina" value="MANDARINA">MANDARINA</option>
-        <option id="mango" value="MANGO">MANGO</option>
-        <option id="manzana" value="MANZANA">MANZANA</option>
-        <option id="moras" value="MORAS">MORAS</option>
-        <option id="naranja" value="NARANJA">NARANJA</option>
-        <option id="peras" value="PERAS">PERAS</option>
-        <option id="pomelo" value="POMELO">POMELO</option>
-        <option id="sandia" value="SANDÍA">SANDÍA</option>
-        <option id="uvas" value="UVAS">UVAS</option>
-        <option id="kiwi" value="KIWI">KIWI</option>
-        <option id="higos" value="HIGOS">HIGOS</option>
-        <option id="kinotos" value="KINOTOS">KINOTOS</option>
-        <option id="frambuesas" value="FRAMBUESAS">FRAMBUESAS</option>
-        <option id="manzanas" value="MANZANAS">MANZANAS</option>
-        <option id="pasas-de-uva" value="PASAS DE UVA">PASAS DE UVA</option>
-        <option id="frutas-secas" value="FRUTAS SECAS">FRUTAS SECAS</option>
-        <option id="pure-de-manzana" value="PURE DE MANZANA">PURE DE MANZANA</option>
-        <option id="anana-en-lata-dietetico" value="ANANÁ EN LATA DIETÉTICO">ANANÁ EN LATA DIETÉTICO</option>
-        <option id="coctel-de-frutas-dietetico" value="CÓCTEL DE FRUTAS DIETÉTICO">CÓCTEL DE FRUTAS DIETÉTICO</option>
-        <option id="duraznos-en-lata-dieteticos" value="DURAZNOS EN LATA DIETÉTICOS">DURAZNOS EN LATA DIETÉTICOS</option>
-        <option id="avena-cocida" value="AVENA COCIDA">AVENA COCIDA</option>
-        <option id="almidon-de-maiz" value="ALMIDÓN DE MAÍZ">ALMIDÓN DE MAÍZ</option>
-        <option id="harina-de-mandioca" value="HARINA DE MANDIOCA">HARINA DE MANDIOCA</option>
-        <option id="arroz-blanco" value="ARROZ BLANCO">ARROZ BLANCO</option>
-        <option id="arroz-integral" value="ARROZ INTEGRAL">ARROZ INTEGRAL</option>
-        <option id="canellones" value="CANELONES">CANELONES</option>
-        <option id="panqueque" value="PANQUEQUE">PANQUEQUE</option>
-        <option id="noquis" value="ÑOQUIS">ÑOQUIS</option>
-        <option id="noquis-de-semola" value="ÑOQUIS DE SÉMOLA">ÑOQUIS DE SÉMOLA</option>
-        <option id="pastas-cocidas" value="PASTAS COCIDAS">PASTAS COCIDAS</option>
-        <option id="ravioles" value="RAVIOLES">RAVIOLES</option>
-        <option id="capellettini" value="CAPELETTINI">CAPELETTINI</option>
-        <option id="lamina-de-lasagna" value="LÁMINA DE LASAGNA">LÁMINA DE LASAGNA</option>
-        <option id="lentejas" value="LENTEJAS">LENTEJAS</option>
-        <option id="porotos" value="POROTOS">POROTOS</option>
-        <option id="garbanzos" value="GARBANZOS">GARBANZOS</option>
-        <option id="milanesa-de-soja" value="MILANESA DE SOJA">MILANESA DE SOJA</option>
-        <option id="habas-cocidas" value="HABAS COCIDAS">HABAS COCIDAS</option>
-        <option id="pan-blanco" value="PAN BLANCO">PAN BLANCO</option>
-        <option id="pan-integral" value="PAN INTEGRAL">PAN INTEGRAL</option>
-        <option id="pan-de-hamburguesa" value="PAN DE HAMBURGUESA">PAN DE HAMBURGUESA</option>
-        <option id="pan-arabe" value="PAN ÁRABE">PAN ÁRABE</option>
-        <option id="sandwich-de-miga" value="SÁNDWICH DE MIGA">SÁNDWICH DE MIGA</option>
-        <option id="tortilla-de-maiz" value="TORTILLA DE MAÍZ">TORTILLA DE MAÍZ</option>
-        <option id="pan-de-salvado" value="PAN DE SALVADO">PAN DE SALVADO</option>
-        <option id="pan-de-pancho" value="PAN DE PANCHO">PAN DE PANCHO</option>
-        <option id="pan-de-fajitas" value="PAN DE FAJITAS">PAN DE FAJITAS</option>
-        <option id="pan-frances-en-rodajas" value="PAN FRANCÉS EN RODAJAS">PAN FRANCÉS EN RODAJAS</option>
-        <option id="pan-pebete" value="PAN PEBETE">PAN PEBETE</option>
-        <option id="barra-de-cereal" value="BARRA DE CEREAL">BARRA DE CEREAL</option>
-        <option id="copitos-azucarados" value="COPITOS AZUCARADOS">COPITOS AZUCARADOS</option>
-        <option id="copos-de-maiz" value="COPOS DE MAÍZ">COPOS DE MAÍZ</option>
-        <option id="granola" value="GRANOLA">GRANOLA</option>
-        <option id="pochoclo-dulce" value="POCHOCLO DULCE">POCHOCLO DULCE</option>
-        <option id="pochoclo-salado" value="POCHOCLO SALADO">POCHOCLO SALADO</option>
-        <option id="cuadraditos-de-avena" value="CUADRADITOS DE AVENA">CUADRADITOS DE AVENA</option>
-        <option id="galleta-de-agua" value="GALLETA DE AGUA">GALLETA DE AGUA</option>
-        <option id="bizcochitos-de-grasa" value="BIZCOCHITOS DE GRASA">BIZCOCHITOS DE GRASA</option>
-        <option id="galleta-de-arroz" value="GALLETA DE ARROZ">GALLETA DE ARROZ</option>
-        <option id="grisines" value="GRISINES">GRISINES</option>
-        <option id="mini-tostadas" value="MINI TOSTADAS">MINI TOSTADAS</option>
-        <option id="galleta-tipo-bizcochitos" value="GALLETA TIPO BIZCOCHITOS">GALLETA TIPO BIZCOCHITOS</option>
-        <option id="empanaditas-de-coopetin" value="EMPANADITAS DE COOPETÍN">EMPANADITAS DE COOPETÍN</option>
-        <option id="snacks" value="SNACKS">SNACKS</option>
-        <option id="papas-fritas" value="PAPAS FRITAS">PAPAS FRITAS</option>
-        <option id="mani" value="MANÍ">MANÍ</option>
-        <option id="papas-fritas-chicas" value="PAPAS FRITAS CHICAS">PAPAS FRITAS CHICAS</option>
-        <option id="papas-fritas-grandes" value="PAPAS FRITAS GRANDES">PAPAS FRITAS GRANDES</option>
-        <option id="pizza-a-la-piedra" value="PIZZA A LA PIEDRA">PIZZA A LA PIEDRA</option>
-        <option id="masa-de-tarta" value="MASA DE TARTA">MASA DE TARTA</option>
-        <option id="tapa-de-empanada" value="TAPA DE EMPANADA">TAPA DE EMPANADA</option>
-        <option id="galleta-cuadrada-dulce" value="GALLETA CUADRADA DULCE">GALLETA CUADRADA DULCE</option>
-        <option id="magdalena" value="MAGDALENA">MAGDALENA</option>
-        <option id="budin-de-chocolate" value="BUDÍN DE CHOCOLATE">BUDÍN DE CHOCOLATE</option>
-        <option id="budin-de-vainilla" value="BUDÍN DE VAINILLA">BUDÍN DE VAINILLA</option>
-        <option id="medialuna" value="MEDIALUNA">MEDIALUNA</option>
-        <option id="pan-dulce" value="PAN DULCE">PAN DULCE</option>
-        <option id="scones-grandes" value="SCONES GRANDES">SCONES GRANDES</option>
-        <option id="palmerita" value="PALMERITA">PALMERITA</option>
-        <option id="bizcohuero" value="BIZCOHUERO">BIZCOHUERO</option>
-        <option id="galleta-de-arroz-dulces" value="GALLETA DE ARROZ DULCES">GALLETA DE ARROZ DULCES</option>
-        <option id="churros" value="CHURROS">CHURROS</option>
-        <option id="leche-descremada" value="LECHE DESCREMADA">LECHE DESCREMADA</option>
-        <option id="leche-en-polvo" value="LECHE EN POLVO">LECHE EN POLVO</option>
-        <option id="yogurt-bebible-dietetico" value="YOGURT BEBIBLE DIETÉTICO">YOGURT BEBIBLE DIETÉTICO</option>
-        <option id="yogurt-bebible-entero" value="YOGURT BEBIBLE ENTERO">YOGURT BEBIBLE ENTERO</option>
-        <option id="flan" value="FLAN">FLAN</option>
-        <option id="postre-simple" value="POSTRE SIMPLE">POSTRE SIMPLE</option>
-        <option id="yogurt-dietetico-con-granola" value="YOGURT DIETÉTICO CON GRANOLA">YOGURT DIETÉTICO CON GRANOLA</option>
-        <option id="yogurt-dietetico-con-cereales" value="YOGURT DIETÉTICO CON CEREALES">YOGURT DIETÉTICO CON CEREALES</option>
-        <option id="yogurt-entero-con-cereales-azucarados" value="YOGURT ENTERO CON CEREALES AZUCARADOS">YOGURT ENTERO CON CEREALES AZUCARADOS</option>
-        <option id="flan-de-vainilla" value="FLAN DE VAINILLA">FLAN DE VAINILLA</option>
-        <option id="flan-de-dulce-de-leche" value="FLAN DE DULCE DE LECHE">FLAN DE DULCE DE LECHE</option>
-        <option id="flan-con-caramelo" value="FLAN CON CARAMELO">FLAN CON CARAMELO</option>
-        <option id="postre-dietetico-de-chocolate" value="POSTRE DIETÉTICO DE CHOCOLATE">POSTRE DIETÉTICO DE CHOCOLATE</option>
-        <option id="chocolatada-envasada" value="CHOCOLATADA ENVASADA">CHOCOLATADA ENVASADA</option>
-        <option id="chocolatada-preparada" value="CHOCOLATADA PREPARADA">CHOCOLATADA PREPARADA</option>
-        <option id="yogur-dietetico-con-frutas" value="YOGUR DIETÉTICO CON FRUTAS">YOGUR DIETÉTICO CON FRUTAS</option>
-        <option id="yogur-griego" value="YOGUR GRIEGO">YOGUR GRIEGO</option>
-        <option id="yogur-con-frutas-y-cereales" value="YOGUR CON FRUTAS Y CEREALES">YOGUR CON FRUTAS Y CEREALES</option>
-        <option id="azucar" value="AZÚCAR">AZÚCAR</option>
-        <option id="dulce-compacto-comun" value="DULCE COMPACTO COMÚN">DULCE COMPACTO COMÚN</option>
-        <option id="dulce-de-leche-comun-y-dietetico" value="DULCE DE LECHE COMÚN Y DIETÉTICO">DULCE DE LECHE COMÚN Y DIETÉTICO</option>
-        <option id="gelatina-comun" value="GELATINA COMÚN">GELATINA COMÚN</option>
-        <option id="miel" value="MIEL">MIEL</option>
-        <option id="mermelada-de-fruta" value="MERMELADA DE FRUTA">MERMELADA DE FRUTA</option>
-        <option id="alfajor-de-chocolate-con-dulce-de-leche" value="ALFAJOR DE CHOCOLATE CON DULCE DE LECHE">ALFAJOR DE CHOCOLATE CON DULCE DE LECHE</option>
-        <option id="bananita-cubierta-de-chocolate" value="BANANITA CUBIERTA DE CHOCOLATE">BANANITA CUBIERTA DE CHOCOLATE</option>
-        <option id="caramelos" value="CARAMELOS">CARAMELOS</option>
-        <option id="barrita-de-chocolate-y-cereal-dietetica" value="BARRITA DE CHOCOLATE Y CEREAL DIETÉTICA">BARRITA DE CHOCOLATE Y CEREAL DIETÉTICA</option>
-        <option id="chocolate-de-taza" value="CHOCOLATE DE TAZA">CHOCOLATE DE TAZA</option>
-        <option id="chocolate-en-polvo" value="CHOCOLATE EN POLVO">CHOCOLATE EN POLVO</option>
-        <option id="merengue" value="MERENGUE">MERENGUE</option>
-        <option id="turron-de-mani" value="TURRÓN DE MANÍ">TURRÓN DE MANÍ</option>
-        <option id="turron-de-mani-dulce" value="TURRÓN DE MANÍ DULCE">TURRÓN DE MANÍ DULCE</option>
-        <option id="huevo-de-pascua" value="HUEVO DE PASCUA">HUEVO DE PASCUA</option>
-        <option id="alfajor-de-galleta-de-arroz" value="ALFAJOR DE GALLETA DE ARROZ">ALFAJOR DE GALLETA DE ARROZ</option>
-        <option id="cucurucho-tipo-barquillo" value="CUCURUCHO TIPO BARQUILLO">CUCURUCHO TIPO BARQUILLO</option>
-        <option id="casata-de-tres-gustos" value="CASATA DE TRES GUSTOS">CASATA DE TRES GUSTOS</option>
-        <option id="helado-bombon" value="HELADO BOMBÓN">HELADO BOMBÓN</option>
-        <option id="helado" value="HELADO">HELADO</option>
-        <option id="cono-de-vainilla" value="CONO DE VAINILLA">CONO DE VAINILLA</option>
-        <option id="helado-de-agua-en-palito" value="HELADO DE AGUA EN PALITO">HELADO DE AGUA EN PALITO</option>
-        <option id="helado-de-crema-en-palito" value="HELADO DE CREMA EN PALITO">HELADO DE CREMA EN PALITO</option>
-        <option id="helado-dietetico" value="HELADO DIETÉTICO">HELADO DIETÉTICO</option>
-        <option id="chipa" value="CHIPÁ">CHIPÁ</option>
-        <option id="empanada-de-humita" value="EMPANADA DE HUMITA">EMPANADA DE HUMITA</option>
-        <option id="empanadas" value="EMPANADAS">EMPANADAS</option>
-        <option id="humita-en-chala" value="HUMITA EN CHALA">HUMITA EN CHALA</option>
-        <option id="locro" value="LOCRO">LOCRO</option>
-        <option id="tamares" value="TAMALES">TAMALES</option>
-        <option id="tortas-fritas" value="TORTAS FRITAS">TORTAS FRITAS</option>
-        <option id="criollo-o-tortilla" value="CRIOLO O TORTILLA">CRIOLO O TORTILLA</option>
-        <option id="tortitas" value="TORTITAS">TORTITAS</option>
-        <option id="sushi-tipo-roll" value="SUSHI TIPO ROLL">SUSHI TIPO ROLL</option>
-        <option id="sushi-tipo-nighiri" value="SUSHI TIPO NIGHIRI">SUSHI TIPO NIGHIRI</option>
-        <option id="ensalada-rusa" value="ENSALADA RUSA">ENSALADA RUSA</option>
-        <option id="milanesas" value="MILANESAS">MILANESAS</option>
-        <option id="gaseosa-comun" value="GASEOSA COMÚN">GASEOSA COMÚN</option>
-        <option id="jugo-de-naranja-o-pomelo" value="JUGO DE NARANJA O POMELO">JUGO DE NARANJA O POMELO</option>
-        <option id="jugo-comercial" value="JUGO COMERCIAL">JUGO COMERCIAL</option>
-        <option id="jugo-comercial-dietetico" value="JUGO COMERCIAL DIETÉTICO">JUGO COMERCIAL DIETÉTICO</option>      
-    </datalist>
-    </div>
+        <datalist id="listacomida">
+            <option id="papa" value="PAPA">PAPA</option>
+            <option id="choclo-en-grano" value="CHOCLO EN GRANO">CHOCLO EN GRANO</option>
+            <option id="choclo-entero" value="CHOCLO ENTERO">CHOCLO ENTERO</option>
+            <option id="mandioca" value="MANDIOCA">MANDIOCA</option>
+            <option id="batata" value="BATATA">BATATA</option>
+            <option id="pure-de-batata" value="PURE DE BATATA">PURE DE BATATA</option>
+            <option id="pure-de-papa" value="PURE DE PAPA">PURE DE PAPA</option>
+            <option id="pure-instantaneo" value="PURE INSTANTÁNEO">PURE INSTANTÁNEO</option>
+            <option id="calabaza" value="CALABAZA">CALABAZA</option>
+            <option id="zapallo" value="ZAPALLO">ZAPALLO</option>
+            <option id="palta" value="PALTA">PALTA</option>
+            <option id="remolacha" value="REMOLACHA">REMOLACHA</option>
+            <option id="zanahoria" value="ZANAHORIA">ZANAHORIA</option>
+            <option id="anana" value="ANANÁ">ANANÁ</option>
+            <option id="banana" value="BANANA">BANANA</option>
+            <option id="cerezas" value="CEREZAS">CEREZAS</option>
+            <option id="ciruelas" value="CIRUELAS">CIRUELAS</option>
+            <option id="damascos" value="DAMASCOS">DAMASCOS</option>
+            <option id="duraznos" value="DURAZNOS">DURAZNOS</option>
+            <option id="frutillas" value="FRUTILLAS">FRUTILLAS</option>
+            <option id="granada" value="GRANADA">GRANADA</option>
+            <option id="melon" value="MELÓN">MELÓN</option>
+            <option id="mandarina" value="MANDARINA">MANDARINA</option>
+            <option id="mango" value="MANGO">MANGO</option>
+            <option id="manzana" value="MANZANA">MANZANA</option>
+            <option id="moras" value="MORAS">MORAS</option>
+            <option id="naranja" value="NARANJA">NARANJA</option>
+            <option id="peras" value="PERAS">PERAS</option>
+            <option id="pomelo" value="POMELO">POMELO</option>
+            <option id="sandia" value="SANDÍA">SANDÍA</option>
+            <option id="uvas" value="UVAS">UVAS</option>
+            <option id="kiwi" value="KIWI">KIWI</option>
+            <option id="higos" value="HIGOS">HIGOS</option>
+            <option id="kinotos" value="KINOTOS">KINOTOS</option>
+            <option id="frambuesas" value="FRAMBUESAS">FRAMBUESAS</option>
+            <option id="manzanas" value="MANZANAS">MANZANAS</option>
+            <option id="pasas-de-uva" value="PASAS DE UVA">PASAS DE UVA</option>
+            <option id="frutas-secas" value="FRUTAS SECAS">FRUTAS SECAS</option>
+            <option id="pure-de-manzana" value="PURE DE MANZANA">PURE DE MANZANA</option>
+            <option id="anana-en-lata-dietetico" value="ANANÁ EN LATA DIETÉTICO">ANANÁ EN LATA DIETÉTICO</option>
+            <option id="coctel-de-frutas-dietetico" value="CÓCTEL DE FRUTAS DIETÉTICO">CÓCTEL DE FRUTAS DIETÉTICO</option>
+            <option id="duraznos-en-lata-dieteticos" value="DURAZNOS EN LATA DIETÉTICOS">DURAZNOS EN LATA DIETÉTICOS</option>
+            <option id="avena-cocida" value="AVENA COCIDA">AVENA COCIDA</option>
+            <option id="almidon-de-maiz" value="ALMIDÓN DE MAÍZ">ALMIDÓN DE MAÍZ</option>
+            <option id="harina-de-mandioca" value="HARINA DE MANDIOCA">HARINA DE MANDIOCA</option>
+            <option id="arroz-blanco" value="ARROZ BLANCO">ARROZ BLANCO</option>
+            <option id="arroz-integral" value="ARROZ INTEGRAL">ARROZ INTEGRAL</option>
+            <option id="canellones" value="CANELONES">CANELONES</option>
+            <option id="panqueque" value="PANQUEQUE">PANQUEQUE</option>
+            <option id="noquis" value="ÑOQUIS">ÑOQUIS</option>
+            <option id="noquis-de-semola" value="ÑOQUIS DE SÉMOLA">ÑOQUIS DE SÉMOLA</option>
+            <option id="pastas-cocidas" value="PASTAS COCIDAS">PASTAS COCIDAS</option>
+            <option id="ravioles" value="RAVIOLES">RAVIOLES</option>
+            <option id="capellettini" value="CAPELETTINI">CAPELETTINI</option>
+            <option id="lamina-de-lasagna" value="LÁMINA DE LASAGNA">LÁMINA DE LASAGNA</option>
+            <option id="lentejas" value="LENTEJAS">LENTEJAS</option>
+            <option id="porotos" value="POROTOS">POROTOS</option>
+            <option id="garbanzos" value="GARBANZOS">GARBANZOS</option>
+            <option id="milanesa-de-soja" value="MILANESA DE SOJA">MILANESA DE SOJA</option>
+            <option id="habas-cocidas" value="HABAS COCIDAS">HABAS COCIDAS</option>
+            <option id="pan-blanco" value="PAN BLANCO">PAN BLANCO</option>
+            <option id="pan-integral" value="PAN INTEGRAL">PAN INTEGRAL</option>
+            <option id="pan-de-hamburguesa" value="PAN DE HAMBURGUESA">PAN DE HAMBURGUESA</option>
+            <option id="pan-arabe" value="PAN ÁRABE">PAN ÁRABE</option>
+            <option id="sandwich-de-miga" value="SÁNDWICH DE MIGA">SÁNDWICH DE MIGA</option>
+            <option id="tortilla-de-maiz" value="TORTILLA DE MAÍZ">TORTILLA DE MAÍZ</option>
+            <option id="pan-de-salvado" value="PAN DE SALVADO">PAN DE SALVADO</option>
+            <option id="pan-de-pancho" value="PAN DE PANCHO">PAN DE PANCHO</option>
+            <option id="pan-de-fajitas" value="PAN DE FAJITAS">PAN DE FAJITAS</option>
+            <option id="pan-frances-en-rodajas" value="PAN FRANCÉS EN RODAJAS">PAN FRANCÉS EN RODAJAS</option>
+            <option id="pan-pebete" value="PAN PEBETE">PAN PEBETE</option>
+            <option id="barra-de-cereal" value="BARRA DE CEREAL">BARRA DE CEREAL</option>
+            <option id="copitos-azucarados" value="COPITOS AZUCARADOS">COPITOS AZUCARADOS</option>
+            <option id="copos-de-maiz" value="COPOS DE MAÍZ">COPOS DE MAÍZ</option>
+            <option id="granola" value="GRANOLA">GRANOLA</option>
+            <option id="pochoclo-dulce" value="POCHOCLO DULCE">POCHOCLO DULCE</option>
+            <option id="pochoclo-salado" value="POCHOCLO SALADO">POCHOCLO SALADO</option>
+            <option id="cuadraditos-de-avena" value="CUADRADITOS DE AVENA">CUADRADITOS DE AVENA</option>
+            <option id="galleta-de-agua" value="GALLETA DE AGUA">GALLETA DE AGUA</option>
+            <option id="bizcochitos-de-grasa" value="BIZCOCHITOS DE GRASA">BIZCOCHITOS DE GRASA</option>
+            <option id="galleta-de-arroz" value="GALLETA DE ARROZ">GALLETA DE ARROZ</option>
+            <option id="grisines" value="GRISINES">GRISINES</option>
+            <option id="mini-tostadas" value="MINI TOSTADAS">MINI TOSTADAS</option>
+            <option id="galleta-tipo-bizcochitos" value="GALLETA TIPO BIZCOCHITOS">GALLETA TIPO BIZCOCHITOS</option>
+            <option id="empanaditas-de-coopetin" value="EMPANADITAS DE COOPETÍN">EMPANADITAS DE COOPETÍN</option>
+            <option id="snacks" value="SNACKS">SNACKS</option>
+            <option id="papas-fritas" value="PAPAS FRITAS">PAPAS FRITAS</option>
+            <option id="mani" value="MANÍ">MANÍ</option>
+            <option id="papas-fritas-chicas" value="PAPAS FRITAS CHICAS">PAPAS FRITAS CHICAS</option>
+            <option id="papas-fritas-grandes" value="PAPAS FRITAS GRANDES">PAPAS FRITAS GRANDES</option>
+            <option id="pizza-a-la-piedra" value="PIZZA A LA PIEDRA">PIZZA A LA PIEDRA</option>
+            <option id="masa-de-tarta" value="MASA DE TARTA">MASA DE TARTA</option>
+            <option id="tapa-de-empanada" value="TAPA DE EMPANADA">TAPA DE EMPANADA</option>
+            <option id="galleta-cuadrada-dulce" value="GALLETA CUADRADA DULCE">GALLETA CUADRADA DULCE</option>
+            <option id="magdalena" value="MAGDALENA">MAGDALENA</option>
+            <option id="budin-de-chocolate" value="BUDÍN DE CHOCOLATE">BUDÍN DE CHOCOLATE</option>
+            <option id="budin-de-vainilla" value="BUDÍN DE VAINILLA">BUDÍN DE VAINILLA</option>
+            <option id="medialuna" value="MEDIALUNA">MEDIALUNA</option>
+            <option id="pan-dulce" value="PAN DULCE">PAN DULCE</option>
+            <option id="scones-grandes" value="SCONES GRANDES">SCONES GRANDES</option>
+            <option id="palmerita" value="PALMERITA">PALMERITA</option>
+            <option id="bizcohuero" value="BIZCOHUERO">BIZCOHUERO</option>
+            <option id="galleta-de-arroz-dulces" value="GALLETA DE ARROZ DULCES">GALLETA DE ARROZ DULCES</option>
+            <option id="churros" value="CHURROS">CHURROS</option>
+            <option id="leche-descremada" value="LECHE DESCREMADA">LECHE DESCREMADA</option>
+            <option id="leche-en-polvo" value="LECHE EN POLVO">LECHE EN POLVO</option>
+            <option id="yogurt-bebible-dietetico" value="YOGURT BEBIBLE DIETÉTICO">YOGURT BEBIBLE DIETÉTICO</option>
+            <option id="yogurt-bebible-entero" value="YOGURT BEBIBLE ENTERO">YOGURT BEBIBLE ENTERO</option>
+            <option id="flan" value="FLAN">FLAN</option>
+            <option id="postre-simple" value="POSTRE SIMPLE">POSTRE SIMPLE</option>
+            <option id="yogurt-dietetico-con-granola" value="YOGURT DIETÉTICO CON GRANOLA">YOGURT DIETÉTICO CON GRANOLA</option>
+            <option id="yogurt-dietetico-con-cereales" value="YOGURT DIETÉTICO CON CEREALES">YOGURT DIETÉTICO CON CEREALES</option>
+            <option id="yogurt-entero-con-cereales-azucarados" value="YOGURT ENTERO CON CEREALES AZUCARADOS">YOGURT ENTERO CON CEREALES AZUCARADOS</option>
+            <option id="flan-de-vainilla" value="FLAN DE VAINILLA">FLAN DE VAINILLA</option>
+            <option id="flan-de-dulce-de-leche" value="FLAN DE DULCE DE LECHE">FLAN DE DULCE DE LECHE</option>
+            <option id="flan-con-caramelo" value="FLAN CON CARAMELO">FLAN CON CARAMELO</option>
+            <option id="postre-dietetico-de-chocolate" value="POSTRE DIETÉTICO DE CHOCOLATE">POSTRE DIETÉTICO DE CHOCOLATE</option>
+            <option id="chocolatada-envasada" value="CHOCOLATADA ENVASADA">CHOCOLATADA ENVASADA</option>
+            <option id="chocolatada-preparada" value="CHOCOLATADA PREPARADA">CHOCOLATADA PREPARADA</option>
+            <option id="yogur-dietetico-con-frutas" value="YOGUR DIETÉTICO CON FRUTAS">YOGUR DIETÉTICO CON FRUTAS</option>
+            <option id="yogur-griego" value="YOGUR GRIEGO">YOGUR GRIEGO</option>
+            <option id="yogur-con-frutas-y-cereales" value="YOGUR CON FRUTAS Y CEREALES">YOGUR CON FRUTAS Y CEREALES</option>
+            <option id="azucar" value="AZÚCAR">AZÚCAR</option>
+            <option id="dulce-compacto-comun" value="DULCE COMPACTO COMÚN">DULCE COMPACTO COMÚN</option>
+            <option id="dulce-de-leche-comun-y-dietetico" value="DULCE DE LECHE COMÚN Y DIETÉTICO">DULCE DE LECHE COMÚN Y DIETÉTICO</option>
+            <option id="gelatina-comun" value="GELATINA COMÚN">GELATINA COMÚN</option>
+            <option id="miel" value="MIEL">MIEL</option>
+            <option id="mermelada-de-fruta" value="MERMELADA DE FRUTA">MERMELADA DE FRUTA</option>
+            <option id="alfajor-de-chocolate-con-dulce-de-leche" value="ALFAJOR DE CHOCOLATE CON DULCE DE LECHE">ALFAJOR DE CHOCOLATE CON DULCE DE LECHE</option>
+            <option id="bananita-cubierta-de-chocolate" value="BANANITA CUBIERTA DE CHOCOLATE">BANANITA CUBIERTA DE CHOCOLATE</option>
+            <option id="caramelos" value="CARAMELOS">CARAMELOS</option>
+            <option id="barrita-de-chocolate-y-cereal-dietetica" value="BARRITA DE CHOCOLATE Y CEREAL DIETÉTICA">BARRITA DE CHOCOLATE Y CEREAL DIETÉTICA</option>
+            <option id="chocolate-de-taza" value="CHOCOLATE DE TAZA">CHOCOLATE DE TAZA</option>
+            <option id="chocolate-en-polvo" value="CHOCOLATE EN POLVO">CHOCOLATE EN POLVO</option>
+            <option id="merengue" value="MERENGUE">MERENGUE</option>
+            <option id="turron-de-mani" value="TURRÓN DE MANÍ">TURRÓN DE MANÍ</option>
+            <option id="turron-de-mani-dulce" value="TURRÓN DE MANÍ DULCE">TURRÓN DE MANÍ DULCE</option>
+            <option id="huevo-de-pascua" value="HUEVO DE PASCUA">HUEVO DE PASCUA</option>
+            <option id="alfajor-de-galleta-de-arroz" value="ALFAJOR DE GALLETA DE ARROZ">ALFAJOR DE GALLETA DE ARROZ</option>
+            <option id="cucurucho-tipo-barquillo" value="CUCURUCHO TIPO BARQUILLO">CUCURUCHO TIPO BARQUILLO</option>
+            <option id="casata-de-tres-gustos" value="CASATA DE TRES GUSTOS">CASATA DE TRES GUSTOS</option>
+            <option id="helado-bombon" value="HELADO BOMBÓN">HELADO BOMBÓN</option>
+            <option id="helado" value="HELADO">HELADO</option>
+            <option id="cono-de-vainilla" value="CONO DE VAINILLA">CONO DE VAINILLA</option>
+            <option id="helado-de-agua-en-palito" value="HELADO DE AGUA EN PALITO">HELADO DE AGUA EN PALITO</option>
+            <option id="helado-de-crema-en-palito" value="HELADO DE CREMA EN PALITO">HELADO DE CREMA EN PALITO</option>
+            <option id="helado-dietetico" value="HELADO DIETÉTICO">HELADO DIETÉTICO</option>
+            <option id="chipa" value="CHIPÁ">CHIPÁ</option>
+            <option id="empanada-de-humita" value="EMPANADA DE HUMITA">EMPANADA DE HUMITA</option>
+            <option id="empanadas" value="EMPANADAS">EMPANADAS</option>
+            <option id="humita-en-chala" value="HUMITA EN CHALA">HUMITA EN CHALA</option>
+            <option id="locro" value="LOCRO">LOCRO</option>
+            <option id="tamares" value="TAMALES">TAMALES</option>
+            <option id="tortas-fritas" value="TORTAS FRITAS">TORTAS FRITAS</option>
+            <option id="criollo-o-tortilla" value="CRIOLO O TORTILLA">CRIOLO O TORTILLA</option>
+            <option id="tortitas" value="TORTITAS">TORTITAS</option>
+            <option id="sushi-tipo-roll" value="SUSHI TIPO ROLL">SUSHI TIPO ROLL</option>
+            <option id="sushi-tipo-nighiri" value="SUSHI TIPO NIGHIRI">SUSHI TIPO NIGHIRI</option>
+            <option id="ensalada-rusa" value="ENSALADA RUSA">ENSALADA RUSA</option>
+            <option id="milanesas" value="MILANESAS">MILANESAS</option>
+            <option id="gaseosa-comun" value="GASEOSA COMÚN">GASEOSA COMÚN</option>
+            <option id="jugo-de-naranja-o-pomelo" value="JUGO DE NARANJA O POMELO">JUGO DE NARANJA O POMELO</option>
+            <option id="jugo-comercial" value="JUGO COMERCIAL">JUGO COMERCIAL</option>
+            <option id="jugo-comercial-dietetico" value="JUGO COMERCIAL DIETÉTICO">JUGO COMERCIAL DIETÉTICO</option>      
+        </datalist>
+        </div>
     <input list="listacantidad" type="text" placeholder="cantidad" id="inputcantidad">
     <datalist id="listacantidad"></datalist>
     <select  name="grupocomidas" id="grupocomidas">
@@ -220,7 +222,8 @@
         <option id="paquete" value="PAQUETE">PAQUETE</option>
         <option id="vaso" value="VASO">VASO</option>
     </select>
-    <input type="button" value="calcular" id="calcular">
+    <div class="resultado" id="resultado">APLICA XXX U.</div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
     <script src="calculadora.js"></script>

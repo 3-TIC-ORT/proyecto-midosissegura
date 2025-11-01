@@ -1,37 +1,32 @@
-connect2Server();
+connect2Server(3000);
+
 const calcular = document.getElementById ("calcular");
+const resultado = dpcument.querySelectorAll ("#resultado");
+const comidaelegida = document.querySelectorAll ("#inputcomidaelegida");
+const cantidades = document.querySelectorAll ("#inputcantidad");
+const grupocomidaelegida = document.querySelectorAll ("#grupocomidaelegidas");
+const unidades = document.querySelectorAll ("#cantidad");
+const botoncalcular = document.querySelectorAll ("#botoncalcular");
 
-const comidaelegida = document.querySelectorAll (".inputcomidaelegida");
-const cantidades = document.querySelectorAll (".inputcantidad");
-const grupocomidaelegida = document.querySelectorAll (".grupocomidaelegidas");
-const cantidad = document.querySelectorAll (".cantidad");
-
-fetch("../../back/Comidas.json")
-  .then(res => res.json())
-  .then(comidaelegidasjson => {
-      function seleccionUnidad (comidaelegidainput) {
-          const convertir = comidaelegidainput.trim().toLowerCase();
-          const match = comidaelegidasjson.find (item =>
-            item.Alimento.trim().toLowerCase() === convertir
-            );
-            return match ? match.Unidad: "";
-      };
-    comidaelegida.forEach ((input, index) => {
-        input.addEventListener ("input", () => {
-            const comidita = input.value;
-            const correspondienteU = seleccionUnidad (comidita);
-            cantidad [index].value = correspondienteU;
-        });
-  });
-  })
-  .catch(err => console.error("Error al cargar comidaelegidas.json:", err));
-
-const datos = [comidaelegida, cantidades, grupocomidaelegida, cantidad];
-postEvent ("Calculadora", datos, (respuesta) => {
-    if (respuesta === error) {
-        alert ("Error");
+function calcular () {
+    const enviar = {
+        grupo: grupocomidaelegida.value,
+        comida: comidaelegida.value,
+        cantidad: cantidades.value,
+        unidad: unidades.value
     }
-    else {
-        alert (respuesta);
-    };
+};
+
+comidaelegida.forEach ((input, index) => {
+    input.addEventListener ("input", () => {
+        const comidita = input.value;
+        const correspondienteU = seleccionUnidad (comidita);
+        cantidad [index].value = correspondienteU;
+    });
+});
+
+postEvent ("Calculadora", enviar, (respuesta) => {
+    resultado.innerText = "APLICA ${respuesta.resultado} U.";
 })
+
+botoncalcular.addEventListener ("click", calcular);

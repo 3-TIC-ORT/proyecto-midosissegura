@@ -43,11 +43,13 @@ body {
 
 .botoncalcular {
     position: absolute;
-    width: 435;
-    height: 116;
+    width: 435px;
+    height: 116px;
 }
 
 .botoncalcular img {
     background-color: transparent;
     border: none;
 }
+
+.
