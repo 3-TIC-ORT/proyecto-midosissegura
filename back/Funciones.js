@@ -289,7 +289,7 @@ function Calculadora(data){
     let eleccion = data.comidaelegida
     let unidades = data.cantidad
     let resultado = null
-    UsuarioR.RATIO = 20 //valor por defecto para pruebas
+
     
 
 for (var i = 0; i<comidas.length; i++)
