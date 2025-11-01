@@ -1,0 +1,54 @@
+body {
+    background-color: #A3DFF2;
+    width: 1440px;
+    height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .cajaazul {
+    position: absolute;
+    width: 1218px;
+    height: 842px;
+    top: 134px;
+    left: 94px;
+    border-width: 7.07px;
+    border-color: black;
+    border-style: solid;
+ }
+
+ .comidas {
+    position: absolute;
+    display: flex;
+    width: 576px;
+    height: 99px;
+    opacity: 1;
+ }
+
+ .botongrupocomidas {
+    position: absolute;
+    width: 33.45418167114258px;
+    height: 17.761646270751953px;
+}
+
+.veropcionescomidas {
+    background-color: transparent;
+    border: none;
+}
+
+.grupodecomidas {
+    background-color: transparent;
+    border: none;
+}
+
+.botoncalcular {
+    position: absolute;
+    width: 435px;
+    height: 116px;
+}
+
+.botoncalcular img {
+    background-color: transparent;
+    border: none;
+}
+
