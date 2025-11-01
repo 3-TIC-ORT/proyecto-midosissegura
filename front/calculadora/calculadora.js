@@ -6,7 +6,7 @@ const cantidades = document.querySelectorAll (".inputcantidad");
 const grupocomidaelegida = document.querySelectorAll (".grupocomidaelegidas");
 const cantidad = document.querySelectorAll (".cantidad");
 
-fetch("../../back/comidaelegidas.json")
+fetch("../../back/Comidas.json")
   .then(res => res.json())
   .then(comidaelegidasjson => {
       function seleccionUnidad (comidaelegidainput) {
@@ -26,7 +26,7 @@ fetch("../../back/comidaelegidas.json")
   })
   .catch(err => console.error("Error al cargar comidaelegidas.json:", err));
 
-const datos = [comidaelegida, cantidad, grupocomidaelegida, cantidad];
+const datos = [comidaelegida, cantidades, grupocomidaelegida, cantidad];
 postEvent ("Calculadora", datos, (respuesta) => {
     if (respuesta.error) {
         alert ("Error");
