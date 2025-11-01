@@ -12,6 +12,21 @@ var UsuarioR = null
 let cuentacreada = null
 var NiñoR= null
 let Mensajenuevo= null
+    let usuarion = ""
+    let usuarioa = ""
+     let   nombre=""
+   let usuarioapellido= ""
+   let contraseña=""
+   let t1= ""
+   let t2= ""
+   let t3= ""
+  let  t4= ""
+   let t5= ""
+   let t6= ""
+   let dosis= ""
+   let ratio= ""
+    let nombreniño= ""
+   let apellidoniño= ""
 function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
@@ -210,21 +225,7 @@ function Comidas()
     return comidas
 }
 export {Comidas}
-    let usuarion = ""
-    let usuarioa = ""
-     let   nombre=""
-   let usuarioapellido= ""
-   let contraseña=""
-   let t1= ""
-   let t2= ""
-   let t3= ""
-  let  t4= ""
-   let t5= ""
-   let t6= ""
-   let dosis= ""
-   let ratio= ""
-    let nombreniño= ""
-   let apellidoniño= ""
+
 function UsuarioRegistrado(data){
     let usuarion = data.NOMBRE;
     let usuarioa = data.APELLIDO;
@@ -287,10 +288,10 @@ function recargarratio(data) {
 }
 export {recargarratio}
 function Calculadora(data){
-    let eleccion = data.comidaelegida
+    let eleccion = data.comida
     let unidades = data.cantidad
     let resultado = 0
-    
+      let hecho = false
     
 if (unidades === 0 || isNaN(unidades))
 {
@@ -302,16 +303,16 @@ for (var i = 0; i<comidas.length; i++)
 {
     if (eleccion === comidas[i].Alimento)
     {
-        resultado = (comidas[i].CpU * unidades / UsuarioR.RATIO)
+        resultado = (comidas[i].CpU * unidades)
              console.log ("El resultado es: " + resultado)
-             let hecho = true
+         hecho = true
         break
     }
 }
 if (resultado === 0)
 {
     console.log ("Comida no encontrada")
-    let hecho = false
+    hecho = false
 }
 
     return [resultado, hecho];

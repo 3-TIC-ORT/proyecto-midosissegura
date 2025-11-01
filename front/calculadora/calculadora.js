@@ -9,15 +9,16 @@ const unidades = document.querySelectorAll ("#cantidad");
 const botoncalcular = document.getElementById ("botoncalcular");
 
 function calculardatos () {
-    const enviar = {
+
+    postEvent ("Calculadora", 
+        {
         grupo: grupocomidaelegida.value,
         comida: comidaelegida.value,
         cantidad: cantidades.value,
-        unidad: unidades.value
-    }
-
-    postEvent ("Calculadora", enviar, (respuesta) => {
-    resultado.innerText = "APLICA ${respuesta.resultado} U.";
+        unidad:  parseFloat(unidades.value)     
+        }, function (data) {
+    const respuesta = data;
+    resultado.innerText = `Calorías: ${respuesta} Kcal;`
 })
 };
 
@@ -29,4 +30,4 @@ comidaelegida.forEach ((input, index) => {
     });
 });
 
-botoncalcular.addEventListener ("click", calcular);
+botoncalcular.addEventListener ("click", calculardatos);
