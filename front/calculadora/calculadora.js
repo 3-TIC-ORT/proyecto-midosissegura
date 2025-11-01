@@ -1,32 +1,32 @@
 connect2Server();
 const calcular = document.getElementById ("calcular");
 
-const comida = document.querySelectorAll (".inputcomida");
-const cantidad = document.querySelectorAll (".inputcantidad");
-const grupocomida = document.querySelectorAll (".grupocomidas");
-const unidades = document.querySelectorAll (".unidades");
+const comidaelegida = document.querySelectorAll (".inputcomidaelegida");
+const cantidades = document.querySelectorAll (".inputcantidad");
+const grupocomidaelegida = document.querySelectorAll (".grupocomidaelegidas");
+const cantidad = document.querySelectorAll (".cantidad");
 
-fetch("../../back/Comidas.json")
+fetch("../../back/comidaelegidas.json")
   .then(res => res.json())
-  .then(comidasjson => {
-      function seleccionUnidad (comidainput) {
-          const convertir = comidainput.trim().toLowerCase();
-          const match = comidasjson.find (item =>
+  .then(comidaelegidasjson => {
+      function seleccionUnidad (comidaelegidainput) {
+          const convertir = comidaelegidainput.trim().toLowerCase();
+          const match = comidaelegidasjson.find (item =>
             item.Alimento.trim().toLowerCase() === convertir
             );
             return match ? match.Unidad: "";
       };
-    comida.forEach ((input, index) => {
+    comidaelegida.forEach ((input, index) => {
         input.addEventListener ("input", () => {
             const comidita = input.value;
             const correspondienteU = seleccionUnidad (comidita);
-            unidades [index].value = correspondienteU;
+            cantidad [index].value = correspondienteU;
         });
   });
   })
-  .catch(err => console.error("Error al cargar Comidas.json:", err));
+  .catch(err => console.error("Error al cargar comidaelegidas.json:", err));
 
-const datos = [comida, cantidad, grupocomida, unidades];
+const datos = [comidaelegida, cantidad, grupocomidaelegida, cantidad];
 postEvent ("Calculadora", datos, (respuesta) => {
     if (respuesta.error) {
         alert ("Error");
