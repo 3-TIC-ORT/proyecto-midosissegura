@@ -1,20 +1,24 @@
 connect2Server(3000);
 
 const calcular = document.getElementById ("calcular");
-const resultado = dpcument.querySelectorAll ("#resultado");
+const resultado = document.querySelectorAll ("#resultado");
 const comidaelegida = document.querySelectorAll ("#inputcomidaelegida");
 const cantidades = document.querySelectorAll ("#inputcantidad");
 const grupocomidaelegida = document.querySelectorAll ("#grupocomidaelegidas");
 const unidades = document.querySelectorAll ("#cantidad");
-const botoncalcular = document.querySelectorAll ("#botoncalcular");
+const botoncalcular = document.getElementById ("botoncalcular");
 
-function calcular () {
+function calculardatos () {
     const enviar = {
         grupo: grupocomidaelegida.value,
         comida: comidaelegida.value,
         cantidad: cantidades.value,
         unidad: unidades.value
     }
+
+    postEvent ("Calculadora", enviar, (respuesta) => {
+    resultado.innerText = "APLICA ${respuesta.resultado} U.";
+})
 };
 
 comidaelegida.forEach ((input, index) => {
@@ -24,9 +28,5 @@ comidaelegida.forEach ((input, index) => {
         cantidad [index].value = correspondienteU;
     });
 });
-
-postEvent ("Calculadora", enviar, (respuesta) => {
-    resultado.innerText = "APLICA ${respuesta.resultado} U.";
-})
 
 botoncalcular.addEventListener ("click", calcular);
