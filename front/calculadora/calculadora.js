@@ -3,9 +3,9 @@ connect2Server(3000);
 
 const botonCalcular = document.querySelector("#botoncalcular");
 const resultado = document.querySelector("#resultado");
-const comidaelegida = document.querySelector("#inputcomida");
-const grupocomidaelegida = document.querySelector("#grupocomidas");
-const unidades = document.querySelector("#unidades");
+const comidaelegida = document.getElementById("inputcomida");
+const grupocomidaelegida = document.getElementById("grupocomidas");
+const unidades = document.getElementById("unidad");
 const cantidades = document.getElementById ("inputcantidad");
 localStorage.setItem("nombreniño", "Maxi")
 localStorage.setItem("apellidoniño","Tabakman");
@@ -13,7 +13,7 @@ localStorage.setItem("apellidoniño","Tabakman");
 
 const comidasydata = [
   {
-    "Alimento": "PAPA",
+    "Alimento": "Papa",
     "Tipo": "Vegetal",
     "Unidad": "Unidad"
   },
@@ -825,7 +825,6 @@ const comidasydata = [
 comidaelegida.addEventListener ("input", () => {
   const nombrecomida = comidaelegida.value.trim().toLowerCase();
   const comida = comidasydata.find(c => c.Alimento.toLowerCase() === nombrecomida);
-
 
   if (comida) {
     grupocomidaelegida.value = comida.Tipo;

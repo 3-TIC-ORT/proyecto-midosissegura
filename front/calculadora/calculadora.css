@@ -2,11 +2,20 @@ body {
     background-color: #A3DFF2;
     width: 1440px;
     height: 1024px;
+    font-family: "Digital Numbers", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
- .cajaazul {
+
+@font-face {
+    font-family: 'Digital Numbers';
+    src: url('DigitalNumbers-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+ .azuloscuro {
     position: absolute;
     width: 1218px;
     height: 842px;
@@ -17,28 +26,63 @@ body {
     border-style: solid;
  }
 
+ .cajaazul {
+    position: absolute;
+    width: 657px;
+    height: 754px;
+    background-color: #2C7998;
+    top: 47px;
+    left: 270px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: 8px;
+ }
+
+ .resultado {
+    position: absolute;
+    width: 570px;
+    height: 107px;
+    left: 43.5px;
+    top: 89px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: black;
+    background-color: #839D36;
+ }
+
+ .resultado p {
+    position: absolute;
+    width: 412px;
+    height: 55px;
+    top: 117px;
+    left: 359px;
+ }
+
  .comidas {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 576px;
     height: 99px;
     opacity: 1;
  }
 
  .botongrupocomidas {
-
+    position: absolute;
     width: 33.45418167114258px;
     height: 17.761646270751953px;
 }
 
 .veropcionescomidas {
+    position: absolute;
     background-color: transparent;
     border: none;
 }
 
 .grupodecomidas {
+    position: absolute;
     background-color: transparent;
     border: none;
 }
