@@ -1,33 +1,30 @@
 connect2Server(3000);
 
-const calcular = document.getElementById ("calcular");
-const resultado = document.querySelectorAll ("#resultado");
-const comidaelegida = document.querySelectorAll ("#inputcomidaelegida");
-const cantidades = document.querySelectorAll ("#inputcantidad");
-const grupocomidaelegida = document.querySelectorAll ("#grupocomidaelegidas");
-const unidades = document.querySelectorAll ("#cantidad");
-const botoncalcular = document.getElementById ("botoncalcular");
+const botonCalcular = document.querySelector("#botoncalcular");
+const resultado = document.querySelector("#resultado");
+const comidaelegida = document.querySelector("#inputcomida");
+const cantidades = document.querySelector("#inputcantidad");
+const grupocomidaelegida = document.querySelector("#grupocomidas");
+const unidades = document.querySelector("#unidades");
+localStorage.setItem("nombreniño", "Maxi")
+localStorage.setItem("apellidoniño","Tabakman");
 
-function calculardatos () {
+function calculardatos() {
+  postEvent("Calculadora", 
+    {
+        NOMBRE: localStorage.getItem("nombreniño"),
+    APELLIDO: localStorage.getItem("apellidoniño"),
+      grupo: grupocomidaelegida.value,
+      comida: comidaelegida.value,
+      CANTIDAD: cantidades.value,
+      unidad: unidades.value
+    }, 
+    function (data) {
+      const respuesta = data;
+      alert(`Calorías: ${respuesta} Kcal`);
+      resultado.innerText = `Calorías: ${respuesta} Kcal`;
+  });
+}
 
-    postEvent ("Calculadora", 
-        {
-        grupo: grupocomidaelegida.value,
-        comida: comidaelegida.value,
-        cantidad: cantidades.value,
-        unidad:  parseFloat(unidades.value)     
-        }, function (data) {
-    const respuesta = data;
-    resultado.innerText = `Calorías: ${respuesta} Kcal;`
-})
-};
 
-comidaelegida.forEach ((input, index) => {
-    input.addEventListener ("input", () => {
-        const comidita = input.value;
-        const correspondienteU = seleccionUnidad (comidita);
-        cantidad [index].value = correspondienteU;
-    });
-});
-
-botoncalcular.addEventListener ("click", calculardatos);
+botonCalcular.addEventListener("click", calculardatos);
