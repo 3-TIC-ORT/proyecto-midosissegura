@@ -1,20 +1,44 @@
 let nivelglucemia= 70;
 const plato= document.getElementById ("plato");
 const platopantalla = null;
-const platofideos = document.getElementById ("Fideos");
-const platopapasfritas = document.getElementById ("PapasFritas");
+const platobanana = document.getElementById ("Banana");
+const platopizza = document.getElementById ("Pizza");
 const platocarne = document.getElementById ("Carne");
 const platohelado = document.getElementById ("Helado");
-const moguls = document.getElementById ("Moguls");
-const lapicera = document.getElementById ("Lapicera");
+const comer = document.getElementById ("comer");
+const insulina = document.getElementById ("insulina");
+const azucar = document.getElementById ("azucar");
+const mucha = document.getElementById ("mucho")
+const baja = document.getElementById ("baja")
+const normal = document.getElementById ("normal")
+const nivelglucometro = document.getElementById ("nivelglucometro");
+
+function actualizarglucometro() {
+    nivelglucometro.textContent = nivelglucemia;
+}
+
+mucha.classList.add ("display");
+baja.classList.add ("display");
+
+function estadonene (){
+if (nivelglucemia >= 300) {
+    normal.classList.add ("display");
+    mucha.classList.remove ("display");
+}
+
+else if (nivelglucemia <= 55) {
+    normal.classList.add ("display");
+    baja.classList.remove ("display");
+}
+}
 
 function cambiosglucemia (cambio) {
     nivelglucemia += cambio
 }
 
 const platos= [
-    platofideos,
-    platopapasfritas,
+    platobanana,
+    platopizza,
     platocarne,
     platohelado
 ];
@@ -29,6 +53,10 @@ function platoaleatorio () {
         plato.style.display = "none";
     }
 })
+}   
+
+function platoenpantalla() {
+  return platos.find((plato) => plato.style.display === "inline");
 }
 
 window.onload = function () {
@@ -36,35 +64,49 @@ window.onload = function () {
     nivelglucemia=70;
 }
 
-platofideos.addEventListener ("click", function() {
-    cambiosglucemia (50);
-    alert ("La glucemia esta a " + nivelglucemia);
-})
+comer.addEventListener("click", function () {
+  const plato = platoenpantalla();
 
-platopapasfritas.addEventListener ("click", function() {
-    cambiosglucemia (40);
-    alert ("La glucemia esta a " + nivelglucemia);
-})
+if (plato===platobanana) {
+    cambiosglucemia (20);
+    actualizarglucometro();
+    estadonene();
+}
 
-platocarne.addEventListener ("click", function() {
-    cambiosglucemia (10);
-    alert ("La glucemia esta a " + nivelglucemia);
-})
+if (plato===platopizza) {
+    cambiosglucemia (30);
+    actualizarglucometro();
+    estadonene();
+}
 
-platohelado.addEventListener ("click", function() {
-    cambiosglucemia (60);
-    alert ("La glucemia esta a " + nivelglucemia);
-})
+if (plato===platocarne) {
+    cambiosglucemia (0);
+    actualizarglucometro();
+    estadonene();
+}
 
-moguls.addEventListener ("click", function() {
+if (plato===platohelado) {
+    cambiosglucemia (30);
+    actualizarglucometro();
+    estadonene();
+}
+
+});
+
+
+azucar.addEventListener ("click", function() {
     cambiosglucemia (15);
-    alert ("La glucemia esta a " + nivelglucemia);
+    actualizarglucometro();
+    estadonene();
 })
 
-lapicera.addEventListener ("click", function() {
+insulina.addEventListener ("click", function() {
     cambiosglucemia (-30);
-    alert ("La glucemia esta a " + nivelglucemia);
+    actualizarglucometro();
+    estadonene();
 })
+
+
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
   window.location.href = "/front/pagina gral/paginageneraln.html";
