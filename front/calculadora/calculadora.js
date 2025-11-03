@@ -1,4 +1,4 @@
-connect2Server(3000);
+connect2Server();
 
 
 const botonCalcular = document.querySelector("#botoncalcular");
@@ -838,10 +838,8 @@ function calculardatos() {
     {
         NOMBRE: localStorage.getItem("nombreniño"),
     APELLIDO: localStorage.getItem("apellidoniño"),
-      grupo: grupocomidaelegida.value,
       comida: comidaelegida.value,
       CANTIDAD: cantidades.value,
-      unidad: unidades.value
     },
     function (data) {
       const respuesta = data;

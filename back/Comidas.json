@@ -1,6 +1,6 @@
 [
   {
-    "Alimento": "PAPA",
+    "Alimento": "Papa",
     "Tipo": "Vegetal",
     "Unidad": "Unidad",
     "CpU": 15
@@ -384,7 +384,7 @@
     "CpU": 30
   },
   {
-    "Alimento": "Sandwich de miga",
+    "Alimento": "Sándwich de miga",
     "Tipo": "Pan",
     "Unidad": "Unidad",
     "CpU": 15
