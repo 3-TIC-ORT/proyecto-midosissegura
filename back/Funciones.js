@@ -4,13 +4,13 @@ import fs from "fs";
 var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
 let comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
-var lista = registro
-var logueado = null
-var contra = null
-var encontrado = null
-var UsuarioR = null
+let lista = registro
+let logueado = null
+let contra = null
+let UsuarioR = []
+let encontrado = null
 let cuentacreada = null
-var NiñoR= null
+let NiñoR= null
 let Mensajenuevo= null
     let usuarion = ""
     let usuarioa = ""
@@ -103,27 +103,13 @@ function LogueoAdultos(data)
             encontrado = true
             logueado = true
             contra=true 
-            UsuarioR.push({
-                "NOMBRE": registro[i].NOMBRE,
-                "APELLIDO": registro[i].APELLIDO,
-                "CONTRASENA": registro[i].CONTRASENA,
-                "DOSIS": registro[i].DOSIS,
-                "RATIO": registro[i].RATIO,
-                "NOMBREniño": registro[i].NOMBREniño,
-                "APELLIDOniño": registro[i].APELLIDOniño,
-                "T1": registro[i].T1,
-                "T2": registro[i].T2,
-                "T3": registro[i].T3,
-                "T4": registro[i].T4,
-                "T5": registro[i].T5,
-                "T6": registro[i].T6})
-                localStorage.setItem(nombre, data.NOMBRE)
-                localStorage.setItem(apellido, data.APELLIDO)
-                localStorage.setItem(dosis, data.DOSIS)
-                localStorage.setItem(ratio, data.RATIO)
-                localStorage.setItem(nombreniño, data.NOMBREniño)
-                localStorage.setItem(apellidoniño, data.APELLIDOniño)
-                localStorage.setItem(contraseñaniño, data.CONTRASENAniño)
+            UsuarioR.push(
+                {
+                    "NOMBRE": registro[i].NOMBRE,
+                    "APELLIDO": registro[i].APELLIDO,
+                    
+                }
+            )
             
             break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
@@ -143,7 +129,7 @@ function LogueoAdultos(data)
         contra = false
     }
 
-  return [logueado,encontrado,contra, UsuarioR];
+  return [logueado,encontrado,contra];
 }
 export {LogueoAdultos};
 
@@ -321,6 +307,7 @@ function Calculadora(data) {
             // Calculamos el resultado
             resultado = valor * cantidad / RATIO;
             encontrado = true;
+            return resultado
             break;
         }
     }
@@ -331,7 +318,7 @@ function Calculadora(data) {
         return [0, false];
     }}
     // Devolvemos resultado y true indicando éxito
-    return resultado;
+
 
 
 export {Calculadora}
