@@ -305,7 +305,7 @@ function Calculadora(data) {
         return [0, false]; // datos inválidos
     }
 
-
+let RATIO = 10;
 
     // Recorremos el JSON de comidas
     for (let i = 0; i < comidas.length; i++) {
