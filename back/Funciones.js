@@ -86,6 +86,7 @@ function Iniciar(data)
             })
             fs.writeFileSync('Usuarios.json', JSON.stringify(lista, null, 2))
             console.log("Usuario registrado con éxito")
+
         }
         return cuentacreada
        
@@ -115,8 +116,15 @@ function LogueoAdultos(data)
                 "T3": registro[i].T3,
                 "T4": registro[i].T4,
                 "T5": registro[i].T5,
-                "T6": registro[i].T6
-            }) 
+                "T6": registro[i].T6})
+                localStorage.setItem(nombre, data.NOMBRE)
+                localStorage.setItem(apellido, data.APELLIDO)
+                localStorage.setItem(dosis, data.DOSIS)
+                localStorage.setItem(ratio, data.RATIO)
+                localStorage.setItem(nombreniño, data.NOMBREniño)
+                localStorage.setItem(apellidoniño, data.APELLIDOniño)
+                localStorage.setItem(contraseñaniño, data.CONTRASENAniño)
+            
             break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
@@ -141,11 +149,13 @@ export {LogueoAdultos};
 
 function AñadirTrofeo(data)
 {
+    let nombre = localStorage.getItem(nombre)
+    let apellido = localStorage.getItem(apellido)
     if (data.T1 === true)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T1 = true
             }
@@ -156,7 +166,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T2 = true
             }
@@ -166,7 +176,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T3 = true
             }
@@ -176,7 +186,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T4 = true
             }
@@ -186,7 +196,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T5 = true
             }
@@ -196,7 +206,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T6 = true
             }
@@ -206,7 +216,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
+            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
             {
                 lista[i].T7 = true
             }
@@ -220,12 +230,7 @@ return "Trofeo actualizado"
 
 export {AñadirTrofeo};
 
-function Comidas()
-{
-    var comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
-    return comidas
-}
-export {Comidas}
+
 
 function UsuarioRegistrado(data){
     let usuarion = data.NOMBRE;
@@ -294,18 +299,14 @@ function Calculadora(data) {
     // Extraemos los datos que vienen del front
     let eleccion = data.comida;       // Ej: "PAPA"
     let cantidad = Number(data.CANTIDAD);  // Ej: "12" -> 12
-        let usuarion = data.NOMBRE;
-    let usuarioa = data.APELLIDO;
+        let ratio = localStorage.getItem(ratio)
         let encontrado = false;
     let resultado = 0;
-        for (let i = 0; i < registro.length; i++) {
-        if (usuarion === registro[i].NOMBREniño && usuarioa === registro[i].APELLIDOniño) {
+       
 
     if (!eleccion ||  cantidad <= 0) {
         return [0, false]; // datos inválidos
     }
-
-let RATIO = 10;
 
     // Recorremos el JSON de comidas
     for (let i = 0; i < comidas.length; i++) {
@@ -328,11 +329,10 @@ let RATIO = 10;
     if (!encontrado) {
         console.log("Comida no encontrada: " + eleccion);
         return [0, false];
-    }}}
-
+    }}
     // Devolvemos resultado y true indicando éxito
     return resultado;
-}
+
 
 export {Calculadora}
 
