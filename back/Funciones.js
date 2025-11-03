@@ -288,36 +288,52 @@ function recargarratio(data) {
     return resultado;
 }
 export {recargarratio}
-function Calculadora(data){
-    let eleccion = data.comida
-    let unidades = data.cantidad
-    let resultado = 0
-      let hecho = false
-    
-if (unidades === 0 || isNaN(unidades))
-{
-    resultado = 0
-    console.log ("Cantidad no válida")
-    return resultado
-}
-for (var i = 0; i<comidas.length; i++)
-{
-    if (eleccion === comidas[i].Alimento)
-    {
-        resultado = (comidas[i].CpU * unidades)
-             console.log ("El resultado es: " + resultado)
-         hecho = true
-        break
+// Suponiendo que tu JSON se llama "comidas" y ya está cargado en memoria
+
+function Calculadora(data) {
+    // Extraemos los datos que vienen del front
+    let eleccion = data.comida;       // Ej: "PAPA"
+    let cantidad = Number(data.CANTIDAD);  // Ej: "12" -> 12
+        let usuarion = data.NOMBRE;
+    let usuarioa = data.APELLIDO;
+        let encontrado = false;
+    let resultado = 0;
+        for (let i = 0; i < registro.length; i++) {
+        if (usuarion === registro[i].NOMBREniño && usuarioa === registro[i].APELLIDOniño) {
+
+    if (!eleccion ||  cantidad <= 0) {
+        return [0, false]; // datos inválidos
     }
-}
-if (resultado === 0)
-{
-    console.log ("Comida no encontrada")
-    hecho = false
+
+
+
+    // Recorremos el JSON de comidas
+    for (let i = 0; i < comidas.length; i++) {
+        // Comparamos ignorando mayúsculas y espacios
+        if (eleccion.trim().toUpperCase() === comidas[i].Alimento.trim().toUpperCase()) {
+            // Convertimos CpU a número, reemplazando coma por punto si hace falta
+            let valor = comidas[i].CpU;
+            if (typeof valor === "string") {
+                valor = parseFloat(valor.replace(",", "."));
+            }
+
+            // Calculamos el resultado
+            resultado = valor * cantidad / registro[i].RATIO;
+            encontrado = true;
+            break;
+        }
+    }
+
+    // Si no se encontró el alimento, devolvemos 0
+    if (!encontrado) {
+        console.log("Comida no encontrada: " + eleccion);
+        return [0, false];
+    }}}
+
+    // Devolvemos resultado y true indicando éxito
+    return resultado;
 }
 
-    return [resultado, hecho];
-}
 export {Calculadora}
 
 function LogueoNiños(data) {
