@@ -12,7 +12,7 @@ let encontrado = null
 let cuentacreada = null
 let NiñoR= null
 let Mensajenuevo= null
-    let usuarion = ""
+  /*  let usuarion = ""
     let usuarioa = ""
      let   nombre=""
    let usuarioapellido= ""
@@ -26,7 +26,7 @@ let Mensajenuevo= null
    let dosis= ""
    let ratio= ""
     let nombreniño= ""
-   let apellidoniño= ""
+   let apellidoniño= ""*/
 function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
@@ -107,7 +107,18 @@ function LogueoAdultos(data)
                 {
                     "NOMBRE": registro[i].NOMBRE,
                     "APELLIDO": registro[i].APELLIDO,
-                    
+                    "CONTRASENA": registro[i].CONTRASENA,
+                    "DOSIS": registro[i].DOSIS,
+                    "RATIO": registro[i].RATIO,
+                    "NOMBREniño": registro[i].NOMBREniño,
+                    "APELLIDOniño": registro[i].APELLIDOniño,
+                    "CONTRASENAniño": registro[i].CONTRASENAniño,
+                    "T1": registro[i].T1,
+                    "T2": registro[i].T2,
+                    "T3": registro[i].T3,
+                    "T4": registro[i].T4,
+                    "T5": registro[i].T5,
+                    "T6": registro[i].T6
                 }
             )
             
@@ -129,19 +140,17 @@ function LogueoAdultos(data)
         contra = false
     }
 
-  return [logueado,encontrado,contra];
+  return [logueado,encontrado,contra,UsuarioR];
 }
 export {LogueoAdultos};
-
+console.log(UsuarioR)
 function AñadirTrofeo(data)
 {
-    let nombre = localStorage.getItem(nombre)
-    let apellido = localStorage.getItem(apellido)
     if (data.T1 === true)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T1 = true
             }
@@ -222,7 +231,7 @@ function UsuarioRegistrado(data){
     let usuarion = data.NOMBRE;
     let usuarioa = data.APELLIDO;
 
-    let resultado = null;
+    let resultado = 0;
 
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
@@ -246,7 +255,7 @@ function recargardosis(data) {
     let usuarion = data.NOMBRE;
     let usuarioa = data.APELLIDO;
     let dosisnew = data.DOSIS;
-    let resultado = null;
+    let resultado = 0;
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].DOSIS = dosisnew;
@@ -264,7 +273,7 @@ function recargarratio(data) {
     let usuarion = data.NOMBRE;
     let usuarioa = data.APELLIDO;
     let ratinew = data.RATIO;
-    let resultado = null;
+    let resultado = 0;
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].RATIO = ratinew;
@@ -284,8 +293,8 @@ export {recargarratio}
 function Calculadora(data) {
     // Extraemos los datos que vienen del front
     let eleccion = data.comida;       // Ej: "PAPA"
-    let cantidad = Number(data.CANTIDAD);  // Ej: "12" -> 12
-        let ratio = localStorage.getItem(ratio)
+    let cantidad = parseInt(data.CANTIDAD);  // Ej: "12" -> 12
+        let ratio = parseInt(UsuarioR.RATIO)
         let encontrado = false;
     let resultado = 0;
        
@@ -305,7 +314,7 @@ function Calculadora(data) {
             }
 
             // Calculamos el resultado
-            resultado = valor * cantidad / RATIO;
+            resultado = valor * cantidad / ratio;
             encontrado = true;
             return resultado
             break;
