@@ -107,6 +107,11 @@ body {
     border-style: solid;
     border-color: black;
     border-width: 7.07px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .inputcomida::placeholder {
