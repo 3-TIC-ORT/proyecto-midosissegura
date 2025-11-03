@@ -69,34 +69,6 @@ body {
     font-family: "Digital Numbers", sans-serif;
  }
 
- .comidas {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 576px;
-    height: 99px;
-    opacity: 1;
- }
-
- .botongrupocomidas {
-    position: absolute;
-    width: 33.45418167114258px;
-    height: 17.761646270751953px;
-}
-
-.veropcionescomidas {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-}
-
-.grupodecomidas {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-}
-
 .inputcomida {
     position: absolute;
     width: 576px;
@@ -244,4 +216,22 @@ body {
     letter-spacing: 0%;
     top: 25px;
     left: 70px;
+}
+
+.logo {
+    position: absolute;
+    width: 287px;
+    height: 161.95px;
+    top: 11px;
+    left: 1141px;
+}
+
+.atras {
+    position: absolute;
+    width: 252;
+    height: 59;
+    top: 47px;
+    left: 94px;
+    padding: 10px;
+    gap: 10px;
 }
