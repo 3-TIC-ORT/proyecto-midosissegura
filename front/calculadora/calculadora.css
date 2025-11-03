@@ -163,6 +163,10 @@ body {
     border-color: #000000;
     left: 40.5px;
     top:190px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .grupocomidasss::placeholder {
@@ -194,6 +198,10 @@ body {
     border-radius: 16px;
     top: 465px;
     left: 42px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .cantidaddd::placeholder {
@@ -217,6 +225,10 @@ body {
     border-color: #000000;
     border-radius: 10px;
     border-style: solid;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .unidaddd::placeholder {
