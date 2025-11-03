@@ -318,7 +318,7 @@ let RATIO = 10;
             }
 
             // Calculamos el resultado
-            resultado = valor * cantidad / registro[i].RATIO;
+            resultado = valor * cantidad / RATIO;
             encontrado = true;
             break;
         }
