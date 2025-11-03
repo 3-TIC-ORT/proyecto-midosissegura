@@ -2,7 +2,6 @@ body {
     background-color: #A3DFF2;
     width: 1440px;
     height: 1024px;
-    font-family: "Digital Numbers", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +12,13 @@ body {
     src: url('DigitalNumbers-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../Fredoka/Fredoka-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
  .azuloscuro {
@@ -44,7 +50,7 @@ body {
     width: 570px;
     height: 107px;
     left: 43.5px;
-    top: 89px;
+    top: 42.44px;
     border-width: 8px;
     border-style: solid;
     border-color: black;
@@ -52,11 +58,15 @@ body {
  }
 
  .resultado p {
-    position: absolute;
+    position: relative;
     width: 412px;
     height: 55px;
-    top: 117px;
-    left: 359px;
+    top: -15px;
+    left: 79px;
+    font-size: 42.44px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Digital Numbers", sans-serif;
  }
 
  .comidas {
@@ -87,14 +97,134 @@ body {
     border: none;
 }
 
+.inputcomida {
+    position: absolute;
+    width: 576px;
+    height: 102px;
+    left: 40.5px;
+    top: 330px;;
+    border-radius: 8.84px;
+    border-style: solid;
+    border-color: black;
+    border-width: 7.07px;
+}
+
+.inputcomida::placeholder {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    left: 220px;
+    top: 25px;
+}
+
+.calcular {
+    position: absolute;
+    width: 435px;
+    height: 116px;
+    background-color: #FF0000;
+    border-style: solid;
+    border-color: black;
+    border-width: 7.07px;
+    border-radius: 442.06px;
+    left: 111px;
+    top: 600px;
+}
+
+.calcular p {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-style: Regular;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    left: 107.5px;
+}
+
 .botoncalcular {
     position: absolute;
     width: 435px;
     height: 116px;
-}
-
-.botoncalcular img {
     background-color: transparent;
     border: none;
 }
 
+.grupocomidasss {
+    position: absolute;
+    width: 576px;
+    height: 99px;
+    opacity: 1;
+    border-width: 7.07px;
+    border-radius: 8.84px;
+    border-style: solid;
+    border-color: #000000;
+    left: 40.5px;
+    top:190px;
+}
+
+.grupocomidasss::placeholder {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    top: 25px;
+    left: 70px;
+}
+
+.SELECTOR {
+    position: absolute;
+    width: 33.45418167114258px;
+    left: 480px;
+    top: 250px;
+}
+
+.cantidaddd {
+    position: absolute;
+    width: 270px;
+    height: 99px;
+    opacity: 1;
+    top: 269px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 16px;
+    top: 465px;
+    left: 42px;
+}
+
+.cantidaddd::placeholder {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    top: 25px;
+    left: 50px;
+}
+
+.unidaddd {
+    position: absolute;
+    width: 263px;
+    height: 97px;
+    opacity: 1;
+    top: 465px;
+    left: 350px;
+    border-width: 8px;
+    border-color: #000000;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.unidaddd::placeholder {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-size: 42.44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    top: 25px;
+    left: 70px;
+}
