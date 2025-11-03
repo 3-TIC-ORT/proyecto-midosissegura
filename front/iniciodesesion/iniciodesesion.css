@@ -157,7 +157,7 @@ body {
 .blanco {
     position: absolute;
     width: 276px;
-    height: 375px;
+    height: 258px;
     opacity: 1;
     background-color: white;
     top: 515px;
@@ -183,7 +183,7 @@ body {
 .piel.visible {
     position: absolute;
     display: block;
-    top: 100px;
+    top: 60px;
     left: 35px;
 }
 
