@@ -305,7 +305,7 @@ function Calculadora(data) {
         return [0, false]; // datos inválidos
     }
 
-
+let ratio = 10
 
     // Recorremos el JSON de comidas
     for (let i = 0; i < comidas.length; i++) {
@@ -318,7 +318,7 @@ function Calculadora(data) {
             }
 
             // Calculamos el resultado
-            resultado = valor * cantidad / registro[i].RATIO;
+            resultado = valor * cantidad / RATIO;
             encontrado = true;
             break;
         }
