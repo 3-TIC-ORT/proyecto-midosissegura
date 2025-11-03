@@ -2,9 +2,6 @@ const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
 const botonEnviar = document.getElementById ("send")
 
-botonEnviar.addEventListener ("click", function(){
-alert ("Bienvenido " + nombreniño.value + " " + apellidoniño.value);
-})
 
 let cabello = 0;
 const cabellos = document.querySelectorAll ('#cabellos .pelo')
