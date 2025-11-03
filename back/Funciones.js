@@ -59,6 +59,7 @@ function Iniciar(data)
         } else if (data.APELLIDO === null || data.NOMBRE === null || data.CONTRASENA === null || data.NOMBREniño === null || data.APELLIDOniño === null)
         {
             cuentacreada = false
+            console.log ("Rellena todos los campos")
         }
         else {
             cuentacreada = true
@@ -155,7 +156,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T2 = true
             }
@@ -165,7 +166,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T3 = true
             }
@@ -175,7 +176,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T4 = true
             }
@@ -185,7 +186,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T5 = true
             }
@@ -195,7 +196,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+            if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T6 = true
             }
@@ -205,7 +206,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (data.GMAIL === lista[i].GMAIL)
+           if (data.NOMBRE === lista[i].NOMBRE && (data.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T7 = true
             }
