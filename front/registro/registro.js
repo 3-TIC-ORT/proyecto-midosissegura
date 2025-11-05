@@ -19,7 +19,8 @@ const CELESTA = document.getElementById ("CELESTA");
 const PELINEGRA = document.getElementById ("PELINEGRA");
 const MOROCHA = document.getElementById ("MOROCHA");
 const ALBINO = document.getElementById ("ALBINO");
-
+const nombrenene = document.getElementById ("nombrenene");
+const apellidonene = document.getElementById ("apellidonene");
 const pelos = [
     NADA,
     PELADO,
