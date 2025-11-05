@@ -1,4 +1,4 @@
-let nivelglucemia= 70;
+let nivelglucemia= 90;
 const plato= document.getElementById ("plato");
 const platopantalla = null;
 const platobanana = document.getElementById ("Banana");
@@ -21,14 +21,22 @@ mucha.classList.add ("display");
 baja.classList.add ("display");
 
 function estadonene (){
-if (nivelglucemia >= 300) {
+if (nivelglucemia >= 181) {
     normal.classList.add ("display");
+    baja.classList.add ("display");
     mucha.classList.remove ("display");
 }
 
-else if (nivelglucemia <= 55) {
+else if (nivelglucemia <= 89) {
     normal.classList.add ("display");
+    mucha.classList.add ("display");
     baja.classList.remove ("display");
+}
+
+else if (nivelglucemia => 90 && nivelglucemia <= 180){
+    baja.classList.add ("display");
+    mucha.classList.add ("display");
+    normal.classList.remove ("display");
 }
 }
 
@@ -61,7 +69,7 @@ function platoenpantalla() {
 
 window.onload = function () {
     platoaleatorio ();
-    nivelglucemia=70;
+    nivelglucemia=90;
 }
 
 comer.addEventListener("click", function () {
@@ -105,9 +113,3 @@ insulina.addEventListener ("click", function() {
     actualizarglucometro();
     estadonene();
 })
-
-
-let btnatras = document.getElementById("btnatras");
-btnatras.addEventListener("click", function () {
-  window.location.href = "/front/pagina gral/paginageneraln.html";
-});

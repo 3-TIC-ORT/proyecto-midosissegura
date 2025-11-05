@@ -90,10 +90,9 @@ const dataavatar = [
 
 function enviardatos() {
     postEvent("NiñoRegistrado", {
-        NOMBRE: localStorage.getItem("nombreniño"),
-        APELLIDO: localStorage.getItem("apellidoniño"),
-        comida: comidaelegida.value,
-        CANTIDAD: cantidades.value,
+        cabelloenpantalla: localStorage.getItem("nombreniño"),
+        anteojosenpantalla: localStorage.getItem("apellidoniño"),
+        pielenpantalla: comidaelegida.value,
     },
     function (data) {
       const respuesta = data;
