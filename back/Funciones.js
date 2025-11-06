@@ -1,15 +1,13 @@
 import fs from "fs";
 
-var registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
+let registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
 let comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
-let lista = registro
 let logueado = null
 let contra = null
 let UsuarioR = []
 let encontrado = null
 let cuentacreada = null
-let NiñoR= null
 let Mensajenuevo= null
 let CONTRASENAniño = ""
 let cuentaparcial = []
@@ -170,67 +168,67 @@ function AñadirTrofeo(data)
 {
     if (data.T1 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T1 = true
+                registro[i].T1 = true
             }
         }
     }
 
     if (data.T2 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T2 = true
+                registro[i].T2 = true
             }
         }
     }
     if (data.T3 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE  === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE  === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T3 = true
+                registro[i].T3 = true
             }
         }
     }
     if (data.T4 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T4 = true
+                registro[i].T4 = true
             }
         }
     }
     if (data.T5 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T5 = true
+                registro[i].T5 = true
             }
         }
     }
     if (data.T6 === true)
     {
-        for (var i = 0; i < lista.length; i++)
+        for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
             {
-                lista[i].T6 = true
+                registro[i].T6 = true
             }
         }
     }
 
-    fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
+    fs.writeFileSync("Usuarios.json",JSON.stringify(registro, null, 2))
 
 return "Trofeo actualizado"
     
