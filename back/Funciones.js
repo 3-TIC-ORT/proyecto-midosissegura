@@ -11,6 +11,10 @@ let encontrado = null
 let cuentacreada = null
 let NiñoR= null
 let Mensajenuevo= null
+let CONTRASENAniño = ""
+let cuentaparcial = []
+let niñocreado = null
+
   /*  let usuarion = ""
     let usuarioa = ""
      let   nombre=""
@@ -30,7 +34,7 @@ function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
     {
-        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
+        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
         {
             console.log ("Este usuario ya existe")
             cuentacreada = false
@@ -55,7 +59,7 @@ function Iniciar(data)
         {
             cuentacreada = false
             console.log ("La dosis debe ser un número")
-        } else if (data.APELLIDO === null || data.NOMBRE === null || data.CONTRASENA === null || data.NOMBREniño === null || data.APELLIDOniño === null)
+        } else if (data.APELLIDO === null || data.NOMBRE === null || data.CONTRASENA === null || data.NOMBREniño === null || data.APELLIDOniño === null || data.DOSIS === null || data.RATIO === null)
         {
             cuentacreada = false
             console.log ("Rellena todos los campos")
@@ -67,7 +71,7 @@ function Iniciar(data)
     }
         if (cuentacreada === true)
             {
-            lista.push ({
+            cuentaparcial.push ({
                 "NOMBRE": data.NOMBRE ,
                 "APELLIDO": data.APELLIDO ,
                 "CONTRASENA": data.CONTRASENA ,
@@ -78,19 +82,38 @@ function Iniciar(data)
                 "T5": false,
                 "T6": false,
                 "DOSIS": data.DOSIS,
-                "RATIO": data.RATIO,
-                "NOMBREniño": data.NOMBREniño,
-                "APELLIDOniño": data.APELLIDOniño ,
-                "CONTRASENAniño": data.CONTRASENAniño
+                "RATIO": data.RATIO
             })
-            fs.writeFileSync('Usuarios.json', JSON.stringify(lista, null, 2))
-            console.log("Usuario registrado con éxito")
+            console.log("Adulto registrado con éxito")
 
         }
         return cuentacreada
        
 }
 export {Iniciar};
+
+function InicioNiños(data)
+{
+    if (data.NOMBREniño === null || data.APELLIDOniño === null || data.CONTRASENAniño === null)
+    {
+        console.log("Por favor llená todas las cajitas")
+        niñocreado = false
+    }else 
+    {
+        niñocreado = true
+        cuentaparcial.push(
+            {
+                "NOMBREniño": data.NOMBREniño,
+                "APELLIDOniño": data.APELLIDOniño,
+                "CONTRASENAniño":data.CONTRASENAniño
+            }
+        )
+        
+        fs.writeFileSync("Usuarios.JSON", JSON.stringify(cuentaparcial, null, 2))
+    }
+return niñocreado
+}
+export{InicioNiños}
 function LogueoAdultos(data)
 {
 
@@ -160,7 +183,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T2 = true
             }
@@ -170,7 +193,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE  === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T3 = true
             }
@@ -180,7 +203,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T4 = true
             }
@@ -190,7 +213,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T5 = true
             }
@@ -200,22 +223,13 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < lista.length; i++)
         {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
+            if (UsuarioR.NOMBRE === lista[i].NOMBRE && (UsuarioR.APELLIDO === lista[i].APELLIDO))
             {
                 lista[i].T6 = true
             }
         }
     }
-    if (data.T7 === true)
-    {
-        for (var i = 0; i < lista.length; i++)
-        {
-            if (nombre === lista[i].NOMBRE && (apellido === lista[i].APELLIDO))
-            {
-                lista[i].T7 = true
-            }
-        }
-    }
+
     fs.writeFileSync("Usuarios.json",JSON.stringify(lista, null, 2))
 
 return "Trofeo actualizado"
@@ -334,15 +348,30 @@ export {Calculadora}
 function LogueoNiños(data) {
   for (var i = 0; i < registro.length; i++) {
   
-    if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño === registro[i].CONTRASENAniño) {
+    if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño === registro[i].CONTRASENAniño && data.APELLIDOniño === registro[i].APELLIDOniño) {
         console.log("Has iniciado sesión correctamente")
         var logueado = true
         var encontrado = true
         var contra = true
-        NiñoR.push({
-            "NOMBREniño": registro[i].NOMBREniño,
-            "APELLIDOniño": registro[i].APELLIDOniño,
-    })}
+        UsuarioR.push(
+            {
+                "NOMBRE": registro[i].NOMBRE,
+                "APELLIDO": registro[i].APELLIDO,
+                "CONTRASENA": registro[i].CONTRASENA,
+                "DOSIS": registro[i].DOSIS,
+                "RATIO": registro[i].RATIO,
+                "NOMBREniño": registro[i].NOMBREniño,
+                "APELLIDOniño": registro[i].APELLIDOniño,
+                "CONTRASENAniño": registro[i].CONTRASENAniño,
+                "T1": registro[i].T1,
+                "T2": registro[i].T2,
+                "T3": registro[i].T3,
+                "T4": registro[i].T4,
+                "T5": registro[i].T5,
+                "T6": registro[i].T6
+            }
+        )
+    }
     else if (data.NOMBREniño === registro[i].NOMBREniño && data.CONTRASENAniño !== registro[i].CONTRASENAniño) {
         console.log("La contraseña es incorrecta")
         var logueado = false
@@ -355,12 +384,12 @@ function LogueoNiños(data) {
         var contra = false
     }
 }
-return [logueado, encontrado, contra, NiñoR];
+return [logueado, encontrado, contra, UsuarioR];
 }
 export{LogueoNiños};
 
 function NiñoRegistrado(){
-return [NiñoR.CONTRASENAniño, NiñoR.NOMBREniño]
+return [UsuarioR.CONTRASENAniño, UsuarioR.NOMBREniño, UsuarioR.APELLIDOniño]
 }
 export {NiñoRegistrado}
 
