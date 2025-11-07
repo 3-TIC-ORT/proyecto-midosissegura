@@ -221,7 +221,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO) && (UsuarioR.CONTRASENA === registro[i].CONTRASENA))
             {
                 registro[i].T6 = true
             }
