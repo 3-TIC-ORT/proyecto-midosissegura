@@ -1,6 +1,7 @@
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
 import fs from "fs";
 import {AñadirTrofeo} from "./Funciones.js";
+import { InicioNiños } from "./Funciones.js";
 import{Iniciar} from "./Funciones.js";
 import {LogueoAdultos} from "./Funciones.js";
 import {UsuarioRegistrado} from "./Funciones.js";
@@ -22,4 +23,5 @@ subscribePOSTEvent ("GuardarMensaje", Guardarmensajesdelforo)
 subscribeGETEvent ("darmensajesalforo", darmensajesalforo);
 subscribePOSTEvent ("ActualizarDosis", recargardosis);
 subscribePOSTEvent ("ActualizarRatio", recargarratio);
+subscribePOSTEvent("InicioNiños", InicioNiños);
 startServer(3000)
