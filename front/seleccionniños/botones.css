@@ -1,0 +1,28 @@
+body {
+    background-color: #A3DFF2;
+    display: flex;
+    width: 1440px;
+    height: 1024px;
+}
+
+.logo {
+    position: absolute;
+    width: 306px;
+    height: 172.6714324951172px;
+    top: 13px;
+    left: 1130px;
+}
+
+.atras {
+    position: absolute;
+    width: 252;
+    height: 59;
+    top: 50px;
+    left: 97px;
+}
+
+.imagenesprimero, .imagenessegundo, .imagenestercero, .imagenescuarto {
+    position: absolute;
+    top: 171px;
+    left: 156px;
+}
