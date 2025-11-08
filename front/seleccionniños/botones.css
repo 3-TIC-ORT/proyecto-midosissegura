@@ -13,7 +13,7 @@ body {
     left: 1130px;
 }
 
-.atras {
+.volveratras {
     position: absolute;
     width: 252;
     height: 59;
@@ -25,4 +25,24 @@ body {
     position: absolute;
     top: 171px;
     left: 156px;
+}
+
+.seguir {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 498px;
+    left: 1298px;
+    background-color: transparent;
+    border: none;
+}
+
+.atras {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 498px;
+    left: 36px;
+    background-color: transparent;
+    border: none;
 }

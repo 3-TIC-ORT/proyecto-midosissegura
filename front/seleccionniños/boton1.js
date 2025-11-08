@@ -12,43 +12,47 @@ const primer9 = document.getElementById("9primer");
 const primer10 = document.getElementById("10primer");
 
 
-let atras = document.getElementById ("atras");
-let seguir = document.getElementById ("seguir");
+let atras1 = document.getElementById ("atras");
+let seguir1 = document.getElementById ("seguir");
 
-let indice = 0;
+let indice1 = 0;
 
-const imagenesprimero = document.querySelectorAll (".imagenesprimero");
+const imagenesprimero = document.querySelectorAll (".imagenesprimero img");
 
 
-function paginasmostrar (pagina) {
+function paginasmostrar () {
     imagenesprimero.forEach((pagina, i) => {
-        pagina.style.display = (i === indice) ? `block` : `none`;
+        pagina.style.display = (i === indice1) ? `block` : `none`;
     });
 
-    if (indice === 0) {
-        atras.style.display= "none"
+    if (indice1 === 0) {
+        atras1.style.display= "none"
     }
     else {
-        atras.style.display= "block"
+        atras1.style.display= "block"
     }
 
-    if (indice === imagenesprimero.length - 1){
-        seguir.style.display = "none"
+    if (indice1 === imagenesprimero.length - 1){
+        seguir1.style.display = "none"
     }
     else {
-        seguir.style.display = "block"
+        seguir1.style.display = "block"
     }
-
-    atras.addEventListener ("click", () => {
-    indice--;
-    if (indice<0) indice = pagina.length - 1;
-})
-
-    seguir.addEventListener ("click", () => {
-    indice ++;
-    if (indice > pagina.length) indice = 0;
-})
 }
+
+    atras1.addEventListener ("click", () => {
+    indice1--;
+    if (indice1<0) indice1 = 0;
+    paginasmostrar ();
+})
+
+    seguir1.addEventListener ("click", () => {
+    indice1 ++;
+    if (indice1 > imagenesprimero.length) indice1 = imagenesprimero.length - 1;
+    paginasmostrar ();
+})
+
+paginasmostrar ();
 
 
 
