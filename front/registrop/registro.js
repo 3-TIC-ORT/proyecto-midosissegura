@@ -15,10 +15,11 @@ postEvent("registro", {
     RATIO:document.getElementById("RATIO").value,
     NOMBREniño:document.getElementById("nombreh").value,
     DOSIS:document.getElementById("dosis").value,
-  }, registro);});
-  function registro(){
+  },registro());});
+  function registro(data){
 if (cuentacreada=true){
     alert("se creo correctamente la cuenta")
+    window.location.href = "/front/registro/registro.html";
 }
 else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
