@@ -1,0 +1,144 @@
+const boton1 = document.getElementById ("boton1");
+const boton2 = document.getElementById ("boton2");
+const boton3 = document.getElementById ("boton3");
+const boton4 = document.getElementById ("boton4");
+
+const primer1 = document.getElementById("1primer");
+const primer2 = document.getElementById("2primer");
+const primer3 = document.getElementById("3primer");
+const primer4 = document.getElementById("4primer");
+const primer5 = document.getElementById("5primer");
+const primer6 = document.getElementById("6primer");
+const primer7 = document.getElementById("7primer");
+const primer8 = document.getElementById("8primer");
+const primer9 = document.getElementById("9primer");
+const primer10 = document.getElementById("10primer");
+
+const segundo1 = document.getElementById("1segundo");
+const segundo2 = document.getElementById("2segundo");
+const segundo3 = document.getElementById("3segundo");
+const segundo4 = document.getElementById("4segundo");
+
+const tercer1 = document.getElementById("1tercer");
+const tercer2 = document.getElementById("2tercer");
+const tercer3 = document.getElementById("3tercer");
+const tercer4 = document.getElementById("4tercer");
+const tercer5 = document.getElementById("5tercer");
+const tercer6 = document.getElementById("6tercer");
+const tercer7 = document.getElementById("7tercer");
+const tercer8 = document.getElementById("8tercer");
+const tercer9 = document.getElementById("9tercer");
+
+const cuarto1 = document.getElementById("1cuarto");
+const cuarto2 = document.getElementById("2cuarto");
+const cuarto3 = document.getElementById("3cuarto");
+const cuarto4 = document.getElementById("4cuarto");
+const cuarto5 = document.getElementById("5cuarto");
+const cuarto6 = document.getElementById("6cuarto");
+const cuarto7 = document.getElementById("7cuarto");
+
+function ocultarimagenes() {
+    primer1.style.display = "none";
+    primer2.style.display = "none";
+    primer3.style.display = "none";
+    primer4.style.display = "none";
+    primer5.style.display = "none";
+    primer6.style.display = "none";
+    primer7.style.display = "none";
+    primer8.style.display = "none";
+    primer9.style.display = "none";
+    primer10.style.display = "none";
+
+    segundo1.style.display = "none";
+    segundo2.style.display = "none";
+    segundo3.style.display = "none";
+    segundo4.style.display = "none";
+
+    tercer1.style.display = "none";
+    tercer2.style.display = "none";
+    tercer3.style.display = "none";
+    tercer4.style.display = "none";
+    tercer5.style.display = "none";
+    tercer6.style.display = "none";
+    tercer7.style.display = "none";
+    tercer8.style.display = "none";
+    tercer9.style.display = "none";
+
+    cuarto1.style.display = "none";
+    cuarto2.style.display = "none";
+    cuarto3.style.display = "none";
+    cuarto4.style.display = "none";
+    cuarto5.style.display = "none";
+    cuarto6.style.display = "none";
+    cuarto7.style.display = "none";
+}
+
+ocultarimagenes ();
+
+let atras = document.getElementById ("atras");
+let seguir = document.getElementById ("seguir");
+
+let boton = [];
+let indice = 0;
+
+const imagenesprimero = document.querySelectorAll (".imagenesprimero");
+const imagenessegundo = document.querySelectorAll (".imagenessegundo");
+const imagenestercero = document.querySelectorAll (".imagenestercero");
+const imagenescuarto = document.querySelectorAll (".imagenescuarto");
+
+
+function paginasmostrar (pagina) {
+    imagenesprimero.forEach((pagina, i) => {
+        pagina.style.display = (i === indice) ? `block` : `none`;
+    });
+
+    if (indice === 0) {
+        atras.style.display= "none"
+    }
+    else {
+        atras.style.display= "block"
+    }
+
+    if (indice === imagenesprimero.length - 1){
+        seguir.style.display = "none"
+    }
+    else {
+        seguir.style.display = "block"
+    }
+
+    atras.addEventListener ("click", () => {
+    indice--;
+    if (indice<0) indice = pagina.length - 1;
+})
+
+    seguir.addEventListener ("click", () => {
+    indice ++;
+    if (indice > pagina.length) indice = 0;
+})
+}
+
+boton1.addEventListener ("click", () =>{
+    indice = 0;
+    boton = imagenesprimero;
+    paginasmostrar(boton);
+})
+
+boton2.addEventListener ("click", () =>{
+    indice = 0;
+    boton = imagenessegundo;
+    paginasmostrar(boton);
+})
+
+boton3.addEventListener ("click", () =>{
+    indice = 0;
+    boton = imagenestercero;
+    paginasmostrar(boton);
+})
+
+boton4.addEventListener ("click", () =>{
+    indice = 0;
+    boton = imagenescuarto;
+    paginasmostrar(boton);
+})
+
+
