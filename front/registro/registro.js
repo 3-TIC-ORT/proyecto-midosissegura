@@ -1,104 +1,78 @@
-connect2Server ();
+const nombreniño = document.getElementById ("nombrenene");
+const apellidoniño = document.getElementById ("apellidonene");
+const botonEnviar = document.getElementById ("send")
 
-const cabellos = document.getElementById ("cabellos");
 
-const NADA = document.getElementById ("NADA");
-const PELADO = document.getElementById ("PELADO");
-const VERDO = document.getElementById ("VERDO");
-const RUBIO = document.getElementById ("RUBIO");
-const ROJO = document.getElementById ("ROJO");
-const AZUL = document.getElementById ("AZUL");
-const CELESTO = document.getElementById ("CELESTO");
-const PELINEGRO = document.getElementById ("PELINEGRO");
-const MOROCHO = document.getElementById ("MOROCHO");
-const VERDA = document.getElementById ("VERDA");
-const RUBIA = document.getElementById ("RUBIA");
-const ROJA = document.getElementById ("ROJA");
-const AZULA = document.getElementById ("AZULA");
-const CELESTA = document.getElementById ("CELESTA");
-const PELINEGRA = document.getElementById ("PELINEGRA");
-const MOROCHA = document.getElementById ("MOROCHA");
-const ALBINO = document.getElementById ("ALBINO");
-const nombrenene = document.getElementById ("nombrenene");
-const apellidonene = document.getElementById ("apellidonene");
-const pelos = [
-    NADA,
-    PELADO,
-    VERDO,
-    RUBIO,
-    ROJO,
-    AZUL,
-    CELESTO,
-    PELINEGRO,
-    MOROCHO,
-    VERDA,
-    RUBIA,
-    ROJA,
-    AZULA,
-    CELESTA,
-    PELINEGRA,
-    MOROCHA,
-    ALBINO
-]
+let cabello = 0;
+const cabellos = document.querySelectorAll ('#cabellos .pelo')
 
-const cabelloenpantalla = [
+document.getElementById ('cabellos').addEventListener ("click", () => {
+        cabellos[cabello].classList.remove ('visible');
+        cabello = (cabello + 1) % cabellos.length;
+        cabellos[cabello].classList.add ('visible');
+})
+
+let lentes = 0;
+const anteojos = document.querySelectorAll ('#anteojosysol .lentes')
+
+document.getElementById ('anteojosysol').addEventListener ("click", () => {
+        anteojos[lentes].classList.remove ('visible');
+        lentes = (lentes + 1) % anteojos.length;
+        anteojos[lentes].classList.add ('visible');
+})
+
+let piel = 0;
+const pieles = document.querySelectorAll ('#colorcitos .piel')
+
+document.getElementById ('colorcitos').addEventListener ("click", () => {
+        pieles[piel].classList.remove ('visible');
+        piel = (piel + 1) % pieles.length;
+        pieles[piel].classList.add ('visible');
+})
+
+
+function anteojosenpantalla() {
+    return anteojos.find((lentes) => lentes.classList.contains ("visible"));
+}
+
+const anteojovisible = anteojosenpantalla ();
+
 function cabelloenpantalla() {
-    return pelos.find((cabellos) => cabellos.style.display === "inline");
-  }]
+    return cabellos.find((cabello) => cabello.classList.contains ("visible"));
+}
 
-const anteojosysol = document.getElementById  ("anteojosysol");
+const cabellovisible = cabelloenpantalla ();
 
-const NADASOL = document.getElementById ("NADA");
-const SOL = document.getElementById ("SOL");
-const MIOPE = document.getElementById ("MIOPE");
+function pielenpantalla() {
+    return pieles.find((piel) => piel.classList.contains ("visible"));
+}
 
-const tiposanteojosysol = [
-    NADASOL,
-    SOL,
-    MIOPE
-]
+const pielvisible = pielenpantalla ();
 
-const anteojosenpantalla = [
-    function anteojosenpantalla() {
-        return tiposanteojosysol.find((anteojosysol) => anteojosysol.style.display === "inline");
-      }]
+const valorpiel = parseInt(pielvisible.dataset.valor);
+const valoranteojos = parseInt(anteojovisible.dataset.valor);
+const valorpelo = parseInt(cabellovisible.dataset.valor);
 
+function registroAVATAR () {
+    const valorfinal = valorpiel + valoranteojos + valorpelo;
+    return valorfinal
+}
 
-const colorcitos = document.getElementById ("cabellos");
-
-const NADAENTERO = document.getElementById ("NADA");
-const NORMALENTERO = document.getElementById ("NORMALENTERO");
-const NEGROENTERO = document.getElementById ("NEGROENTERO");
-const ALBINOENTERO = document.getElementById ("ALBINOENTERO");
-      
-const piel = [
-    NADAENTERO,
-    NORMALENTERO,
-    NEGROENTERO,
-    ALBINOENTERO
-]
-      
-const pielenpantalla = [
-    function pielenpantalla() {
-          return piel.find((colorcitos) => colorcitos.style.display === "inline");
-        }]
-
-const dataavatar = [
-    cabelloenpantalla,
-    anteojosenpantalla,
-    pielenpantalla
-]
+const avatarvalor = registroAVATAR();
 
 function enviardatos() {
-    postEvent("NiñoRegistrado", {
-        cabelloenpantalla: localStorage.getItem("nombreniño"),
-        anteojosenpantalla: localStorage.getItem("apellidoniño"),
-        pielenpantalla: comidaelegida.value,
-    },
+    localStorage.setItem ("nombreniño", nombreniño.value);
+    localStorage.setItem ("apellidoniño", apellidoniño.value);
+    localStorage.setItem ("contraseña", avatarvalor)
+    postEvent("UsuarioRegistrado", {
+        NOMBRE: nombreniño.value,
+        APELLIDO: apellidoniño.value,
+        CONTRASEÑA: avatarvalor
+    }, 
     function (data) {
-      const respuesta = data;
-      alert(`Calorías: ${respuesta} Kcal`);
-      resultado.innerText = `Calorías: ${respuesta} Kcal`;
-    });
+        console.log(data);
+        alert("usuario registrado");
+    }
+    )
 }
-    
+

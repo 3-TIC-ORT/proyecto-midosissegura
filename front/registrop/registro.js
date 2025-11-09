@@ -19,7 +19,7 @@ postEvent("registro", {
   function registro(data){
 if (cuentacreada=true){
     alert("se creo correctamente la cuenta")
-    window.location.href = "/front/registro/registro.html";
+    window.location.href = "../registro/registro.html";
 }
 else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
@@ -27,5 +27,5 @@ else if ( cuentacreada=false){
   }
   let cuenta = document.getElementById("cuenta")
   cuenta.addEventListener("click", function(){
-    window.location.href='/front/main/main_html_front.html'
+    window.location.href='../main/main_html_front.html'
   })

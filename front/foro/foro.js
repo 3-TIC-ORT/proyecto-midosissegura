@@ -2,8 +2,6 @@ let listacomentarios =[]
 connect2Server(3000)
 let mensajes =[]
 let nombre=""
- localStorage.setItem("nombreusuario", "messi");
-     localStorage.setItem("apellidousuario", "a");
 const inputcomentario=document.getElementById("comentarioinput")
 const agregarcomentario =document.getElementById("agregarcomentario")
 const ulcomentarios=document.getElementById("comentariosresto")
