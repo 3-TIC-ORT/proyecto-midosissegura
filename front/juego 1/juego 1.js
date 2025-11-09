@@ -263,5 +263,5 @@ volverajugar3.addEventListener ("click", function() {
 
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
-  window.location.href = "/front/pagina gral/paginageneraln.html";
+  window.location.href = "../pagina gral/paginageneraln.html";
 });
