@@ -46,3 +46,14 @@ body {
     background-color: transparent;
     border: none;
 }
+.imagenessegundo img {
+  width: 100%;
+  height: auto;
+}
+
+.block {
+  display:initial;
+}
+.none {
+  display: none;
+}
