@@ -63,26 +63,7 @@ body {
 
 .ratio {
     position: absolute;
-    top: 610px;
-    left: 200px;
-    width: 652px;
-    height: 58px;
-    opacity: 1;
-    font-family: "Fredoka One";
-    font-size: 48px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: bottom;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 0%;
-    text-decoration-skip-ink: auto;
-    z-index: 1500;
-}
-
-.edad {
-    position: absolute;
-    top: 680px;
+    top: 640px;
     left: 200px;
     width: 652px;
     height: 58px;
@@ -101,7 +82,7 @@ body {
 
 .trofeos {
     position: absolute;
-    top: 750px;
+    top: 740px;
     left: 200px;
     width: 652px;
     height: 58px;

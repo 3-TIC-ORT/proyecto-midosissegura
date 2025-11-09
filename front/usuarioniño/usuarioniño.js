@@ -1,14 +1,19 @@
 connect2Server();
 
 function datosUsuario() {
-    NOMBREyAPELLIDO = localStorage.getItem("nombreniño") + " " + localStorage.getItem("apellidoniño");
-    RATIO = "";
-    EDAD = "";
-    TROFEOS = "";
+    const nombre = localStorage.getItem("nombreniño");
+    const apellido = localStorage.getItem("apellidoniño");
 
-    document.getElementById("nombreyapellido").textContent = NOMBREyAPELLIDO;
-    document.getElementById("ratio").textContent = RATIO;
-    document.getElementById("edad").textContent = EDAD;
+    postEvent ("UsuarioRegistrado", {}, function(response) {
+        if (response.success) {
+            actualizarDatosUsuario(response.data);
+        } else {
+            console.error("Error al obtener los datos del usuario:", response.message);
+        }
+    });
+
+    document.getElementById("nombreyapellido").textContent = nombre + " " + apellido;
+    document.getElementById("ratio").textContent = data.RATIO;
     document.getElementById("trofeos").textContent = TROFEOS;
 }
 
