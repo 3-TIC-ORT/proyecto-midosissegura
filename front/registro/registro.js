@@ -1,6 +1,7 @@
+connect2Server();
 const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
-const botonEnviar = document.getElementById ("send")
+const botonEnviar = document.getElementById ("aceptar");
 
 
 let cabello = 0;
@@ -31,36 +32,22 @@ document.getElementById ('colorcitos').addEventListener ("click", () => {
 })
 
 
-function anteojosenpantalla() {
-    return anteojos.find((lentes) => lentes.classList.contains ("visible"));
-}
+function AVATAR () {
+    const pielvisible = document.querySelector('#colorcitos .visible');
+    const cabellovisible = document.querySelector('#cabellos .visible');
+    const anteojovisible = document.querySelector('#anteojosysol .visible');
 
-const anteojovisible = anteojosenpantalla ();
+    const valorpiel = parseInt(pielvisible.dataset.valor);
+    const valoranteojos = parseInt(anteojovisible.dataset.valor);
+    const valorpelo = parseInt(cabellovisible.dataset.valor);
 
-function cabelloenpantalla() {
-    return cabellos.find((cabello) => cabello.classList.contains ("visible"));
-}
-
-const cabellovisible = cabelloenpantalla ();
-
-function pielenpantalla() {
-    return pieles.find((piel) => piel.classList.contains ("visible"));
-}
-
-const pielvisible = pielenpantalla ();
-
-const valorpiel = parseInt(pielvisible.dataset.valor);
-const valoranteojos = parseInt(anteojovisible.dataset.valor);
-const valorpelo = parseInt(cabellovisible.dataset.valor);
-
-function registroAVATAR () {
     const valorfinal = valorpiel + valoranteojos + valorpelo;
     return valorfinal
 }
 
-const avatarvalor = registroAVATAR();
-
 function enviardatos() {
+    const avatarvalor = AVATAR();
+
     localStorage.setItem ("nombreniño", nombreniño.value);
     localStorage.setItem ("apellidoniño", apellidoniño.value);
     localStorage.setItem ("contraseña", avatarvalor)
@@ -70,9 +57,11 @@ function enviardatos() {
         CONTRASEÑA: avatarvalor
     }, 
     function (data) {
-        console.log(data);
+        const respuesta = data;
         alert("usuario registrado");
     }
     )
 }
+
+botonEnviar.addEventListener ("click", enviardatos);
 
