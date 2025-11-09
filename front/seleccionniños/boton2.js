@@ -11,6 +11,7 @@ let indice2 = 0;
 function paginasmostrar2 () {
 if (indice2 === 0) {
     atras2.style.display= "none"
+    seguir2.style.display = "block"
     segundo1.style.display= "block"
     segundo2.style.display= "none"
     segundo3.style.display= "none"
