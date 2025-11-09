@@ -34,23 +34,22 @@ body {
 .glucagon {
     position: absolute;
     background-color: transparent;
+    width: 330px;
+    height: 377px;
     border: none;
     top: 200px;
     left: 350px;
     opacity: 1;
 }
 
-.glucagon img {
-    width: 327.7201232910156px;
-    height: 343.00372314453125px;
-}
-
 .foro {
     position: absolute;
     background-color: transparent;
     border: none;
-    top: 600px;
+    top: 616px;
     left: 750px;
+    width: 330px;
+    height: 377px;
 }
 
 .logo {
@@ -75,52 +74,27 @@ body {
     top: 200px;
     left: 750px;
     opacity: 1;
-}
-
-.mapa img {
-    width: 324.3145446777344px;
-    height: 342.0481872558594px;
+    width: 330px;
+    height: 377px;
 }
 
 .calculadora {
     position: absolute;
     background-color: transparent;
     border: none;
-    top: 600px;
+    top: 620px;
     left: 350px;
     opacity: 1;
+    width: 330px;
+    height: 377px;
 }
 
 .terminos {
     position: absolute;
-    width: 145;
-    height: 145;
+    width: 155px;
+    height: 146px;
     opacity: 1;
-    top: 814px;
-    left: 1222px;
-    border-width: 8px;
+    top: 826px;
+    left: 1212px;
 }
 
-.textotyc {
-    position: absolute;
-    width: 132;
-    height: 50;
-    opacity: 1;
-    top: 800px;
-    left: 1224px;
-    z-index: 500;
-}
-
-.textoin {
-    position: absolute;
-    width: 76;
-    height: 49;
-    opacity: 1;
-    top: 870px;
-    left: 1255px;
-    z-index: 1000;
-}
-
-.tyc {
-    align-items: center;
-}

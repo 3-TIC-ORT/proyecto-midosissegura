@@ -11,9 +11,16 @@ font-size: 48px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-
-
 }
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('Fredoka-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 .tipocomentarioblanco{
     background-color: transparent;
     padding: 10px;
@@ -110,7 +117,7 @@ opacity: 1;
   align-items: center;
   justify-content: center;
   position: absolute;
-  font-family: "Fredoka One", Arial, sans-serif;
+  font-family: "Fredoka", Arial, sans-serif;
   text-transform: uppercase;
   top: 43px;
   left: 117px;

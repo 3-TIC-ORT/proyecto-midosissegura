@@ -76,7 +76,7 @@ getEvent("darmensajesalforo", function(data) {
 });
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
-  window.location.href = "";
+  window.location.href = "../paginageneralp/paginageneralp.html";
 });
 
 
