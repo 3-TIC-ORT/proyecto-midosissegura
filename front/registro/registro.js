@@ -58,7 +58,6 @@ function enviardatos() {
     }, 
     function (data) {
         const respuesta = data;
-        alert("usuario registrado");
     }
     )
 }
