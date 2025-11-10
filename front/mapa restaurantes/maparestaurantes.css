@@ -29,24 +29,17 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     gap: 10px;
-    position: relative;
+    position: absolute;
     z-index: 10;
     opacity: 0.7;
     justify-content: center;
 }
-.main img:first-of-type {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 0;
-}
+
 .signowarning{
-  width: 75px;
-  height: 75px;
+  position: absolute;
+  width: 5px;
+  height: 5px;
   padding: 10px;
-  display: flexbox;
  margin: 10px;
  justify-content: center;
  
@@ -63,16 +56,48 @@ body {
     top: 146px;
     overflow: hidden;
 }
-.main img {
-    width: 100%;
-    height: auto;
-  }
   
-.restaurante1 {  position:absolute; top: 200px; left: 300px;width: 101.33px; height: 126.67px; }
-.restaurante2 { position:absolute; top:  350px; left: 600px; width: 101.33px; height: 126.67px;}
-.restaurante3 { position:absolute; top: 500px; left: 400px;width: 101.33px; height: 126.67px; }
-.restaurante4 { position:absolute; top: 600px; left: 800px;width: 101.33px; height: 126.67px; }
-.restaurante5 { position:absolute; top: 650px; left: 200px; width: 101.33px; height: 126.67px;}
+.restaurante1 {  position:absolute; width: 156;
+height: 156;
+top: 236px;
+left: 157px;
+angle: 0 deg;
+opacity: 1;
+z-index: 1;
+ }
+.restaurante2 { position:absolute; width: 157;
+height: 157;
+top: 426px;
+left: 304px;
+angle: 0 deg;
+opacity: 1;
+z-index: 1;
+}
+.restaurante3 { position:absolute; width: 152;
+height: 152;
+top: 274px;
+left: 586px;
+angle: 0 deg;
+opacity: 1;
+z-index: 1;
+ }
+.restaurante4 { position:absolute;width: 154;
+height: 154;
+top: 572px;
+left: 653px;
+angle: 0 deg;
+opacity: 1;
+z-index: 1;
+ 
+}
+.restaurante5 { position:absolute; width: 157;
+height: 157;
+top: 426px;
+left: 888px;
+angle: 0 deg;
+opacity: 1;
+z-index: 1;
+}
 .LOGO{
     position: absolute;
     left: 1133px;
@@ -80,3 +105,40 @@ body {
     width: 260px;
     height: 136.81px;
 }
+.signowarning{
+  position: absolute;
+  width: 150px;
+height: 150px;
+top: 0px;
+left: 0px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 15px;
+}
+.h1{
+  position: absolute;
+width: 843px;
+height: 49px;
+top: 18px;
+left: 184px;
+angle: 0 deg;
+opacity: 1;
+font-family: "Fredoka";
+font-weight: 400;
+font-style: Regular;
+font-size: 48px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.hovered {
+  z-index: 20;
+  filter: brightness(1.5) drop-shadow(0 0 10px yellow);
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.oculto {
+  display: none;
+}
+
