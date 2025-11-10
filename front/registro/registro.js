@@ -52,9 +52,9 @@ function enviardatos() {
     localStorage.setItem ("apellidoniño", apellidoniño.value);
     localStorage.setItem ("contraseña", avatarvalor)
     postEvent("UsuarioRegistrado", {
-        NOMBRE: nombreniño.value,
-        APELLIDO: apellidoniño.value,
-        CONTRASEÑA: avatarvalor
+        NOMBREniño: nombreniño.value,
+        APELLIDOniño: apellidoniño.value,
+        CONTRASEÑAniño: avatarvalor
     }, 
     function (data) {
         const respuesta = data;
