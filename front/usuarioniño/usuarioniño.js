@@ -3,6 +3,7 @@ connect2Server();
 const nombre = localStorage.getItem("nombreniño");
 const apellido = localStorage.getItem("apellidoniño");
 const rationiño = 0;
+let TROFEOS = 0;
 
 function datosUsuario() {
     postEvent ("UsuarioRegistrado", {
@@ -14,6 +15,7 @@ function datosUsuario() {
         apellido=data.APELLIDOniño,
         rationiño=data.RATIO
     }
+    
 )
 
 function actualizarDatosUsuario () {
