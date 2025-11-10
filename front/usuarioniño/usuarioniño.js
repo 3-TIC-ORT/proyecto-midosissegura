@@ -1,20 +1,28 @@
 connect2Server();
 
+const nombre = localStorage.getItem("nombreniño");
+const apellido = localStorage.getItem("apellidoniño");
+const rationiño = 0;
+
 function datosUsuario() {
-    const nombre = localStorage.getItem("nombreniño");
-    const apellido = localStorage.getItem("apellidoniño");
+    postEvent ("UsuarioRegistrado", {
+        NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    },
+    function (data) {
+        nombre=data.NOMBREniño,
+        apellido=data.APELLIDOniño,
+        rationiño=data.RATIO
+    }
+)
 
-    postEvent ("UsuarioRegistrado", {}, function(response) {
-        if (response.success) {
-            actualizarDatosUsuario(response.data);
-        } else {
-            console.error("Error al obtener los datos del usuario:", response.message);
-        }
-    });
-
+function actualizarDatosUsuario () {
     document.getElementById("nombreyapellido").textContent = nombre + " " + apellido;
-    document.getElementById("ratio").textContent = data.RATIO;
+    document.getElementById("ratio").textContent = rationiño;
     document.getElementById("trofeos").textContent = TROFEOS;
+}
+
+actualizarDatosUsuario();
 }
 
 datosUsuario();

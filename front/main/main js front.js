@@ -22,7 +22,7 @@ postEvent("iniciarsesion", {
   APELLIDO: document.getElementById("apellido").value,
   CONTRASENA: document.getElementById("CONTRASEÑA").value
 }, comprobaciondedatos);
-
+ window.location.href = "../paginageneralp/paginageneralp.html";
 });
 function comprobaciondedatos(data) {
     let logueado = data[0];

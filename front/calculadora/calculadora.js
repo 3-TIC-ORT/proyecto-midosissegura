@@ -836,8 +836,8 @@ comidaelegida.addEventListener ("input", () => {
 function calculardatos() {
   postEvent("Calculadora",
     {
-        NOMBRE: localStorage.getItem("nombreniño"),
-    APELLIDO: localStorage.getItem("apellidoniño"),
+      NOMBRE: localStorage.getItem("nombreniño"),
+      APELLIDO: localStorage.getItem("apellidoniño"),
       comida: comidaelegida.value,
       CANTIDAD: cantidades.value,
     },
