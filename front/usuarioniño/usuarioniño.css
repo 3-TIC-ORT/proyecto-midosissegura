@@ -12,6 +12,14 @@ body {
     font-style: normal;
 }
 
+img.visible {
+    display: block !important;
+}
+
+.colorcitos img, .anteojosysol img, .cabellos img {
+    display: none;
+}
+
 .cartel {
     position: absolute;
     width: 1223px;
@@ -23,23 +31,30 @@ body {
 
 .pelo {
     position: absolute;
-    z-index: 1500;
-    left: 270px;
-    top: 300px;
+    z-index: 1400;
+    left: 280px;
+    top: 325px;
 }
 
-.cara {
+.pelo.mujer {
     position: absolute;
-    z-index: 1500;
+    z-index: 1400;
+    left: 265px;
+    top: 333px;
+}
+
+.colorcitos {
+    position: absolute;
+    z-index: 1200;
     left: 269px;
     top: 340px;
 }
 
-.anteojos {
+.anteojosysol {
     position: absolute;
     z-index: 1500;
-    left: 290px;
-    top: 385px;
+    left: 297px;
+    top: 423px;
 }
 
 .nombreyapellido {

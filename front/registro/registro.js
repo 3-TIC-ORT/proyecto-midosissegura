@@ -31,15 +31,18 @@ document.getElementById ('colorcitos').addEventListener ("click", () => {
         pieles[piel].classList.add ('visible');
 })
 
+let valorpiel = 0;
+let valoranteojos = 0;
+let valorpelo = 0;
 
 function AVATAR () {
     const pielvisible = document.querySelector('#colorcitos .visible');
     const cabellovisible = document.querySelector('#cabellos .visible');
     const anteojovisible = document.querySelector('#anteojosysol .visible');
 
-    const valorpiel = parseInt(pielvisible.dataset.valor);
-    const valoranteojos = parseInt(anteojovisible.dataset.valor);
-    const valorpelo = parseInt(cabellovisible.dataset.valor);
+    valorpiel = parseInt(pielvisible.dataset.valor);
+    valoranteojos = parseInt(anteojovisible.dataset.valor);
+    valorpelo = parseInt(cabellovisible.dataset.valor);
 
     const valorfinal = valorpiel + valoranteojos + valorpelo;
     return valorfinal
@@ -51,6 +54,9 @@ function enviardatos() {
     localStorage.setItem ("nombreniño", nombreniño.value);
     localStorage.setItem ("apellidoniño", apellidoniño.value);
     localStorage.setItem ("contraseña", avatarvalor)
+    localStorage.setItem ("valorpiel", valorpiel);
+    localStorage.setItem ("valoranteojos", valoranteojos);
+    localStorage.setItem ("valorpelo", valorpelo);
     postEvent("UsuarioRegistrado", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
