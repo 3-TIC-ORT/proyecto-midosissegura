@@ -34,6 +34,7 @@ document.getElementById ('colorcitos').addEventListener ("click", () => {
 let valorpiel = 0;
 let valoranteojos = 0;
 let valorpelo = 0;
+let ratio = 0;
 
 function AVATAR () {
     const pielvisible = document.querySelector('#colorcitos .visible');
@@ -57,15 +58,22 @@ function enviardatos() {
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);
     localStorage.setItem ("valorpelo", valorpelo);
+    localStorage.setItem ("RATIO", ratio);
     postEvent("UsuarioRegistrado", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
         CONTRASEÑAniño: avatarvalor
-    }, 
+    },
     function (data) {
         const respuesta = data;
-    }
-    )
+    })
+    postEvent ("LogueoAdultos", {
+        NOMBREniño: nombreniño.value,
+        APELLIDOniño: apellidoniño.value,
+    },
+    function (data) {
+        const respuesta = data;
+    })
 }
 
 botonEnviar.addEventListener ("click", enviardatos);

@@ -5,6 +5,8 @@ let RATIO =document.getElementById("RATIO")
 let contraseña =document.getElementById("contraseña")
 let dosis=document.getElementById("dosis")
 let registroBTN=document.getElementById("registroBTN")
+
+
 connect2Server()
 registroBTN.addEventListener("click", () => {
 postEvent("registro", {

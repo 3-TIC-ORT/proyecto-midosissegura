@@ -2,7 +2,7 @@ connect2Server();
 
 let nombre = localStorage.getItem("nombreniño");
 let apellido = localStorage.getItem("apellidoniño");
-let rationiño = 0;
+let ratio = 0;
 let TROFEOS = 0;
 let valorpiel = 0;
 let valorpelo = 0;
@@ -12,16 +12,20 @@ window.addEventListener("DOMContentLoaded", () => {
   valorpiel = localStorage.getItem("valorpiel");
   valorpelo = localStorage.getItem("valorpelo");
   valoranteojos = localStorage.getItem("valoranteojos");
+  ratio = localStorage.getItem ("RATIO");
 
   document.querySelector(`.colorcitos img[data-valor="${valorpiel}"]`).classList.add("visible");
   document.querySelector(`.cabellos img[data-valor="${valorpelo}"]`).classList.add("visible");
   document.querySelector(`.anteojosysol img[data-valor="${valoranteojos}"]`).classList.add("visible");
+
+  actualizarDatosUsuario();
+  actualizarAvatar();
 });
 
 
 function actualizarDatosUsuario () {
     document.getElementById("nombreyapellido").textContent = nombre + " " + apellido;
-    document.getElementById("ratio").textContent = rationiño;
+    document.getElementById("ratio").textContent = ratio;
     document.getElementById("trofeos").textContent = TROFEOS;
 }
 
