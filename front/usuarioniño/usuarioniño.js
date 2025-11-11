@@ -56,6 +56,7 @@ function datosUsuario() {
         APELLIDOniño:apellido
     },
     function (data) {
+      console.log("Respuesta del servidor:", data);
       if (!data) return;
         nombre=data.NOMBREniño,
         apellido=data.APELLIDOniño,
