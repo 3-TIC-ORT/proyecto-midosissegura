@@ -67,7 +67,7 @@ function enviardatos() {
     function (data) {
         const respuesta = data;
     })
-    postEvent ("LogueoAdultos", {
+    postEvent ("InicioNiños", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
     },

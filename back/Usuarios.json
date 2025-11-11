@@ -1,97 +1,6 @@
 [
   {
-    "NOMBRE": "Bryan",
-    "APELLIDO": "Mbeumo",
-    "CONTRASENA": "Caput",
-    "BOLO": "1.0",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "6",
-    "RATIO": "2",
-    "NOMBREniño": "Mateo",
-    "APELLIDOniño": "Mbeumo"
-  },
-  {
-    "NOMBRE": "a",
-    "APELLIDO": "a",
-    "CONTRASENA": "a",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "1",
-    "RATIO": "1",
-    "NOMBREniño": "a",
-    "APELLIDOniño": "a"
-  },
-  {
-    "NOMBRE": "b",
-    "APELLIDO": "a",
-    "CONTRASENA": "a",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "1",
-    "RATIO": "1",
-    "NOMBREniño": "a",
-    "APELLIDOniño": "a"
-  },
-  {
-    "NOMBRE": "Baredes",
-    "APELLIDO": "Benja",
-    "CONTRASENA": "River260611",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "1",
-    "RATIO": "10",
-    "NOMBREniño": "Maxi",
-    "APELLIDOniño": "Tabakman"
-  },
-  {
-    "NOMBRE": "que",
-    "APELLIDO": "quie",
-    "CONTRASENA": "ni idea",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "3",
-    "RATIO": "20",
-    "NOMBREniño": "ee",
-    "APELLIDOniño": "res"
-  },
-  {
-    "NOMBRE": "aa",
-    "APELLIDO": "Mbeumo",
-    "CONTRASENA": "a",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "2",
-    "RATIO": "1",
-    "NOMBREniño": "e",
-    "APELLIDOniño": "r"
-  },
-  {
-    "NOMBRE": "w",
+    "NOMBRE": "aaa",
     "APELLIDO": "quie",
     "CONTRASENA": "w",
     "T1": false,
@@ -101,14 +10,12 @@
     "T5": false,
     "T6": false,
     "DOSIS": "2",
-    "RATIO": "1",
-    "NOMBREniño": "m",
-    "APELLIDOniño": "r"
+    "RATIO": "1"
   },
   {
-    "NOMBRE": "t",
-    "APELLIDO": "quie",
-    "CONTRASENA": "w",
+    "NOMBRE": "leo",
+    "APELLIDO": "messi",
+    "CONTRASENA": "a",
     "T1": false,
     "T2": false,
     "T3": false,
@@ -116,14 +23,12 @@
     "T5": false,
     "T6": false,
     "DOSIS": "2",
-    "RATIO": "1",
-    "NOMBREniño": "m",
-    "APELLIDOniño": "r"
+    "RATIO": "1"
   },
   {
-    "NOMBRE": "aa",
-    "APELLIDO": "quie",
-    "CONTRASENA": "w",
+    "NOMBRE": "leo",
+    "APELLIDO": "messi",
+    "CONTRASENA": "a",
     "T1": false,
     "T2": false,
     "T3": false,
@@ -131,8 +36,23 @@
     "T5": false,
     "T6": false,
     "DOSIS": "2",
-    "RATIO": "1",
-    "NOMBREniño": "m",
-    "APELLIDOniño": "r"
+    "RATIO": "1"
+  },
+  {
+    "NOMBRE": "leo",
+    "APELLIDO": "messi",
+    "CONTRASENA": "a",
+    "T1": false,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "2",
+    "RATIO": "1"
+  },
+  {
+    "NOMBREniño": "neymar",
+    "APELLIDOniño": "jr"
   }
 ]
