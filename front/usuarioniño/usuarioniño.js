@@ -24,8 +24,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 function actualizarDatosUsuario () {
-    document.getElementById("nombreyapellido").textContent = nombre + " " + apellido;
-    document.getElementById("ratio").textContent = ratio;
+    document.getElementById("nombreyapellido").textContent = "~" + " " + " " + nombre + " " + apellido;
+    document.getElementById("ratio").textContent = "~  RATIO DE INSULINA:" + " " + ratio;
     document.getElementById("trofeos").textContent = TROFEOS;
 }
 

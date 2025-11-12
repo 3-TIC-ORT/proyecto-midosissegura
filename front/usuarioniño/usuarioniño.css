@@ -151,6 +151,66 @@ img.visible {
     left: 1159px;
 }
 
+.trofeo1 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 285px;
+    left: 896px;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.trofeo2 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 323px;
+    left: 1024px;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.trofeo3 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 431px;
+    left: 885px;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.trofeo4 {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: 558px;
+    left: 953px;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.trofeo5 {
+    position: absolute;
+    width: 95;
+    height: 95;
+    top: 717px;
+    left: 1089px;
+    opacity: 1;
+    z-index: 1500;
+}
+
+.trofeo6 {
+    position: absolute;
+    width: 95;
+    height: 95;
+    top: 709px;
+    left: 918px;
+    opacity: 1;
+    z-index: 1500;
+}
+
 .volveratras {
     position: absolute;
     width: 107px;
