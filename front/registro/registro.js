@@ -54,7 +54,7 @@ function enviardatos() {
 
     localStorage.setItem ("nombreniño", nombreniño.value);
     localStorage.setItem ("apellidoniño", apellidoniño.value);
-    localStorage.setItem ("contraseña", avatarvalor)
+    localStorage.setItem ("contraseña", valorfinal)
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);
     localStorage.setItem ("valorpelo", valorpelo);
