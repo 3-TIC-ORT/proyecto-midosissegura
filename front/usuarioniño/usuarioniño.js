@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
   valorpiel = localStorage.getItem("valorpiel");
   valorpelo = localStorage.getItem("valorpelo");
   valoranteojos = localStorage.getItem("valoranteojos");
-  ratio = localStorage.getItem ("RATIO");
+  ratio = localStorage.getItem ("ratio");
 
   document.querySelector(`.colorcitos img[data-valor="${valorpiel}"]`).classList.add("visible");
   document.querySelector(`.cabellos img[data-valor="${valorpelo}"]`).classList.add("visible");
@@ -53,7 +53,7 @@ document.querySelectorAll ("#cabellos img").forEach(img => {
     }
 });
 }
-
+ 
 function datosUsuario() {
     postEvent ("UsuarioRegistrado", {
         NOMBREniño:nombre,
@@ -64,7 +64,7 @@ function datosUsuario() {
       if (!data) return;
         nombre=data.NOMBREniño,
         apellido=data.APELLIDOniño,
-        rationiño=data.RATIO
+        ratio=data.RATIO
 
         actualizarDatosUsuario();
         actualizarAvatar();
