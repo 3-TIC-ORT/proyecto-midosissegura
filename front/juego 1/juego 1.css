@@ -142,15 +142,23 @@ body {
     pointer-events: none;
 }
 
+@font-face {
+  font-family: 'Fredoka';
+  src: url('FredokaOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .pop1 {
     position: absolute;
     background-color: #F37777;
     border-color: #FF0000;
     width: 701px;
     height: 682px;
-    top: 97px;
-    left: 281px;
+    top: 210px;
+    left: 358px;
     opacity: 1;
+    font-family: "Fredoka", sans-serif;
     border-style: solid;
     border-radius: 20px;
     border-width: 15px;
@@ -163,9 +171,10 @@ body {
     border-color: #F7B81D;
     width: 701px;
     height: 682px;
-    top: 97px;
-    left: 281px;
+    top: 210px;
+    left: 358px;
     opacity: 1;
+    font-family: "Fredoka", sans-serif;
     border-style: solid;
     border-radius: 20px;
     border-width: 15px;
@@ -179,11 +188,68 @@ body {
     border-color: #16AC2D;
     width: 701px;
     height: 682px;
-    top: 97px;
-    left: 281px;
+    top: 210px;
+    left: 358px;
     opacity: 1;
+    font-family: "Fredoka", sans-serif;
     border-style: solid;
     border-radius: 20px;
     border-width: 15px;
     z-index: 1500;
+}
+
+.score {
+    position: absolute;
+    top: 145px;
+    left: 125px;
+    opacity: 1;
+    gap: 82px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.score::after {
+    content: "BIEN";
+    display: block;
+}
+
+.motivacion {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    top: 350px;
+    left: 140px;
+}
+
+.volverajugar {
+    position: absolute;
+    width: 425px;
+    height: 68.7621841430664px;
+    background-color: #39ABD9;
+    top: 557px;
+    left: 138px;
+    opacity: 1;
+    border-width: 6.63px;
+    border-radius: 49.71px;
+    border-style: solid;
+    font-family: "Fredoka", sans-serif;
+    font-size: 39px;
+}
+
+.cerrar {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    top: 31px;
+    left: 584px;
+    opacity: 1;
 }

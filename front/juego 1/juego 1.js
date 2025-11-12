@@ -131,7 +131,6 @@ imgactiva1 = cambiarnm (uno, null, null);
 imgactiva2 = cambiarnm (dos, imgactiva1, null);
 imgactiva3 = cambiarnm (tres, imgactiva1, imgactiva2);
 
-
 const correctas = {
     img1 : "carbos1",
     img2 : "carbos2",
@@ -143,6 +142,12 @@ const correctas = {
     img8 : "carbos8",
 }
 
+const iguales = {
+  carbos2: "carbos6",
+  carbos6: "carbos2",
+  carbos5: "carbos7",
+  carbos7: "carbos5",
+};
 
 let comidaseleccionada = null;
 let conexiones = [];
@@ -216,9 +221,9 @@ function verificar () {
     let cerrarPOPUP2 = document.getElementById ("cerrarPOPUP2");
     let cerrarPOPUP3 = document.getElementById ("cerrarPOPUP3");
     conexiones.forEach(c => {
-        if (correctas[c.comida] === c.carbos) bien++;
+        if (correctas[c.comida] === c.carbos || iguales [correctas[c.comida]] === c.carbos)
+            bien++;
     });
-    alert ("Acertaste" + bien +"/3");
 
     if (bien === 1) {
         pop1.classList.remove ("display");
