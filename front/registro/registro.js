@@ -62,7 +62,7 @@ function enviardatos() {
     postEvent("UsuarioRegistrado", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
-        CONTRASEÑAniño: avatarvalor
+        CONTRASENAniño: avatarvalor
     },
     function (data) {
         const respuesta = data;
@@ -70,6 +70,7 @@ function enviardatos() {
     postEvent ("InicioNiños", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
+        CONTRASENAniño: avatarvalor
     },
     function (data) {
         const respuesta = data;

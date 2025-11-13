@@ -80,7 +80,9 @@ function Iniciar(data)
                 "T5": false,
                 "T6": false,
                 "DOSIS": data.DOSIS,
-                "RATIO": data.RATIO
+                "RATIO": data.RATIO,
+                "NOMBREniño": data.NOMBREniño,
+                "APELLIDOniño": data.APELLIDOniño,
             })
             console.log("Adulto registrado con éxito")
 

@@ -21,7 +21,6 @@ postEvent("registro", {
   function registro(data){
 if (cuentacreada=true){
   localStorage.setItem ("ratio", RATIO.value);
-  alert("se creo correctamente la cuenta")
   window.location.href = "../registro/registro.html";
 }
 else if ( cuentacreada=false){
