@@ -107,7 +107,7 @@ function InicioNiños(data)
             }
         )
         
-        fs.writeFileSync("Usuarios.JSON", JSON.stringify(cuentaparcial, null, 2))
+        fs.writeFileSync("Usuarios.json", JSON.stringify(cuentaparcial, null, 2))
     }
 return niñocreado
 }
