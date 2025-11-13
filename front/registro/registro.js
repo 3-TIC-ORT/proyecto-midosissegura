@@ -54,7 +54,7 @@ function enviardatos() {
 
     localStorage.setItem ("nombreniño", nombreniño.value);
     localStorage.setItem ("apellidoniño", apellidoniño.value);
-    localStorage.setItem ("contraseña", valorfinal)
+    localStorage.setItem ("contraseña", avatarvalor)
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);
     localStorage.setItem ("valorpelo", valorpelo);
@@ -73,7 +73,7 @@ function enviardatos() {
     },
     function (data) {
         const respuesta = data;
-    })
+    }) 
 }
 
 botonEnviar.addEventListener ("click", enviardatos);
