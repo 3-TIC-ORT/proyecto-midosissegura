@@ -1,3 +1,5 @@
+connect2Server();
+
 let nivelglucemia= 90;
 const plato= document.getElementById ("plato");
 const platopantalla = null;
@@ -12,6 +14,7 @@ const mucha = document.getElementById ("mucho")
 const baja = document.getElementById ("baja")
 const normal = document.getElementById ("normal")
 const nivelglucometro = document.getElementById ("nivelglucometro");
+const botonatras = document.getElementById ("btnatras");
 
 function actualizarglucometro() {
     nivelglucometro.textContent = nivelglucemia;
@@ -115,7 +118,8 @@ insulina.addEventListener ("click", function() {
 })
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
-      connect2Server()
+
+botonatras.addEventListener ("click", function() {
       postEvent("trofeos",{
       T5: true,
       NOMBREniño:nombre,
@@ -124,3 +128,4 @@ APELLIDOniño:apellido
       console.log(data)
     }
     )
+});

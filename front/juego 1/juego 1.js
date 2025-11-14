@@ -243,6 +243,10 @@ function verificar () {
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
+        cerrarPOPUP3.addEventListener ("click", () => {
+        video.pause();
+        video.classList.add ("display");
+        pop3.classList.add ("display");
         let apellido=localStorage.getItem ("apellidoniño");
         let nombre=localStorage.getItem ("nombreniño");
               connect2Server()
@@ -254,10 +258,6 @@ function verificar () {
               console.log(data)
             }
             )
-        cerrarPOPUP3.addEventListener ("click", () => {
-        video.pause();
-        video.classList.add ("display");
-        pop3.classList.add ("display");
     })
 }
 }

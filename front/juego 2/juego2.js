@@ -1,3 +1,6 @@
+window.SOQUETIC_AUTORELOAD = false;
+connect2Server()
+
 const botonorden1 = document.getElementById("boton1");
 const botonorden2 = document.getElementById("boton2");
 const botonorden3 = document.getElementById("boton3");
@@ -82,17 +85,6 @@ function verificarFondos() {
         confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
       confeti.classList.add("zindex")
-      let apellido=localStorage.getItem ("apellidoniño");
-let nombre=localStorage.getItem ("nombreniño");
-      connect2Server()
-      postEvent("trofeos",{
-      T3: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
@@ -101,6 +93,16 @@ APELLIDOniño:apellido
 <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
     `;
+          let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
+      postEvent("trofeos",{
+      T3: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )
     } else if (correcttos >= 2 && correcttos <= 4) {
       resultadoDiv.classList.add("verde");
       resultadoDiv.innerHTML = `

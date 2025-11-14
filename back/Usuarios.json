@@ -103,5 +103,20 @@
     "RATIO": "20",
     "NOMBREniño": "maxi",
     "APELLIDOniño": "hasson"
+  },
+  {
+    "NOMBRE": "malena",
+    "APELLIDO": "rossi",
+    "CONTRASENA": "12345",
+    "T1": true,
+    "T2": true,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": false,
+    "DOSIS": "2",
+    "RATIO": "100",
+    "NOMBREniño": "LUCIA",
+    "APELLIDOniño": "CABALLERO"
   }
 ]
