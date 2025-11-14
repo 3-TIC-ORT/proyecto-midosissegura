@@ -69,7 +69,7 @@ function Iniciar(data)
     }
         if (cuentacreada === true)
             {
-            cuentaparcial.push ({
+          registro.push ({
                 "NOMBRE": data.NOMBRE ,
                 "APELLIDO": data.APELLIDO ,
                 "CONTRASENA": data.CONTRASENA ,
@@ -85,7 +85,7 @@ function Iniciar(data)
                 "APELLIDOniño": data.APELLIDOniño,
             })
             console.log("Adulto registrado con éxito")
-
+        fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2))
         }
         return cuentacreada
        
@@ -101,15 +101,6 @@ function InicioNiños(data)
     }else 
     {
         niñocreado = true
-        cuentaparcial.push(
-            {
-                "NOMBREniño": data.NOMBREniño,
-                "APELLIDOniño": data.APELLIDOniño,
-                "CONTRASENAniño":data.CONTRASENAniño
-            }
-        )
-        
-        fs.writeFileSync("Usuarios.json", JSON.stringify(cuentaparcial, null, 2))
     }
 return niñocreado
 }
@@ -168,11 +159,13 @@ export {LogueoAdultos};
 console.log(UsuarioR)
 function AñadirTrofeo(data)
 {
+     let APELLIDOniño=data.APELLIDOniño
+    let NOMBREniño=data.NOMBREniño
     if (data.T1 === true)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (NOMBREniño === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T1 = true
             }
@@ -183,7 +176,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (NOMBREniño === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T2 = true
             }
@@ -193,7 +186,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE  === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (NOMBREniño  === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T3 = true
             }
@@ -203,7 +196,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (NOMBREniño === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T4 = true
             }
@@ -213,7 +206,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO))
+            if (NOMBREniño === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T5 = true
             }
@@ -223,7 +216,7 @@ function AñadirTrofeo(data)
     {
         for (var i = 0; i < registro.length; i++)
         {
-            if (UsuarioR.NOMBRE === registro[i].NOMBRE && (UsuarioR.APELLIDO === registro[i].APELLIDO) && (UsuarioR.CONTRASENA === registro[i].CONTRASENA))
+            if (NOMBREniño === registro[i].NOMBREniño && (APELLIDOniño === registro[i].APELLIDOniño))
             {
                 registro[i].T6 = true
             }

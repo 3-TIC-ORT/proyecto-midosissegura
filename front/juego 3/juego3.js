@@ -16,6 +16,8 @@ const img5 = document.getElementById("imagen5");
 const img6 = document.getElementById("imagen6");
 const img7 = document.getElementById("imagen7");
 const contenedor = document.querySelector(".containerdeimg");
+let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
 
 let imagenSeleccionada = null;
 
@@ -103,7 +105,11 @@ function verificarFondos() {
       confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
       connect2Server()
-      postEvent("trofeos",{t4: true  },function(data){
+      postEvent("trofeos",{
+      T3: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
       console.log(data)
     }
     )

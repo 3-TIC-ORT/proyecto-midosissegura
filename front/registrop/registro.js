@@ -17,9 +17,10 @@ postEvent("registro", {
     RATIO:document.getElementById("RATIO").value,
     NOMBREniño:document.getElementById("nombreh").value,
     DOSIS:document.getElementById("dosis").value,
-  },registro());});
+  },registro);});
   function registro(data){
-if (cuentacreada=true){
+    let cuentacreada=data
+if (cuentacreada===true){
   localStorage.setItem ("ratio", RATIO.value);
   window.location.href = "../registro/registro.html";
 }
