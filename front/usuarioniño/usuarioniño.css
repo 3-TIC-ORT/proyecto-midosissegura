@@ -16,6 +16,10 @@ img.visible {
     display: block !important;
 }
 
+.visible {
+    display: block;
+}
+
 .colorcitos img, .anteojosysol img, .cabellos img {
     display: none;
 }
