@@ -43,5 +43,50 @@
     "RATIO": "200",
     "NOMBREniño": "male",
     "APELLIDOniño": "rossii"
+  },
+  {
+    "NOMBRE": "aa",
+    "APELLIDO": "messi",
+    "CONTRASENA": "a",
+    "T1": false,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "2",
+    "RATIO": "1",
+    "NOMBREniño": "male",
+    "APELLIDOniño": "creosalio"
+  },
+  {
+    "NOMBRE": "gerardo",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "123",
+    "T1": false,
+    "T2": false,
+    "T3": true,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "30",
+    "RATIO": "20",
+    "NOMBREniño": "maximiliano",
+    "APELLIDOniño": "tabakman"
+  },
+  {
+    "NOMBRE": "marina",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "123",
+    "T1": false,
+    "T2": false,
+    "T3": true,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "30",
+    "RATIO": "20",
+    "NOMBREniño": "maxi",
+    "APELLIDOniño": "tabakman"
   }
 ]

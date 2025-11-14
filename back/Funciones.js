@@ -256,7 +256,30 @@ function UsuarioRegistrado(data){
 
     return resultado;
 }
+    let T1=null
+    let T2 =null
+    let T3 =null
+    let T4 =null
+    let T5 =null
+    let T6 =null
 export {UsuarioRegistrado}
+function mostrartrofeos(data){
+    let usuarioh = data.NOMBREniño;
+    let usuarioha= data.APELLIDOniño;
+    for (let i = 0; i < registro.length; i++) {
+        if (usuarioh === registro[i].NOMBREniño && usuarioha === registro[i].APELLIDOniño) {
+     T1=registro[i].T1
+     T2 =registro[i].T2
+     T3 =registro[i].T3
+     T4 =registro[i].T4
+     T5 =registro[i].T5
+     T6 =registro[i].T6
+            break;
+        }
+    }
+    return [T1,T2,T3,T4,T5,T6];
+}
+export {mostrartrofeos}
 function recargardosis(data) {
     let usuarion = data.NOMBRE;
     let usuarioa = data.APELLIDO;

@@ -246,6 +246,14 @@ function verificar () {
         cerrarPOPUP3.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
+              postEvent("trofeos",{
+      T2: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )
         pop3.classList.add ("display");
     })
 }

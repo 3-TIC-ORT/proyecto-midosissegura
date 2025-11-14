@@ -106,7 +106,7 @@ function verificarFondos() {
       resultadoDiv.classList.add("verde");
       connect2Server()
       postEvent("trofeos",{
-      T3: true,
+      T4: true,
       NOMBREniño:nombre,
 APELLIDOniño:apellido
        },function(data){

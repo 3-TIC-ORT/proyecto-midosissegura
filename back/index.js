@@ -12,6 +12,8 @@ import { Guardarmensajesdelforo } from "./Funciones.js";
 import { darmensajesalforo } from "./Funciones.js";
 import {recargarratio} from "./Funciones.js";
 import {recargardosis} from "./Funciones.js";
+import {mostrartrofeos} from "./Funciones.js";
+
 subscribePOSTEvent ("iniciarsesion", LogueoAdultos);
 subscribePOSTEvent ("registro", Iniciar);
 subscribePOSTEvent ("trofeos", AñadirTrofeo);
@@ -24,4 +26,5 @@ subscribeGETEvent ("darmensajesalforo", darmensajesalforo);
 subscribePOSTEvent ("ActualizarDosis", recargardosis);
 subscribePOSTEvent ("ActualizarRatio", recargarratio);
 subscribePOSTEvent("InicioNiños", InicioNiños);
+subscribePOSTEvent ("mostrartrofeos", mostrartrofeos);
 startServer(3000)

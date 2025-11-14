@@ -4,7 +4,7 @@ let nombre = localStorage.getItem("nombreniño");
 let apellido = localStorage.getItem("apellidoniño");
 let ratio = 0;
 let TROFEOS = 0;
-let T1 = document.getElementById ("T1");
+let trofeo1 = document.getElementById ("T1");
 let T2 = document.getElementById ("T2");
 let T3 = document.getElementById ("T3");
 let T4 = document.getElementById ("T4");
@@ -13,27 +13,17 @@ let T6 = document.getElementById ("T6");
 let valorpiel = 0;
 let valorpelo = 0;
 let valoranteojos = 0;
+let t1= null
+ let t2 = null
+ let t3 =null
+ let t4 = null
+  let t5 =null
+  let t6 =null
 
-function ocultartrofeos (){
-  T1.style.display = "none";
-  T2.style.display = "none";
-  T3.style.display = "none";
-  T4.style.display = "none";
-  T5.style.display = "none";
-  T6.style.display = "none";
-}
-ocultartrofeos ();
 
-function mostrartrofeos (t1, t2, t3, t4, t5, t6){
-  if (t1 == 1) T1.style.display = "block";
-  if (t2 == 1) T2.style.display = "block";
-  if (t3 == 1) T3.style.display = "block";
-  if (t4 == 1) T4.style.display = "block";
-  if (t5 == 1) T5.style.display = "block";
-  if (t6 == 1) T6.style.display = "block";
-}
 
-window.addEventListener("DOMContentLoaded", () => {
+
+
   valorpiel = localStorage.getItem("valorpiel");
   valorpelo = localStorage.getItem("valorpelo");
   valoranteojos = localStorage.getItem("valoranteojos");
@@ -45,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   actualizarDatosUsuario();
   actualizarAvatar();
-});
+
 
 
 function actualizarDatosUsuario () {
@@ -95,19 +85,62 @@ function datosUsuario() {
         actualizarAvatar();
     }
 )
-  postEvent ("trofeos", {
+  postEvent ("mostrartrofeos", {
     NOMBREniño: nombre,
     APELLIDOniño: apellido
   },
   function (data) {
-console.log("Valores individuales:", data.T1, data.T2, data.T3, data.T4, data.T5, data.T6);
 
-    if (!data) return;
-    mostrartrofeos (data.T1, data.T2, data.T3, data.T4, data.T5, data.T6)
-  }
+t1 = data[0]; 
+  t2 = data[1];
+  t3 = data[2];
+  t4 = data[3]; 
+  t5 = data[4];
+  t6 = data[5];
+console.log(data)
+console.log("T1:", trofeo1, "t1:", t1);
+vertrofeos()
+}
 )
 }
+function vertrofeos(){
+if (t1 === false) {
+  trofeo1.classList.add("display");
+} else {
+  trofeo1.classList.remove("display");
+}
 
+if (t2 === false) {
+  T2.classList.add("display");
+} else {
+  T2.classList.remove("display");
+}
+
+if (t3 === false) {
+  T3.classList.add("display");
+} else {
+  T3.classList.remove("display");
+}
+
+if (t4 === false) {
+  T4.classList.add("display");
+} else {
+  T4.classList.remove("display");
+}
+
+if (t5 === false) {
+  T5.classList.add("display");
+} else {
+  T5.classList.remove("display");
+}
+
+if (t6 === false) {
+  T6.classList.add("display");
+} else {
+  T6.classList.remove("display");
+}
+
+}
 datosUsuario();
 
 
