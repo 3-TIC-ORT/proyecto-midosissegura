@@ -66,6 +66,17 @@ function enviardatos() {
     },
     function (data) {
         const respuesta = data;
+        let apellido=localStorage.getItem ("apellidoniño");
+        let nombre=localStorage.getItem ("nombreniño");
+              connect2Server()
+              postEvent("trofeos",{
+              T1: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+               },function(data){
+              console.log(data)
+            }
+            )
     })
     postEvent ("InicioNiños", {
         NOMBREniño: nombreniño.value,

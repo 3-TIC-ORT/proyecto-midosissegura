@@ -113,3 +113,14 @@ insulina.addEventListener ("click", function() {
     actualizarglucometro();
     estadonene();
 })
+let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
+      connect2Server()
+      postEvent("trofeos",{
+      T5: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )

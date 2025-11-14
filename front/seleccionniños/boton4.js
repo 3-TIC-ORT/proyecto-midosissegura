@@ -46,5 +46,16 @@ function paginasmostrar () {
     if (indice4 > imagenescuarto.length) indice4 = imagenescuarto.length - 1;
     paginasmostrar ();
 })
+let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
+      connect2Server()
+      postEvent("trofeos",{
+      T6: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )
 
 paginasmostrar ();

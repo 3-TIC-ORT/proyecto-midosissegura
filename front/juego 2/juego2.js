@@ -82,9 +82,11 @@ function verificarFondos() {
         confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
       confeti.classList.add("zindex")
+      let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
       connect2Server()
       postEvent("trofeos",{
-      T5: true,
+      T3: true,
       NOMBREniño:nombre,
 APELLIDOniño:apellido
        },function(data){

@@ -3,6 +3,7 @@ let btnjuego2=document.getElementById("juego2")
 let btnjuego3=document.getElementById("juego3") 
 let btnjuego4=document.getElementById("juego4")
 let usuario = document.getElementById ("usuario")
+let queesladiabetes=document.getElementById("queesladiabetes")
 juego1.addEventListener("click", function() {
     window.location.href = "../juego 1/juego 1.html";
 })
@@ -17,4 +18,7 @@ juego4.addEventListener("click", function() {
 })
 usuario.addEventListener("click", function() {
     window.location.href = "../usuarioniño/usuarioniño.html";
+})
+queesladiabetes.addEventListener("click", function() {
+    window.location.href = "../seleccionniños/seleccionniños.html";
 })

@@ -88,5 +88,20 @@
     "RATIO": "20",
     "NOMBREniño": "maxi",
     "APELLIDOniño": "tabakman"
+  },
+  {
+    "NOMBRE": "benja",
+    "APELLIDO": "baredes",
+    "CONTRASENA": "123",
+    "T1": true,
+    "T2": true,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": true,
+    "DOSIS": "30",
+    "RATIO": "20",
+    "NOMBREniño": "maxi",
+    "APELLIDOniño": "hasson"
   }
 ]

@@ -243,17 +243,20 @@ function verificar () {
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
+        let apellido=localStorage.getItem ("apellidoniño");
+        let nombre=localStorage.getItem ("nombreniño");
+              connect2Server()
+              postEvent("trofeos",{
+              T2: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+               },function(data){
+              console.log(data)
+            }
+            )
         cerrarPOPUP3.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
-              postEvent("trofeos",{
-      T2: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
         pop3.classList.add ("display");
     })
 }
