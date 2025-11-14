@@ -32,7 +32,7 @@ function comprobaciondedatos(data) {
         alert("Has iniciado sesión con éxito");
         localStorage.setItem("nombreusuario", document.getElementById("NOMBREP").value)
         localStorage.setItem("apellidousuario", document.getElementById("apellido").value);
-         window.location.href='/front/paginageneralp/paginageneralp.html'
+         window.location.href='../paginageneralp/paginageneralp.html'
     }
     else if (encontrado === true && contra === false && logueado === false) {
     alert("La contraseña es incorrecta");

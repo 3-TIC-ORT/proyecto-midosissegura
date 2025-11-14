@@ -8,32 +8,35 @@ const elemento2a = document.getElementById ("restaurante2a");
 const elemento3a = document.getElementById ("restaurante3a");
 const elemento4a = document.getElementById ("restaurante4a");
 const elemento5a = document.getElementById ("restaurante5a");
+const BOTON1 = document.getElementById ("BOTON1");
+const BOTON2 = document.getElementById ("BOTON2");
+const BOTON3 = document.getElementById ("BOTON3");
+const BOTON4 = document.getElementById ("BOTON4");
+const BOTON5 = document.getElementById ("BOTON5");
 
-const InformacionMapa = {
-    "restaurante1" : "Sintaxis, ubicado en Av. Cabildo 2607, Belgrano, CABA, es un restaurante donde preparan comidas que ayudan a cuidar el azúcar en tu cuerpo. Tienen platos ricos y saludables para que los niños se sientan con energía para jugar y aprender asi como nuggets de pollo caseros con verduras al vapor, puré de calabaza, y gelatina de frutas sin azúcar.",
-    "restaurante2" : "Cocelia, ubicado en Av. Libertador 8000, Nuñez, CABA, es un restaurante que ofrece comidas sanas y sabrosas para que los niños crezcan fuertes y felices, asi como mini milanesas de pollo al horno con ensalada colorida, sopa de verduras casera y fruta fresca picada",
-    "restaurante3" : "Eat Cool Sin azúcar‑Keto, ubicado en Av. Francisco Beiró 5311, CABA, es un local donde todo lo que ofrecen es sin azúcar y muchas opciones son low carb / keto: crepes, waffles, smoothies y platos que permiten controlar mejor los carbohidratos; ideal para merienda o desayuno sano.",
-    "restaurante4" : "Keto Gourmet CABA, no tiene salón grande que trabajar como restaurante tradicional, pero ofrecen viandas cetogénicas listas para calentar, hechas sin harinas, sin azúcar y sin conservantes, con buenas proteínas y vegetales bien seleccionados, práctico para almuerzos en casa o llevar.",
-    "restaurante5" : "Ketolicity / Keto Bakery — aunque más enfocado a producción de productos (postres, panes, snacks) keto y low carb, también tienen opciones aptas para incluir en una comida completa; ideal para acompañar lo que comés, si estás cuidando el azúcar, ya sea desayuno, snack o postre.",
-}
+BOTON1.addEventListener("click", () => {
+});
 
-function MapaRestaurantes (event) {
-    const mapa = event.target.id;
-    const popup = InformacionMapa [mapa];
+BOTON2.addEventListener("click", () => {
+});
 
-    document.getElementById ("popup-texto").textContent = popup;
-    document.getElementById ("popup").style.display = "block";
+BOTON3.addEventListener("click", () => {
+});
+
+BOTON4.addEventListener("click", () => {
+});
+
+BOTON5.addEventListener("click", () => {
+});
+
+
+function popup (event) {
 }
 
 function cerrarPopup (event) {
     document.getElementById ("popup").style.display = "none"
 }
 
-restaurante1.addEventListener("click", MapaRestaurantes);
-restaurante2.addEventListener("click", MapaRestaurantes);
-restaurante3.addEventListener("click", MapaRestaurantes);
-restaurante4.addEventListener("click", MapaRestaurantes);
-restaurante5.addEventListener("click", MapaRestaurantes);
 let elemento;
 let restaurante;
 function manejarMouseOver(numero) {
