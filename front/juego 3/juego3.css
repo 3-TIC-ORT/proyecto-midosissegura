@@ -4,7 +4,37 @@ body {
   font-family: "Fredoka One", Arial, sans-serif;
   background-color: #A3DFF2;
 }
-
+.pop{
+        position: absolute;
+    background-color: #FCEBD9;
+    border-color: #16AC2D;
+    width: 701px;
+    height: 682px;
+    top: 210px;
+    left: 358px;
+    opacity: 1;
+    font-family: "Fredoka", sans-serif;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 15px;
+    z-index: 1500;
+}
+.explicacion{
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
+.cerrar {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    top: 31px;
+    left: 584px;
+    opacity: 1;
+    z-index: 110;
+}
 @font-face {
     font-family: 'Fredoka';
     src: url('Fredoka-Regular.ttf') format('truetype');
@@ -469,7 +499,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  pointer-events: none; /* para que no bloquee clicks */
+  pointer-events: none; 
   display: none;
 }
 .display{
@@ -477,4 +507,12 @@ body {
 }
 .zindex {
   z-index: 10;
+}
+.antizidex{
+  z-index: -100;
+display: block;
+opacity: 0;
+}
+.borde{
+    border:#39abd9, solid, 6.63px;
 }

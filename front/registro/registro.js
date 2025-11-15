@@ -52,8 +52,7 @@ function AVATAR () {
 function enviardatos() {
     const avatarvalor = AVATAR();
 
-    localStorage.setItem ("nombreniño", nombreniño.value);
-    localStorage.setItem ("apellidoniño", apellidoniño.value);
+
     localStorage.setItem ("contraseña", avatarvalor)
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);

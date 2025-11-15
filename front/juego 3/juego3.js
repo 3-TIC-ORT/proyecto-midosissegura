@@ -7,6 +7,7 @@ const botonorden6 = document.getElementById("boton6");
 const botonorden7 = document.getElementById("boton7");
 let resultadoDiv = document.getElementById("resultadodiv");
 let correcttos = 0;
+let videoexplicacion =document.getElementById("explicacion")
 let confeti =document.getElementById("confeti")
 const img1 = document.getElementById("imagen1");
 const img2 = document.getElementById("imagen2");
@@ -19,28 +20,89 @@ const contenedor = document.querySelector(".containerdeimg");
 
 
 let imagenSeleccionada = null;
-
+let imagenes =null
 img1.addEventListener("click", () => {
   imagenSeleccionada = img1.getAttribute("src");
+  img1.classList.add("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+  img6.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img1
 });
+
 img2.addEventListener("click", () => {
   imagenSeleccionada = img2.getAttribute("src");
+  img2.classList.add("borde")
+  img1.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+  img6.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img2
 });
+
 img3.addEventListener("click", () => {
   imagenSeleccionada = img3.getAttribute("src");
+  img3.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+  img6.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img3
 });
 
 img4.addEventListener("click", () => {
   imagenSeleccionada = img4.getAttribute("src");
+  img4.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img5.classList.remove("borde")
+  img6.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img4
 });
+
 img5.addEventListener("click", () => {
   imagenSeleccionada = img5.getAttribute("src");
+  img5.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img6.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img5
 });
+
 img6.addEventListener("click", () => {
   imagenSeleccionada = img6.getAttribute("src");
+  img6.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+  img7.classList.remove("borde")
+  imagenes=img6
 });
+
 img7.addEventListener("click", () => {
   imagenSeleccionada = img7.getAttribute("src");
+  img7.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+  img6.classList.remove("borde")
+  imagenes=img7
 });
 
 function aplicarFondo(boton) {
@@ -48,6 +110,7 @@ function aplicarFondo(boton) {
     boton.style.backgroundImage = `url("${imagenSeleccionada}")`;
     boton.style.backgroundSize = "cover";
     boton.style.backgroundPosition = "center";
+imagenes.classList.add("antizidex")
     verificarFondos();
   }
 }
@@ -211,3 +274,9 @@ let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
   window.location.href = "../pagina gral/paginageneraln.html";
 });
+        videoexplicacion.play();
+        let cerrarPOPUP = document.getElementById ("cerrarPOPUP");
+             cerrarPOPUP.addEventListener ("click", () => {
+        pop.classList.add ("displaya");
+        pop.classList.add("antizidex")
+        videoexplicacion.pause()})

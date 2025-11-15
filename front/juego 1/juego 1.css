@@ -109,6 +109,9 @@ body {
 .display{
     display: none;
 }
+.displaya{
+    display: block;
+}
 .posicion1{
     top: 350px;
     left: 550px;
