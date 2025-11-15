@@ -4,6 +4,7 @@ let pop2 = document.getElementById ("pop2");
 pop2.classList.add ("display");
 let pop3 = document.getElementById ("pop3");
 pop3.classList.add ("display");
+let videoexplicacion =document.getElementById("explicacion")
 let img1 = document.getElementById ("img1");
 let img2 = document.getElementById ("img2");
 let img3 = document.getElementById ("img3");
@@ -212,11 +213,16 @@ carboseleccionado.forEach(escuchar => {
             setTimeout (verificar, 50);
         }
     });
-});
-
-
+});        videoexplicacion.pause()
+        videoexplicacion.play();
+        let cerrarPOPUP = document.getElementById ("cerrarPOPUP");
+             cerrarPOPUP.addEventListener ("click", () => {
+        pop.classList.add ("display");
+        videoexplicacion.pause()
+    })
 function verificar () {
     let bien = 0;
+
     let cerrarPOPUP1 = document.getElementById ("cerrarPOPUP1");
     let cerrarPOPUP2 = document.getElementById ("cerrarPOPUP2");
     let cerrarPOPUP3 = document.getElementById ("cerrarPOPUP3");

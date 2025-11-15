@@ -4,7 +4,11 @@ body {
     height: 1024px;
     display: flex;
 }
-
+.explicacion{
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
 
 .azuloscuro {
     position: absolute;
@@ -197,7 +201,21 @@ body {
     border-width: 15px;
     z-index: 1500;
 }
-
+.pop{
+        position: absolute;
+    background-color: #FCEBD9;
+    border-color: #16AC2D;
+    width: 701px;
+    height: 682px;
+    top: 210px;
+    left: 358px;
+    opacity: 1;
+    font-family: "Fredoka", sans-serif;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 15px;
+    z-index: 1500;
+}
 .score {
     position: absolute;
     top: 145px;
@@ -252,4 +270,8 @@ body {
     top: 31px;
     left: 584px;
     opacity: 1;
+    z-index: 110;
+}
+.antizindex{
+    z-index: -200;
 }

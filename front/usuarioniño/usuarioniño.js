@@ -41,7 +41,7 @@ let t1= null
 function actualizarDatosUsuario () {
     document.getElementById("nombreyapellido").textContent = "~" + " " + " " + nombre + " " + apellido;
     document.getElementById("ratio").textContent = "~  RATIO DE INSULINA:" + " " + ratio;
-    document.getElementById("trofeos").textContent = TROFEOS;
+
 }
 
 function actualizarAvatar () {
@@ -108,38 +108,44 @@ if (t1 === false) {
   trofeo1.classList.add("display");
 } else {
   trofeo1.classList.remove("display");
+  TROFEOS++
 }
 
 if (t2 === false) {
   T2.classList.add("display");
 } else {
   T2.classList.remove("display");
+    TROFEOS++
 }
 
 if (t3 === false) {
   T3.classList.add("display");
 } else {
   T3.classList.remove("display");
+    TROFEOS++
 }
 
 if (t4 === false) {
   T4.classList.add("display");
 } else {
   T4.classList.remove("display");
+    TROFEOS++
 }
 
 if (t5 === false) {
   T5.classList.add("display");
 } else {
   T5.classList.remove("display");
+    TROFEOS++
 }
 
 if (t6 === false) {
   T6.classList.add("display");
 } else {
   T6.classList.remove("display");
+    TROFEOS++
 }
-
+    document.getElementById("trofeos").textContent = TROFEOS;
 }
 datosUsuario();
 

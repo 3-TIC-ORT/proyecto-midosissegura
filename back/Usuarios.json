@@ -90,33 +90,18 @@
     "APELLIDOniño": "tabakman"
   },
   {
-    "NOMBRE": "benja",
-    "APELLIDO": "baredes",
-    "CONTRASENA": "123",
+    "NOMBRE": "gerardo",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "gera",
     "T1": true,
-    "T2": true,
-    "T3": true,
-    "T4": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
     "T5": true,
     "T6": true,
-    "DOSIS": "30",
-    "RATIO": "20",
-    "NOMBREniño": "maxi",
-    "APELLIDOniño": "hasson"
-  },
-  {
-    "NOMBRE": "malena",
-    "APELLIDO": "rossi",
-    "CONTRASENA": "12345",
-    "T1": true,
-    "T2": true,
-    "T3": true,
-    "T4": true,
-    "T5": true,
-    "T6": false,
-    "DOSIS": "2",
-    "RATIO": "100",
-    "NOMBREniño": "LUCIA",
-    "APELLIDOniño": "CABALLERO"
+    "DOSIS": "100",
+    "RATIO": "10000",
+    "NOMBREniño": "jose",
+    "APELLIDOniño": "tabakman"
   }
 ]
