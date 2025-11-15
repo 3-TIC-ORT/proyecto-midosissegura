@@ -17,7 +17,7 @@ let atras = document.getElementById ("atras");
 let seguir = document.getElementById ("seguir");
 
 const total = 14;
-let indice = 1;
+let indice = 0;
 
 const paginas = document.querySelectorAll (`[class^="pagina"]`);
 

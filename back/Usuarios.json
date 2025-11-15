@@ -118,5 +118,20 @@
     "RATIO": "20",
     "NOMBREniño": "susana",
     "APELLIDOniño": "tabakman"
+  },
+  {
+    "NOMBRE": "MAXIMILIANO",
+    "APELLIDO": "TABAKMAN",
+    "CONTRASENA": "SOYELMAX",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "7",
+    "RATIO": "100",
+    "NOMBREniño": "MARTIN",
+    "APELLIDOniño": "MORALES"
   }
 ]

@@ -16,7 +16,7 @@ body {
     z-index: 500;
 }
 
-.dos, .tres, .cuatro, .cinco, .ocho {
+.dos, .tres, .cuatro, .cinco {
     position: absolute;
     display: flex;
     z-index: 500;
@@ -27,7 +27,86 @@ body {
     opacity: 1;
 }
 
+.seis {
+    position: absolute;
+    width: 1225.6339111328125px;
+    height: 763px;
+    top: 185px;
+    left: 155px;
+    opacity: 1;
+}
 
+.siete {
+    position: absolute;
+    width: 1190.6339111328125px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.ocho {
+    position: absolute;
+    width: 1121px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.nueve {
+    position: absolute;
+    width: 1204.6339111328125px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.diez {
+    position: absolute;
+    width: 1210px;
+height: 873.0354614257812px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.once {
+    position: absolute;
+    width: 1131px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.doce {
+    position: absolute;
+    width: 1194px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.trece {
+    position: absolute;
+    width: 1238.6339111328125px;
+height: 763px;
+top: 185px;
+left: 155px;
+opacity: 1;
+}
+
+.catorce {
+    position: absolute;
+    width: 1121px;
+height: 830px;
+top: 178px;
+left: 159px;
+opacity: 1;
+}
 
 .display {
     display: none;
