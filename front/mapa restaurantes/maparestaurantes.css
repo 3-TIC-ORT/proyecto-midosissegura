@@ -12,6 +12,86 @@ body {
     font-style: normal;
 }
 
+.BOTON1, .BOTON2, .BOTON3, .BOTON4, .BOTON5 {
+  z-index: 5000;
+  background: transparent;
+  border: none;
+  height: 156px;
+  width: 156px;
+}
+
+.popup {
+  position: absolute;
+  width: 842px;
+height: 682px;
+top: 51px;
+left: 203px;
+background-color: #FCEBD9;
+opacity: 1;
+border-width: 8px;
+border-radius: 20px;
+border-color: black;
+border-style: solid;
+display: none;
+z-index: 5100;
+}
+
+.popupcontenedor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Fredoka", sans-serif;
+}
+
+.popupcontenedor h3 {
+  position: relative;
+  text-align: center;
+  opacity: 1;
+  font-family: "Fredoka";
+  font-style: Medium;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+}
+
+.popupcontenedor h4 {
+  position: relative;
+  font-family: "Fredoka";
+font-size: 36px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 15px 0;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.icono {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.cerrar {
+  position: absolute;
+  width: 62px;
+height: 62px;
+top: -48px;
+left: 760px;
+opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
   .volveratras {
     position: absolute;
     width: 252px;
@@ -39,7 +119,7 @@ body {
     letter-spacing: 0%;
     gap: 10px;
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     opacity: 0.7;
     justify-content: center;
 }
@@ -51,9 +131,9 @@ body {
   padding: 10px;
  margin: 10px;
  justify-content: center;
- z-index: 100;
- 
+ z-index: 100; 
 }
+
 .main {
     position: relative;
     display: flex;
@@ -65,6 +145,7 @@ body {
     left: 117px;
     top: 146px;
     overflow: hidden;
+    z-index: 10;
 }
   
 .restaurante1 {  position:absolute; width: 156;
