@@ -1,4 +1,9 @@
-const botonorden1 = document.getElementById("boton1");
+
+
+      connect2Server()
+            let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
+      const botonorden1 = document.getElementById("boton1");
 const botonorden2 = document.getElementById("boton2");
 const botonorden3 = document.getElementById("boton3");
 const botonorden4 = document.getElementById("boton4");
@@ -17,7 +22,6 @@ const img5 = document.getElementById("imagen5");
 const img6 = document.getElementById("imagen6");
 const img7 = document.getElementById("imagen7");
 const contenedor = document.querySelector(".containerdeimg");
-
 
 let imagenSeleccionada = null;
 let imagenes =null
@@ -111,6 +115,7 @@ function aplicarFondo(boton) {
     boton.style.backgroundSize = "cover";
     boton.style.backgroundPosition = "center";
 imagenes.classList.add("antizidex")
+boton.innerHTML=""
     verificarFondos();
   }
 }
@@ -166,17 +171,9 @@ function verificarFondos() {
       confeti.play();
       confeti.classList.add("display")
       resultadoDiv.classList.add("verde");
-      let apellido=localStorage.getItem ("apellidoniño");
-let nombre=localStorage.getItem ("nombreniño");
-      connect2Server()
-      postEvent("trofeos",{
-      T4: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
+
+
+    
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
@@ -238,6 +235,15 @@ function reiniciarJuego() {
   botonorden5.style.backgroundImage = "none";
   botonorden6.style.backgroundImage = "none";
   botonorden7.style.backgroundImage = "none";
+botonorden1.innerHTML = 1;
+botonorden2.innerHTML = 2;
+botonorden3.innerHTML = 3;
+botonorden4.innerHTML = 4;
+botonorden5.innerHTML = 5;
+botonorden6.innerHTML = 6;
+botonorden7.innerHTML = 7;
+
+
   imagenSeleccionada = null;
   correcttos = 0;
   resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
@@ -246,6 +252,21 @@ function reiniciarJuego() {
   confeti.classList.remove("zindex")
   confeti.pause();
    confeti.classList.remove("display")
+   img1.classList.remove("antizidex");
+img2.classList.remove("antizidex");
+img3.classList.remove("antizidex");
+img4.classList.remove("antizidex");
+img5.classList.remove("antizidex");
+img6.classList.remove("antizidex");
+img7.classList.remove("antizidex");
+   img1.classList.remove("borde");
+img2.classList.remove("borde");
+img3.classList.remove("borde");
+img4.classList.remove("borde");
+img5.classList.remove("borde");
+   img6.classList.remove("borde");
+img7.classList.remove("borde");
+
 }
 
 resultadoDiv.addEventListener("click", function (event) {
@@ -262,6 +283,14 @@ resultadoDiv.addEventListener("click", function (event) {
       confeti.classList.remove("zindex")
       confeti.pause();
       confeti.classList.remove("display")
+  postEvent("trofeos",{
+      T4: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )
   } else if (
     event.target &&
     event.target.classList &&

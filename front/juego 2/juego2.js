@@ -1,6 +1,7 @@
-window.SOQUETIC_AUTORELOAD = false;
-connect2Server()
 
+connect2Server()
+          let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
 const botonorden1 = document.getElementById("boton1");
 const botonorden2 = document.getElementById("boton2");
 const botonorden3 = document.getElementById("boton3");
@@ -16,23 +17,57 @@ const img5 = document.getElementById("imagen5");
 const contenedor = document.querySelector(".containerdeimg");
 let confeti =document.getElementById("confeti")
 let imagenSeleccionada = null;
- 
+ let imagenes=null
 img1.addEventListener("click", () => {
   imagenSeleccionada = img1.getAttribute("src");
+  img1.classList.add("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+    imagenes=img1
 });
+
 img2.addEventListener("click", () => {
   imagenSeleccionada = img2.getAttribute("src");
+  img2.classList.add("borde")
+  img1.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+    imagenes=img2
 });
+
 img3.addEventListener("click", () => {
   imagenSeleccionada = img3.getAttribute("src");
+  img3.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img4.classList.remove("borde")
+  img5.classList.remove("borde")
+    imagenes=img3
 });
 
 img4.addEventListener("click", () => {
   imagenSeleccionada = img4.getAttribute("src");
+  img4.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img5.classList.remove("borde")
+    imagenes=img4
 });
+
 img5.addEventListener("click", () => {
   imagenSeleccionada = img5.getAttribute("src");
+  img5.classList.add("borde")
+  img1.classList.remove("borde")
+  img2.classList.remove("borde")
+  img3.classList.remove("borde")
+  img4.classList.remove("borde")
+    imagenes=img5
 });
+
 
 function aplicarFondo(boton) {
   if (imagenSeleccionada) {
@@ -40,6 +75,8 @@ function aplicarFondo(boton) {
     boton.style.backgroundSize = "cover";
     boton.style.backgroundPosition = "center";
     verificarFondos();
+    imagenes.classList.add("antizidex")
+    boton.innerHTML=""
   }
 }
 botonorden1.addEventListener("click", () => aplicarFondo(botonorden1));
@@ -93,16 +130,8 @@ function verificarFondos() {
 <img src="../imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">
  <button id="botonresultado" class="boton botonresultado">volver a jugar</button>
     `;
-          let apellido=localStorage.getItem ("apellidoniño");
-let nombre=localStorage.getItem ("nombreniño");
-      postEvent("trofeos",{
-      T3: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
+
+   
     } else if (correcttos >= 2 && correcttos <= 4) {
       resultadoDiv.classList.add("verde");
       resultadoDiv.innerHTML = `
@@ -149,11 +178,28 @@ function actualizarVisibilidad(mostrar) {
 }
 
 function reiniciarJuego() {
+
   botonorden1.style.backgroundImage = "none";
   botonorden2.style.backgroundImage = "none";
   botonorden3.style.backgroundImage = "none";
   botonorden4.style.backgroundImage = "none";
   botonorden5.style.backgroundImage = "none";
+  botonorden1.innerHTML = 1;
+botonorden2.innerHTML = 2;
+botonorden3.innerHTML = 3;
+botonorden4.innerHTML = 4;
+botonorden5.innerHTML = 5;
+   img1.classList.remove("antizidex");
+img2.classList.remove("antizidex");
+img3.classList.remove("antizidex");
+img4.classList.remove("antizidex");
+img5.classList.remove("antizidex");
+   img1.classList.remove("borde");
+img2.classList.remove("borde");
+img3.classList.remove("borde");
+img4.classList.remove("borde");
+img5.classList.remove("borde");
+
   imagenSeleccionada = null;
   correcttos = 0;
   resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
@@ -162,6 +208,7 @@ function reiniciarJuego() {
   confeti.classList.remove("zindex")
    confeti.pause();
     confeti.classList.remove("display")
+    connect2Server()
 }
 
 resultadoDiv.addEventListener("click", function (event) {
@@ -176,6 +223,14 @@ resultadoDiv.addEventListener("click", function (event) {
  confeti.pause();
  confeti.classList.remove("display")
     correcttos = 0;
+       postEvent("trofeos",{
+      T3: true,
+      NOMBREniño:nombre,
+APELLIDOniño:apellido
+       },function(data){
+      console.log(data)
+    }
+    )
     resultadoDiv.innerHTML =
       '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
   } else if (
