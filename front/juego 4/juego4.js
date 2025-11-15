@@ -36,7 +36,7 @@ else if (nivelglucemia <= 89) {
     baja.classList.remove ("display");
 }
 
-else if (nivelglucemia => 90 && nivelglucemia <= 180){
+else if (nivelglucemia >= 90 && nivelglucemia <= 180){
     baja.classList.add ("display");
     mucha.classList.add ("display");
     normal.classList.remove ("display");
@@ -73,6 +73,8 @@ function platoenpantalla() {
 window.onload = function () {
     platoaleatorio ();
     nivelglucemia=90;
+    actualizarglucometro();
+    estadonene();
 }
 
 comer.addEventListener("click", function () {
@@ -104,6 +106,31 @@ if (plato===platohelado) {
 
 });
 
+let apellido=localStorage.getItem ("apellidoniño");
+let nombre=localStorage.getItem ("nombreniño");
+
+let bajainsulina = 0;
+let dosis = 0;
+function cuentainsulina () {
+postEvent("registro", {
+    NOMBREniño: nombre,
+    APELLIDOniño: apellido,
+  },
+  function (data) {
+    console.log (data);
+    if (!data) {
+        return;
+    }
+        dosis = Number(data.DOSIS);
+        console.log (dosis);
+        bajainsulina = 1800 / dosis;
+        
+        cambiosglucemia(-bajainsulina);
+        actualizarglucometro();
+        estadonene();
+  })
+}
+
 
 azucar.addEventListener ("click", function() {
     cambiosglucemia (15);
@@ -111,13 +138,7 @@ azucar.addEventListener ("click", function() {
     estadonene();
 })
 
-insulina.addEventListener ("click", function() {
-    cambiosglucemia (-30);
-    actualizarglucometro();
-    estadonene();
-})
-let apellido=localStorage.getItem ("apellidoniño");
-let nombre=localStorage.getItem ("nombreniño");
+insulina.addEventListener ("click", cuentainsulina);
 
 botonatras.addEventListener ("click", function() {
       postEvent("trofeos",{
