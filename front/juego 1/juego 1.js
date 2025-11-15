@@ -1,3 +1,4 @@
+connect2Server()
 let pop1 = document.getElementById ("pop1");
 pop1.classList.add ("display");
 let pop2 = document.getElementById ("pop2");
@@ -246,6 +247,16 @@ function verificar () {
     }
 
     if (bien === 3) {
+        let apellido=localStorage.getItem ("apellidoniño");
+        let nombre=localStorage.getItem ("nombreniño");
+        postEvent("trofeos",{
+            T2: true,
+            NOMBREniño:nombre,
+            APELLIDOniño:apellido
+            },function(data){
+            console.log(data)
+        }
+            )
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
@@ -253,17 +264,6 @@ function verificar () {
         video.pause();
         video.classList.add ("display");
         pop3.classList.add ("display");
-        let apellido=localStorage.getItem ("apellidoniño");
-        let nombre=localStorage.getItem ("nombreniño");
-              connect2Server()
-              postEvent("trofeos",{
-              T2: true,
-              NOMBREniño:nombre,
-        APELLIDOniño:apellido
-               },function(data){
-              console.log(data)
-            }
-            )
     })
 }
 }

@@ -133,5 +133,20 @@
     "RATIO": "100",
     "NOMBREniño": "MARTIN",
     "APELLIDOniño": "MORALES"
+  },
+  {
+    "NOMBRE": "Isabel",
+    "APELLIDO": "Mezzetti",
+    "CONTRASENA": "mesa",
+    "T1": true,
+    "T2": true,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "9",
+    "RATIO": "400",
+    "NOMBREniño": "Hernan",
+    "APELLIDOniño": "Rossi"
   }
 ]
