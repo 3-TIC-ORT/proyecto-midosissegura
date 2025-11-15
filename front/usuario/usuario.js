@@ -45,6 +45,6 @@ inpuratio.addEventListener("keydown", (event) => {
 });
 let volveratras = document.getElementById("volveratras");
 function volveratra (){
-    window.location.href='../paginageneralp/paginageneralp.html'
+    window.location.href='../pagina gral/paginageneraln.html'
 }
 volveratras.addEventListener("click", (volveratra));

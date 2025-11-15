@@ -2,8 +2,10 @@ connect2Server();
 const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
 const botonEnviar = document.getElementById ("aceptar");
-
-
+      let apellido=localStorage.getItem ("apellidoniño");
+        let nombre=localStorage.getItem ("nombreniño");
+document.getElementById("nombrenene").placeholder= localStorage.getItem("nombreniño") ;
+ document.getElementById("apellidonene").placeholder = localStorage.getItem("apellidoniño") ;
 let cabello = 0;
 const cabellos = document.querySelectorAll ('#cabellos .pelo')
 
@@ -65,8 +67,8 @@ function enviardatos() {
     },
     function (data) {
         const respuesta = data;
-        let apellido=localStorage.getItem ("apellidoniño");
-        let nombre=localStorage.getItem ("nombreniño");
+  
+
               connect2Server()
               postEvent("trofeos",{
               T1: true,
@@ -77,6 +79,7 @@ function enviardatos() {
             }
             )
     })
+ if(nombre=== nombreniño.value && apellido ===apellidoniño.value){
     postEvent ("InicioNiños", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
@@ -84,8 +87,14 @@ function enviardatos() {
     },
     function (data) {
         const respuesta = data;
+ window.location.href='../paginageneralp/paginageneralp.html'
     }) 
+   }
+
+else{
+alert("escribi bien tus datos")
+}
 }
 
-botonEnviar.addEventListener ("click", enviardatos);
+         botonEnviar.addEventListener ("click", enviardatos);
 

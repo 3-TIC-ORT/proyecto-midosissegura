@@ -103,5 +103,20 @@
     "RATIO": "10000",
     "NOMBREniño": "jose",
     "APELLIDOniño": "tabakman"
+  },
+  {
+    "NOMBRE": "micaela",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "123",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": true,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "40",
+    "RATIO": "20",
+    "NOMBREniño": "susana",
+    "APELLIDOniño": "tabakman"
   }
 ]
