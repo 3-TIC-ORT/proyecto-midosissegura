@@ -121,23 +121,34 @@ function LogueoAdultos(data)
 
   for (var i =0; i<registro.length;i++)
     {
-        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
+        if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA && data.NOMBREniño === registro[i].NOMBREniño && data.APELLIDOniño === registro[i].APELLIDOniño)
         {
             console.log ("Has iniciado sesión correctamente")
             encontrado = true
             logueado = true
             contra=true             
             break
-        } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
+        } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA && data.NOMBREniño === registro[i].NOMBREniño && data.APELLIDOniño === registro[i].APELLIDOniño)
         {
             console.log ("La contraseña es incorrecta")
             encontrado = true
             logueado = false
             contra=false
             break
-        } 
-  
-    }
+        } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA && (data.NOMBREniño !== registro[i].NOMBREniño || data.APELLIDOniño !== registro[i].APELLIDOniño))
+        {
+            console.log ("Has ingresado mal el nombre o apellido del niño")
+            encontrado = true
+            logueado = false
+            contra = false
+            break
+        }else if (data.NOMBRE !== registro[i].NOMBRE || data.APELLIDO !== registro[i].APELLIDO)
+        {
+            console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
+            encontrado = false
+            logueado = false
+            contra = false
+        }
     if (encontrado === false)
     {
         console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
@@ -146,7 +157,7 @@ function LogueoAdultos(data)
     }
 
     
-  if (encontrado === true) {
+  if (logueado === true) {
     for (let j = 0; j < registro.length; j++) {
       if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO) {
         ratio = parseInt(registro[j].RATIO);
@@ -155,7 +166,7 @@ function LogueoAdultos(data)
       }
     }
   }
-
+}
   return [logueado, encontrado, contra, ratio];
 }
 export {LogueoAdultos};
