@@ -181,5 +181,21 @@
     "NOMBREniño": "a",
     "APELLIDOniño": "a",
     "CONTRASENAniño": 322
+  },
+  {
+    "NOMBRE": "sofi",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "123",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "4",
+    "RATIO": "20",
+    "NOMBREniño": "juan",
+    "APELLIDOniño": "dalorso",
+    "CONTRASENAniño": 322
   }
 ]

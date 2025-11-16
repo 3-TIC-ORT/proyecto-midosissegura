@@ -847,7 +847,7 @@ function calculardatos() {
   }, function (data) {
     const respuesta = data;
     alert(`Calorías: ${respuesta} Kcal`);
-    resultado.innerText = `Calorías: ${respuesta} Kcal`;
+    resultado.innerText = `${respuesta} Kcal`;
   });
 }
 
