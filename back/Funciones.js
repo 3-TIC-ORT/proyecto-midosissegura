@@ -123,17 +123,6 @@ function LogueoAdultos(data)
     {
         if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
         {
-             for (var i =0; i<registro.length;i++)
-        {
-            if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
-            {
-                ratio = parseInt(registro[i].RATIO)
-                console.log("Ratio encontrado: " + ratio)
-                return ratio
-                break
-            }
-        }
-
             console.log ("Has iniciado sesión correctamente")
             encontrado = true
             logueado = true
@@ -156,10 +145,21 @@ function LogueoAdultos(data)
         contra = false
     }
 
-  return [logueado,encontrado,contra, ratio];
+
+  let ratio = 0;
+  if (encontrado === true) {
+    for (let j = 0; j < registro.length; j++) {
+      if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO) {
+        ratio = parseInt(registro[j].RATIO);
+        console.log("Ratio encontrado: " + ratio);
+        break;
+      }
+    }
+  }
+
+  return [logueado, encontrado, contra, ratio];
 }
 export {LogueoAdultos};
-console.log(UsuarioR)
 function AñadirTrofeo(data)
 {
      let APELLIDOniño=data.APELLIDOniño
