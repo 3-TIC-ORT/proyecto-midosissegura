@@ -120,9 +120,10 @@ function verificarFondos() {
 
     if (correcttos == 5) {
        confeti.play();
-        confeti.classList.add("display")
+
       resultadoDiv.classList.add("verde");
       confeti.classList.add("zindex")
+           confeti.classList.add("messi")
       resultadoDiv.innerHTML = `
       <div class="textosresultado">
         <p class="txtresultado">hiciste ${numeroHtml} de ${num7} bien</p>
@@ -208,7 +209,7 @@ img5.classList.remove("borde");
   resultadoDiv.innerHTML = "";
   confeti.classList.remove("zindex")
    confeti.pause();
-    confeti.classList.remove("display")
+    confeti.classList.remove("messi")
     connect2Server()
 }
 
@@ -222,7 +223,7 @@ resultadoDiv.addEventListener("click", function (event) {
     resultadoDiv.classList.remove("verde", "amarillo", "rojo", "zindex");
     confeti.classList.remove("zindex")
  confeti.pause();
- confeti.classList.remove("display")
+ confeti.classList.remove("messi")
     correcttos = 0;
        postEvent("trofeos",{
       NOMBREniño:nombre,

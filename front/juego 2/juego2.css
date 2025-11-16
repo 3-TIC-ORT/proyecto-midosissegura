@@ -500,7 +500,9 @@ opacity: 1;
 .display{
   display: none;
 }
-
+.messi{
+  display: inherit;
+}
 .antizidex{
   z-index: -100;
 opacity: 0;

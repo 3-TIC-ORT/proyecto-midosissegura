@@ -247,16 +247,6 @@ function verificar () {
     }
 
     if (bien === 3) {
-        let apellido=localStorage.getItem ("apellidoniño");
-        let nombre=localStorage.getItem ("nombreniño");
-        postEvent("trofeos",{
-            T2: true,
-            NOMBREniño:nombre,
-            APELLIDOniño:apellido
-            },function(data){
-            console.log(data)
-        }
-            )
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
@@ -267,6 +257,16 @@ cerrarPOPUP3.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
         pop3.classList.add ("display");
+                let apellido=localStorage.getItem ("apellidoniño");
+        let nombre=localStorage.getItem ("nombreniño");
+        postEvent("trofeos",{
+            T2: true,
+            NOMBREniño:nombre,
+            APELLIDOniño:apellido
+            },function(data){
+            console.log(data)
+        }
+            )
 })
 
 let volverajugar1 = document.getElementById ("volverajugar1")

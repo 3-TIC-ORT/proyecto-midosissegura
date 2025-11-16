@@ -165,5 +165,21 @@
     "NOMBREniño": "MALENA",
     "APELLIDOniño": "ROSSI",
     "CONTRASENAniño": 1522
+  },
+  {
+    "NOMBRE": "nina",
+    "APELLIDO": "mundo",
+    "CONTRASENA": "123",
+    "T1": true,
+    "T2": true,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": true,
+    "DOSIS": "3",
+    "RATIO": "20",
+    "NOMBREniño": "a",
+    "APELLIDOniño": "a",
+    "CONTRASENAniño": 322
   }
 ]
