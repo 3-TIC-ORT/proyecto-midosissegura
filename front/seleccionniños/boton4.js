@@ -1,4 +1,4 @@
-
+      connect2Server()
 const cuarto1 = document.getElementById("1cuarto");
 const cuarto2 = document.getElementById("2cuarto");
 const cuarto3 = document.getElementById("3cuarto");
@@ -47,7 +47,7 @@ function paginasmostrar () {
 })
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
-      connect2Server()
+
       postEvent("trofeos",{
       T6: true,
       NOMBREniño:nombre,
