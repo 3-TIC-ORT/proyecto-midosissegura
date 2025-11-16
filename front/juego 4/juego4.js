@@ -109,36 +109,18 @@ if (plato===platohelado) {
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
 
-let bajainsulina = 0;
-let dosis = 0;
-function cuentainsulina () {
-postEvent("registro", {
-    NOMBREniño: nombre,
-    APELLIDOniño: apellido,
-  },
-  function (data) {
-    console.log (data);
-    if (!data) {
-        return;
-    }
-        dosis = Number(data.DOSIS);
-        console.log (dosis);
-        bajainsulina = 1800 / dosis;
-        
-        cambiosglucemia(-bajainsulina);
-        actualizarglucometro();
-        estadonene();
-  })
-}
 
+insulina.addEventListener ("click", function() {
+    cambiosglucemia (-70);
+    actualizarglucometro();
+    estadonene();
+})
 
 azucar.addEventListener ("click", function() {
     cambiosglucemia (15);
     actualizarglucometro();
     estadonene();
 })
-
-insulina.addEventListener ("click", cuentainsulina);
 
 botonatras.addEventListener ("click", function() {
       postEvent("trofeos",{

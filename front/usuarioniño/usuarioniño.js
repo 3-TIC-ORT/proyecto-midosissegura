@@ -145,7 +145,7 @@ if (t6 === false) {
   T6.classList.remove("display");
     TROFEOS++
 }
-    document.getElementById("trofeos").textContent = TROFEOS;
+    document.getElementById("trofeos").textContent = "~  TROFEOS:" + " " + TROFEOS;
 }
 datosUsuario();
 

@@ -149,5 +149,21 @@
     "NOMBREniño": "Martito",
     "APELLIDOniño": "Morales",
     "CONTRASENAniño": 412
+  },
+  {
+    "NOMBRE": "GONZALO",
+    "APELLIDO": "ALVAREZ",
+    "CONTRASENA": "12345678",
+    "T1": true,
+    "T2": true,
+    "T3": false,
+    "T4": false,
+    "T5": true,
+    "T6": false,
+    "DOSIS": "4",
+    "RATIO": "100",
+    "NOMBREniño": "MALENA",
+    "APELLIDOniño": "ROSSI",
+    "CONTRASENAniño": 1522
   }
 ]

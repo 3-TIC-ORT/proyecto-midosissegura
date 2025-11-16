@@ -1,6 +1,6 @@
 
 connect2Server()
-          let apellido=localStorage.getItem ("apellidoniño");
+let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
 const botonorden1 = document.getElementById("boton1");
 const botonorden2 = document.getElementById("boton2");
@@ -225,9 +225,9 @@ resultadoDiv.addEventListener("click", function (event) {
  confeti.classList.remove("display")
     correcttos = 0;
        postEvent("trofeos",{
-      T3: true,
       NOMBREniño:nombre,
-APELLIDOniño:apellido
+APELLIDOniño:apellido,
+T3: true
        },function(data){
       console.log(data)
     }
