@@ -77,6 +77,7 @@ function aplicarFondo(boton) {
     verificarFondos();
     imagenes.classList.add("antizidex")
     boton.innerHTML=""
+    imagenSeleccionada=null
   }
 }
 botonorden1.addEventListener("click", () => aplicarFondo(botonorden1));
@@ -245,3 +246,11 @@ let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
   window.location.href = "../pagina gral/paginageneraln.html";
 });
+let videoexplicacion =document.getElementById("explicacion")
+      videoexplicacion.play();
+        let cerrarPOPUP = document.getElementById ("cerrarPOPUP");
+             cerrarPOPUP.addEventListener ("click", () => {
+        pop.classList.add("antizidex")
+        pop.classList.add ("display");
+
+        videoexplicacion.pause()})

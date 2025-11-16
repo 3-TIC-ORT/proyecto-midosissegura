@@ -116,6 +116,7 @@ function aplicarFondo(boton) {
     boton.style.backgroundPosition = "center";
 imagenes.classList.add("antizidex")
 boton.innerHTML=""
+imagenSeleccionada=null
     verificarFondos();
   }
 }

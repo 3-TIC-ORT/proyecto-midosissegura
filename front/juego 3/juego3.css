@@ -499,7 +499,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  pointer-events: none; 
+  pointer-events: none; /* para que no bloquee clicks */
   display: none;
 }
 .display{

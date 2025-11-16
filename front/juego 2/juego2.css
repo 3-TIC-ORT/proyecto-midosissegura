@@ -498,14 +498,44 @@ opacity: 1;
   display: none;
 }
 .display{
-  display: block;
+  display: none;
 }
 
 .antizidex{
   z-index: -100;
-display: block;
 opacity: 0;
 }
 .borde{
     border:#39abd9, solid, 6.63px;
+}
+.pop{
+        position: absolute;
+    background-color: #FCEBD9;
+    border-color: #16AC2D;
+    width: 701px;
+    height: 682px;
+    top: 210px;
+    left: 358px;
+    opacity: 1;
+    font-family: "Fredoka", sans-serif;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 15px;
+    z-index: 1500;
+}
+.explicacion{
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
+.cerrar {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    top: 31px;
+    left: 584px;
+    opacity: 1;
+    z-index: 110;
 }
