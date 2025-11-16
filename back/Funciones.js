@@ -126,7 +126,16 @@ function LogueoAdultos(data)
             console.log ("Has iniciado sesión correctamente")
             encontrado = true
             logueado = true
-            contra=true             
+            contra=true     
+             if (logueado === true) {
+                for (let j = 0; j < registro.length; j++) {
+             if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO && data.CONTRASENA === registro[j].CONTRASENA) {
+                 ratio = parseInt(registro[j].RATIO);
+                   console.log("Ratio encontrado: " + ratio);
+                     break;
+      }
+    }
+  }        
             break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA && data.NOMBREniño === registro[i].NOMBREniño && data.APELLIDOniño === registro[i].APELLIDOniño)
         {
@@ -157,15 +166,8 @@ function LogueoAdultos(data)
     }
 
     
-  if (logueado === true) {
-    for (let j = 0; j < registro.length; j++) {
-      if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO) {
-        ratio = parseInt(registro[j].RATIO);
-        console.log("Ratio encontrado: " + ratio);
-        break;
-      }
-    }
-  }
+ 
+  console.log("Ratio devuelto: " + ratio);
 }
   return [logueado, encontrado, contra, ratio];
 }
@@ -258,8 +260,8 @@ function UsuarioRegistrado(data){
                 NOMBRE: registro[i].NOMBRE,
                 APELLIDO: registro[i].APELLIDO,
                 CONTRASENA: registro[i].CONTRASENA,
-                DOSIS: registro[i].DOSIS,
-                RATIO: registro[i].RATIO,
+                DOSIS: parseInt(registro[i].DOSIS),
+                RATIO: parseInt(registro[i].RATIO),
                 NOMBREniño: registro[i].NOMBREniño,
                 APELLIDOniño: registro[i].APELLIDOniño
             };
@@ -302,7 +304,7 @@ function recargardosis(data) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].DOSIS = dosisnew;
             resultado = {
-                DOSIS: dosisnew,
+                DOSIS: parseInt(dosisnew),
             };
             break;
         }

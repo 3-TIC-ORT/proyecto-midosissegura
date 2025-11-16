@@ -20,7 +20,9 @@ btniniciosesion.addEventListener("click", () => {
 postEvent("iniciarsesion", {
   NOMBRE: document.getElementById("NOMBREP").value,
   APELLIDO: document.getElementById("apellido").value,
-  CONTRASENA: document.getElementById("CONTRASEÑA").value
+  CONTRASENA: document.getElementById("CONTRASEÑA").value,
+  NOMBREniño: document.getElementById("NOMBREH").value,
+  APELLIDOniño: document.getElementById("apellidoh").value
 }, comprobaciondedatos);
 });
 function comprobaciondedatos(data) {
