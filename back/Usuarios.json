@@ -144,7 +144,7 @@
     "T4": true,
     "T5": true,
     "T6": false,
-    "DOSIS": "1",
+    "DOSIS": "2",
     "RATIO": "2",
     "NOMBREniño": "Martito",
     "APELLIDOniño": "Morales",
@@ -165,5 +165,21 @@
     "NOMBREniño": "MALENA",
     "APELLIDOniño": "ROSSI",
     "CONTRASENAniño": 1522
+  },
+  {
+    "NOMBRE": "Carlo",
+    "APELLIDO": "Morales Larroza",
+    "CONTRASENA": "123567843",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "1",
+    "RATIO": "1",
+    "NOMBREniño": "Vinicius",
+    "APELLIDOniño": "Junior",
+    "CONTRASENAniño": 222
   }
 ]

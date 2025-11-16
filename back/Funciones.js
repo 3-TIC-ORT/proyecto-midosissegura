@@ -3,15 +3,15 @@ import fs from "fs";
 let registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
 let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
 let comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
-let logueado = null
-let contra = null
+let logueado = false
+let contra = false
 let UsuarioR = []
-let encontrado = null
-let cuentacreada = null
-let Mensajenuevo= null
+let encontrado = false
+let cuentacreada = false
+let Mensajenuevo= ""
 let CONTRASENAniño = ""
 let cuentaparcial = []
-let niñocreado = null
+let niñocreado = false
 let ratio = null
 
 
@@ -137,26 +137,7 @@ function LogueoAdultos(data)
             console.log ("Has iniciado sesión correctamente")
             encontrado = true
             logueado = true
-            contra=true 
-            UsuarioR.push(
-                {
-                    "NOMBRE": registro[i].NOMBRE,
-                    "APELLIDO": registro[i].APELLIDO,
-                    "CONTRASENA": registro[i].CONTRASENA,
-                    "DOSIS": registro[i].DOSIS,
-                    "RATIO": registro[i].RATIO,
-                    "NOMBREniño": registro[i].NOMBREniño,
-                    "APELLIDOniño": registro[i].APELLIDOniño,
-                    "CONTRASENAniño": registro[i].CONTRASENAniño,
-                    "T1": registro[i].T1,
-                    "T2": registro[i].T2,
-                    "T3": registro[i].T3,
-                    "T4": registro[i].T4,
-                    "T5": registro[i].T5,
-                    "T6": registro[i].T6
-                }
-            )
-            
+            contra=true             
             break
         } else if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA != registro[i].CONTRASENA)
         {
@@ -168,14 +149,14 @@ function LogueoAdultos(data)
         } 
   
     }
-    if (encontrado == false)
+    if (encontrado === false)
     {
         console.log ("No se ha encontrado una cuenta con ese nombre y apellido")
         logueado = false
         contra = false
     }
 
-  return [logueado,encontrado,contra,UsuarioR, ratio];
+  return [logueado,encontrado,contra, ratio];
 }
 export {LogueoAdultos};
 console.log(UsuarioR)
