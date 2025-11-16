@@ -12,6 +12,8 @@ let Mensajenuevo= null
 let CONTRASENAniño = ""
 let cuentaparcial = []
 let niñocreado = null
+let ratio = null
+
 
   /*  let usuarion = ""
     let usuarioa = ""
@@ -69,7 +71,7 @@ function Iniciar(data)
     }
         if (cuentacreada === true)
             {
-          registro.push ({
+          cuentaparcial.push ({
                 "NOMBRE": data.NOMBRE ,
                 "APELLIDO": data.APELLIDO ,
                 "CONTRASENA": data.CONTRASENA ,
@@ -83,9 +85,11 @@ function Iniciar(data)
                 "RATIO": data.RATIO,
                 "NOMBREniño": data.NOMBREniño,
                 "APELLIDOniño": data.APELLIDOniño,
-            })
+                "CONTRASENAniño": null
+          }
+        )
             console.log("Adulto registrado con éxito")
-        fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2))
+      
         }
         return cuentacreada
        
@@ -94,12 +98,19 @@ export {Iniciar};
 
 function InicioNiños(data)
 {
-    if (data.NOMBREniño === null || data.APELLIDOniño === null || data.CONTRASENAniño === null)
+    if (/\d/.test(data.NOMBREniño) || /\d/.test(data.APELLIDOniño))
+    {
+        console.log("El nombre y apellido del niño no pueden contener números")
+        niñocreado = false
+    }else if (data.NOMBREniño === "" || data.APELLIDOniño === "" || data.CONTRASENAniño === "")
     {
         console.log("Por favor llená todas las cajitas")
         niñocreado = false
-    }else 
+    }else if (data.NOMBREniño === cuentaparcial[0].NOMBREniño && data.APELLIDOniño === cuentaparcial[0].APELLIDOniño)
     {
+        cuentaparcial[0].CONTRASENAniño = data.CONTRASENAniño
+        registro.push(cuentaparcial[0])
+        fs.writeFileSync("Usuarios.json",JSON.stringify(registro, null, 2))
         niñocreado = true
     }
 return niñocreado
@@ -112,6 +123,17 @@ function LogueoAdultos(data)
     {
         if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO && data.CONTRASENA === registro[i].CONTRASENA)
         {
+             for (var i =0; i<registro.length;i++)
+        {
+            if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO)
+            {
+                ratio = parseInt(registro[i].RATIO)
+                console.log("Ratio encontrado: " + ratio)
+                return ratio
+                break
+            }
+        }
+
             console.log ("Has iniciado sesión correctamente")
             encontrado = true
             logueado = true
@@ -153,7 +175,7 @@ function LogueoAdultos(data)
         contra = false
     }
 
-  return [logueado,encontrado,contra,UsuarioR];
+  return [logueado,encontrado,contra,UsuarioR, ratio];
 }
 export {LogueoAdultos};
 console.log(UsuarioR)
@@ -323,7 +345,12 @@ function Calculadora(data) {
     // Extraemos los datos que vienen del front
     let eleccion = data.comida;       // Ej: "PAPA"
     let cantidad = parseInt(data.CANTIDAD);  // Ej: "12" -> 12
-        let ratio = parseInt(UsuarioR.RATIO)
+        console.log(data.NOMBRE)
+        console.log(data.APELLIDO)
+       
+        console.log("El ratio es: " + ratio)
+        console.log("La cantidad es" + cantidad)
+        console.log("La comida es " + eleccion)
         let encontrado = false;
     let resultado = 0;
        
@@ -346,6 +373,8 @@ function Calculadora(data) {
             resultado = valor * cantidad / ratio;
             encontrado = true;
             return resultado
+            console.log(encontrado)
+            console.log("Resultado calculado: " + resultado);
             break;
         }
     }

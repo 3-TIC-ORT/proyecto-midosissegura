@@ -13,7 +13,7 @@ APELLIDO: localStorage.getItem("apellidousuario")
 },definicion)
 function definicion(data){
     console.log("Datos recibidos:", data);
-  pusuario.textContent = data.NOMBRE + " " + data.APELLIDO;
+    pusuario.textContent = data.NOMBRE + " " + data.APELLIDO;
  document.getElementById("inputdosis").placeholder= data.DOSIS ;
  document.getElementById("inpuratio").placeholder = data.RATIO ;
   pclave.textContent =data.CONTRASENA;

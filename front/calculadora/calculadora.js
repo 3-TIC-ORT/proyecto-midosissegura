@@ -7,8 +7,8 @@ const comidaelegida = document.getElementById("inputcomida");
 const grupocomidaelegida = document.getElementById("grupocomidas");
 const unidades = document.getElementById("unidad");
 const cantidades = document.getElementById ("inputcantidad");
-localStorage.setItem("nombreniño", "Maxi")
-localStorage.setItem("apellidoniño","Tabakman");
+localStorage.getItem("nombreniño");
+localStorage.getItem("apellidoniño"); 
 
 
 const comidasydata = [
@@ -834,17 +834,20 @@ comidaelegida.addEventListener ("input", () => {
 
 
 function calculardatos() {
-  postEvent("Calculadora",
-    {
-      NOMBRE: localStorage.getItem("nombreniño"),
-      APELLIDO: localStorage.getItem("apellidoniño"),
-      comida: comidaelegida.value,
-      CANTIDAD: cantidades.value,
-    },
-    function (data) {
-      const respuesta = data;
-      alert(`Calorías: ${respuesta} Kcal`);
-      resultado.innerText = `Calorías: ${respuesta} Kcal`;
+  // Preferir el usuario adulto guardado; si no existe, usar datos del niño
+  const nombreAdulto = localStorage.getItem("nombreusuario") || localStorage.getItem("nombreniño");
+  const apellidoAdulto = localStorage.getItem("apellidousuario") || localStorage.getItem("apellidoniño");
+  const cantidadNum = parseInt(cantidades.value, 10) || 0;
+
+  postEvent("Calculadora", {
+    NOMBRE: nombreAdulto,
+    APELLIDO: apellidoAdulto,
+    comida: comidaelegida.value,
+    CANTIDAD: cantidadNum,
+  }, function (data) {
+    const respuesta = data;
+    alert(`Calorías: ${respuesta} Kcal`);
+    resultado.innerText = `Calorías: ${respuesta} Kcal`;
   });
 }
 

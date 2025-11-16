@@ -133,5 +133,21 @@
     "RATIO": "20",
     "NOMBREniño": "susana",
     "APELLIDOniño": "tabakman"
+  },
+  {
+    "NOMBRE": "Marto",
+    "APELLIDO": "Morales Larroza",
+    "CONTRASENA": "1234556",
+    "T1": true,
+    "T2": true,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": false,
+    "DOSIS": "1",
+    "RATIO": "1",
+    "NOMBREniño": "Martito",
+    "APELLIDOniño": "Morales",
+    "CONTRASENAniño": 412
   }
 ]

@@ -2,6 +2,8 @@ connect2Server();
 const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
 const botonEnviar = document.getElementById ("aceptar");
+localStorage.setItem("nombreniño", nombreniño.value);
+localStorage.setItem("apellidoniño", apellidoniño.value);
       let apellido=localStorage.getItem ("apellidoniño");
         let nombre=localStorage.getItem ("nombreniño");
 document.getElementById("nombrenene").placeholder= localStorage.getItem("nombreniño") ;
@@ -54,7 +56,8 @@ function AVATAR () {
 function enviardatos() {
     const avatarvalor = AVATAR();
 
-
+    localStorage.setItem ("nombreniño", nombreniño.value);
+    localStorage.setItem ("apellidoniño", apellidoniño.value);
     localStorage.setItem ("contraseña", avatarvalor)
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);

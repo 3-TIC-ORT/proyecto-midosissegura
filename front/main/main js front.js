@@ -32,7 +32,10 @@ function comprobaciondedatos(data) {
         alert("Has iniciado sesión con éxito");
         localStorage.setItem("nombreusuario", document.getElementById("NOMBREP").value)
         localStorage.setItem("apellidousuario", document.getElementById("apellido").value);
-         window.location.href='../paginageneralp/paginageneralp.html'
+        localStorage.setItem("contraseñausuario", document.getElementById("CONTRASEÑA").value);
+        localStorage.setItem("nombreniño", document.getElementById("NOMBREH").value);
+        localStorage.setItem("apellidoniño", document.getElementById("apellidoh").value);
+         window.location.href='../paginageneralp/paginageneralp.html'  
     }
     else if (encontrado === true && contra === false && logueado === false) {
     alert("La contraseña es incorrecta");
