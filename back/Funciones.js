@@ -12,7 +12,7 @@ let Mensajenuevo= ""
 let CONTRASENAniño = ""
 let cuentaparcial = []
 let niñocreado = false
-let ratio = null
+let ratio = 0
 
 
   /*  let usuarion = ""
@@ -145,8 +145,7 @@ function LogueoAdultos(data)
         contra = false
     }
 
-
-  let ratio = 0;
+    
   if (encontrado === true) {
     for (let j = 0; j < registro.length; j++) {
       if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO) {
