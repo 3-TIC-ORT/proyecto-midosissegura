@@ -250,10 +250,8 @@ function verificar () {
         pop3.classList.remove ("display");
         video.classList.remove ("display");
         video.play();
-}
-}
 
-cerrarPOPUP3.addEventListener ("click", () => {
+        cerrarPOPUP3.addEventListener ("click", () => {
         video.pause();
         video.classList.add ("display");
         pop3.classList.add ("display");
@@ -268,7 +266,9 @@ cerrarPOPUP3.addEventListener ("click", () => {
         }
             )
 })
-
+}
+}
+ 
 let volverajugar1 = document.getElementById ("volverajugar1")
 volverajugar1.addEventListener ("click", function() {
     window.location.reload ();
