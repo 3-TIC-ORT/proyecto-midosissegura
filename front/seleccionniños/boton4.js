@@ -1,4 +1,3 @@
-const boton4 = document.getElementById ("boton4");
 
 const cuarto1 = document.getElementById("1cuarto");
 const cuarto2 = document.getElementById("2cuarto");
