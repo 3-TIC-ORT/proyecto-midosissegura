@@ -354,9 +354,7 @@ function Calculadora(data) {
 
     // Recorremos el JSON de comidas
     for (let i = 0; i < comidas.length; i++) {
-        // Comparamos ignorando mayúsculas y espacios
         if (eleccion.trim().toUpperCase() === comidas[i].Alimento.trim().toUpperCase()) {
-            // Convertimos CpU a número, reemplazando coma por punto si hace falta
             let valor = comidas[i].CpU;
             if (typeof valor === "string") {
                 valor = parseFloat(valor.replace(",", "."));
@@ -365,10 +363,12 @@ function Calculadora(data) {
             // Calculamos el resultado
             resultado = valor * cantidad / ratio;
             encontrado = true;
-            return resultado
             console.log(encontrado)
             console.log("Resultado calculado: " + resultado);
             break;
+            return resultado
+            
+            
         }
     }
 
