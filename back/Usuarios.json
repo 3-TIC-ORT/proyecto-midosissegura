@@ -197,5 +197,21 @@
     "NOMBREniño": "juan",
     "APELLIDOniño": "dalorso",
     "CONTRASENAniño": 322
+  },
+  {
+    "NOMBRE": "HERNAN",
+    "APELLIDO": "CABALLERO",
+    "CONTRASENA": "2314",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": true,
+    "T6": false,
+    "DOSIS": "8",
+    "RATIO": "300",
+    "NOMBREniño": "ISABEL",
+    "APELLIDOniño": "MEZZETTI",
+    "CONTRASENAniño": 1632
   }
 ]
