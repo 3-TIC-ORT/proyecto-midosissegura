@@ -321,7 +321,7 @@ function recargarratio(data) {
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].RATIO = ratinew;
-        
+            ratio = parseInt(ratinew);
             resultado = {
                 RATIO: ratinew,
             };
@@ -352,7 +352,7 @@ function Calculadora(data) {
         return [0, false]; // datos inválidos
     }
 
-    // Recorremos el JSON de comidas
+   if (cantidad > 0) {
     for (let i = 0; i < comidas.length; i++) {
         if (eleccion.trim().toUpperCase() === comidas[i].Alimento.trim().toUpperCase()) {
             let valor = comidas[i].CpU;
@@ -365,12 +365,12 @@ function Calculadora(data) {
             encontrado = true;
             console.log(encontrado)
             console.log("Resultado calculado: " + resultado);
-            break;
+           
             return resultado
             
             
         }
-    }
+    }}
 
     // Si no se encontró el alimento, devolvemos 0
     if (!encontrado) {
