@@ -361,7 +361,7 @@ function Calculadora(data) {
             }
 
             // Calculamos el resultado
-            resultado = valor * cantidad / 10 * ratio;
+            resultado = valor * cantidad / ratio;
             encontrado = true;
             console.log(encontrado)
             console.log("Resultado calculado: " + resultado);
