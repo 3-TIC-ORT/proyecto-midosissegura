@@ -846,8 +846,7 @@ function calculardatos() {
     CANTIDAD: cantidadNum,
   }, function (data) {
     const respuesta = data;
-    alert(`La cantidad de dosis de insulina recomendada es: ${respuesta}`);
-    resultado.innerText = `Dosis recomendadas: ${respuesta}`;
+    resultado.innerText = `Dosis: ${respuesta}`;
   });
 }
 

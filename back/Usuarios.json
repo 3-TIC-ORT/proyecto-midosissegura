@@ -46,5 +46,21 @@
     "NOMBREniño": "mica",
     "APELLIDOniño": "tabakman",
     "CONTRASENAniño": 1222
+  },
+  {
+    "NOMBRE": "Marc",
+    "APELLIDO": "Marquez",
+    "CONTRASENA": "MM93",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "8",
+    "RATIO": "30",
+    "NOMBREniño": "Valentino",
+    "APELLIDOniño": "Rossi",
+    "CONTRASENAniño": 322
   }
 ]
