@@ -38,6 +38,8 @@ letter-spacing: 0%;
 color: #ffffff;
 }
 .titulos{
+    padding-left: 70px;
+    padding-top: 50px;
     width: 855px;
 height: 58px;
 display: flex;
@@ -88,8 +90,8 @@ gap: .5px;
     position: absolute;
     width: 891px;
 height: 622px;
-top: 250px;
-left: 18px;
+top: 300px;
+left: 70px;
 border-radius: 30px;
 opacity: 1;
 gap: 23px;

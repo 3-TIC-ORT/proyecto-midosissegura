@@ -1,10 +1,6 @@
 let nombrep =document.getElementById("nombrep")
 let apellido =document.getElementById("apellido")
 let niño =document.getElementById("nombreh")
-let RATIO =document.getElementById("RATIOMAÑANA")
-let RATIOALMUERZO = document.getElementById ("RATIOALMUERZO");
-let RATIOMERIENDA = document.getElementById ("RATIOMERIENDA");
-let RATIOCENA = document.getElementById ("RATIOCENA");
 let contraseña =document.getElementById("contraseña")
 let dosis=document.getElementById("dosis")
 let registroBTN=document.getElementById("registroBTN")
@@ -17,10 +13,6 @@ postEvent("registro", {
     APELLIDOniño: document.getElementById("apellidoh").value,
     APELLIDO: document.getElementById("apellido").value,
     CONTRASENA: document.getElementById("contraseña").value,
-    RATIO:document.getElementById("RATIOMAÑANA").value,
-    RATIOALMUERZO = document.getElementById ("RATIOALMUERZO").value,
-    RATIOMERIENDA = document.getElementById ("RATIOMERIENDA").value,
-    RATIOCENA = document.getElementById ("RATIOCENA").value,
     NOMBREniño:document.getElementById("nombreh").value,
     DOSIS:document.getElementById("dosis").value,
   },registro);});
@@ -29,10 +21,6 @@ postEvent("registro", {
 if (cuentacreada===true){
   localStorage.setItem ("nombreniño", document.getElementById("nombreh").value);
   localStorage.setItem ("apellidoniño",  document.getElementById("apellidoh").value);
-  localStorage.setItem ("ratio", RATIO.value);
-  localStorage.setItem ("ratioalmuerzo", RATIOALMUERZO.value);
-  localStorage.setItem ("ratiomerienda", RATIOMERIENDA.value);
-  localStorage.setItem ("ratiocena", RATIOCENA.value);
   window.location.href = "../registro/registro.html";
 }
 else if ( cuentacreada=false){
