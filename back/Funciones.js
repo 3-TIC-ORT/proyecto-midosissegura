@@ -14,22 +14,6 @@ let cuentaparcial = []
 let niñocreado = false
 let ratio = 0
 
-
-  /*  let usuarion = ""
-    let usuarioa = ""
-     let   nombre=""
-   let usuarioapellido= ""
-   let contraseña=""
-   let t1= ""
-   let t2= ""
-   let t3= ""
-  let  t4= ""
-   let t5= ""
-   let t6= ""
-   let dosis= ""
-   let ratio= ""
-    let nombreniño= ""
-   let apellidoniño= ""*/
 function Iniciar(data)
 {
     for (var i =0; i<registro.length;i++)
@@ -448,3 +432,11 @@ function darmensajesalforo() {
     return mensajes;
 }
 export { darmensajesalforo };
+
+function Fecha(){
+const date = new Date();
+console.log(date)
+return `${date.getHours()}/${date.getMinutes()}`}
+Fecha()
+export{Fecha}
+

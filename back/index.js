@@ -13,6 +13,7 @@ import { darmensajesalforo } from "./Funciones.js";
 import {recargarratio} from "./Funciones.js";
 import {recargardosis} from "./Funciones.js";
 import {mostrartrofeos} from "./Funciones.js";
+import {Fecha} from "./Funciones.js"
 
 subscribePOSTEvent ("iniciarsesion", LogueoAdultos);
 subscribePOSTEvent ("registro", Iniciar);
@@ -27,4 +28,5 @@ subscribePOSTEvent ("ActualizarDosis", recargardosis);
 subscribePOSTEvent ("ActualizarRatio", recargarratio);
 subscribePOSTEvent("InicioNiños", InicioNiños);
 subscribePOSTEvent ("mostrartrofeos", mostrartrofeos);
+subscribeGETEvent ("Fecha", Fecha)
 startServer(3000)
