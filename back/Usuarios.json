@@ -213,5 +213,21 @@
     "NOMBREniño": "ISABEL",
     "APELLIDOniño": "MEZZETTI",
     "CONTRASENAniño": 1632
+  },
+  {
+    "NOMBRE": "maximo",
+    "APELLIDO": "tabaquito",
+    "CONTRASENA": "maxitaki",
+    "T1": true,
+    "T2": true,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": true,
+    "DOSIS": "7",
+    "RATIO": "80",
+    "NOMBREniño": "zuri",
+    "APELLIDOniño": "linda",
+    "CONTRASENAniño": 1632
   }
 ]
