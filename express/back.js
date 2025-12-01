@@ -1,7 +1,7 @@
 // Importamos la librería express
 import express from "express";
-import { Iniciar } from "../back/Funciones.js";
-import { InicioNiños } from "../back/Funciones.js";
+import { Iniciar } from "../back/funcionesexpress.js";
+import { InicioNiños } from "../back/funcionesexpress.js";
 
 // Creamos el servidor de Express con la configuración estándar básica
 const app = express();
@@ -18,7 +18,7 @@ app.post("/register", (req, res) => {
 });
 
 // Iniciamos el servidor en el puerto 3000
-app.listen(8080, () => {
+app.listen(3000, () => {
     console.log("Example app listening on port 3000!");
 });
 app.post("/login", (req, res) => {

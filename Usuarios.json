@@ -62,21 +62,5 @@
     "NOMBREniño": "Valentino",
     "APELLIDOniño": "Rossi",
     "CONTRASENAniño": 123
-  },
-  {
-    "NOMBRE": "hola",
-    "APELLIDO": "Marquez",
-    "CONTRASENA": "MM93",
-    "T1": false,
-    "T2": false,
-    "T3": false,
-    "T4": false,
-    "T5": false,
-    "T6": false,
-    "DOSIS": "8",
-    "RATIO": "30",
-    "NOMBREniño": "Valentino",
-    "APELLIDOniño": "Rossi",
-    "CONTRASENAniño": 123
   }
 ]
