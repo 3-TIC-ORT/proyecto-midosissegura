@@ -234,7 +234,7 @@ function AñadirTrofeo(data)
         }
     }
 
-    fs.writeFileSync("Usuarios.json",JSON.stringify(registro, null, 2))
+    fs.writeFileSync("back/Usuarios.json",JSON.stringify(registro, null, 2))
 
 return "Trofeo actualizado"
     
@@ -305,7 +305,7 @@ function recargardosis(data) {
             break;
         }
     }
-            fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2));
+            fs.writeFileSync("back/Usuarios.json", JSON.stringify(registro, null, 2));
     return resultado;
 }
 export {recargardosis}
@@ -323,7 +323,7 @@ function recargarratio(data) {
             };
             break;
            }   }
-            fs.writeFileSync("Usuarios.json", JSON.stringify(registro, null, 2));
+            fs.writeFileSync("back/Usuarios.json", JSON.stringify(registro, null, 2));
     
     return resultado;
 }
@@ -336,7 +336,9 @@ function Calculadora(data) {
     let cantidad = parseInt(data.CANTIDAD);  // Ej: "12" -> 12
         console.log(data.NOMBRE)
         console.log(data.APELLIDO)
-       
+for (let i = 0; i < registro.length; i++) {
+    if (data.NOMBRE === registro[i].NOMBRE && data.APELLIDO === registro[i].APELLIDO) {
+        ratio = parseInt(registro[i].RATIO);}}
         console.log("El ratio es: " + ratio)
         console.log("La cantidad es" + cantidad)
         console.log("La comida es " + eleccion)
@@ -436,7 +438,7 @@ function Guardarmensajesdelforo (data){
             "Autor": data.NOMBRE + data.APELLIDO
         }
     )
-    fs.writeFileSync ("Mensajes.json", JSON.stringify(mensajes, null, 2))
+    fs.writeFileSync ("back/Mensajes.json", JSON.stringify(mensajes, null, 2))
  return "Mensaje guardado"
 }
 export {Guardarmensajesdelforo}

@@ -2,30 +2,37 @@
 import express from "express";
 import { Iniciar } from "../back/funcionesexpress.js";
 import { InicioNiños } from "../back/funcionesexpress.js";
-
+import { LogueoAdultos } from "../back/funcionesexpress.js";
+import { LogueoNiños } from "../back/funcionesexpress.js";
+import { Calculadora } from "../back/funcionesexpress.js";
 // Creamos el servidor de Express con la configuración estándar básica
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    // Esto envía el texto "Hello World!" como respuesta a la HTTP request
-    res.send("Male");
-});
-app.post("/register", (req, res) => {
-    console.log(req.body);
-    // Esto envía el texto "Hello World!" como respuesta a la HTTP request
-    res.send("Maxi");
-});
 
-// Iniciamos el servidor en el puerto 3000
 app.listen(3000, () => {
     console.log("Example app listening on port 3000!");
 });
-app.post("/login", (req, res) => {
+//registro
+app.post("/registrop", (req, res) => {
     let logueado = Iniciar(req.body);
     res.send(logueado);
 });
 app.post("/registernenes", (req, res) => {
     let funciono =InicioNiños(req.body);
+    res.send(funciono);
+});
+//login
+app.post("/loginadultos", (req, res) => {
+    let logueado = LogueoAdultos(req.body);
+    res.send(logueado);
+});
+app.post("/loginnenes", (req, res) => {
+    let funciono =LogueoNiños(req.body);
+    res.send(funciono);
+});
+//calculadora
+app.post("/calculadora", (req, res) => {
+    let funciono =Calculadora(req.body);
     res.send(funciono);
 });

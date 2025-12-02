@@ -1,8 +1,8 @@
 import fs from "fs";
 
-let registro= JSON.parse(fs.readFileSync("back/Usuarios.json", "utf-8"))
-let mensajes = JSON.parse(fs.readFileSync("back/Mensajes.json", "utf-8"))
-let comidas = JSON.parse(fs.readFileSync("back/Comidas.json", "utf-8"))
+let registro= JSON.parse(fs.readFileSync("Usuarios.json", "utf-8"))
+let mensajes = JSON.parse(fs.readFileSync("Mensajes.json", "utf-8"))
+let comidas = JSON.parse(fs.readFileSync("Comidas.json", "utf-8"))
 let logueado = false
 let contra = false
 let UsuarioR = []
