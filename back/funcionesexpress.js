@@ -299,9 +299,7 @@ function recargardosis(data) {
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].DOSIS = dosisnew;
-            resultado = {
-                DOSIS: parseInt(dosisnew),
-            };
+            resultado = registro[i]
             break;
         }
     }
@@ -316,11 +314,8 @@ function recargarratio(data) {
     let resultado = 0;
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
-            registro[i].RATIO = ratinew;
-            ratio = parseInt(ratinew);
-            resultado = {
-                RATIO: ratinew,
-            };
+            registro[i].RATIO = ratinew
+            resultado = registro[i]
             break;
            }   }
             fs.writeFileSync("back/Usuarios.json", JSON.stringify(registro, null, 2));

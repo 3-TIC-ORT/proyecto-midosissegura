@@ -52,15 +52,15 @@
     "APELLIDO": "Marquez",
     "CONTRASENA": "MM93",
     "T1": true,
-    "T2": false,
+    "T2": true,
     "T3": false,
     "T4": false,
     "T5": false,
     "T6": false,
-    "DOSIS": "8",
-    "RATIO": "30",
+    "RATIO": 40,
     "NOMBREniño": "Valentino",
     "APELLIDOniño": "Rossi",
-    "CONTRASENAniño": 123
+    "CONTRASENAniño": 123,
+    "DOSIS": 23
   }
 ]
