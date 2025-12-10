@@ -156,12 +156,12 @@ function verificarFondos() {
     const f6 = fondo6.toLowerCase();
     const f7 = fondo7.toLowerCase();
 
-    if (f1.includes("paso-1.png")) correcttos++;
-    if (f2.includes("paso-2.jpg")) correcttos++;
-    if (f3.includes("paso-3.png")) correcttos++;
-    if (f4.includes("paso-4.png")) correcttos++;
-    if (f5.includes("paso-5.png")) correcttos++;
-    if (f6.includes("paso-6.png")) correcttos++;
+    if (f5.includes("paso-1.png")) correcttos++;
+    if (f1.includes("paso-2.jpg")) correcttos++;
+    if (f4.includes("paso-3.png")) correcttos++;
+    if (f3.includes("paso-4.png")) correcttos++;
+    if (f6.includes("paso-5.png")) correcttos++;
+    if (f2.includes("paso-6.png")) correcttos++;
     if (f7.includes("paso-7.png")) correcttos++;
 
     const numeroHtml = `<span class="numero">${correcttos}</span>`;
