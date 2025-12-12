@@ -86,11 +86,11 @@ body {
 
 .botonatras {
     position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 38px;
-    left: 110px;
-    padding: 10px;
+    top: 35px;
+    left: 166px;
+    opacity: 1;
+    width: 252px;
+    height: 59px;
 }
 
 
@@ -101,10 +101,10 @@ body {
 
 .imagenlogo {
     position: absolute;
-    width: 301px;
-    height: 169.85000610351562px;
-    top: 19px;
-    left: 67px;
+    width: 266px;
+    height: 150.09999084472656px;
+    top: 2px;
+    left: 982px;
     opacity: 1;
 }
 .display{
