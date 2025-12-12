@@ -11,22 +11,22 @@ body{
     font-weight: 400;
     font-style: normal;
 }
-
+ 
 .textos{
     position: absolute;
-        width: 824px;
-height: 363px;
+    width: 722.1444702148438px;
+height: 318.1291809082031px;
+top: 247px;
+left: 134px;
 opacity: 1;
-top: 361px;
-left: 155px;
 }
 .logo{
     position: absolute;
-width: 420px;
-height: 237px;
-opacity: 1;
-top: 4px;
-left: 62px;
+    width: 295.66387939453125px;
+    height: 166.83889770507812px;
+    top: 3.51px;
+    left: 54.34px;
+    opacity: 1;    
 }
 .pasto{
     position: absolute;

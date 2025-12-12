@@ -6,11 +6,12 @@ body {
 }
 
 .logo {
-    position: absolute;
-    width: 306px;
-    height: 172.6714324951172px;
-    top: 13px;
-    left: 1130px;
+  position: absolute;
+  width: 301px;
+  height: 169.85000610351562px;
+  top: 19px;
+  left: 67px;
+  opacity: 1;
 }
 
 .volveratras {

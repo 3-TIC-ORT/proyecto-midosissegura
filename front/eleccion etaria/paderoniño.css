@@ -11,10 +11,11 @@ body {
   
   .logo {
     position: absolute;
-    top: 26px;
-    left: 58px;
-    width: 420px;
-    height: 237px;
+    width: 301px;
+    height: 169.85000610351562px;
+    top: 19px;
+    left: 67px;
+    opacity: 1;
   }
   
   .frameazul {

@@ -23,11 +23,11 @@ body {
 
 .logo {
     position: absolute;
-    width: 259.9999694824219px;
-    height: 146.7142791748047px;
+    width: 301px;
+    height: 169.85000610351562px;
+    top: 19px;
+    left: 67px;
     opacity: 1;
-    top: 12px;
-    left: 1101px;
 }
 
 .titulo {

@@ -27,11 +27,11 @@ body {
 
 .logo {
     position: absolute;
-    width: 309px;
-    height: 174.36427307128906px;
+    width: 301px;
+    height: 169.85000610351562px;
+    top: 19px;
+    left: 67px;
     opacity: 1;
-    top: 9px;
-    left: 1087px;
 }
 
 .atras {

@@ -185,11 +185,12 @@ opacity: 1;
 z-index: 1;
 }
 .LOGO{
-    position: absolute;
-    left: 1133px;
-    top: 14px;
-    width: 260px;
-    height: 136.81px;
+  position: absolute;
+    width: 301px;
+    height: 169.85000610351562px;
+    top: 19px;
+    left: 67px;
+    opacity: 1;
 }
 .signowarning{
   position: absolute;

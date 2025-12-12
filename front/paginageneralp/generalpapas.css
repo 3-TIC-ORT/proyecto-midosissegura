@@ -56,15 +56,15 @@ body {
     position: absolute;
     background-color: transparent;
     border: none;
-    top: 16px;
-    left: 61px;
+    top: 19px;
+    left: 67px;
     opacity: 1;
     z-index: 1000;
 }
 
 .logo img {
-    width: 266px;
-    height: 150.09999084472656px;
+    width: 301px;
+    height: 169.85000610351562px;
 }
 
 .mapa {

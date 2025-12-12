@@ -14,10 +14,11 @@ body {
 
 .logo{
     position: absolute;
-    width: 420px;
-    height: 237px;
-    top: 22px;
-    left: 40px;
+    width: 301px;
+    height: 169.85000610351562px;
+    top: 19px;
+    left: 67px;
+    opacity: 1;
 }
 
 .azuloscuro {
