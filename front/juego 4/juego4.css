@@ -1,6 +1,6 @@
 body {
-    width: 1440px;
-    height: 1024px;
+    width: 1280px;
+    height: 720px;
     background-color: #A3DFF2;
     display: flex;
 }
@@ -14,8 +14,8 @@ body {
 
 .azuloscuro {
     position: absolute;
-    width: 1241px;
-    height: 805.993408203125px;
+    width: 1087px;
+    height: 538px;
     background-color: #8EE0FF;
     opacity: 1;
     top: 148px;
@@ -27,17 +27,18 @@ body {
 
 .logo {
     position: absolute;
-    width: 266px;
-    height: 150.09999084472656px;
-    top: 2px;
-    left: 982px;
+    width: 283px;
+    height: 159.69285583496094px;
+    opacity: 1;
+    top: 8px;
+    left: 969px;
     opacity: 1;
 }
 
 .atras {
     position: absolute;
-    top: 35px;
-    left: 166px;
+    top: 33px;
+    left: 95px;
     opacity: 1;
     width: 252px;
     height: 59px;
@@ -45,57 +46,57 @@ body {
 
 .mesa {
     position: absolute;
-    width: 720.5px;
-    height: 432.3339538574219px;
+    width: 606px;
+    height: 274px;
     opacity: 1;
-    top: 373.66px;
-    left: -3px;
+    top: 265px;
+    left: -2px;
     z-index: 1000;
 }
 
 .normal {
     position: absolute;
-    width: 375px;
-    height: 504.941162109375px;
+    width: 264.1015319824219px;
+    height: 355.61529541015625px;
     opacity: 1;
-    top: 59px;
-    left: 139px;
+    top: 44px;
+    left: 182px;
     z-index: 500;
 }
 
 .mucho {
     position: absolute;
-    width: 413px;
-    height: 527px;
-    top: 32px;
-    left: 97px;
+    width: 265px;
+    height: 355.61529541015625px;
+    top: 44px;
+    left: 182px;
     z-index: 500;
 }
 
 .baja {
     position: absolute;
-    width: 590px;
-    height: 590px;
-    top: 36px;
-    left: 14px;
+    width: 380px;
+    height: 355.61529541015625px;
+    top: 44px;
+    left: 140px;
     z-index: 500;
 }
 
 .glucometro {
     position: absolute;
-    width: 289px;
-    height: 435.89947509765625px;
+    width: 181px;
+    height: 273px;
     opacity: 1;
-    top: 29px;
-    left: 855px;
+    top: 24px;
+    left: 832px;
 }
 
 .nivelglucometro {
     position: absolute;
-    top: 80px;
-    left: 920px;
+    top: 50px;
+    left: 870px;
     font-family: "Digital Numbers", sans-serif;
-    font-size: 68.75px;
+    font-size: 46.57px;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -106,10 +107,10 @@ body {
 
 .plato {
     position: absolute;
-    width: 280px;
-    height: 280px;
-    top: 400px;
-    left: 165px;
+    width: 180px;
+    height: 180px;
+    top: 278px;
+    left: 210px;
     z-index: 1500;
 }
 
@@ -121,10 +122,10 @@ body {
 
 .azucar img{
     position: absolute;
-    width: 423px;
-    height: 89px;
-    top: 691px;
-    left: 794px;
+    width: 297.882568359375px;
+    height: 62.68009567260742px;
+    top: 459.65px;
+    left: 778px;
     background-color: transparent;
     border: none;
     z-index: 1000;
@@ -138,10 +139,10 @@ body {
 
 .insulina img{
     position: absolute;
-    width: 423.04034423828125px;
-    height: 89px;
-    top: 596px;
-    left: 794px;
+    width: 297.882568359375px;
+    height: 62.68009567260742px;
+    top: 392px;
+    left: 778px;
     background-color: transparent;
     border: none;
     z-index: 1000;
@@ -155,10 +156,10 @@ body {
 
 .comer img{
     position: absolute;
-    width: 423px;
-    height: 111px;
-    top: 479px;
-    left: 794px;
+    width: 297.2432556152344px;
+    height: 78px;
+    top: 308px;
+    left: 779px;
     background-color: transparent;
     border: none;
 }
@@ -171,27 +172,30 @@ body {
 
 .mogul {
     position: absolute;
-    width: 125.57738494873047px;
-    height: 98.4920654296875px;
-    top: 657px;
-    left: 469px;
+    width: 88.44047546386719px;
+    height: 69.36508178710938px;
+    opacity: 1;
+    top: 441px;
+    left: 456px;
     z-index: 1500;
 }
 
 .mogul1{
     position: absolute;
-    width: 134.60581970214844px;
-    height: 110.80357360839844px;
-    top: 635px;
-    left: 486px;
+    width: 88.44047546386719px;
+    height: 69.36508178710938px;
+    opacity: 1;
+    top: 441px;
+    left: 410px;
     z-index: 1500;
 }
 
 .lapicera {
     position: absolute;
-    width: 333.14874267578125;
-    height: 166.522705078125;
-    top: 635px;
-    left: 42px;
+    width: 234.6269073486328px;
+    height: 117.27706909179688px;
+    opacity: 1;
+    top: 426px;
+    left: 36px;
     z-index: 1500;
 }
