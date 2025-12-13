@@ -4,9 +4,8 @@ body {
     font-family: 'Fredoka One', Arial, sans-serif;
     background-color: #A3DFF2;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    width: 1280px;
+    height: 720px;
   }
   
   .logo {
@@ -19,35 +18,45 @@ body {
   }
   
   .frameazul {
-    width: 795px;
-    height: 721px;
-    border: 8px solid #000;
-    border-radius: 30px;
-    background-color: #39ABD9;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 60px;
-    padding-top: 60px;
-margin-left: 50px;
+    position: absolute;
+    width: 610px;
+height: 553.1383666992188px;
+background-color: #39ABD9;
+opacity: 1;
+top: 113.97px;
+left: 368px;
+border: 6.14px solid #000000;
+gap: 98.21px;
+border-radius: 23.02px;
+padding-top: 38.36px;
+padding-right: 46.81px;
+padding-bottom: 62.92px;
+padding-left: 38.36px;
   }
   
   .iniciosesion {
-    width: 401px;
-    height: 77px;
+    width: 307px;
+height: 59px;
+opacity: 1;
+padding-left: 150px;
   }
   
   .quieneres {
-    font-family: 'Fredoka', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    color: #000;
-    text-align: center;
-    margin: 0;
-    white-space: nowrap; 
-    display: inline-block; 
+    width: 618.4402465820312px;
+height: 49.10691833496094px;
+opacity: 1;
+font-family: Fredoka;
+font-weight: 400;
+font-style: Regular;
+font-size: 27.62px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000;
+text-align: center;
+margin: 0;
+white-space: nowrap; 
+display: inline-block; 
+gap: 5px;
   }
   
   .padreoniño {
