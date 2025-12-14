@@ -1,6 +1,4 @@
 body {
-    width: 1440px;
-    height: 1024px;
     background-color: #A3DFF2;
     display: flex;
 }
@@ -14,22 +12,23 @@ body {
 
 .logo{
     position: absolute;
-    width: 301px;
-    height: 169.85000610351562px;
-    top: 19px;
-    left: 67px;
+    width: 313px;
+height: 176.6214141845703px;
+top: 11px;
+left: 40px;
+opacity: 1;
     opacity: 1;
 }
 
 .azuloscuro {
     position: absolute;
-    width: 814px;
-    height: 897px;
-    opacity: 1;
-    top: 100px;
-    left: 345px;
+    width: 615.2642211914062px;
+height: 678px;
+top: 22px;
+left: 353px;
+opacity: 1;
     border-radius: 40px;
-    border-width: 8px;
+    border-width: 6.05px;
     border-style: solid;
     border-color: black;
     background-color: #39ABD9;
@@ -37,18 +36,20 @@ body {
 
 .niñogrande {
     position: absolute;
-    width: 415;
-    height: 599;
-    top: 207px;
-    left: 356px;
+    width: 313.678955078125px;
+height: 452.7558898925781px;
+top: 156.46px;
+left: 269.08px;
+opacity: 1;
 }
 
 .bienvenida {
     position: absolute;
-    width: 594px;
-    height: 156px;
-    top: 50px;
-    left: 110px;
+    width: 568px;
+height: 149.12457275390625px;
+left: 40px;
+top: 2px;
+opacity: 1;
 }
 
 .nombre {
@@ -56,33 +57,33 @@ body {
     width: 286px;
     height: 44px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 210px;
-    left: 63px;
+    top: 126.49px;
+    left: 47.63px;
 }
 
 .nombrenene {
     position: absolute;
-    width: 286px;
-    height: 64px;
+    width: 216.17391967773438px;
+    height: 48.11705780029297px;
     opacity: 1;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
     border-width: 2px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 285px;
-    left: 63px;
+    top: 190px;
+    left: 47.63px;
 }
 
 .nombrenene::placeholder {
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -93,33 +94,33 @@ body {
     width: 286px;
     height: 44px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 325px;
-    left: 63px;
+    top: 215px;
+    left: 47.63px;
 }
 
 .apellidonene {
     position: absolute;
-    width: 286px;
-    height: 64px;
+    width: 216.17391967773438px;
+    height: 48.11705780029297px;
     opacity: 1;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
     border-width: 2px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 400px;
-    left: 63px;
+    top: 280px;
+    left: 47.63px;
 }
 
 .apellidonene::placeholder {
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -130,39 +131,39 @@ body {
     width: 286px;
     height: 44px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 30.11px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 440px;
-    left: 63px;
+    top: 305px;
+    left: 47.62px;
 }
 
 .aceptar {
     position: absolute;
-    width: 198px;
-    height: 64px;
+    width: 150.23px;
+    height: 48.12px;
     background-color: #FBCE00;
     opacity: 1;
-    top: 796px;
-    left: 308px;
+    top: 601.66px;
+    left: 232.8px;
     border-radius: 50px;
     border-style: solid;
     border-color: black;
-    border-width: 6px;
+    border-width: 4.54px;
     font-family: "Fredoka";
-    font-size: 36px;
+    font-size: 27.21px;
     line-height: 100%;
     letter-spacing: 0%;
 }
 
 .blanco {
     position: absolute;
-    width: 276px;
-    height: 258px;
-    opacity: 1;
+    width: 208.61538696289062px;
+height: 195.01004028320312px;
+top: 370.37px;
+left: 47.62px;
+opacity: 1;
     background-color: white;
-    top: 515px;
-    left: 63px;
     border-radius: 13px;
     border-width: 2px;
     border-style: solid;
@@ -176,8 +177,8 @@ body {
 .piel.visible {
     position: absolute;
     display: block;
-    top: 60px;
-    left: 35px;
+    top: 43px;
+    left: 17px;
 }
 
 .pelo {
@@ -187,20 +188,20 @@ body {
 .pelo.visible {
     position: absolute;
     display: block;
-    top: 20px;
-    left: 40px;
+    top: 10px;
+    left: 25px;
     z-index: 1500;
 }
 
 .pelo.mujer {
     position: absolute;
-    left: 28px;
+    left: 12px;
 }
 
 .piel.entero {
     position: absolute;
-    left: 30px;
-    top: 30px;
+    left: 17px;
+    top: 20px;
 }
 
 .lentes {
@@ -210,8 +211,8 @@ body {
 .lentes.visible {
     position: absolute;
     display: block;
-    top: 110px;
-    left: 60px;
+    top: 87px;
+    left: 40px;
     z-index: 1500;
 }
 
