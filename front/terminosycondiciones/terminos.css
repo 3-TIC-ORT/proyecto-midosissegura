@@ -1,6 +1,4 @@
 body {
-    width: 1440px;
-    height: 1024px;
     background-color: #A3DFF2;
     margin: 0;
     display: flex;
@@ -8,12 +6,12 @@ body {
 
 .amarillo {
     position: absolute;
-    width: 1218px;
-    height: 842px;
-    background-color: #FCEBD9;
+    width: 1017px;
+    height: 572px;
     opacity: 1;
-    top: 134px;
-    left: 94px;
+    top: 120px;
+    left: 120px;
+    background-color: #FCEBD9;
     border-style: solid;
     border-width: 7.07px;
     border-color: black;
@@ -25,35 +23,35 @@ body {
     position: absolute;
     width: 266px;
     height: 150.09999084472656px;
-    top: 2px;
-    left: 982px;
+    top: 5px;
+    left: 961px;
     opacity: 1;
 }
 
 .titulo {
     position: absolute;
-    width: 715px;
-    height: 77px;
+    width: 447px;
+    height: 55px;
     opacity: 1;
-    top: 47px;
-    left: 232px;
+    top: 28px;
+    left: 312px;
     z-index: 1000;
 }
 
 .texto {
     position: absolute;
-    width: 1063px;
-    height: 646px;
+    width: 952px;
+    height: 442px;
     opacity: 1;
-    top: 158px;
-    left: 74px;
+    top: 96px;
+    left: 26px;
     z-index: 1000;
 }
 
 .atras {
     position: absolute;
-    top: 35px;
-    left: 166px;
+    top: 23px;
+    left: 137px;
     opacity: 1;
     width: 252px;
     height: 59px;
