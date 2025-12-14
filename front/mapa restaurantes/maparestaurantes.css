@@ -16,16 +16,17 @@ body {
   z-index: 5000;
   background: transparent;
   border: none;
-  height: 156px;
-  width: 156px;
+  height: 138px;
+  width: 138px;
 }
 
 .popup {
   position: absolute;
   width: 842px;
-height: 682px;
-top: 51px;
-left: 203px;
+height: 477px;
+opacity: 1;
+top: 120px;
+left: 80px;
 background-color: #FCEBD9;
 opacity: 1;
 border-width: 8px;
@@ -61,7 +62,7 @@ z-index: 5100;
 .popupcontenedor h4 {
   position: relative;
   font-family: "Fredoka";
-font-size: 36px;
+font-size: 33px;
 line-height: 100%;
 letter-spacing: 0%;
 }
@@ -70,9 +71,10 @@ letter-spacing: 0%;
     display: flex;
     align-items: center;
     gap: 25px;
-    margin: 15px 0;
+    margin: -10px 0;
     text-align: left;
     padding-left: 50px;
+    margin-top: -40px;
 }
 
 .icono {
@@ -83,8 +85,8 @@ letter-spacing: 0%;
 
 .cerrar {
   position: absolute;
-  width: 62px;
-height: 62px;
+  width: 60px;
+height: 60px;
 top: -48px;
 left: 760px;
 opacity: 1;
@@ -94,18 +96,18 @@ opacity: 1;
 
   .volveratras {
     position: absolute;
-    top: 35px;
-    left: 166px;
+    top: 23px;
+    left: 137px;
     opacity: 1;
     width: 252px;
     height: 59px;
 }
 
   .advertenciaamarilla{
-    width: 1109px;
-    height: 152px;
+    width: 899px;
+    height: 123px;
     padding: 15px;
-    margin: 10px;
+    margin: 13px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -124,64 +126,66 @@ opacity: 1;
     justify-content: center;
 }
 
-.signowarning{
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  padding: 10px;
- margin: 10px;
- justify-content: center;
- z-index: 100; 
-}
 
 .main {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 1205.6px;
-    height: 783px;
     border: 8px solid black;
-    left: 117px;
-    top: 146px;
     overflow: hidden;
     z-index: 10;
+    width: 1008px;
+    height: 650px;
+    top: 150px;
+    left: 150px;
 }
   
-.restaurante1 {  position:absolute; width: 156;
-height: 156;
-top: 236px;
-left: 157px;
+.restaurante1 {  
+  position:absolute; 
+  width: 138px;
+height: 138px;
 opacity: 1;
+top: 196px;
+left: 93px;
 z-index: 1;
  }
-.restaurante2 { position:absolute; width: 157;
-height: 157;
-top: 426px;
-left: 304px;
+
+.restaurante2 { 
+  position:absolute; 
+  width: 138px;
+height: 138px;
 opacity: 1;
+top: 392px;
+left: 139px;
 z-index: 1;
 }
-.restaurante3 { position:absolute; width: 152;
-height: 152;
-top: 274px;
-left: 586px;
+.restaurante3 { 
+  position:absolute; 
+  width: 138px;
+height: 138px;
 opacity: 1;
+top: 254px;
+left: 484px;
 z-index: 1;
  }
-.restaurante4 { position:absolute;width: 154;
-height: 154;
-top: 572px;
-left: 653px;
+.restaurante4 { 
+  position:absolute;
+  width: 138px;
+height: 138px;
 opacity: 1;
+top: 347px;
+left: 753px;
 z-index: 1;
  
 }
-.restaurante5 { position:absolute; width: 157;
-height: 157;
-top: 426px;
-left: 888px;
+.restaurante5 { 
+  position:absolute; 
+  width: 138px;
+height: 138px;
 opacity: 1;
+top: 179px;
+left: 860px;
 z-index: 1;
 }
 .LOGO{
@@ -196,25 +200,27 @@ z-index: 1;
   position: absolute;
   width: 150px;
 height: 150px;
-top: 0px;
-left: 0px;
+top: 10px;
+left: 15px;
 opacity: 1;
 border-radius: 15px;
 }
 .h1{
   position: absolute;
-width: 843px;
+width: 700px;
 height: 49px;
-top: 18px;
+top: 15px;
 left: 184px;
 opacity: 1;
 font-family: "Fredoka";
 font-weight: 400;
 font-style: Regular;
-font-size: 48px;
+font-size: 40px;
 line-height: 100%;
 letter-spacing: 0%;
 z-index: 100;
+color: black;
+
 }
 .hovered {
   z-index: 20;
