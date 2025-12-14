@@ -4,8 +4,7 @@ body {
     font-family: 'Fredoka One', Arial, sans-serif;
     background-color: #A3DFF2;
     display: flex;
-    width: 1280px;
-    height: 720px;
+
   }
   
   .logo {
@@ -19,31 +18,36 @@ body {
   
   .frameazul {
     position: absolute;
-    width: 610px;
-height: 553.1383666992188px;
+    
 background-color: #39ABD9;
-opacity: 1;
-top: 113.97px;
-left: 368px;
+
 border: 6.14px solid #000000;
-gap: 98.21px;
+width: 570px;
+height: 503.1383666992188px;
+top: 50.97px;
+left: 368px;
 border-radius: 23.02px;
+border-width: 6.14px;
 padding-top: 38.36px;
 padding-right: 46.81px;
 padding-bottom: 62.92px;
 padding-left: 38.36px;
+gap: 98.21px;
+angle: 0 deg;
+opacity: 1;
   }
   
   .iniciosesion {
-    width: 307px;
+width: 307px;
 height: 59px;
-opacity: 1;
 padding-left: 150px;
+
   }
   
   .quieneres {
-    width: 618.4402465820312px;
+width: 618.4402465820312px;
 height: 49.10691833496094px;
+
 opacity: 1;
 font-family: Fredoka;
 font-weight: 400;
@@ -67,11 +71,18 @@ gap: 5px;
     height: 279px;
     border-radius: 30px;
     margin-top: 30px;
+    width: 472.654052734375px;
+height: 214.07546997070312px;
+top: 60.62px;
+left: 72.89px;
+border-radius: 767.3px;
+angle: 0 deg;
+opacity: 1;
   }
   
   .padre, .niño {
-    width: 308px;
-    height: 279px;
+    width: 237.86163330078125px;
+    height: 214.07546997070312px;
     border: 8px solid #000;
     display: flex;
     flex-direction: column;
@@ -97,13 +108,14 @@ gap: 5px;
   .iconopadre, .icononiño {
     height: 130px;
     object-fit: contain;
+    margin-top: 30px;
   }
   
   .padrep, .niñop {
     font-family: "Fredoka One";
-    font-size: 48px;
+    font-size: 30.83px;
     color: black;
-    margin-top:15px;
+   
   }
   .emaa {
     position: relative; 
