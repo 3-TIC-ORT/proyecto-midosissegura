@@ -1,6 +1,5 @@
 body {
-    width: 1440px;
-    height: 1024px;
+
     background-color: #A3DFF2;
     position: relative;
     margin: 0;
@@ -14,28 +13,31 @@ body {
     left: 0;
     background-color: #39ABD9;
     z-index: 500;
+    width: 100%;
+height: 143px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
 .usuario {
     background-color: transparent;
     border: none;
     position: absolute;
-    top: 37px;
-    left: 1254px;
-    opacity: 1;
+ width: 70px;
+height: 70px;
+top: 45px;
+left: 1147px;
+border-width: 10.37px;
+angle: 0 deg;
+opacity: 1;
+
     z-index: 1000;
 }
-
-.usuario img {
-    width: 70px;
-    height: 70px;
-}
-
 .glucagon {
-    position: absolute;
+
     background-color: transparent;
-    width: 330px;
-    height: 377px;
+   
     border: none;
     top: 200px;
     left: 350px;
@@ -43,19 +45,19 @@ body {
 }
 
 .foro {
-    position: absolute;
+
     background-color: transparent;
     border: none;
     top: 616px;
     left: 750px;
-    width: 330px;
-    height: 377px;
+
 }
 
 .logo {
-    position: absolute;
+
     background-color: transparent;
     border: none;
+    position: absolute;
     top: 19px;
     left: 67px;
     opacity: 1;
@@ -68,33 +70,43 @@ body {
 }
 
 .mapa {
-    position: absolute;
     background-color: transparent;
     border: none;
     top: 200px;
     left: 750px;
     opacity: 1;
-    width: 330px;
-    height: 377px;
 }
 
 .calculadora {
-    position: absolute;
     background-color: transparent;
     border: none;
     top: 620px;
     left: 350px;
     opacity: 1;
-    width: 330px;
-    height: 377px;
+   
 }
 
 .terminos {
     position: absolute;
-    width: 155px;
-    height: 146px;
-    opacity: 1;
-    top: 826px;
-    left: 1212px;
+width: 154.53147888183594;
+height: 146;
+top: 568px;
+left: 1114px;
+gap: 4px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
+.cosas {
+    position: absolute;
+   width: 1209.27099609375px;
+height: 300px;
+top: 244px;
+left: 34px;
+angle: 0 deg;
+opacity: 1;
+display: flex;
+
+align-items: center;;
+}
