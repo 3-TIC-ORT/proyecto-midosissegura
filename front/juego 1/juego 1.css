@@ -1,7 +1,5 @@
 body {
     background-color: rgb(163, 223, 242);
-    width: 1280px;
-    height: 720px;
     display: flex;
 }
 .explicacion{
