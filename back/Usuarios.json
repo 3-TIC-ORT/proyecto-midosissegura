@@ -62,5 +62,21 @@
     "APELLIDOniño": "Rossi",
     "CONTRASENAniño": 123,
     "DOSIS": 23
+  },
+  {
+    "NOMBRE": "marina",
+    "APELLIDO": "hasson",
+    "CONTRASENA": "1234",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "30",
+    "RATIO": "20",
+    "NOMBREniño": "mica",
+    "APELLIDOniño": "tabakman",
+    "CONTRASENAniño": 322
   }
 ]

@@ -1,15 +1,17 @@
 body{
     background-color: #A3DFF2;
-    margin: 0;
-    padding: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .frame{
     position: absolute;
     width: 927px;
 height: 939px;
+angle: 0 deg;
 opacity: 1;
-top: 42px;
-left: 256px;
 border-radius: 50px;
 border-width: 8px;
 background: #3376A5;
@@ -17,125 +19,182 @@ border: 8px solid #000000;
 display: flex;
 flex-direction: column;
 align-items: center;
-}
-.container{
-    width: 315px;
-height: 115px;
+width: 983px;
+height: 661px;
+border-radius: 40.33px;
+border-width: 6.45px;
+angle: 0 deg;
 opacity: 1;
-gap: 7px;
+left: 148.5px;
+top: 29.5px;
 }
+
 .h1{
-    width: 315px;
-height: 44px;
+  angle: 0 deg;
 opacity: 1;
-gap: 7px;
-font-family: "Fredoka one";
+width: 153px;
+height: 37px;
+angle: 0 deg;
+opacity: 1;
+
+font-family: "Fredoka";
 font-weight: 400;
 font-style: normal;
-font-size: 36px;
+font-size: 30.17px;
+leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #ffffff;
+margin-top: 8px;
 }
-.titulos{
-    padding-left: 70px;
-    padding-top: 50px;
-    width: 855px;
-height: 58px;
-display: flex;
-justify-content: space-between;
-opacity: 1;
-position: absolute;
-top: 170px;
-}
+
 .datosp{
-    width: 266px;
-height: 58px;
+    position: absolute;
+  
+width: 214;
+height: 47;
+top: 117px;
+left: 415px;
+border-width: 4.84px;
+angle: 0 deg;
 opacity: 1;
-border-width: 6px;
- font-family: "Fredoka one";
-font-weight: 1000;
-font-size: 400%;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #E54424;
--webkit-text-stroke: 2px black;
+
+
 }
 .datosh{
-    width: 437px;
-height: 58px;
-border-width: 6px;
+
+    position: absolute;
+
+width: 298;
+height: 40;
+top: 326px;
+left: 344px;
+border-width: 4.08px;
+angle: 0 deg;
 opacity: 1;
-font-family: "Fredoka One";
-font-weight: 400;
-font-style: Regular;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #F9C215;
--webkit-text-stroke: 3.5px black;
+
+
 }
 .container{
- width: 315px;
-height: 115px;
 opacity: 1;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items:flex-start;
 justify-content: center;
-gap: .5px;
+height: auto;
+margin-top: -15px;
 }
 .datos{
     position: absolute;
     width: 891px;
 height: 622px;
-top: 300px;
-left: 70px;
+top: 12px;
+left: 18px;
 border-radius: 30px;
+angle: 0 deg;
 opacity: 1;
 gap: 23px;
 padding-top: 10px;
 padding-bottom: 77px;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: flex-start;
-gap: 124px;
 }
 .datosniños{
+    position: absolute;
     display: flex;
 flex-direction: column;
-align-items: center;
-gap: 15px;
+align-items:first baseline;
+
+angle: 0 deg;
+opacity: 1;
+width: 263.9992370605469px;
+height: 193.84654235839844pxf;
+
+gap: 0.84px;
+angle: 0 deg;
+opacity: 1;
+width: 801px;
+height: 117.63758087158203px;
+
+gap: 10px;
+angle: 0 deg;
+opacity: 1;
+width: 668;
+height: 204.213134765625px;
+top: 375px;
+left: 92px;
+gap: 8.34px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .datospadres{
     display: flex;
 flex-direction: column;
-align-items: center;
-gap: 15px;
+align-items: flex-start;
+position: absolute;
+gap: 0.84px;
+angle: 0 deg;
+opacity: 1;
+width: 801px;
+height: 181.27516174316406px;
+top: 175px;
+left: 80px;
+gap: 10px;
+angle: 0 deg;
+opacity: 1;
+width: 695px;
+height: 151.14208984375px;
+top: 160px;
+left: 92px;
+gap: 8.34px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .input{
-    word-wrap: break-word;
-overflow-wrap: break-word;
-    width: 315px;
-height: 40px;
+    display: flex;
+flex-direction: row;
+align-items: center;
+position: relative;
+text-align: center;
+width: 315px;
+angle: 0 deg;
+opacity: 1;
 border-radius: 20px;
 border-width: 2px;
+border-radius: 20px;
+border-width: 2px;
+angle: 0 deg;
 opacity: 1;
-gap: 10px;
 padding: 10px;
 font-family: "Fredoka";
 border: 2px solid #000000;
 font-size: 24px;
 font-weight: 400;
+width: 263.9992370605469px;
+border-radius: 16.76px;
+border-width: 1.68px;
+angle: 0 deg;
+opacity: 1;
+padding: 8.38px;
+width: 501px;
+border-radius: 16.76px;
+border-width: 1.68px;
+angle: 0 deg;
+opacity: 1;
+padding: 8.38px;
+}
+.arriba{
+    margin-top: -25px;
 }
 .aceptarbtn{
     position: absolute;
-    width: 242px;
-height: 102px;
-top: 797px;
+
 border-radius: 50px;
 border-width: 8px;
+angle: 0 deg;
 opacity: 1;
 gap: 10px;
 padding-top: 6px;
@@ -148,51 +207,77 @@ font-family: "Fredoka one";
 font-family: Fredoka;
 font-weight: 400;
 font-style: Regular;
-font-size: 40px;
+font-size: 32.26px;
+leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
+width: 188.73284912109375px;
+height: 69.36335754394531px;
+top: 546px;
+left: 386px;
+border-radius: 40.33px;
+border-width: 6.45px;
+padding-top: 4.84px;
+padding-right: 8.07px;
+padding-bottom: 8.07px;
+padding-left: 8.07px;
+gap: 8.07px;
+angle: 0 deg;
+opacity: 1;
+width: 188.73284912109375px;
+height: 69.36335754394531px;
+top: 584px;
+left: 412px;
+border-radius: 40.33px;
+border-width: 6.45px;
+padding-top: 4.84px;
+padding-right: 8.07px;
+padding-bottom: 8.07px;
+padding-left: 8.07px;
+gap: 8.07px;
+angle: 0 deg;
+opacity: 1;
 
 }
 .txt{
     position: absolute;
 width: 594px;
 height: 137px;
-top: 30px;
+top: -10px;
 left: 166.5px;
+angle: 0 deg;
 opacity: 1;
 
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 5px;
+
 }
 .registroh1{
-width: 292px;
-height: 58px;
-padding-top: 10px;
-padding-left: 30px;
-border-width: 6px;
+    position: absolute;
+
+top: 21.78px;
+left: 130px;
+angle: 0 deg;
 opacity: 1;
-border-width: 6px;
- font-family: "Fredoka one";
-font-weight: 1000;
-font-size: 400%;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #00A47F;
--webkit-text-stroke: 2px black;
+
 }
-.p{    position: absolute;
-    display: contents;
-    color: #ffffff;
-    font-family: "Fredoka";
+.cuenta{
+    position: absolute;
+    width: 404.3301086425781px;
+height: 27.227615356445312px;
+top: 80px;
+left: 150px;
+angle: 0 deg;
+opacity: 1;
+font-family: Fredoka;
 font-weight: 400;
 font-style: Regular;
-font-size: 24px;
+font-size: 16.34px;
+leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-
+color: #FFFFFF;
 }
