@@ -1,7 +1,5 @@
 body {
     background-color: #A3DFF2;
-    width: 1440px;
-    height: 1024px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,10 +21,12 @@ body {
 
  .azuloscuro {
     position: absolute;
-    width: 1218px;
-    height: 842px;
-    top: 134px;
-    left: 94px;
+    width: 1004px;
+height: 567px;
+opacity: 1;
+top: 150px;
+left: 130px;
+background-color: #82DBF7;
     border-width: 7.07px;
     border-color: black;
     border-style: solid;
@@ -34,11 +34,12 @@ body {
 
  .cajaazul {
     position: absolute;
-    width: 657px;
-    height: 754px;
+    width: 485px;
+height: 517.2616577148438px;
+opacity: 1;
+top: 25px;
+left: 259px;
     background-color: #2C7998;
-    top: 47px;
-    left: 270px;
     border-radius: 20px;
     border-color: black;
     border-style: solid;
@@ -47,10 +48,11 @@ body {
 
  .resultado {
     position: absolute;
-    width: 570px;
-    height: 107px;
-    left: 43.5px;
-    top: 42.44px;
+    width: 418.325927734375px;
+height: 75.27716064453125px;
+opacity: 1;
+top: 39.79px;
+left: 30px;
     border-width: 8px;
     border-style: solid;
     border-color: black;
@@ -59,11 +61,12 @@ body {
 
  .resultado p {
     position: relative;
-    width: 412px;
-    height: 55px;
-    top: -15px;
-    left: 79px;
-    font-size: 42.44px;
+    width: 313px;
+height: 42px;
+opacity: 1;
+top: -10px;
+left: 50px;
+    font-size: 32.26px;
     justify-content: center;
     align-items: center;
     font-family: "Digital Numbers";
@@ -71,17 +74,18 @@ body {
 
 .inputcomida {
     position: absolute;
-    width: 576px;
-    height: 102px;
-    left: 40.5px;
-    top: 330px;;
+    width: 418.325927734375px;
+height: 60px;
+opacity: 1;
+top: 241px;
+left: 33.34px;
     border-radius: 8.84px;
     border-style: solid;
     border-color: black;
     border-width: 7.07px;
     font-family: "Fredoka", sans-serif;
     font-weight: 400;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -90,58 +94,60 @@ body {
     position: absolute;
     font-family: "Fredoka", sans-serif;
     font-weight: 400;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
-    left: 220px;
-    top: 25px;
+    left: 140px;
+    top: 10px;
 }
 
 .calcular {
     position: absolute;
-    width: 435px;
-    height: 116px;
+    width: 237.66075134277344px;
+    height: 63.44789505004883px;
     background-color: #FF0000;
     border-style: solid;
     border-color: black;
     border-width: 7.07px;
     border-radius: 442.06px;
-    left: 111px;
-    top: 600px;
+    top: 430px;
+    left: 126.9px;
 }
 
 .calcular p {
     position: absolute;
     font-family: "Fredoka", sans-serif;
     font-style: Regular;
-    font-size: 42.44px;
+    font-size: 32.26px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #000000;
-    left: 107.5px;
+    top: -15px;
+    left: 35px;
 }
 
 .botoncalcular {
     position: absolute;
-    width: 435px;
-    height: 116px;
+    width: 237.66075134277344px;
+    height: 63.44789505004883px;
     background-color: transparent;
     border: none;
 }
 
 .grupocomidasss {
     position: absolute;
-    width: 576px;
-    height: 99px;
+    width: 418.325927734375px;
+height: 60px;
+opacity: 1;
+top: 150px;
+left: 33.34px;
     opacity: 1;
     border-width: 7.07px;
     border-radius: 8.84px;
     border-style: solid;
     border-color: #000000;
-    left: 40.5px;
-    top:190px;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -149,34 +155,27 @@ body {
 .grupocomidasss::placeholder {
     position: absolute;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 25px;
-    left: 70px;
-}
-
-.SELECTOR {
-    position: absolute;
-    width: 33.45418167114258px;
-    left: 480px;
-    top: 240px;
+    top: 10px;
+    left: 60px;
 }
 
 .cantidaddd {
     position: absolute;
-    width: 270px;
-    height: 99px;
+    width: 194.64523315429688px;
+height: 60px;
+opacity: 1;
+top: 335px;
+left: 33.34px;
     opacity: 1;
-    top: 269px;
     border-width: 8px;
     border-style: solid;
     border-color: #000000;
     border-radius: 16px;
-    top: 465px;
-    left: 42px;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -184,26 +183,26 @@ body {
 .cantidaddd::placeholder {
     position: absolute;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 25px;
-    left: 50px;
+    top: 10px;
+    left: 25px;
 }
 
 .unidaddd {
     position: absolute;
-    width: 263px;
-    height: 97px;
-    opacity: 1;
-    top: 465px;
-    left: 350px;
+    width: 194.64523315429688px;
+height: 60px;
+opacity: 1;
+top: 335px;
+left: 257.02px;
     border-width: 8px;
     border-color: #000000;
     border-radius: 10px;
     border-style: solid;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
 }
@@ -211,19 +210,19 @@ body {
 .unidaddd::placeholder {
     position: absolute;
     font-family: "Fredoka", sans-serif;
-    font-size: 42.44px;
+    font-size: 37.64px;
     line-height: 100%;
     letter-spacing: 0%;
-    top: 25px;
-    left: 70px;
+    top: 10px;
+    left: 45px;
 }
 
 .logo {
     position: absolute;
     width: 266px;
     height: 150.09999084472656px;
-    top: 2px;
-    left: 982px;
+    top: 5px;
+    left: 961px;
     opacity: 1;
 }
 
@@ -231,8 +230,8 @@ body {
     position: absolute;
     width: 252;
     height: 59;
-    top: 47px;
-    left: 94px;
+    top: 23px;
+    left: 137px;
     padding: 10px;
     gap: 10px;
 }
