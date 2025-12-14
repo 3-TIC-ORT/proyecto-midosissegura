@@ -63,7 +63,9 @@ body{
     font-family: "Fredoka One", Arial, sans-serif;
     margin: 0;
     padding: 0;
-   
+   display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .div{
@@ -72,21 +74,39 @@ body{
     height: 783px;
    display: flex;
    border: 8px black solid;
-   
    position: absolute;
-   top: 146px;
-   left: 117px;
-
+   
+   top: 94.5px;
+   left: 105px;
+   width: 1070px;
+height: 531px;
+border-radius: 11px;
+border-width: 9px;
+angle: 0 deg;
+opacity: 1;
     
 }
 #agregarcomentario{
-    background-color: #0296FF;
+ 
     width: 83px;
     height: 83px;
     border-radius: 500px;
     position: absolute;
-    left: 999px;
-    top: 666px;
+  
+    width: 82.9518051147461;
+height: 81;
+top: 425px;
+left: 940px;
+border-radius: 487.95px;
+border-width: 0.98px;
+padding-top: 9.76px;
+padding-right: 9.76px;
+padding-bottom: 9.76px;
+padding-left: 27.33px;
+gap: 9.76px;
+angle: 0 deg;
+opacity: 1;
+
 }
 img{
     position: absolute;
@@ -98,8 +118,8 @@ top: 19px;
 left: 1136px;
 angle: 0 deg;
 opacity: 1;
-
 }
+
 #comentarioinput{
     height: 81px;
     width: 1017px;
@@ -107,19 +127,34 @@ opacity: 1;
     font-size: 64px;
     border-radius: 50px;
     position: absolute;
-    top: 664px;
-    left: 58px;
+    top: 432px;
+    left: 27px;
     
 }
 .btnatras {
 position: absolute;
-top: 35px;
-left: 166px;
-opacity: 1;
-width: 252px;
-height: 59px;
-}
 
+width: 224px;
+height: 52px;
+top: 23px;
+left: 97px;
+border-radius: 50px;
+border-width: 4px;
+gap: 10px;
+angle: 0 deg;
+opacity: 1;
+padding: 10px;
+
+}
+.logo{
+position: absolute;
+
+left: 961px;
+angle: 0 deg;
+opacity: 1;
+width: 180px;
+height: 101px;
+}
 #comentarios{
     border-radius: 50px;
     width: 100%;
@@ -128,14 +163,13 @@ height: 59px;
     flex-direction: row;
     align-items: flex-start;
     justify-content:space-around;
-    gap: 450px;
     flex-wrap: nowrap;
     overflow-y: auto;
     overflow-x: hidden;
     
 }
   #comentarios {
-    height: 80%;              /* alto del contenedor */
+    height: 80%;
     overflow-y: auto;          /* activa la barra vertical */
     overflow-x: hidden;        /* oculta la horizontal */
   }
