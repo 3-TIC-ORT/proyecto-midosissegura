@@ -18,29 +18,39 @@ body {
 
 .logo {
   position: absolute;
-    width: 266px;
-    height: 150.09999084472656px;
-    top: 2px;
-    left: 982px;
-    opacity: 1;
+  width: 221px;
+height: 124.70713806152344px;
+top: 4px;
+left: 1009px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
 .containerdeimg {
+  position: absolute;
   display: flex;
   flex-direction: column;
+  width: 250.03460693359375px;
+height: 427.570556640625px;
+top: 100.25px;
+left: 15.52px;
+gap: 34.61px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .imagen {
-  width: 172.71177673339844px;
-  height: 160.9740753173828px;
+  width: 117.14398956298828px;
+  height: 117.14398956298828px;
   opacity: 1;
-  border: black, solid, 6.71px;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
 }
 .boton {
-  width: 165.16612243652344px;
-  height: 160.13568115234375px;
+  width:117.14398956298828px;
+  height: 117.14398956298828px;
   gap: 10px;
   color: black;
   font-size: 50px;
@@ -48,17 +58,17 @@ body {
   font-family: "Fredoka One", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  font-style: normal;
-  font-size: 107.32px;
+  font-style: "Regular";
+ 
   line-height: 100%;
-  letter-spacing: 0;
+  letter-spacing: 0%;
   background-color: #ffffffb2;
   border: 2.52px solid #ffffff;
   cursor: pointer;
   font-weight: 800;
   font-weight: 400;
   font-style: normal;
-  font-size: 107.32px;
+  font-size: 76.19px;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -66,10 +76,11 @@ body {
   padding: 5%;
   transition: all 0.3s ease;
 }
-.resultadodiv {
+
+  .resultadodiv {
   position: fixed;
-  margin-top: 76.06px;
-  margin-left: 258.4px;
+  margin-top: 12px;
+  margin-left: 239px;
   transform: none;
   display: none;
   width: 701px;
@@ -90,6 +101,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 571.3372192382812px;
+height: 555.8516845703125px;
 }
 .amarillo {
   background-color: #f3f36e;
@@ -116,122 +129,158 @@ body {
   transform: none;
 }
 .frame {
+  position: absolute;
   width: 1267.6707763671875px;
   height: 823.3153076171875px;
   opacity: 1;
-  margin-top: 136.94px;
-  margin-left: 87.6px;
+
   border: black, solid, 6.71px;
   background-color: #82DBF7;
   z-index: -2;
   overflow: hidden;
+  width: 1049.316162109375px;
+height: 586.4561157226562px;
+top: 93px;
+left: 116px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .boton1 {
   position: absolute;
-top: 91.13px;
-left: 493.34px;
+
 border-radius: 86.8px;
 border-width: 5.21px;
 opacity: 1;
 font-family: "Fredoka One";
 font-weight: 400;
-font-size: 150.11px;
+
 color: #FF0808;
 
-  -webkit-text-stroke: 8.68px black;
+  -webkit-text-stroke: 6.68px black;
 line-height: 100%;
 letter-spacing: 0%;
+width: 117.55931091308594px;
+height: 117.55931091308594px;
+top: 40.2px;
+left: 419.4px;
+border-radius: 59.67px;
+border-width: 3.58px;
+angle: 0 deg;
+opacity: 1;
 
 }
 .boton2 {
   position: absolute;
 
-top: 174.13px;
-left: 928.34px;
+
+top: 120.2px;
+left: 778.4px;
+border-radius: 59.67px;
+border-width: 3.58px;
+angle: 0 deg;
+opacity: 1;
+
 border-radius: 86.8px;
 border-width: 5.21px;
 
 opacity: 1;
-font-family: Fredoka One;
+font-family: "Fredoka One";
 font-weight: 400;
 font-style: Regular;
-font-size: 150.11px;
+
 line-height: 100%;
 letter-spacing: 0%;
 color: #FEC846;
 
-  -webkit-text-stroke: 8.68px black;
+  -webkit-text-stroke: 6.68px black;
 }
 .boton3 {
   position: absolute;
 
-top: 379.13px;
-left: 560.34px;
+
 border-radius: 86.8px;
 border-width: 5.21px;
 font-family: Fredoka One;
 font-weight: 400;
 font-style: Regular;
-font-size: 150.11px;
+width: 117.55931091308594;
+height: 117.55931091308594;
+top: 258.2px;
+left: 480.4px;
+border-radius: 59.67px;
+border-width: 3.58px;
+angle: 0 deg;
+opacity: 1;
+
 line-height: 100%;
 letter-spacing: 0%;
 
 opacity: 1;
 color: #48ABDC;
 
-  -webkit-text-stroke: 8.68px black;
+  -webkit-text-stroke: 6.68px black;
 }
 .boton4 {
   position: absolute;
 
-top: 432.13px;
-left: 975.34px;
+width: 117.55931091308594;
+height: 117.55931091308594;
+top: 306.2px;
+left: 784.4px;
+border-radius: 59.67px;
+border-width: 3.59px;
+angle: 0 deg;
+opacity: 1;
+
 border-radius: 86.8px;
 border-width: 5.22px;
 opacity: 1;
 font-family: Fredoka One;
 font-weight: 400;
 font-style: Regular;
-font-size: 150.11px;
+
 line-height: 100%;
 letter-spacing: 0%;
 
 color: #7DBE55;
 
-  -webkit-text-stroke: 8.68px black;
+  -webkit-text-stroke: 6.68px black;
 }
 .boton5 {
   position: absolute;
 
-top: 641.13px;
-left: 664.34px;
+
 border-radius: 86.8px;
 border-width: 5.21px;
 opacity: 1;
 font-family: Fredoka One;
 font-weight: 400;
 font-style: Regular;
-font-size: 150.11px;
+
 line-height: 100%;
 letter-spacing: 0%;
 color:#AB8FC3 ;
 
-  -webkit-text-stroke: 8.68px black;
+  -webkit-text-stroke: 6.68px black;
+  width: 117.55931091308594;
+height: 117.55931091308594;
+top: 440.76px;
+left: 456.73px;
+border-radius: 59.67px;
+border-width: 3.58px;
+angle: 0 deg;
+opacity: 1;
+
 }
-.containerdeimg {
-  width: 350.4539489746094;
-  height: 700.9078979492188;
-  opacity: 1;
-  top: 53.66px;
-  left: 892.06px;
-}
+
 .segundogrupo {
   display: flex;
   flex-direction: row;
   width: 361.353271484375;
   height: 157.6204376220703;
   opacity: 1;
-  top: 191.99px;
+  top: 150.99px;
   left: 0px;
   gap: 19.28px;
 }
@@ -258,7 +307,7 @@ color:#AB8FC3 ;
   font-family: "Fredoka One", Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 64px;
+  font-size: 52.26px;
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
@@ -275,7 +324,7 @@ color:#AB8FC3 ;
   font-family: "Fredoka One", Arial, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 96px;
+  font-size: 52.16px;
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
@@ -297,12 +346,12 @@ color:#AB8FC3 ;
   font-family: "Fredoka One";
   font-weight: 400;
   font-style: normal;
-  font-size: 64px;
+  font-size: 52.16px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  margin-top: 250px;
-  margin-left: 75px;
+  margin-top: 200px;
+  margin-left: 45px;
 }
 .textosresultado {
   display: flex;
@@ -315,6 +364,14 @@ color:#AB8FC3 ;
   left: 69px;
   opacity: 1;
   gap: 82px;
+  width: 452.3426208496094px;
+height: 275.7232666015625px;
+top: 118.18px;
+left: 56.24px;
+gap: 66.83px;
+angle: 0 deg;
+opacity: 1;
+
 }
 * {
   font-family: "Fredoka One", sans-serif;
@@ -324,7 +381,7 @@ color:#AB8FC3 ;
   position: absolute;
   width: 425px;
   height: 68.7621841430664px;
-  margin-top: 500px;
+
   opacity: 1;
   border-width: 6.63px;
   gap: 8.28px;
@@ -336,25 +393,43 @@ color:#AB8FC3 ;
   font-family: "Fredoka One";
   font-weight: 400;
   font-style: normal;
-  font-size: 39.77px;
+  font-size: 32.41px;
   line-height: 100%;
   letter-spacing: 0%;
+  width: 346.38848876953125px;
+height: 56.043365478515625px;
+top: 453.97px;
+left: 112.47px;
+border-radius: 40.51px;
+border-width: 5.4px;
+gap: 6.75px;
+padding: 6.75px;
+z-index: 100;
 }
 .btnatras {
   position: absolute;
-    top: 35px;
-    left: 166px;
-    opacity: 1;
-    width: 252px;
-    height: 59px;
+   width: 228.09524536132812px;
+height: 53.095237731933594px;
+top: 20px;
+left: 106px;
+border-radius: 45.24px;
+border-width: 3.62px;
+gap: 9.05px;
+angle: 0 deg;
+opacity: 1;
+padding: 9.05px;
+
 }
+
 .nube{
   position: absolute;
-  rotate: 90 deg;
+  
   width: 1609.29296875;
 height: 700.1686401367188;
 opacity: 1;
 overflow: hidden;
+top: -226.76px;
+left: -112.18px;
 }
 .containerdeimg{
   position: absolute;
@@ -362,100 +437,133 @@ overflow: hidden;
   justify-content: center;
   flex-direction: column;
 align-items: center;
-
-  width: 363.6965637207031px;
-height: 621.9376220703125px;
-top: 145.82px;
-left: 22.58px;
-opacity: 1;
-gap: 8.68px;
 }
 .nube1{
   position: absolute¬;
-  width: 479.1391296386719px;
-height: 219.61898803710938px;
-top: 54.48px;
-left: 441.83px;
+width: 329.3990173339844px;
+height: 150.983154296875px;
+top: 30.2px;
+left: 372.4px;
+angle: 0 deg;
 opacity: 1;
+
 z-index: -1;
 }
 .nube2{
   position: absolute;
-  width: 395.8132019042969;
-height: 265.2864685058594;
-top: 143.22px;
-left: 868.01px;
+width: 272.114013671875px;
+height: 182.38278198242188px;
+top: 91.2px;
+left: 699.4px;
+angle: 0 deg;
 opacity: 1;
+
 z-index: -1;
 }
 
 .nube3{
   position: absolute;
   z-index: -1;
-  width: 343.7528076171875px;
-height: 176.8232421875px;
-top: 408.83px;
-left: 487.83px;
+width: 236.3236541748047px;
+height: 121.56484985351562px;
+top: 269.2px;
+left: 427.4px;
+angle: 0 deg;
+opacity: 1;
+
 opacity: 1;
 }
 .nube4{
   position: absolute;
-  z-index: -1;
-  width: 368.8678283691406px;
-height: 225.22927856445312px;
-top: 451.37px;
-left: 870.62px;
+width: 253.58961486816406px;
+height: 154.83706665039062px;
+top: 311px;
+left: 742px;
+angle: 0 deg;
 opacity: 1;
+z-index: -1;
 }
 .nube5{
   position: absolute;
   z-index: -1;
-  width: 550.3189086914062px;
-height: 239.95632934570312px;
-top: 591.98px;
-left: 503.44px;
+ width: 378.3340148925781px;
+height: 164.9651641845703px;
+top: 404.2px;
+left: 421.4px;
+angle: 0 deg;
+opacity: 1;
+
 opacity: 1;
 }
 .avionamarillo{
   position: absolute;
   width: 184.018310546875;
 height: 168.39410400390625;
-top: 232.63px;
-left: 412.31px;
 opacity: 1;
+width: 126.50916290283203px;
+height: 115.76780700683594px;
+top: 154.2px;
+left: 495.4px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .avionverde{
   position: absolute;
   width: 200.510498046875;
 height: 132.8056640625;
-top: 10.42px;
-left: 841.97px;
+
 opacity: 1;
+width: 137.84722900390625px;
+height: 91.30142211914062px;
+top: 19.2px;
+left: 613.4px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .avionvioleta{
   position: absolute;
   width: 192.6984100341797;
 height: 164.05404663085938;
-top: 363.7px;
-left: 756.91px;
+
 opacity: 1;
+width: 132.4765625px;
+height: 112.78410339355469px;
+top: 251.2px;
+left: 671.4px;
+angle: 0 deg;
+opacity: 1;
+
 
 }
 .avionrojo{
   position: absolute;
   width: 179.67825317382812;
 height: 108.50135803222656;
-top: 582.44px;
-left: 809.86px;
+
 opacity: 1;
+width: 123.52545928955078px;
+height: 74.59266662597656px;
+top: 377.2px;
+left: 566.4px;
+angle: -180 deg;
+opacity: 1;
+
 }
 .avionazul{
   position: absolute;
   width: 167.52609252929688;
 height: 113.70942687988281;
-top: 700.48px;
-left: 1058.98px;
+
 opacity: 1;
+width: 115.17106628417969px;
+height: 78.17311096191406px;
+top: 436.2px;
+left: 797.4px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .confeti {
   position: fixed;
@@ -486,7 +594,7 @@ opacity: 0;
     border-color: #16AC2D;
     width: 701px;
     height: 682px;
-    top: 210px;
+    top: 112px;
     left: 358px;
     opacity: 1;
     font-family: "Fredoka", sans-serif;
@@ -494,6 +602,12 @@ opacity: 0;
     border-radius: 20px;
     border-width: 15px;
     z-index: 1500;
+    width: 571.3372192382812px;
+height: 555.8516845703125px;
+
+angle: 0 deg;
+opacity: 1;
+
 }
 .explicacion{
     z-index: 20;
@@ -510,4 +624,12 @@ opacity: 0;
     left: 584px;
     opacity: 1;
     z-index: 110;
+    width: 65.2025375366211px;
+height: 65.2025375366211px;
+top: 25.27px;
+left: 475.98px;
+border-width: 6.52px;
+angle: 0 deg;
+opacity: 1;
+
 }
