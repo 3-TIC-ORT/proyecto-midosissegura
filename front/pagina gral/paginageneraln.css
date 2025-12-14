@@ -8,8 +8,7 @@ background-color: #A3DFF2;
     position: absolute;
     width: 537px;
 height: 509px;
-top: 381px;
-left: 96px;
+
 border-radius: 45.49px;
 border-width: 17.29px;
 opacity: 1;
@@ -20,16 +19,27 @@ display: flex;
 align-items: center;
 text-align: center;
 cursor: pointer;
+width: 427px;
+height: 404.7355651855469px;
+top: 243px;
+left: 117px;
+border-radius: 36.17px;
+border-width: 13.74px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .pqueesladiabetes{
-position: absolute;
-width: 487.6291198730469px;
-height: 282px;
+
+
+angle: 0 deg;
+opacity: 1;
+
 opacity: 1;
 font-family: "Fredoka One";
 font-weight: 400;
 font-style: normal;
-font-size: 116.45px;
+font-size: 92.6px;
 line-height: 100%;
 letter-spacing: 0%;
 font-family: "Fredoka One";
@@ -45,86 +55,85 @@ text-align: center;
 
 }
 header{
-    width: 1440px;
-height: 177px;
+    width: 100%;
+height: 115px;
 opacity: 1;
 background: #39ABD9;
 }
 .logo{
   position: absolute;
-    width: 301px;
-    height: 169.85000610351562px;
-    top: 19px;
-    left: 67px;
-    opacity: 1;
+
+ width: 242;
+height: 136.55714416503906;
+top: 7px;
+left: 141px;
+angle: 0 deg;
+opacity: 1;
+
 }
 .usuario{
 position: absolute;
-width: 106px;
-height: 106px;
-top: 36px;
-left: 1176px;
-border-width: 8px;
+width: 88PX;
+height: 88PX;
+top: 14px;
+left: 1074px;
+border-width: 6.64px;
+angle: 0 deg;
 opacity: 1;
 cursor: pointer;
 }
 .aprende{
     position: absolute;
-    width: 413px;
-height: 106px;
-left: 106.22px;
-border-width: 7.28px;
+top: 144px;
+left: 141px;
+border-width: 6.38px;
+angle: 0 deg;
 opacity: 1;
-font-family: "Fredoka One";
-font-weight: 400;
-font-style: normal;
-font-size: 100.34px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #16AC2D;
-  -webkit-text-stroke: 7.28px black; 
 }
 .juega{
 position: absolute;
-width: 297px;
-height: 106px;
-left: 843.64px;
-border-width: 7.28px;
+width: 254;
+height: 90;
+top: 144px;
+left: 805px;
+border-width: 6.23px;
+angle: 0 deg;
 opacity: 1;
-opacity: 1;
-font-family: "Fredoka One";
-font-weight: 400;
-font-style: normal;
-font-size: 100.34px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #F7B81D;
-  -webkit-text-stroke: 7.28px black;
+
 }
 .botonescont{
     position: absolute;
-    width: 655.0242309570312px;
-height: 547.6729736328125px;
-top: 367.73px;
-left: 720.98px;
 opacity: 1;
 display: grid;
 row-gap: 22.21px;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
   grid-template-rows: repeat(2, auto); 
+  width: 484.38543701171875px;
+height: 405px;
+top: 243px;
+left: 713px;
 }
 .juego4{
-    position: absolute;
-    left: 327.51px;
-    top: 284.94px;
+  
+   
+    width: 199.21971130371094px;
+height: 190.3921356201172px;
+
+
 }
 .juego2{
-position: absolute;
-  left: 327.51px;
+
+      width: 199.21971130371094px;
+height: 190.3921356201172px;
 }
 .juego3{
-    position: absolute;
-    top: 284.94px;
+   
+        width: 199.21971130371094px;
+height: 190.3921356201172px;
+}
+.juego1{
+      width: 199.21971130371094px;
+height: 190.3921356201172px;
 }
 
 

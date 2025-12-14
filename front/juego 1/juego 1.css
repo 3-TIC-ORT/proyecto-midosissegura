@@ -1,6 +1,8 @@
 body {
     background-color: rgb(163, 223, 242);
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 .explicacion{
     position: relative;
@@ -144,8 +146,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vw;
+    width: 1280px;
+    height: 720px;
     pointer-events: none;
     z-index: 1000;
 }
@@ -155,6 +157,8 @@ body {
     position: absolute;
     z-index: 2000;
     pointer-events: none;
+  width: 100%;
+    height: 100%;
 }
 
 @font-face {
