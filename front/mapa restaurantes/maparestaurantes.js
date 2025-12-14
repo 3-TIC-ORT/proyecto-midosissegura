@@ -54,6 +54,7 @@ function popup (restaurantepop) {
     POPUP.innerHTML = `
       <div class="popupcontenedor">
         <h3>${restaurantepop.titulo}</h3>
+      <div class= "informacion">
       <div class="fila">
           <img src="ubicacion.png" class="icono">
           <h4 class="texto">${restaurantepop.ubicacion}</h4>
@@ -67,6 +68,7 @@ function popup (restaurantepop) {
       <div class="fila">
           <img src="descripcion.png" class="icono">
           <h4 class="texto">${restaurantepop.descripcion}</h4>
+      </div>
       </div>
 
       <button onclick= "cerrarPopup()" class="cerrar">
