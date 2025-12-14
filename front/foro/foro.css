@@ -76,14 +76,15 @@ body{
    border: 8px black solid;
    position: absolute;
    
-   top: 94.5px;
-   left: 105px;
-   width: 1070px;
-height: 531px;
-border-radius: 11px;
-border-width: 9px;
+
+  width: 1053px;
+height: 543px;
+top: 126px;
+left: 117px;
+border-width: 5.35px;
 angle: 0 deg;
 opacity: 1;
+
     
 }
 #agregarcomentario{
@@ -93,19 +94,21 @@ opacity: 1;
     border-radius: 500px;
     position: absolute;
   
-    width: 82.9518051147461;
-height: 81;
-top: 425px;
-left: 940px;
-border-radius: 487.95px;
-border-width: 0.98px;
-padding-top: 9.76px;
-padding-right: 9.76px;
-padding-bottom: 9.76px;
-padding-left: 27.33px;
-gap: 9.76px;
+  width: 55.457313537597656px;
+height: 54.15243911743164px;
+top: 459px;
+left: 953px;
+border-radius: 326.22px;
+border-width: 0.65px;
+padding-top: 6.52px;
+padding-right: 6.52px;
+padding-bottom: 6.52px;
+padding-left: 18.27px;
+gap: 6.52px;
 angle: 0 deg;
 opacity: 1;
+
+
 
 }
 img{
@@ -121,23 +124,30 @@ opacity: 1;
 }
 
 #comentarioinput{
-    height: 81px;
-    width: 1017px;
+
     font-family: "Fredoka One", Arial, sans-serif;
-    font-size: 64px;
+    font-size: 42px;
     border-radius: 50px;
     position: absolute;
-    top: 432px;
-    left: 27px;
-    
+  
+width: 982px;
+height: 54px;
+top: 464px;
+left: 39px;
+border-radius: 33.43px;
+border-width: 0.67px;
+angle: 0 deg;
+opacity: 1;
+
+
 }
 .btnatras {
 position: absolute;
 
-width: 224px;
-height: 52px;
-top: 23px;
-left: 97px;
+width: 252px;
+height: 59px;
+top: 32px;
+left: 117px;
 border-radius: 50px;
 border-width: 4px;
 gap: 10px;
@@ -145,15 +155,18 @@ angle: 0 deg;
 opacity: 1;
 padding: 10px;
 
+
 }
 .logo{
 position: absolute;
 
-left: 961px;
+width: 259.9999694824219px;
+height: 146.7142791748047px;
+top: 8px;
+left: 990px;
 angle: 0 deg;
 opacity: 1;
-width: 180px;
-height: 101px;
+
 }
 #comentarios{
     border-radius: 50px;

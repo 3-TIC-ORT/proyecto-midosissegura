@@ -2,7 +2,7 @@ let pusuario = document.getElementById("pusuario");
 let pclave = document.getElementById("pclave");
 let iclave = document.getElementById("cclave");
 let ptrofeos = document.getElementById("ptrofeos");
-let pdosis= document.getElementById("pdosis");
+
 let pratio= document.getElementById("pratio");
 let inpuratio= document.getElementById("inpuratio");
 let inputdosis= document.getElementById("inputdosis");
