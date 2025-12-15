@@ -45,6 +45,8 @@ function paginasmostrar () {
     if (indice4 > imagenescuarto.length) indice4 = imagenescuarto.length - 1;
     paginasmostrar ();
 })
+let volveratras = document.getElementById ("volveratras");
+    volveratras.addEventListener ("click", () => {
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
 
@@ -56,5 +58,5 @@ APELLIDOniño:apellido
       console.log(data)
     }
     )
-
+    })
 paginasmostrar ();

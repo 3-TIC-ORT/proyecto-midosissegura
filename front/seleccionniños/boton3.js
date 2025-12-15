@@ -1,5 +1,5 @@
 const boton3 = document.getElementById ("boton3");
-
+const cerraradura = document.querySelector (".cerradura");
 const tercer1 = document.getElementById("1tercer");
 const tercer2 = document.getElementById("2tercer");
 const tercer3 = document.getElementById("3tercer");
@@ -34,6 +34,12 @@ function paginasmostrar () {
     }
     else {
         seguir3.style.display = "block"
+    }
+    if (indice3 === 2){
+        cerraradura.style.display = "block"
+    }
+    else {
+        cerraradura.style.display = "none"
     }
 }
 

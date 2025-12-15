@@ -22,43 +22,57 @@ body {
     width: 252px;
     height: 59px;
 }
-
-.boton1 {
+.botones{
     position: absolute;
-    width: 1304px;
-    height: 174px;
-    top: 170px;
-    background-color: transparent;
-    border: none;
-    left: 60px;
+    width: 1142px;
+height: 531px;
+top: 136px;
+left: 69px;
+border-radius: 18.82px;
+gap: 18.23px;
+angle: 0 deg;
+opacity: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+.imagen1 {
+
+width: 1142px;
+height: 119.12476348876953px;
+border-radius: 43.9px;
+border-width: 4.7px;
+angle: 0 deg;
+opacity: 1;
 }
 
-.boton2 {
-    position: absolute;
-    width: 1304px;
-    height: 174px;
-    top: 375px;
-    background-color: transparent;
-    border: none;
-    left: 60px;
+.imagen2 {
+
+width: 1142px;
+height: 119.12476348876953px;
+border-radius: 43.9px;
+border-width: 4.7px;
+angle: 0 deg;
+opacity: 1;
 }
 
-.boton3 {
-    position: absolute;
-    width: 1304px;
-    height: 174px;
-    top: 580px;
-    background-color: transparent;
-    border: none;
-    left: 60px;
+.imagen3 {
+
+    width: 1142px;
+height: 119.12476348876953px;
+border-radius: 43.9px;
+border-width: 4.7px;
+angle: 0 deg;
+opacity: 1;
 }
 
-.boton4 {
-    position: absolute;
-    width: 1304px;
-    height: 174px;
-    top: 785px;
-    background-color: transparent;
-    border: none;
-    left: 60px;
+.imagen4 {
+ 
+    width: 1142px;
+height: 119.12476348876953px;
+border-radius: 43.9px;
+border-width: 4.7px;
+angle: 0 deg;
+opacity: 1;
 }

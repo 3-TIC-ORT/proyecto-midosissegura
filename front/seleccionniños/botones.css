@@ -1,51 +1,69 @@
 body {
     background-color: #A3DFF2;
     display: flex;
-    width: 1440px;
-    height: 1024px;
 }
 
 .logo {
   position: absolute;
-    width: 266px;
-    height: 150.09999084472656px;
-    top: 2px;
-    left: 982px;
-    opacity: 1;
+ width: 245.00001525878906px;
+height: 138.25001525878906px;
+top: 20px;
+left: 943px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
 .volveratras {
   position: absolute;
-  top: 35px;
-  left: 166px;
-  opacity: 1;
-  width: 252px;
-  height: 59px;
+width: 252px;
+height: 59px;
+top: 35px;
+left: 166px;
+border-radius: 50px;
+border-width: 4px;
+gap: 10px;
+angle: 0 deg;
+opacity: 1;
+padding: 10px;
+
 }
 
 .imagenesprimero, .imagenessegundo, .imagenestercero, .imagenescuarto {
-    position: absolute;
-    top: 171px;
-    left: 156px;
+position: absolute;
+top: 138px;
+left: 166px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
 .seguir {
     position: absolute;
     width: 100px;
     height: 100px;
-    top: 498px;
-    left: 1298px;
+
     background-color: transparent;
     border: none;
     z-index: 20;
+    width: 84px;
+height: 84px;
+top: 353px;
+left: 1144px;
+angle: 0 deg;
+opacity: 1;
+
 }
 
 .atras {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 498px;
-    left: 36px;
+ width: 84px;
+height: 84px;
+top: 353px;
+left: 44px;
+angle: 180 deg;
+opacity: 1;
+
     background-color: transparent;
     border: none;
 }
@@ -59,4 +77,14 @@ body {
 }
 .none {
   display: none;
+}
+.cerradura{
+  position: absolute;
+  width: 73.6640625px;
+height: 97.00032043457031px;
+top: 431px;
+left: 661px;
+angle: 0 deg;
+opacity: 1;
+
 }
