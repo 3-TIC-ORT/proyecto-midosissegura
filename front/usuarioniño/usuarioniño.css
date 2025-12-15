@@ -37,28 +37,28 @@ img.visible {
     position: absolute;
     z-index: 1400;
     left: 280px;
-    top: 325px;
+    top: 155px;
 }
 
 .pelo.mujer {
     position: absolute;
     z-index: 1400;
     left: 265px;
-    top: 333px;
+    top: 163px;
 }
 
 .colorcitos {
     position: absolute;
     z-index: 1200;
     left: 269px;
-    top: 340px;
+    top: 170px;
 }
 
 .anteojosysol {
     position: absolute;
     z-index: 1500;
     left: 297px;
-    top: 423px;
+    top: 253px;
 }
 
 .nombreyapellido {

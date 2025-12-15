@@ -78,5 +78,21 @@
     "NOMBREniño": "mica",
     "APELLIDOniño": "tabakman",
     "CONTRASENAniño": 322
+  },
+  {
+    "NOMBRE": "ema",
+    "APELLIDO": "goldberg",
+    "CONTRASENA": "12345",
+    "T1": true,
+    "T2": false,
+    "T3": true,
+    "T4": true,
+    "T5": true,
+    "T6": false,
+    "DOSIS": "10",
+    "RATIO": "10",
+    "NOMBREniño": "emita",
+    "APELLIDOniño": "goldberg",
+    "CONTRASENAniño": 1112
   }
 ]
