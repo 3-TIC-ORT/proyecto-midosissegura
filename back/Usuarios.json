@@ -94,5 +94,21 @@
     "NOMBREniño": "emita",
     "APELLIDOniño": "goldberg",
     "CONTRASENAniño": 1112
+  },
+  {
+    "NOMBRE": "susana",
+    "APELLIDO": "tabakman",
+    "CONTRASENA": "1234",
+    "T1": false,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "2",
+    "RATIO": "5",
+    "NOMBREniño": "graciela",
+    "APELLIDOniño": "diaz",
+    "CONTRASENAniño": null
   }
 ]

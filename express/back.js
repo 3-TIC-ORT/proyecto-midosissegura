@@ -1,5 +1,12 @@
-// Importamos la librería express
+const app = express();
+app.use(express.json());
 import express from "express";
+import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic"; 
+import cors from "cors";
+app.use(cors());
+
+app.use(cors());
+app.use(express.json());
 import { Iniciar } from "../back/funcionesexpress.js";
 import { InicioNiños } from "../back/funcionesexpress.js";
 import { LogueoAdultos } from "../back/funcionesexpress.js";
@@ -11,15 +18,17 @@ import { Guardarmensajesdelforo } from "../back/funcionesexpress.js";
 import { recargarratio } from "../back/funcionesexpress.js";
 import { recargardosis } from "../back/funcionesexpress.js";
 import { Fecha } from "../back/funcionesexpress.js";
-const app = express();
-app.use(express.json());
-app.listen(3000, () => {
-    console.log("Example app listening on port 3000!");
+
+
+// Asociamos la ruta "/" a la función pasada como segundo parámetro
+app.get("/", (req, res) => {
+    // Esto envía el texto "Hello World!" como respuesta a la HTTP request
+    res.send("Hello World!");
 });
 //registro
 app.post("/registrop", (req, res) => {
     let logueado = Iniciar(req.body);
-    res.send(logueado);
+    res.json(logueado);
 });
 app.post("/registernenes", (req, res) => {
     let funciono =InicioNiños(req.body);
@@ -64,7 +73,11 @@ app.post("/ActualizarDosis", (req, res) => {
     res.send(funciono);
 });
 //fecha
-app.get("/fecha", (req, res) => {
+app.get("/horario", (req, res) => {
     let fechaactual = Fecha();
-    res.send({ fecha: fechaactual });
+    res.send({ horario: fechaactual });
+});
+
+app.listen(3000, () => {          // 👈 AGREGÁ ESTO
+    console.log("Servidor corriendo en puerto 3000 🚀");
 });

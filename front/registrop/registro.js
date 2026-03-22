@@ -5,11 +5,18 @@ let RATIO =document.getElementById("RATIO")
 let contraseña =document.getElementById("contraseña")
 let dosis=document.getElementById("dosis")
 let registroBTN=document.getElementById("registroBTN")
-
-
-connect2Server()
+  let cuenta = document.getElementById("cuenta")
+  cuenta.addEventListener("click", function(){
+    window.location.href='../main/main_html_front.html'
+  })
 registroBTN.addEventListener("click", () => {
-postEvent("registro", {
+fetch("http://127.0.0.1:3000/registrop", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
     NOMBRE: document.getElementById("nombrep").value,
     APELLIDOniño: document.getElementById("apellidoh").value,
     APELLIDO: document.getElementById("apellido").value,
@@ -17,8 +24,8 @@ postEvent("registro", {
     RATIO:document.getElementById("RATIO").value,
     NOMBREniño:document.getElementById("nombreh").value,
     DOSIS:document.getElementById("dosis").value,
-  },registro);});
-  function registro(data){
+  })}).then(response => response.json())
+ .then(data => {
     let cuentacreada=data
 if (cuentacreada===true){
   localStorage.setItem ("nombreniño", document.getElementById("nombreh").value);
@@ -29,8 +36,4 @@ localStorage.setItem ("apellidoniño",  document.getElementById("apellidoh").val
 else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
 }
-  }
-  let cuenta = document.getElementById("cuenta")
-  cuenta.addEventListener("click", function(){
-    window.location.href='../main/main_html_front.html'
-  })
+  })});
