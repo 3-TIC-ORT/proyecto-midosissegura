@@ -1,4 +1,4 @@
-connect2Server();
+
 const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
 const botonEnviar = document.getElementById ("aceptar");
@@ -51,7 +51,7 @@ function AVATAR () {
     return valorfinal
 }
 
-function enviardatos() {
+/*function enviardatos() {
     const avatarvalor = AVATAR();
 
 
@@ -60,6 +60,7 @@ function enviardatos() {
     localStorage.setItem ("valoranteojos", valoranteojos);
     localStorage.setItem ("valorpelo", valorpelo);
     localStorage.setItem ("RATIO", ratio);
+    
     postEvent("UsuarioRegistrado", {
         NOMBREniño: nombreniño.value,
         APELLIDOniño: apellidoniño.value,
@@ -94,5 +95,64 @@ function enviardatos() {
 else{
 alert("escribi bien tus datos")
 }
-}
-         botonEnviar.addEventListener ("click", enviardatos);
+}*/
+botonEnviar.addEventListener ("click", enviardatos);
+function enviardatos() {
+    const avatarvalor = AVATAR();
+
+
+    localStorage.setItem ("contraseña", avatarvalor)
+    localStorage.setItem ("valorpiel", valorpiel);
+    localStorage.setItem ("valoranteojos", valoranteojos);
+    localStorage.setItem ("valorpelo", valorpelo);
+    localStorage.setItem ("RATIO", ratio);
+fetch("http://127.0.0.1:3000/UsuarioRegistrado", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              NOMBREniño: nombreniño.value,
+        APELLIDOniño: apellidoniño.value,
+        CONTRASENAniño: avatarvalor
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+  
+fetch("http://127.0.0.1:3000/trofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              T1: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
+ if(nombre=== nombreniño.value && apellido ===apellidoniño.value){
+    fetch("http://127.0.0.1:3000/InicioNiños", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              NOMBREniño: nombreniño.value,
+        APELLIDOniño: apellidoniño.value,
+        CONTRASENAniño: avatarvalor
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
+    window.location.href='../eleccion etaria/padreoniño.html'
+   }
+
+else{
+alert("escribi bien tus datos")
+}})}

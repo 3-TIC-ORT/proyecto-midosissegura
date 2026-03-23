@@ -18,12 +18,13 @@ import { Guardarmensajesdelforo } from "../back/funcionesexpress.js";
 import { recargarratio } from "../back/funcionesexpress.js";
 import { recargardosis } from "../back/funcionesexpress.js";
 import { Fecha } from "../back/funcionesexpress.js";
-
+import { mostrartrofeos } from "../back/funcionesexpress.js";
+import{UsuarioRegistrado} from "../back/funcionesexpress.js";
 
 // Asociamos la ruta "/" a la función pasada como segundo parámetro
 app.get("/", (req, res) => {
     // Esto envía el texto "Hello World!" como respuesta a la HTTP request
-    res.send("Hello World!");
+    res.json("Hello World!");
 });
 //registro
 app.post("/registrop", (req, res) => {
@@ -32,50 +33,56 @@ app.post("/registrop", (req, res) => {
 });
 app.post("/registernenes", (req, res) => {
     let funciono =InicioNiños(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
+//UsuarioRegistrado
+app.post("/UsuarioRegistrado", (req, res) => {
+    let funciono = UsuarioRegistrado(req.body);
+    res.json(funciono);
+});
+
 //login
 app.post("/loginadultos", (req, res) => {
     let logueado = LogueoAdultos(req.body);
-    res.send(logueado);
+    res.json(logueado);
 });
 app.post("/loginnenes", (req, res) => {
     let funciono =LogueoNiños(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //calculadora
 app.post("/calculadora", (req, res) => {
     let funciono =Calculadora(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //foro
 app.get("/darmensajesalforo", (req, res) => {
     let funciono =darmensajesalforo();
-    res.send(funciono);
+    res.json(funciono);
 });
 app.post("/Guardarmensajesdelforo", (req, res) => {
     let funciono =Guardarmensajesdelforo(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //trofeos
 app.post("/trofeos", (req, res) => {
     let funciono =AñadirTrofeo(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //ratio
 app.post("/ActualizarRatio", (req, res) => {
     let funciono =recargarratio(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //dosis
 app.post("/ActualizarDosis", (req, res) => {
     let funciono =recargardosis(req.body);
-    res.send(funciono);
+    res.json(funciono);
 });
 //fecha
 app.get("/horario", (req, res) => {
     let fechaactual = Fecha();
-    res.send({ horario: fechaactual });
+    res.json({ horario: fechaactual });
 });
 
 app.listen(3000, () => {          // 👈 AGREGÁ ESTO
