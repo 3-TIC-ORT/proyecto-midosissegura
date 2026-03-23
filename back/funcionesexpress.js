@@ -1,8 +1,12 @@
 import fs from "fs";
+import path from "path";
 
-let registro= JSON.parse(fs.readFileSync("./Usuarios.json", "utf-8"))
-let mensajes = JSON.parse(fs.readFileSync("./Mensajes.json", "utf-8"))
-let comidas = JSON.parse(fs.readFileSync("./Comidas.json", "utf-8"))
+const rutaUsuarios = path.join(process.cwd(), "back", ".");
+const rutaMensajes = path.join(process.cwd(), "back", "Mensajes.");
+const rutaComidas = path.join(process.cwd(), "back", "Comidas.");
+let registro= JSON.parse(fs.readFileSync(rutaUsuarios, "utf-8"))
+let mensajes = JSON.parse(fs.readFileSync(rutaMensajes, "utf-8"))
+let comidas = JSON.parse(fs.readFileSync(rutaComidas, "utf-8"))
 let logueado = false
 let contra = false
 let UsuarioR = []
@@ -74,14 +78,14 @@ function Iniciar(data)
         )
             console.log("Adulto registrado con éxito")
         
-        fs.writeFileSync("./Usuarios.json",JSON.stringify(registro, null, 2))
+        fs.writeFileSync(rutaUsuarios,JSON.stringify(registro, null, 2))
           
         }
         return cuentacreada
        
 }
 export {Iniciar};
-//conectar a las funciones mediante un json externo que guarde el usuario a registrar y lo tome luego la función de inicio niños, le sube la contraseña del niño y borra lo del json y lo sube al json de usuarios, creándolo
+//conectar a las funciones mediante un  externo que guarde el usuario a registrar y lo tome luego la función de inicio niños, le sube la contraseña del niño y borra lo del  y lo sube al  de usuarios, creándolo
 function InicioNiños(data)
    /*   {
         console.log("El nombre y apellido del niño no pueden contener números")
@@ -94,7 +98,7 @@ function InicioNiños(data)
     {
         cuentaparcial.CONTRASENAniño = data.CONTRASENAniño
         registro.push(cuentaparcial[0])
-        fs.writeFileSync("./Usuarios.json",JSON.stringify(registro, null, 2))
+        fs.writeFileSync("./.",JSON.stringify(registro, null, 2))
         cuentaparcial=[]
         niñocreado = true
     }*/
@@ -102,7 +106,7 @@ function InicioNiños(data)
     if (registro[i].CONTRASENAniño === null){
    
             registro[i].CONTRASENAniño = data.CONTRASENAniño
-            fs.writeFileSync("./Usuarios.json",JSON.stringify(registro, null, 2))
+            fs.writeFileSync(rutaUsuarios,JSON.stringify(registro, null, 2))
             niñocreado = true
             break
         } else {
@@ -234,7 +238,7 @@ function AñadirTrofeo(data)
         }
     }
 
-    fs.writeFileSync("./Usuarios.json",JSON.stringify(registro, null, 2))
+    fs.writeFileSync(rutaUsuarios,JSON.stringify(registro, null, 2))
 
 return "Trofeo actualizado"
     
@@ -303,7 +307,7 @@ function recargardosis(data) {
             break;
         }
     }
-            fs.writeFileSync("./Usuarios.json", JSON.stringify(registro, null, 2));
+            fs.writeFileSync(rutaUsuarios, JSON.stringify(registro, null, 2));
     return resultado;
 }
 export {recargardosis}
@@ -318,7 +322,7 @@ function recargarratio(data) {
             resultado = registro[i]
             break;
            }   }
-            fs.writeFileSync("./Usuarios.json", JSON.stringify(registro, null, 2));
+            fs.writeFileSync(rutaUsuarios, JSON.stringify(registro, null, 2));
     
     return resultado;
 }
@@ -433,7 +437,7 @@ function Guardarmensajesdelforo (data){
             "Autor": data.NOMBRE + data.APELLIDO
         }
     )
-    fs.writeFileSync ("./Mensajes.json", JSON.stringify(mensajes, null, 2))
+    fs.writeFileSync (rutaMensajes, JSON.stringify(mensajes, null, 2))
  return "Mensaje guardado"
 }
 export {Guardarmensajesdelforo}
