@@ -7,6 +7,7 @@ app.use(cors());
 
 app.use(cors());
 app.use(express.json());
+import path from "path";
 import { Iniciar } from "../back/funcionesexpress.js";
 import { InicioNiños } from "../back/funcionesexpress.js";
 import { LogueoAdultos } from "../back/funcionesexpress.js";
@@ -21,10 +22,10 @@ import { Fecha } from "../back/funcionesexpress.js";
 import { mostrartrofeos } from "../back/funcionesexpress.js";
 import{UsuarioRegistrado} from "../back/funcionesexpress.js";
 
-// Asociamos la ruta "/" a la función pasada como segundo parámetro
+// Asociamos la ruta "/" a la función pasada como segundo parámetr
+
 app.get("/", (req, res) => {
-    // Esto envía el texto "Hello World!" como respuesta a la HTTP request
-    res.json("Hello World!");
+  res.sendFile(path.join(process.cwd(), "front", "pagina1", "paginauno.html"));
 });
 app.post("/mostrartrofeos", (req, res) => {
     let funciono =mostrartrofeos(req.body);
