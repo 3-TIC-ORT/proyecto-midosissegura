@@ -1,4 +1,4 @@
-connect2Server();
+
 
 let nombre = localStorage.getItem("nombreniño");
 let apellido = localStorage.getItem("apellidoniño");
@@ -69,14 +69,19 @@ document.querySelectorAll ("#cabellos img").forEach(img => {
     }
 });
 }
- 
+
 function datosUsuario() {
-    postEvent ("UsuarioRegistrado", {
-        NOMBREniño:nombre,
+ fetch("http://127.0.0.1:3000/UsuarioRegistrado", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+   NOMBREniño:nombre,
         APELLIDOniño:apellido
-    },
-    function (data) {
-      console.log("Respuesta del servidor:", data);
+  })}).then(response => response.json())
+    .then(data => { console.log("Respuesta del servidor:", data);
       if (!data) return;
         nombre=data.NOMBREniño,
         apellido=data.APELLIDOniño,
@@ -86,11 +91,17 @@ function datosUsuario() {
         actualizarAvatar();
     }
 )
-  postEvent ("mostrartrofeos", {
-    NOMBREniño: nombre,
-    APELLIDOniño: apellido
+  fetch("http://127.0.0.1:3000/mostrartrofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
   },
-  function (data) {
+
+  body: JSON.stringify({
+   NOMBREniño:nombre,
+        APELLIDOniño:apellido
+  })}).then(response => response.json())
+    .then(data => {
 
 t1 = data[0]; 
   t2 = data[1];

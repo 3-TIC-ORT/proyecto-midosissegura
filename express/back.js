@@ -26,6 +26,10 @@ app.get("/", (req, res) => {
     // Esto envía el texto "Hello World!" como respuesta a la HTTP request
     res.json("Hello World!");
 });
+app.post("/mostrartrofeos", (req, res) => {
+    let funciono =mostrartrofeos(req.body);
+    res.json(funciono);
+});
 //registro
 app.post("/registrop", (req, res) => {
     let logueado = Iniciar(req.body);
