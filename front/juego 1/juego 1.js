@@ -1,4 +1,4 @@
-connect2Server()
+
 let pop1 = document.getElementById ("pop1");
 pop1.classList.add ("display");
 let pop2 = document.getElementById ("pop2");
@@ -257,14 +257,21 @@ function verificar () {
         pop3.classList.add ("display");
                 let apellido=localStorage.getItem ("apellidoniño");
         let nombre=localStorage.getItem ("nombreniño");
-        postEvent("trofeos",{
-            T2: true,
-            NOMBREniño:nombre,
-            APELLIDOniño:apellido
-            },function(data){
-            console.log(data)
-        }
-            )
+     fetch("http://127.0.0.1:3000/trofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              T2: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
 })
 }
 }

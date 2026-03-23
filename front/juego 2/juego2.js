@@ -1,5 +1,4 @@
 
-connect2Server()
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
 const botonorden1 = document.getElementById("boton1");
@@ -225,14 +224,21 @@ resultadoDiv.addEventListener("click", function (event) {
  confeti.pause();
  confeti.classList.remove("messi")
     correcttos = 0;
-       postEvent("trofeos",{
-      NOMBREniño:nombre,
-APELLIDOniño:apellido,
-T3: true
-       },function(data){
-      console.log(data)
-    }
-    )
+     fetch("http://127.0.0.1:3000/trofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              T3: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
     resultadoDiv.innerHTML =
       '<img src="../front/imagenes/cruz.png" alt="cruz" class="cruz" id="cruz">';
   } else if (

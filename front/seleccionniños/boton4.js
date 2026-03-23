@@ -1,4 +1,4 @@
-      connect2Server()
+    
 const cuarto1 = document.getElementById("1cuarto");
 const cuarto2 = document.getElementById("2cuarto");
 const cuarto3 = document.getElementById("3cuarto");
@@ -50,13 +50,20 @@ let volveratras = document.getElementById ("volveratras");
 let apellido=localStorage.getItem ("apellidoniño");
 let nombre=localStorage.getItem ("nombreniño");
 
-      postEvent("trofeos",{
-      T6: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
+   fetch("http://127.0.0.1:3000/trofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              T6: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
     })
 paginasmostrar ();

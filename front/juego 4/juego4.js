@@ -1,4 +1,4 @@
-connect2Server();
+
 
 let nivelglucemia= 90;
 const plato= document.getElementById ("plato");
@@ -123,12 +123,19 @@ azucar.addEventListener ("click", function() {
 })
 
 botonatras.addEventListener ("click", function() {
-      postEvent("trofeos",{
-      T5: true,
-      NOMBREniño:nombre,
-APELLIDOniño:apellido
-       },function(data){
-      console.log(data)
-    }
-    )
+     fetch("http://127.0.0.1:3000/trofeos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+              T5: true,
+              NOMBREniño:nombre,
+        APELLIDOniño:apellido
+    })}).then(response => response.json())
+    .then(data => {const respuesta = data;
+             console.log(data)
+            
+    })
 });
