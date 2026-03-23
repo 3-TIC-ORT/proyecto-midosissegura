@@ -6,11 +6,20 @@ let ptrofeos = document.getElementById("ptrofeos");
 let pratio= document.getElementById("pratio");
 let inpuratio= document.getElementById("inpuratio");
 let inputdosis= document.getElementById("inputdosis");
-connect2Server();
-postEvent("UsuarioRegistrado",{
-NOMBRE: localStorage.getItem("nombreusuario"),
+
+fetch("http://127.0.0.1:3000/UsuarioRegistrado", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+           NOMBRE: localStorage.getItem("nombreusuario"),
 APELLIDO: localStorage.getItem("apellidousuario")
-},definicion)
+    })}).then(response => response.json())
+    .then(data => 
+            
+     definicion(data))
 function definicion(data){
     console.log("Datos recibidos:", data);
     pusuario.textContent = data.NOMBRE + " " + data.APELLIDO;
@@ -21,26 +30,39 @@ function definicion(data){
 }
 inputdosis.addEventListener("keydown", (event) => {
    if (event.key === "Enter") {
-    postEvent("ActualizarDosis", {
+        fetch("http://127.0.0.1:3000/ActualizarDosis", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
 
-      NOMBRE: localStorage.getItem("nombreusuario"),
+  body: JSON.stringify({
+           NOMBRE: localStorage.getItem("nombreusuario"),
       APELLIDO: localStorage.getItem("apellidousuario"),
       DOSIS: inputdosis.value
-    }, function(data) {
-      inputdosis.placeholder = data.DOSIS;
-    });
+    })}).then(response => response.json())
+    .then(data => { inputdosis.placeholder = data.DOSIS;
+            
+    })
    }
 });
 
 inpuratio.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-    postEvent("ActualizarRatio", {
-      NOMBRE: localStorage.getItem("nombreusuario"),
+      fetch("http://127.0.0.1:3000/ActualizarRatio", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+           NOMBRE: localStorage.getItem("nombreusuario"),
       APELLIDO: localStorage.getItem("apellidousuario"),
       RATIO: inpuratio.value
-    }, function(data) {
-      inpuratio.placeholder = data.RATIO;
-    });
+    })}).then(response => response.json())
+    .then(data => { inpuratio.placeholder = data.RATIO;
+            
+    })
     }
 });
 let volveratras = document.getElementById("volveratras");
