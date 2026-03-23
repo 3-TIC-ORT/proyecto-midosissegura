@@ -1,5 +1,4 @@
 let listacomentarios =[]
-connect2Server(3000)
 let mensajes =[]
 let nombre=""
 const inputcomentario=document.getElementById("comentarioinput")
@@ -17,13 +16,18 @@ agregarcomentario.addEventListener("click", function() {
     ulcomentarios.appendChild(li);
  listacomentarios.innerHTML=""
  listacomentarios=[]
+fetch("http://127.0.0.1:3000/Guardarmensajesdelforo", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
 
-postEvent("GuardarMensaje", {
+  body: JSON.stringify({
     NOMBRE: localStorage.getItem("nombreusuario"),
     APELLIDO: localStorage.getItem("apellidousuario"),
     Mensajenuevo:comentario
-}, function(data) {
-   mensajes = data.Mensaje;
+  })}).then(response => response.json())
+    .then(data => {mensajes = data.Mensaje;
    nombre = data.Autor;
    if(nombre==localStorage.getItem("nombreusuario") + localStorage.getItem("apellidousuario")){
     const li = document.createElement("p");
@@ -45,10 +49,13 @@ postEvent("GuardarMensaje", {
     li2.className="tipocomentarioblanco"
     ulcomentariosusuario.appendChild(li2);
    }
-});
-}})
-getEvent("darmensajesalforo", function(data) {
-    for (let i = 0; i < data.length; i++) {
+})
+
+}});
+fetch("http://localhost:3000/darmensajesalforo")
+  .then(res => res.json())
+  .then(data => {
+       for (let i = 0; i < data.length; i++) {
    mensajes = data[i].Mensaje;
    nombre = data[i].Autor;
    if(nombre==localStorage.getItem("nombreusuario") + localStorage.getItem("apellidousuario")){
@@ -71,7 +78,7 @@ getEvent("darmensajesalforo", function(data) {
     li2.className="tipocomentarioblanco"
     ulcomentariosusuario.appendChild(li2);
    }}
-});
+  });
 let btnatras = document.getElementById("btnatras");
 btnatras.addEventListener("click", function () {
   window.location.href = "../paginageneralp/paginageneralp.html";

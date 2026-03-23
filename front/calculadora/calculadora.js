@@ -1,6 +1,3 @@
-connect2Server();
-
-
 const botonCalcular = document.querySelector("#botoncalcular");
 const resultado = document.querySelector("#resultado");
 const comidaelegida = document.getElementById("inputcomida");
@@ -839,15 +836,21 @@ function calculardatos() {
   const apellidoAdulto = localStorage.getItem("apellidousuario") || localStorage.getItem("apellidoniño");
   const cantidadNum = parseInt(cantidades.value, 10) || 0;
 
-  postEvent("Calculadora", {
-    NOMBRE: nombreAdulto,
+fetch("http://127.0.0.1:3000/Calculadora", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+  NOMBRE: nombreAdulto,
     APELLIDO: apellidoAdulto,
     comida: comidaelegida.value,
     CANTIDAD: cantidadNum,
-  }, function (data) {
-    const respuesta = data;
-    resultado.innerText = `Dosis: ${respuesta}`;
-  });
+  })}).then(response => response.json())
+ .then(data => {
+ const respuesta = data;
+    resultado.innerText = `Dosis: ${respuesta}`;})
 }
 
 
