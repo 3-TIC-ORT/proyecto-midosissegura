@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 
-const rutaUsuarios = path.join(process.cwd(), "back", ".");
-const rutaMensajes = path.join(process.cwd(), "back", "Mensajes.");
-const rutaComidas = path.join(process.cwd(), "back", "Comidas.");
+const rutaUsuarios = path.join(process.cwd(), "back", "Usuarios.json");
+const rutaMensajes = path.join(process.cwd(), "back", "Mensajes.json");
+const rutaComidas = path.join(process.cwd(), "back", "Comidas.json");
 let registro= JSON.parse(fs.readFileSync(rutaUsuarios, "utf-8"))
 let mensajes = JSON.parse(fs.readFileSync(rutaMensajes, "utf-8"))
 let comidas = JSON.parse(fs.readFileSync(rutaComidas, "utf-8"))
