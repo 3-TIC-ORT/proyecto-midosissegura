@@ -93,6 +93,5 @@ app.get("/horario", (req, res) => {
 app.listen(3000, () => {          // 👈 AGREGÁ ESTO
     console.log("Servidor corriendo en puerto 3000 🚀");
 });
-import path from "path";
 
 app.use(express.static(path.join(process.cwd(), "front")));
