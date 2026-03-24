@@ -126,5 +126,21 @@
     "NOMBREniño": "susana",
     "APELLIDOniño": "tabakman",
     "CONTRASENAniño": null
+  },
+  {
+    "NOMBRE": "lautaro",
+    "APELLIDO": "cobra",
+    "CONTRASENA": "412",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "3",
+    "RATIO": "2",
+    "NOMBREniño": "david",
+    "APELLIDOniño": "queen",
+    "CONTRASENAniño": null
   }
 ]

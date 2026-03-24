@@ -1,8 +1,6 @@
 
 let btniniciosesion= document.getElementById("registroBTN")
-connect2Server()
 function cambiardatosdelusuario() {
-   
     contrseña = document.getElementById("contraseña").value;
     console.log("contraseña:" + contrseña);
     console.log( "correo electronico:" +gmail);
@@ -14,19 +12,21 @@ function cambiardatosdelusuario() {
     const  valorinputnomredeusuario= inputnombredeusuario.value;
     let nombre = valorinputnomredeusuario;
     console.log("ratio de insulina:" + nombre);}
-    connect2Server("http://127.0.0.1:5501");
-
 btniniciosesion.addEventListener("click", () => {
-postEvent("iniciarsesion", {
-  NOMBRE: document.getElementById("NOMBREP").value,
+ fetch("http://127.0.0.1:3000/loginadultos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+      NOMBRE: document.getElementById("NOMBREP").value,
   APELLIDO: document.getElementById("apellido").value,
   CONTRASENA: document.getElementById("CONTRASEÑA").value,
   NOMBREniño: document.getElementById("NOMBREH").value,
   APELLIDOniño: document.getElementById("apellidoh").value
-}, comprobaciondedatos);
-});
-function comprobaciondedatos(data) {
-    let logueado = data[0];
+    })}).then(response => response.json())
+    .then(data => {    let logueado = data[0];
     let encontrado = data[1];
     let contra = data[2];
     if (logueado === true && encontrado === true && contra === true) {
@@ -46,10 +46,8 @@ else if (encontrado === true && contra === true && logueado === false) {
 }
 else if (encontrado === false) {
     alert("No se ha encontrado una cuenta con ese correo");
-}
-
-}
-
+}            
+})})
  
   
 
