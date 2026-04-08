@@ -142,5 +142,21 @@
     "NOMBREniño": "david",
     "APELLIDOniño": "queen",
     "CONTRASENAniño": null
+  },
+  {
+    "NOMBRE": "sw",
+    "APELLIDO": "ws",
+    "CONTRASENA": "123",
+    "T1": true,
+    "T2": false,
+    "T3": false,
+    "T4": false,
+    "T5": false,
+    "T6": false,
+    "DOSIS": "3",
+    "RATIO": "2",
+    "NOMBREniño": "slk",
+    "APELLIDOniño": "dxds",
+    "CONTRASENAniño": null
   }
 ]
