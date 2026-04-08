@@ -16,7 +16,7 @@ agregarcomentario.addEventListener("click", function() {
     ulcomentarios.appendChild(li);
  listacomentarios.innerHTML=""
  listacomentarios=[]
-fetch("http://127.0.0.1:3000/Guardarmensajesdelforo", {
+fetch("https://proyecto-midosissegura.onrender.com/Guardarmensajesdelforo", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -52,7 +52,7 @@ fetch("http://127.0.0.1:3000/Guardarmensajesdelforo", {
 })
 
 }});
-fetch("http://localhost:3000/darmensajesalforo")
+fetch("https://proyecto-midosissegura.onrender.com/darmensajesalforo")
   .then(res => res.json())
   .then(data => {
        for (let i = 0; i < data.length; i++) {
