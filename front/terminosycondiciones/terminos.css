@@ -2,57 +2,57 @@ body {
     background-color: #A3DFF2;
     margin: 0;
     display: flex;
+    position: relative;
 }
 
+/* CUADRO AMARILLO */
 .amarillo {
     position: absolute;
-    width: 1017px;
-    height: 572px;
-    opacity: 1;
-    top: 120px;
-    left: 120px;
+    width: 79.45%;   /* 1017 / 1280 */
+    height: 79.44%;  /* 572 / 720 */
+    top: 16.67%;     /* 120 / 720 */
+    left: 9.38%;     /* 120 / 1280 */
+
     background-color: #FCEBD9;
-    border-style: solid;
-    border-width: 7.07px;
-    border-color: black;
+    border: 7.07px solid black;
     display: flex;
     z-index: 500;
 }
 
+/* LOGO */
 .logo {
     position: absolute;
-    width: 266px;
-    height: 150.09999084472656px;
-    top: 5px;
-    left: 961px;
-    opacity: 1;
+    width: 20.78%;   /* 266 / 1280 */
+    height: 20.85%;  /* 150 / 720 */
+    top: 0.69%;      /* 5 / 720 */
+    left: 75.08%;    /* 961 / 1280 */
 }
 
+/* TITULO */
 .titulo {
     position: absolute;
-    width: 447px;
-    height: 55px;
-    opacity: 1;
-    top: 28px;
-    left: 312px;
+    width: 34.92%;   /* 447 / 1280 */
+    height: 7.64%;   /* 55 / 720 */
+    top: 3.89%;      /* 28 / 720 */
+    left: 24.38%;    /* 312 / 1280 */
     z-index: 1000;
 }
 
+/* TEXTO */
 .texto {
     position: absolute;
-    width: 952px;
-    height: 442px;
-    opacity: 1;
-    top: 96px;
-    left: 26px;
+    width: 74.38%;   /* 952 / 1280 */
+    height: 61.39%;  /* 442 / 720 */
+    top: 13.33%;     /* 96 / 720 */
+    left: 2.03%;     /* 26 / 1280 */
     z-index: 1000;
 }
 
+/* BOTON ATRAS */
 .atras {
     position: absolute;
-    top: 23px;
-    left: 137px;
-    opacity: 1;
-    width: 252px;
-    height: 59px;
+    width: 19.69%;   /* 252 / 1280 */
+    height: 8.19%;   /* 59 / 720 */
+    top: 3.19%;      /* 23 / 720 */
+    left: 10.70%;    /* 137 / 1280 */
 }
