@@ -3,7 +3,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Fredoka", sans-serif;
-    position: relative;
 }
 
 @font-face {
@@ -50,7 +49,7 @@ body{
     height: 13.75%;
     top: 4.86%;
     left: 50.94%;
-    border-radius: 6.43%;
+    border-radius: 5.1425rem;
     padding: 0.64%;
     background: #0077FF;
     border: 0.39% solid #040404;
@@ -66,7 +65,7 @@ body{
     height: 13.75%;
     top: 4.86%;
     left: 74.22%;
-    border-radius: 6.43%;
+    border-radius: 5.1425rem;
     padding: 0.64%;
     background: transparent;
     border: 0.39% solid #040404;
@@ -111,16 +110,13 @@ body{
 }
 
 /* Scroll */
-.p::-webkit-scrollbar {
-    width: 1.09%;
-}
 .p::-webkit-scrollbar-track {
     background: #f1f1f1;
-    border-radius: 50px;
+    border-radius: 5.1425rem;
 }
 .p::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 50px;
+    border-radius: 5.1425rem;
 }
 .p::-webkit-scrollbar-thumb:hover {
     background: #555;
