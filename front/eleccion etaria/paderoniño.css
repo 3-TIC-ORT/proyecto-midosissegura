@@ -104,7 +104,7 @@ body {
 .iconopadre, .icononiño {
     height: 60%;   /* ✔ recalculado */
     object-fit: contain;
-    margin-top: 10%;
+    margin-top: 20%;
 
 }
 
@@ -120,7 +120,7 @@ body {
     position: relative; 
     width: 100%;
     height: 12%;
-    top: 25%;
+    margin-top:10%;
     display: flex;
     align-items: center;
     justify-content: center;
