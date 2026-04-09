@@ -5,166 +5,132 @@ body {
     background-color: #A3DFF2;
     display: flex;
 
-  }
-  
-  .logo {
+}
+
+/* LOGO */
+.logo {
     position: absolute;
-    width: 301px;
-    height: 169.85000610351562px;
-    top: 19px;
-    left: 67px;
-    opacity: 1;
-  }
-  
-  .frameazul {
+    width: 23.52%;   /* 301 / 1280 */
+    height: 23.59%;  /* 169.85 / 720 */
+    top: 2.64%;      /* 19 / 720 */
+    left: 5.23%;     /* 67 / 1280 */
+}
+
+/* FRAME AZUL */
+.frameazul {
     position: absolute;
+    background-color: #39ABD9;
+    border: 0.48% solid #000000; /* 6.14px */
+    width: 44.53%;   /* 570 / 1280 */
+    height: 69.88%;  /* 503 / 720 */
+    top: 7.08%;      /* 50.97 / 720 */
+    left: 28.75%;    /* 368 / 1280 */
+    border-radius: 1.44rem; /* 23.02 / 16 */
     
-background-color: #39ABD9;
+    padding-top: 5.33%;
+    padding-right: 3.66%;
+    padding-bottom: 8.74%;
+    padding-left: 3%;
+}
 
-border: 6.14px solid #000000;
-width: 570px;
-height: 503.1383666992188px;
-top: 50.97px;
-left: 368px;
-border-radius: 23.02px;
-border-width: 6.14px;
-padding-top: 38.36px;
-padding-right: 46.81px;
-padding-bottom: 62.92px;
-padding-left: 38.36px;
-gap: 98.21px;
-angle: 0 deg;
-opacity: 1;
-  }
-  
-  .iniciosesion {
-width: 307px;
-height: 59px;
-padding-left: 150px;
+/* TITULO */
+.iniciosesion {
+    width: 23.98%;
+    height: 8.19%;
+    padding-left: 11.72%;
+}
 
-  }
-  
-  .quieneres {
-width: 618.4402465820312px;
-height: 49.10691833496094px;
-
-opacity: 1;
-font-family: Fredoka;
-font-weight: 400;
-font-style: Regular;
-font-size: 27.62px;
-line-height: 100%;
-letter-spacing: 0%;
-color: #000;
-text-align: center;
-margin: 0;
-white-space: nowrap; 
-display: inline-block; 
-gap: 5px;
-  }
-  
-  .padreoniño {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 616px;
-    height: 279px;
-    border-radius: 30px;
-    margin-top: 30px;
-    width: 472.654052734375px;
-height: 214.07546997070312px;
-top: 60.62px;
-left: 72.89px;
-border-radius: 767.3px;
-angle: 0 deg;
-opacity: 1;
-  }
-  
-  .padre, .niño {
-    width: 237.86163330078125px;
-    height: 214.07546997070312px;
-    border: 8px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  }
-  
-  .padre {
-    background-color: #FFE100;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border: 8px solid #000000
-  }
-  
-  .niño {
-    background-color: #3CB371;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border: 8px solid #000000
-  }
-  
-  .iconopadre, .icononiño {
-    height: 130px;
-    object-fit: contain;
-    margin-top: 30px;
-  }
-  
-  .padrep, .niñop {
-    font-family: "Fredoka One";
-    font-size: 30.83px;
-    color: black;
-   
-  }
-  .emaa {
-    position: relative; 
-    width: 806px;
-    height: 64px;
-    opacity: 1;
-  top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .emaforra {
-    width: 261px;
-    height: 62px;
-    opacity: 1;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-  
-  .emaa {
-    width: 100%;          
-    height: 64px;          
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-  }
-  
-  .emaforra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 261px;  
-    height: 62px;  
-  }
-  
-  .quieneres {
-    font-family: 'Fredoka One', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0;
+/* TEXTO */
+.quieneres {
+    width: 48.31%;
+    height: 6.82%;
+    font-family: Fredoka;
+    font-size: 2.16vw;
     color: #000;
     text-align: center;
     margin: 0;
-    white-space: nowrap; 
-  }
-  
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* CONTENEDOR PADRE-NIÑO */
+.padreoniño {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36.93%;
+    height: 29.73%;
+    margin-top: 4.17%;
+    border-radius: 47.96rem; /* 767.3 / 16 */
+}
+
+/* BLOQUES */
+.padre, .niño {
+    width: 18.58%;
+    height: 29.73%;
+    border: 0.63% solid #000; /* 8px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PADRE */
+.padre {
+    background-color: #FFE100;
+    border-top-left-radius: 1.875rem;  /* 30px */
+    border-bottom-left-radius: 1.875rem;
+}
+
+/* NIÑO */
+.niño {
+    background-color: #3CB371;
+    border-top-right-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
+}
+
+/* ICONOS */
+.iconopadre, .icononiño {
+    height: 18.06%;
+    object-fit: contain;
+    margin-top: 4.17%;
+}
+
+/* TEXTOS */
+.padrep, .niñop {
+    font-family: "Fredoka One";
+    font-size: 2.41vw;
+    color: black;
+}
+
+/* CONTENEDOR EMA */
+.emaa {
+    position: relative; 
+    width: 62.97%;
+    height: 8.89%;
+    top: 27.78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENEDOR INTERNO */
+.emaforra {
+    width: 20.39%;
+    height: 8.61%;
+    padding: 0.78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXTO FINAL */
+.quieneres {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 2.81vw;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
