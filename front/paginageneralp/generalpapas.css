@@ -1,112 +1,128 @@
 body {
-
     background-color: #A3DFF2;
-    position: relative;
+
     margin: 0;
 }
 
+/* BARRA SUPERIOR */
 .azuloscuro {
     position: absolute;
-    width: 1440px;
-    height: 143px;
+    width: 100%;
+    height: 19.86%;   /* 143 / 720 */
     top: 0;
     left: 0;
     background-color: #39ABD9;
     z-index: 500;
-    width: 100%;
-height: 143px;
-angle: 0 deg;
-opacity: 1;
-
 }
 
+/* USUARIO */
 .usuario {
-    background-color: transparent;
-    border: none;
     position: absolute;
- width: 70px;
-height: 70px;
-top: 45px;
-left: 1147px;
-border-width: 10.37px;
-angle: 0 deg;
-opacity: 1;
-
+    width: 5.47%;     /* 70 / 1280 */
+    height: 9.72%;    /* 70 / 720 */
+    top: 6.25%;       /* 45 / 720 */
+    left: 89.61%;     /* 1147 / 1280 */
     z-index: 1000;
 }
-.glucagon {
 
-    background-color: transparent;
-   
-    border: none;
-    top: 200px;
-    left: 350px;
-    opacity: 1;
+.usuario img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
+/* LOGO */
+.logo {
+    position: absolute;
+    width: 23.52%;    /* 301 / 1280 */
+    height: 23.59%;   /* 169 / 720 */
+    top: 2.64%;       /* 19 / 720 */
+    left: 5.23%;      /* 67 / 1280 */
+    z-index: 1000;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.cosas {
+    position: absolute;
+    width: 94.47%;    /* 1209 / 1280 */
+    height: 41.67%;   /* 300 / 720 */
+    top: 33.89%;      /* 244 / 720 */
+    left: 2.66%;      /* 34 / 1280 */
+    display: flex;
+    align-items: center;
+}
+
+/* BOTONES (TODOS IGUALES) */
+.glucagon,
+.mapa,
+.calculadora,
 .foro {
 
+    width: 18%;
+    height: 25%;
     background-color: transparent;
     border: none;
-    top: 616px;
-    left: 750px;
-
 }
 
-.logo {
-
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 19px;
-    left: 67px;
-    opacity: 1;
-    z-index: 1000;
-}
-
-.logo img {
-    width: 301px;
-    height: 169.85000610351562px;
+/* POSICIONES */
+.glucagon {
+    top: 27.78%;
+    left: 27.34%;
 }
 
 .mapa {
-    background-color: transparent;
-    border: none;
-    top: 200px;
-    left: 750px;
-    opacity: 1;
+    top: 27.78%;
+    left: 58.59%;
 }
 
 .calculadora {
-    background-color: transparent;
-    border: none;
-    top: 620px;
-    left: 350px;
-    opacity: 1;
-   
+    top: 86.11%;
+    left: 27.34%;
 }
 
+.foro {
+    top: 85.56%;
+    left: 58.59%;
+}
+
+/* IMÁGENES DE BOTONES */
+.glucagon img,
+.mapa img,
+.calculadora img,
+.foro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TERMINOS */
 .terminos {
     position: absolute;
-width: 154.53147888183594;
-height: 146;
-top: 568px;
-left: 1114px;
-gap: 4px;
-angle: 0 deg;
-opacity: 1;
+    width: 12.07%;    /* 154 / 1280 */
+    height: 20.28%;   /* 146 / 720 */
+    top: 78.89%;      /* 568 / 720 */
+    left: 87.03%;     /* 1114 / 1280 */
+}
+.glucagon,
+.mapa,
+.calculadora,
+.foro {
 
+    width: 22%;   /* ajustado */
+    height: auto; /* 🔥 clave */
+}
+.glucagon img,
+.mapa img,
+.calculadora img,
+.foro img {
+    width: 100%;
+    height: auto;  /* 🔥 mantiene proporción real */
+    display: block;
+}
+.calculadora {
+    top: 75%;  /* antes 86% */
 }
 
-.cosas {
-    position: absolute;
-   width: 1209.27099609375px;
-height: 300px;
-top: 244px;
-left: 34px;
-angle: 0 deg;
-opacity: 1;
-display: flex;
-
-align-items: center;;
+.foro {
+    top: 75%;
 }
