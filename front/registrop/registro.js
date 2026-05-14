@@ -37,3 +37,8 @@ else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
 }
   })});
+  let btnatras = document.getElementById("btnatras");
+
+btnatras.addEventListener("click", function() {
+    window.location.href = "../pagina1/paginauno.html";
+});

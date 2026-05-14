@@ -48,6 +48,11 @@ else if (encontrado === false) {
     alert("No se ha encontrado una cuenta con ese correo");
 }            
 })})
+  let btnatras = document.getElementById("btnatras");
+
+btnatras.addEventListener("click", function() {
+      window.location.href = "../eleccion etaria/padreoniño.html";
+});
  
   
 

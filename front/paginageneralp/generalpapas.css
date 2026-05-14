@@ -47,7 +47,7 @@ body {
     width: 94.47%;    /* 1209 / 1280 */
     height: 41.67%;   /* 300 / 720 */
     top: 33.89%;      /* 244 / 720 */
-    left: 2.66%;      /* 34 / 1280 */
+    left: 105px;      /* 34 / 1280 */
     display: flex;
     align-items: center;
 }

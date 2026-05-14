@@ -54,19 +54,30 @@ margin-top: 8px;
 width: 214;
 height: 47;
 top: 117px;
-left: 352px;
+left: 372px;
 border-width: 4.84px;
 angle: 0 deg;
 opacity: 1;
 
 
 }
+.atras{
+    position: absolute;
+    width: 54px;
+height: 54px;
+top: 51px;
+left: 350px;
+angle: -180 deg;
+opacity: 1;
+z-index: 2000;
+    transform: rotate(180deg);
+}
 .datosh{
 
     position: absolute;
 
 top: 387px;
-left: 270px;
+left: 290px;
 border-width: 4.84px;
 angle: 0 deg;
 opacity: 1;
@@ -251,7 +262,7 @@ opacity: 1;
 width: 594px;
 height: 137px;
 top: -10px;
-left: 166.5px;
+left: 186.5px;
 angle: 0 deg;
 opacity: 1;
 

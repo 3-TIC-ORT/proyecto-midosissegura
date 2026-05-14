@@ -136,3 +136,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+.atras{
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: 45px;
+    left: 75px;
+    transform: rotate(180deg);
+opacity: 1;
+z-index: 1000;
+
+}

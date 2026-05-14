@@ -13,6 +13,17 @@ body{
 padding: 0;
 margin: 0;
 }
+.cerrarsesion{
+    position: absolute;
+ width: 135.5274658203125;
+height: 70.07386016845703;
+top: 550px;
+left: 292px;
+angle: 0 deg;
+opacity: 1;
+border-radius: 10.01px;
+border-width: 6.16px;
+}
 .frame{
     position: absolute;
 width: 1008px;
