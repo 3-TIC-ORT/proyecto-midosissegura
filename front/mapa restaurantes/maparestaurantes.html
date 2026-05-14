@@ -8,40 +8,35 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
       rel="stylesheet"
     />
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <link rel="stylesheet" href="maparestaurantes.css" />
 </head>
 <body>
     <a href="../paginageneralp/paginageneralp.html">
-        <img src="../imagenes/volevr atras.png" class="volveratras">
+        
+        <div class="volveratras" ></div>
     </a>
     <img src="../imagenes/LOGO PERO MINI.png" alt="LOGO" class="LOGO">
     <main class="main">
-        <img src="../imagenes/mapa fondo.png" alt="dibujo de mapa">
-        <div class="advertenciaamarilla">
-            <img src="signo.png" class="signowarning">
-            <h1 class="h1">El mapa incluido es a modo ilustrativo, no es un mapa real</h1>
-        </div>
+        <div id="Map" class="Map"></div>
+   
 
-    <button class="BOTON1" id="BOTON1">
-    <img src="../imagenes/Vector.png" alt="mapa signo" id="restaurante1" class="restaurante1">
-    <img src="Vector.png" alt="mapa signo" id="restaurante1a" class="restaurante1 oculto">
+    <button class="BOTON1" id="BOTON1" id="restaurante1a" id="restaurante1">
+
     </button>
-    <button class="BOTON2" id="BOTON2">
-    <img src="../imagenes/Vector.png" alt="mapa signo" id="restaurante2" class="restaurante2">
-    <img src="Vector.png" alt="mapa signo" id="restaurante2a" class="restaurante2 oculto">
+    <button class="BOTON2" id="BOTON2" id="restaurante2a" id="restaurante2">
+   </button>
+    <button class="BOTON3" id="BOTON3" id="restaurante3a" id="restaurante3">
+     </button>
+    <button class="BOTON4" id="BOTON4" id="restaurante4a" id="restaurante4">
     </button>
-    <button class="BOTON3" id="BOTON3">
-    <img src="../imagenes/Vector.png" alt="mapa signo" id="restaurante3" class="restaurante3">
-    <img src="Vector.png" alt="mapa signo" id="restaurante3a" class="restaurante3 oculto">
-    </button>
-    <button class="BOTON4" id="BOTON4">
-    <img src="../imagenes/Vector.png" alt="mapa signo" id="restaurante4" class="restaurante4">
-    <img src="Vector.png" alt="mapa signo" id="restaurante4a" class="restaurante4 oculto">
-    </button>
-    <button class="BOTON5" id="BOTON5">
-    <img src="../imagenes/Vector.png" alt="mapa signo" id="restaurante5" class="restaurante5">
-    <img src="Vector.png" alt="mapa signo" id="restaurante5a" class="restaurante5 oculto">
-    </button>
+    <button class="BOTON5" id="BOTON5" id="restaurante5a" id="restaurante5">
+     </button>
     <div class="popup" id="popup"></div>
     </main>
     <script src="maparestaurantes.js"></script>

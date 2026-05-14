@@ -8,14 +8,23 @@ const elemento2a = document.getElementById ("restaurante2a");
 const elemento3a = document.getElementById ("restaurante3a");
 const elemento4a = document.getElementById ("restaurante4a");
 const elemento5a = document.getElementById ("restaurante5a");
-const BOTON1 = document.getElementById ("BOTON1");
-const BOTON2 = document.getElementById ("BOTON2");
-const BOTON3 = document.getElementById ("BOTON3");
-const BOTON4 = document.getElementById ("BOTON4");
-const BOTON5 = document.getElementById ("BOTON5");
+var BOTON1 = document.getElementById ("BOTON1");
+var BOTON2 = document.getElementById ("BOTON2");
+var BOTON3 = document.getElementById ("BOTON3");
+var BOTON4 = document.getElementById ("BOTON4");
+var BOTON5 = document.getElementById ("BOTON5");
 const POPUP = document.getElementById ("popup");
 
-
+var map = L.map('Map').setView([-34.58085644017662, -58.43144334736555], 14);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+BOTON1 = L.marker([-34.59453594005355, -58.4247654473649]).addTo(map);
+BOTON2= L.marker([-34.5784899337124, -58.43691580503798]).addTo(map);
+BOTON3 = L.marker([-34.58094477343005, -58.43138970318477]).addTo(map);
+BOTON4 = L.marker([-34.59550358703196, -58.39119284736489]).addTo(map);
+BOTON5 = L.marker([-34.563984197260716, -58.45359381227147]).addTo(map);
 const restaurantes = [
   {
     titulo: "DISTRITO KETO",
@@ -110,8 +119,7 @@ function manejarMouseOut(numero) {
   restaurante.classList.remove('oculto');
   elemento.classList.add('oculto');
 }
-
-restaurante1.addEventListener("mouseenter", () => manejarMouseOver(1));
+/*/restaurante1.addEventListener("mouseenter", () => manejarMouseOver(1));
 restaurante1.addEventListener("mouseout", () => manejarMouseOut(1));
 elemento1a.addEventListener("mouseenter", () => manejarMouseOver(1));
 elemento1a.addEventListener("mouseout", () => manejarMouseOut(1));
@@ -134,4 +142,4 @@ elemento4a.addEventListener("mouseout", () => manejarMouseOut(4));
 restaurante5.addEventListener("mouseenter", () => manejarMouseOver(5));
 restaurante5.addEventListener("mouseout", () => manejarMouseOut(5));
 elemento5a.addEventListener("mouseenter", () => manejarMouseOver(5));
-elemento5a.addEventListener("mouseout", () => manejarMouseOut(5));
+elemento5a.addEventListener("mouseout", () => manejarMouseOut(5));*/

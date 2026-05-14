@@ -13,7 +13,7 @@ body {
 }
 
 .BOTON1, .BOTON2, .BOTON3, .BOTON4, .BOTON5 {
-  z-index: 5000;
+  z-index: -5000;
   background: transparent;
   border: none;
   height: 138px;
@@ -139,6 +139,13 @@ opacity: 1;
     height: 650px;
     top: 150px;
     left: 150px;
+}
+.Map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
   
 .restaurante1 {  
