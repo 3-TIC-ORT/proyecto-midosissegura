@@ -163,3 +163,8 @@ datosUsuario();
 
 
 
+ let cerrarsesion = document.getElementById("cerrarsesion");
+
+cerrarsesion.addEventListener("click", function() {
+    window.location.href = "../pagina1/paginauno.html";
+});

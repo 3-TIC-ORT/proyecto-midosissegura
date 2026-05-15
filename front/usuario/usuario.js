@@ -70,7 +70,7 @@ function volveratra (){
     window.location.href='../paginageneralp/paginageneralp.html'
 }
 volveratras.addEventListener("click", (volveratra));
-  let cerrarsecio = document.getElementById("cerrarsesion");
+  let cerrarsesion = document.getElementById("cerrarsesion");
 
 cerrarsesion.addEventListener("click", function() {
     window.location.href = "../pagina1/paginauno.html";

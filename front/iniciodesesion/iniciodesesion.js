@@ -1,7 +1,12 @@
 const nombreniño = document.getElementById ("nombrenene");
 const apellidoniño = document.getElementById ("apellidonene");
 const botonEnviar = document.getElementById ("send");
+let btnatras = document.getElementById("btnatras");
 
+btnatras.addEventListener("click", function() {
+      window.location.href = "../eleccion etaria/padreoniño.html";
+});
+ 
 
 let cabello = 0;
 const cabellos = document.querySelectorAll ('#cabellos .pelo')

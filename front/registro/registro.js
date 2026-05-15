@@ -156,3 +156,8 @@ fetch("https://proyecto-midosissegura.onrender.com/trofeos", {
 else{
 alert("escribi bien tus datos")
 }})}
+let btnatras = document.getElementById("btnatras");
+
+btnatras.addEventListener("click", function() {
+    window.location.href = "../pagina1/paginauno.html";
+});
