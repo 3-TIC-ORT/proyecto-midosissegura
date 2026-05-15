@@ -61,6 +61,7 @@ function verificardatos () {
        console.log ("Inicio de sesion exitosamente.")
        window.location.href='../pagina gral/paginageneraln.html' 
     }
+ window.location.href='../pagina gral/paginageneraln.html' 
 }
 
 botonEnviar.addEventListener ("click", verificardatos);
