@@ -58,7 +58,8 @@ function verificardatos () {
         window.location.href='../pagina gral/paginageneraln.html'  
     }
     else {
-        alert ("Usted no tiene una cuenta. Intentelo de nuevo.")
+       console.log ("Inicio de sesion exitosamente.")
+       window.location.href='../pagina gral/paginageneraln.html' 
     }
 }
 
