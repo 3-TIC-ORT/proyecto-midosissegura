@@ -52,6 +52,7 @@ function verificardatos () {
         const valorpielactual = parseInt(pielvisible.dataset.valor);
         const valorpelonactual = parseInt(cabellovisible.dataset.valor);
         const valoranteojosactual = parseInt(anteojovisible.dataset.valor);
+         window.location.href='../pagina gral/paginageneraln.html' 
 
     if (nombreniño.value === nombredelnene && apellidoniño.value === apellidodelnene  && valorpelonactual === valorpelo && valorpielactual === valorpiel && valoranteojosactual === valoranteojos) {
         console.log ("Inicio de sesion exitoso.")
@@ -61,7 +62,7 @@ function verificardatos () {
        console.log ("Inicio de sesion exitosamente.")
        window.location.href='../pagina gral/paginageneraln.html' 
     }
- window.location.href='../pagina gral/paginageneraln.html' 
+
 }
 
 botonEnviar.addEventListener ("click", verificardatos);
