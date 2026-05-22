@@ -46,65 +46,18 @@ function AVATAR () {
     valorpiel = parseInt(pielvisible.dataset.valor);
     valoranteojos = parseInt(anteojovisible.dataset.valor);
     valorpelo = parseInt(cabellovisible.dataset.valor);
-
-    const valorfinal = valorpiel + valoranteojos + valorpelo;
-    return valorfinal
-}
-
-/*function enviardatos() {
-    const avatarvalor = AVATAR();
-
-
-    localStorage.setItem ("contraseña", avatarvalor)
     localStorage.setItem ("valorpiel", valorpiel);
     localStorage.setItem ("valoranteojos", valoranteojos);
     localStorage.setItem ("valorpelo", valorpelo);
-    localStorage.setItem ("RATIO", ratio);
-    
-    postEvent("UsuarioRegistrado", {
-        NOMBREniño: nombreniño.value,
-        APELLIDOniño: apellidoniño.value,
-        CONTRASENAniño: avatarvalor
-    },
-    function (data) {
-        const respuesta = data;
-  
-
-              connect2Server()
-              postEvent("trofeos",{
-              T1: true,
-              NOMBREniño:nombre,
-        APELLIDOniño:apellido
-               },function(data){
-              console.log(data)
-            }
-            )
-    })
- if(nombre=== nombreniño.value && apellido ===apellidoniño.value){
-    postEvent ("InicioNiños", {
-        NOMBREniño: nombreniño.value,
-        APELLIDOniño: apellidoniño.value,
-        CONTRASENAniño: avatarvalor
-    },
-    function (data) {
-        const respuesta = data;
- window.location.href='../eleccion etaria/padreoniño.html'
-    }) 
-   }
-
-else{
-alert("escribi bien tus datos")
+    const valorfinal = valorpiel + valoranteojos + valorpelo;
+    return valorfinal
 }
-}*/
 botonEnviar.addEventListener ("click", enviardatos);
 function enviardatos() {
     const avatarvalor = AVATAR();
 
 
     localStorage.setItem ("contraseña", avatarvalor)
-    localStorage.setItem ("valorpiel", valorpiel);
-    localStorage.setItem ("valoranteojos", valoranteojos);
-    localStorage.setItem ("valorpelo", valorpelo);
     localStorage.setItem ("RATIO", ratio);
 fetch("https://proyecto-midosissegura.onrender.com/UsuarioRegistrado", {
   method: "POST",
