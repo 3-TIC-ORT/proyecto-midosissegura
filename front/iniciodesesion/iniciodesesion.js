@@ -52,15 +52,15 @@ function verificardatos () {
         const valorpielactual = parseInt(pielvisible.dataset.valor);
         const valorpelonactual = parseInt(cabellovisible.dataset.valor);
         const valoranteojosactual = parseInt(anteojovisible.dataset.valor);
-         window.location.href='../pagina gral/paginageneraln.html' 
+
 
     if (nombreniño.value === nombredelnene && apellidoniño.value === apellidodelnene  && valorpelonactual === valorpelo && valorpielactual === valorpiel && valoranteojosactual === valoranteojos) {
         console.log ("Inicio de sesion exitoso.")
         window.location.href='../pagina gral/paginageneraln.html'  
     }
     else {
-       console.log ("Inicio de sesion exitosamente.")
-       window.location.href='../pagina gral/paginageneraln.html' 
+    
+        alert ("Los datos ingresados no son correctos. Por favor, intente nuevamente.")
     }
 
 }
