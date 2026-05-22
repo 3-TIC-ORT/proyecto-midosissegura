@@ -56,8 +56,9 @@ function verificardatos () {
 
     if (nombreniño.value === nombredelnene && apellidoniño.value === apellidodelnene  && valorpelonactual === valorpelo && valorpielactual === valorpiel && valoranteojosactual === valoranteojos) {
         console.log ("Inicio de sesion exitoso.")
-        alert ("Inicio de sesión exitoso. Bienvenido/a " + nombreniño.value + " " + apellidoniño.value + ".")
+    
         window.location.href='../pagina gral/paginageneraln.html'  
+            alert ("Inicio de sesión exitoso. Bienvenido/a " + nombreniño.value + " " + apellidoniño.value + ".")
     }
     else {
     console.log(
