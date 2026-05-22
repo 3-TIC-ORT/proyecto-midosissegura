@@ -59,7 +59,16 @@ function verificardatos () {
         window.location.href='../pagina gral/paginageneraln.html'  
     }
     else {
-    
+    console.log(
+    nombredelnene,
+    apellidodelnene,
+    valorpelo,
+    valorpiel,
+    valoranteojos,
+    valorpelonactual,
+    valorpielactual,
+    valoranteojosactual
+);
         alert ("Los datos ingresados no son correctos. Por favor, intente nuevamente.")
     }
 
