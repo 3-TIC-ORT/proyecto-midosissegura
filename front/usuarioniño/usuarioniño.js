@@ -27,7 +27,7 @@ let t1= null
   valorpiel = localStorage.getItem("valorpiel");
   valorpelo = localStorage.getItem("valorpelo");
   valoranteojos = localStorage.getItem("valoranteojos");
-  ratio = localStorage.getItem ("ratio");
+  ratio = localStorage.getItem ("RATIO");
 
 
   document.querySelector(`#colorcitos img[data-valor="${valorpiel}"]`).classList.add("visible");

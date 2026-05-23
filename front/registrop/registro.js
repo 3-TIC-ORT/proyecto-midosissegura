@@ -28,10 +28,10 @@ fetch("https://proyecto-midosissegura.onrender.com/registrop", {
  .then(data => {
     let cuentacreada=data
 if (cuentacreada===true){
-  localStorage.setItem ("nombreniño", document.getElementById("nombreh").value);
+localStorage.setItem ("nombreniño", document.getElementById("nombreh").value);
 localStorage.setItem ("apellidoniño",  document.getElementById("apellidoh").value);
-  localStorage.setItem ("ratio", RATIO.value);
-  window.location.href = "../registro/registro.html";
+localStorage.setItem ("RATIO", RATIO.value);
+window.location.href = "../registro/registro.html";
 }
 else if ( cuentacreada=false){
     alert("vueva a intentar y revise si ya existe el usuario")
