@@ -266,7 +266,7 @@ function UsuarioRegistrado(data){
                 NOMBREniño: registro[i].NOMBREniño,
                 APELLIDOniño: registro[i].APELLIDOniño
             }
-            localStorage.setItem ("RATIO",registro[i].RATIO)
+            
             break
         }
     }
