@@ -47,7 +47,23 @@ else if (encontrado === true && contra === true && logueado === false) {
 else if (encontrado === false) {
     alert("No se ha encontrado una cuenta con ese correo");
 }            
-})})
+})
+fetch("https://proyecto-midosissegura.onrender.com/ratios", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+    NOMBREniño: document.getElementById("NOMBREH").value,
+    APELLIDOniño: document.getElementById("apellidoh").value,
+    ratio:inputnombredeusuario.value
+    })})
+    .then(response => response.json())
+    .then(data => 
+         console.log(data)
+    )
+})
   let btnatras = document.getElementById("btnatras");
 
 btnatras.addEventListener("click", function() {

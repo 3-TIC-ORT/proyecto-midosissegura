@@ -452,4 +452,12 @@ console.log(date)
 return `${date.getHours()}/${date.getMinutes()}`}
 Fecha()
 export{Fecha}
-
+function ratios (data) {
+    for (let i =0;i < registro.length ;i++){
+        if (data.NOMBREniño == registro.NOMBREniño && data.APELLIDOniño== registro.APELLIDOniño)
+        registro[i].RATIO = data.ratio
+        localStorage.setItem ("RATIO",data.ratio)
+        return "seteado el ratio"
+    }
+}
+export {ratios}

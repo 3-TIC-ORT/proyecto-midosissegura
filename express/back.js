@@ -8,7 +8,7 @@ app.use(cors());
 app.use(cors());
 app.use(express.json());
 import path from "path";
-import { Iniciar } from "../back/funcionesexpress.js";
+import { Iniciar} from "../back/funcionesexpress.js";
 import { InicioNiños } from "../back/funcionesexpress.js";
 import { LogueoAdultos } from "../back/funcionesexpress.js";
 import { LogueoNiños } from "../back/funcionesexpress.js";
@@ -21,7 +21,7 @@ import { recargardosis } from "../back/funcionesexpress.js";
 import { Fecha } from "../back/funcionesexpress.js";
 import { mostrartrofeos } from "../back/funcionesexpress.js";
 import{UsuarioRegistrado} from "../back/funcionesexpress.js";
-
+import{ratios} from "../back/funcionesexpress.js";
 // Asociamos la ruta "/" a la función pasada como segundo parámetr
 
 app.get("/", (req, res) => {
@@ -67,6 +67,10 @@ app.get("/darmensajesalforo", (req, res) => {
 });
 app.post("/Guardarmensajesdelforo", (req, res) => {
     let funciono =Guardarmensajesdelforo(req.body);
+    res.json(funciono);
+});
+app.post("/ratios", (req, res) => {
+    let funciono =ratios(req.body);
     res.json(funciono);
 });
 //trofeos

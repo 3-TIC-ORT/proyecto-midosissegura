@@ -23,7 +23,6 @@ let t1= null
 
 
 
-
   valorpiel = localStorage.getItem("valorpiel");
   valorpelo = localStorage.getItem("valorpelo");
   valoranteojos = localStorage.getItem("valoranteojos");
