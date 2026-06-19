@@ -15,7 +15,7 @@ fetch("https://proyecto-midosissegura.onrender.com/UsuarioRegistrado", {
 
   body: JSON.stringify({
            NOMBRE: localStorage.getItem("nombreusuario"),
-APELLIDO: localStorage.getItem("apellidousuario")
+     APELLIDO: localStorage.getItem("apellidousuario")
     })}).then(response => response.json())
     .then(data => 
             
