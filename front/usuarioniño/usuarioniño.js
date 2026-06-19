@@ -77,8 +77,8 @@ function datosUsuario() {
   },
 
   body: JSON.stringify({
-   NOMBREniño:nombre,
-        APELLIDOniño:apellido
+   NOMBRE:localStorage.getItem("nombreusuario"),
+        APELLIDO:localStorage.getItem("apellidousuario")
   })}).then(response => response.json())
     .then(data => { console.log("Respuesta del servidor:", data);
       if (!data) return;
