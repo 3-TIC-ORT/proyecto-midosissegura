@@ -132,7 +132,6 @@ function LogueoAdultos(data)
              if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO && data.CONTRASENA === registro[j].CONTRASENA) {
                  ratio = parseInt(registro[j].RATIO);
                    console.log("Ratio encontrado: " + ratio);
-                   localStorage.setItem ("RATIO",ratio)
                      break;
       }
     }
@@ -321,7 +320,7 @@ function recargarratio(data) {
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].RATIO = ratinew
-            localStorage.setItem ("RATIO",ratinew)
+    
             resultado = registro[i]
             break;
            }   }
