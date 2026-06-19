@@ -250,13 +250,13 @@ export {AñadirTrofeo};
 
 
 function UsuarioRegistrado(data){
-    let usuarion = data.NOMBRE;
-    let usuarioa = data.APELLIDO;
+    let usuarion = data.NOMBREniño;
+    let usuarioa = data.APELLIDOniño;
 
     let resultado = 0;
 
     for (let i = 0; i < registro.length; i++) {
-        if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
+        if (usuarion === registro[i].NOMBREniño && usuarioa === registro[i].APELLIDOniño) {
             resultado = {
                 NOMBRE: registro[i].NOMBRE,
                 APELLIDO: registro[i].APELLIDO,
