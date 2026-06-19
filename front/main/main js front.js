@@ -36,21 +36,6 @@ btniniciosesion.addEventListener("click", () => {
         localStorage.setItem("contraseñausuario", document.getElementById("CONTRASEÑA").value);
         localStorage.setItem("nombreniño", document.getElementById("NOMBREH").value);
         localStorage.setItem("apellidoniño", document.getElementById("apellidoh").value);
-        fetch("https://proyecto-midosissegura.onrender.com/ratios", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-        
-          body: JSON.stringify({
-            NOMBREniño: document.getElementById("NOMBREH").value,
-            APELLIDOniño: document.getElementById("apellidoh").value,
-            ratio:document.getElementById("ratioinsulina").value
-            })})
-            .then(response => response.json())
-            .then(data => 
-                 console.log(data)
-            )
         window.location.href='../paginageneralp/paginageneralp.html'  
     }
     else if (encontrado === true && contra === false && logueado === false) {
