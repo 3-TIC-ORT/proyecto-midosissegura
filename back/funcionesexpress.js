@@ -132,6 +132,7 @@ function LogueoAdultos(data)
              if (data.NOMBRE === registro[j].NOMBRE && data.APELLIDO === registro[j].APELLIDO && data.CONTRASENA === registro[j].CONTRASENA) {
                  ratio = parseInt(registro[j].RATIO);
                    console.log("Ratio encontrado: " + ratio);
+                   localStorage.setItem ("RATIO",ratio)
                      break;
       }
     }
@@ -264,11 +265,12 @@ function UsuarioRegistrado(data){
                 RATIO: parseInt(registro[i].RATIO),
                 NOMBREniño: registro[i].NOMBREniño,
                 APELLIDOniño: registro[i].APELLIDOniño
-            };
-            break;
+            }
+            localStorage.setItem ("RATIO",registro[i].RATIO)
+            break
         }
     }
-
+    
     return resultado;
 }
     let T1=null
@@ -319,6 +321,7 @@ function recargarratio(data) {
     for (let i = 0; i < registro.length; i++) {
         if (usuarion === registro[i].NOMBRE && usuarioa === registro[i].APELLIDO) {
             registro[i].RATIO = ratinew
+            localStorage.setItem ("RATIO",ratinew)
             resultado = registro[i]
             break;
            }   }
@@ -388,6 +391,7 @@ function LogueoNiños(data) {
         var logueado = true
         var encontrado = true
         var contra = true
+        localStorage.setItem ("RATIO",registro[i].RATIO)
         UsuarioR.push(
             {
                 "NOMBRE": registro[i].NOMBRE,
