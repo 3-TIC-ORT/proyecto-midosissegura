@@ -45,7 +45,7 @@ btniniciosesion.addEventListener("click", () => {
           body: JSON.stringify({
             NOMBREniño: document.getElementById("NOMBREH").value,
             APELLIDOniño: document.getElementById("apellidoh").value,
-            ratio:inputnombredeusuario.value
+            ratio:valorinputratioinsulina
             })})
             .then(response => response.json())
             .then(data => 
