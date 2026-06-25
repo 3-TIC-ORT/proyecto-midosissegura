@@ -45,6 +45,9 @@ else if (nivelglucemia >= 90 && nivelglucemia <= 180){
 
 function cambiosglucemia (cambio) {
     nivelglucemia += cambio
+    if (nivelglucemia < 0) {
+        nivelglucemia = 0;
+    }
 }
 
 const platos= [
